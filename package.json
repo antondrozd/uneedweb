@@ -1,0 +1,24 @@
+{
+  "name": "www.uneedweb.com",
+  "version": "0.0.1",
+  "description": "UNeed Web website",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "uneed",
+    "website",
+    "software",
+    "development",
+    "outsourcing",
+    "outstaffing"
+  ],
+  "author": "Kirill Buga",
+  "license": "ISC",
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "jade-watch": "^0.1.1",
+    "stylus": "^0.54.5"
+  }
+}

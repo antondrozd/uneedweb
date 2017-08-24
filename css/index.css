@@ -1,0 +1,242 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+header {
+  display: none;
+  position: absolute;
+}
+.flex {
+  display: flex;
+}
+.flex.flex-row {
+  flex-direction: row;
+}
+.flex.flex-column {
+  flex-direction: column;
+}
+.flex.align-hor-center {
+  justify-content: center;
+}
+.flex.align-ver-center {
+  align-items: center;
+}
+.container {
+  padding: 0 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+button {
+  padding: 0.9rem 2.8rem;
+  border-radius: 4px;
+  background-color: #f3f8ff;
+  border: solid 2px #8492af;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  color: #8492af;
+}
+h1.title {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  color: #fff;
+}
+h1.title.dark {
+  color: #0e1a35;
+}
+h2.sub-title {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  color: #8492af;
+}
+.gradient {
+  height: 6px;
+  width: 100%;
+  background-image: linear-gradient(to left, #4444b9, #ec523e);
+}
+#landing {
+  height: 100%;
+  background-image: url("../photos/landing.jpg");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+#info {
+  padding: 4rem 0;
+}
+#info .main-title {
+  width: 11rem;
+  margin: 1rem auto;
+}
+#services {
+  flex-direction: column;
+}
+#services .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f3f8ff;
+  border: solid 1px #e3eaf3;
+}
+#services .service-image {
+  margin: 0 auto;
+}
+#services .service-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 1rem 0 0 0;
+  letter-spacing: 0.4px;
+}
+#services .service-subtitle {
+  font-size: 13px;
+  line-height: 1.38;
+  letter-spacing: 0.3px;
+  margin-bottom: 1.5rem;
+}
+#about-services {
+  padding: 2rem 1rem 4rem 1rem;
+}
+#about-services span {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  color: #8492af;
+}
+#guarantee {
+  padding: 2rem 0;
+  background-color: #0e1a35;
+}
+#guarantee .sub-title {
+  color: #576076;
+}
+#guarantee .features-container {
+  margin: 4rem 0;
+}
+#guarantee .features-container .feature {
+  padding: 0 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#guarantee .features-container .feature img {
+  min-width: 68px;
+  min-height: 76px;
+  margin-right: 1rem;
+}
+#guarantee .features-container .feature span {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  color: #fefefe;
+}
+#portfolio {
+  padding: 4rem 0;
+}
+footer {
+  padding: 2rem 0;
+  background-color: #0e1a35;
+}
+footer .menu-list .menu-item {
+  font-size: 15px;
+  line-height: 3;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #8492af;
+  transition: color 0.3s ease;
+}
+footer .menu-list .menu-item:hover {
+  color: #c3cee4;
+}
+footer .subscribe h1 {
+  margin: 2rem 0;
+  font-size: 18px;
+  text-align: center;
+  color: #f3f8ff;
+}
+footer .subscribe .subscribe-form {
+  display: flex;
+  flex-direction: row;
+}
+footer .subscribe .subscribe-form input {
+  border-radius: 4px 0 0 4px;
+  background-color: #0e1a35;
+  border: solid 1px #576076;
+  padding: 1rem;
+  color: #fff;
+}
+footer .subscribe .subscribe-form input::-webkit-input-placeholder {
+  font-size: 13px;
+  line-height: 1.38;
+  letter-spacing: 0.3px;
+  color: rgba(90,99,121,0.5);
+}
+footer .subscribe .subscribe-form button {
+  position: relative;
+  left: -1px;
+  border-radius: 0 4px 4px 0;
+  background-color: #576076;
+  font-size: 13px;
+  line-height: 1.38;
+  letter-spacing: 0.3px;
+  color: #fff;
+  border: none;
+}
+footer .contacts {
+  margin: 2rem auto;
+  width: 11rem;
+  font-size: 13px;
+  text-align: center;
+  color: #576076;
+}
+footer .contacts p {
+  margin: 0;
+}
+footer .contacts a {
+  text-decoration: none;
+  color: #576076;
+}
+footer .contacts a:visited {
+  text-decoration: none;
+  color: #576076;
+}
+footer .contacts address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+footer .copyright {
+  font-size: 13px;
+  line-height: 2.31;
+  text-align: center;
+  color: #5a6379;
+}
