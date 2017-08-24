@@ -1,175 +1,5 @@
-html, body
-	height 100%
-	margin 0
-
-*
-	box-sizing: border-box
-
-@font-face
-	font-family: 'Circe'
-	src: url('../fonts/CirceRegular/Circe-Regular.eot'),
-		url('../fonts/CirceRegular/Circe-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/CirceRegular/Circe-Regular.woff') format('woff'),
-		url('../fonts/CirceRegular/Circe-Regular.ttf') format('truetype'),
-		url('../fonts/CirceRegular/Circe-Regular.svg#webfont') format('svg')
-	text-rendering: optimizeLegibility
-
-body
-	font-weight: 300
-	font-size: 16px
-	line-height: 1.5
-	font-family: 'Roboto'
-	-webkit-font-smoothing: antialiased
-	text-rendering: optimizelegibility
-	overflow-x: hidden
-	
-	&.navbar-expanded
-		.mobile-nav
-			transform: translateY(0)
-		#toggle-navbar
-			justify-content: center
-			.icon-bar:nth-child(1)
-				transform: rotate(-45deg) translateY(2px)
-			.icon-bar:nth-child(2)
-				display: none
-			.icon-bar:nth-child(3)
-				transform: rotate(45deg) translateY(-2px)
-
-.mobile-nav
-	position: fixed
-	width: 100%
-	height: 100%
-	transition: transform .3s ease
-	transform: translateY(-100%)
-	background-color: #0e1a35
-	z-index: 1
-	padding: 2rem 0
-	.menu-list
-		padding-top: 2rem
-		.menu-item
-			font-size: 16px
-			text-transform: uppercase
-			line-height: 3.75
-			font-weight: 400
-			&:hover
-				a
-					color: #ffffff
-
-header
-	position: absolute
-	nav
-		display: flex
-		align-items: center
-		margin-top: 1rem
-		.container
-			padding-left: 1rem
-		.logo
-			margin-right: .5rem
-		.logo-text-container
-			display: flex
-			flex-direction: column
-			justify-content: center
-			.logo-text
-				margin-bottom: 3px
-			.company-subname
-				font-family: Circe
-				text-transform: uppercase
-				font-size: 6.9px
-				line-height: 1.59
-				letter-spacing: 2.4px
-				text-align: center
-				color: #ffffff
-	#toggle-navbar
-		background-color: transparent
-		border: none
-		position: fixed
-		z-index: 2
-		top: 1.6rem
-		right: 1rem
-		height: 1.4rem
-		width: 2rem
-		display: flex
-		flex-direction: column
-		justify-content: space-between
-		.icon-bar
-			height: 4px
-			width: 100%
-			border-radius: 2px
-			background-color: white
-			transition: transform .3s ease
-	
-a
-	text-decoration: none
-	color: #576076
-	&:visited
-		text-decoration: none
-		color: #576076
-	
-.menu-list
-	.menu-item
-		font-size: 15px
-		line-height: 3.0
-		letter-spacing: 0.3px
-		text-align: center
-		color: #8492af
-		transition: color .3s ease
-		&:hover
-			color: #c3cee4
-
-.flex
-	display flex
-	&.flex-row
-		flex-direction row
-	&.flex-column
-		flex-direction column
-	&.align-hor-center
-		justify-content center
-	&.align-ver-center
-		align-items center
-
-.container
-	padding 0 1.5rem
-	margin-right auto
-	margin-left auto
-
-	@media screen and (min-width: 768px)
-		width: 750px
-
-	@media screen and (min-width: 992px)
-		width: 970px
-
-	@media screen and (min-width: 1200px)
-		width: 1170px
-
-button
-	padding: .9rem 2.8rem
-	border-radius: 4px
-	background-color: #f3f8ff
-	border: solid 2px #8492af
-	font-size: 16px
-	letter-spacing: .3px
-	color: #8492af
-
-h1.title
-	font-family Roboto
-	font-size 30px
-	font-weight 100
-	text-align center
-	color #ffffff
-	&.dark
-		color: #0e1a35
-	
-h2.sub-title
-	font-size: 16px
-	font-weight: 300
-	line-height: 1.5
-	text-align: center
-	color: #8492af
-
-.gradient
-	height: 6px
-	width: 100%
-	background-image: linear-gradient(to left, #4444b9, #ec523e)
+@import 'variables'
+@import 'general'
 
 #landing
 	padding-top: 3rem
@@ -192,6 +22,10 @@ h2.sub-title
 		padding-bottom: 3rem
 		background-color: #f3f8ff
 		border: solid 1px #e3eaf3
+	.service-description
+		display: flex
+		flex-direction: column
+		justify-content: center
 	.service-image
 		margin: 0 auto
 	.service-title
@@ -204,15 +38,52 @@ h2.sub-title
 		line-height: 1.38
 		letter-spacing: 0.3px
 		margin-bottom: 1.5rem
+	@media screen and (min-width: $screenSmall)
+		.container
+			width: 100%
+			flex-direction: row
+			justify-content: center
+		.service-description
+			width: 23rem
+			h1, h2
+				text-align: left
+			button
+				width: 13rem
+		.service-image
+			margin: 0 3rem 0 0
+	@media screen and (min-width: $screenMedium)
+		flex-direction: row
+		justify-content: center
+		.container.service
+			width: 19rem
+			margin: 0 2rem
+			flex-direction: column
+			.service-description
+				align-items: center
+				width: 100%
+				h1.title
+					text-align: center
+					margin-bottom: 0.5rem
+				h2.sub-title
+					width: auto
+					text-align: center
+			.service-image
+				margin: auto
 		
 #about-services
 	padding: 2rem 1rem 4rem 1rem
-	span
-		font-size: 16px
-		font-weight: 300
-		line-height: 1.5
-		text-align: center
-		color: #8492af
+	font-size: 16px
+	font-weight: 300
+	line-height: 1.5
+	text-align: center
+	color: #8492af
+	@media screen and (min-width: $screenSmall)
+		width: 35rem
+		margin: auto
+		font-size: 18px
+		line-height: 1.33
+	@media screen and (min-width: $screenMedium)
+		margin-top: 2rem
 
 #guarantee
 	padding: 2rem 0
@@ -236,58 +107,25 @@ h2.sub-title
 				font-weight: 300
 				letter-spacing: 0.3px
 				color: #fefefe
+	@media screen and (min-width: $screenSmall)
+		.title
+			font-size: 48px
+			font-weight: 100
+			line-height: 1
+		.sub-title
+			font-size: 18px
+			font-weight: 300
+		.features-container
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			.feature
+				width: 50%
+	@media screen and (min-width: $screenMedium)
+		.features-container
+			justify-content: center
+			.feature
+				width: 24rem
 
 #portfolio
 	padding: 4rem 0
-		
-footer
-	padding: 2rem 0
-	background-color: #0e1a35
-	.subscribe
-		h1
-			margin: 2rem 0
-			font-size: 18px
-			text-align: center
-			color: #f3f8ff
-		.subscribe-form
-			display: flex
-			flex-direction: row
-			input
-				border-radius: 4px 0 0 4px
-				background-color: #0e1a35
-				border: solid 1px #576076
-				padding: 1rem
-				color: #ffffff
-				flex: 1
-				&::-webkit-input-placeholder
-					font-size: 13px
-					line-height: 1.38
-					letter-spacing: 0.3px
-					color: rgba(90, 99, 121, 0.5)
-			button
-				position: relative
-				left: -1px
-				border-radius: 0 4px 4px 0
-				background-color: #576076
-				font-size: 13px
-				line-height: 1.38
-				letter-spacing: 0.3px
-				color: #ffffff
-				border: none
-	.contacts
-		margin: 2rem auto
-		width: 11rem
-		font-size: 13px
-		text-align: center
-		color: #576076
-		p
-			margin: 0
-		address
-			font-style: normal
-			margin-bottom: 1rem
-			
-	.copyright
-		font-size: 13px
-		line-height: 2.31
-		text-align: center
-		color: #5a6379
