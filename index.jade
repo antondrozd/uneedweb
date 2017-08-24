@@ -1,125 +1,78 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    title UNeed Web - Software Development Company
-    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet")
-    link(href="css/index.css" rel="stylesheet")
-  body
-    header
-      nav
-        .container
-          .navbar-header
-            button(type="button")
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-          .navbar-expanded
-            ul.nav.navbar-nav.navbar-right
-              li
-                a(href="#about") About
-              li
-                a(href="#service") Service
-              li
-                a(href="#portfolio") Portfolio
-              li
-                a(href="#blog") Blog
-              li
-                a(href="#team") Team
-              li
-                a(href="#contact") Contact Us
+	include parts/head
+	body
+		include parts/header
+		include parts/mobile-nav
 
-    section#landing.flex.align-ver-center
-      .container
-        h1.title Welcome to UNeed
-        h2.sub-title 
-          | Lorem ipsum dolor sit amet. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+		section#landing.flex.align-ver-center
+			.container
+				h1.title Welcome to UNeed
+				h2.sub-title 
+					| Lorem ipsum dolor sit amet. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
 
-    section#info.flex.align-ver-center
-      .container
-        h1.title.dark What are you looking for?
-        h2.sub-title
-          | Uneed has a variety of pricing models and is always glad to meet your specific needs by adjustingt the model that suits both the company and client. Inspired by latest technologies, supported by self-motivated talents with a clear vision to expand your business. 
+		section#info.flex.align-ver-center
+			.container
+				h1.title.dark What are you looking for?
+				h2.sub-title
+					| Uneed has a variety of pricing models and is always glad to meet your specific needs by adjustingt the model that suits both the company and client. Inspired by latest technologies, supported by self-motivated talents with a clear vision to expand your business. 
 
-    section#services.flex.align-ver-center
-      .container.service.flex.flex-column.align-ver-center
-        img.service-image(src="../images/gif/outsource.gif" width="100" height="100")
-        h1.title.dark.service-title Development of the Project
-        h2.sub-title.service-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        button(role="button") Get more info
-      .container.service.flex.flex-column.align-ver-center
-        img.service-image(src="../images/gif/outstuff.gif" width="100" height="100")
-        h1.title.dark.service-title Dedicated Development Team
-        h2.sub-title.service-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        button(role="button") Get more info
-      .container.service.flex.flex-column.align-ver-center
-        img.service-image(src="../images/gif/relocation.gif" width="100" height="100")
-        h1.title.dark.service-title Developer for relocation
-        h2.sub-title.service-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        button(role="button") Get more info
+		section#services.flex.align-ver-center
+			.container.service.flex.flex-column.align-ver-center
+				img.service-image(src="../images/gif/outsource.gif" width="100" height="100")
+				h1.title.dark.service-title Development of the Project
+				h2.sub-title.service-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+				button(role="button") Get more info
 
-    section#about-services.flex.align-ver-center
-      .container
-        span 
-          | If you don’t know what to choose, learn more about each of this options and its difference 
-          a(href="#") here
-          | .
-    section#guarantee.flex.align-ver-center
-      .container
-        h1.title We guarantee
-        h2.sub-title Now you can give secure access to you’re community from anywhere at anytime. Your future visitor will receive a unique Sequr pin to access your community. You can specify if you want it to be send via text-message or email.
-        .features-container
-          .feature
-            img(src="../images/svg/1-quality.svg" width="68" height="76")
-            span Quality is first of all
-          .feature
-            img(src="../images/svg/2-english.svg" width="68" height="76")
-            span Specialist with good English
-          .feature
-            img(src="../images/svg/3-office.svg" width="68" height="76")
-            span Our office availabity for 24/7
-          .feature
-            img(src="../images/svg/4-meeting.svg" width="68" height="76")
-            span Personal meetings and direct comunication
-          .feature
-            img(src="../images/svg/5-seniors.svg" width="68" height="76")
-            span Seniors for seniors
-          .feature
-            img(src="../images/svg/6-risk.svg" width="68" height="76")
-            span Risk free cooperation
+			.container.service.flex.flex-column.align-ver-center
+				img.service-image(src="../images/gif/outstuff.gif" width="100" height="100")
+				h1.title.dark.service-title Dedicated Development Team
+				h2.sub-title.service-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+				button(role="button") Get more info
 
-    .gradient
+			.container.service.flex.flex-column.align-ver-center
+				img.service-image(src="../images/gif/relocation.gif" width="100" height="100")
+				h1.title.dark.service-title Developer for relocation
+				h2.sub-title.service-subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+				button(role="button") Get more info
 
-    section#portfolio
-      .container
-        h1.title.dark What can we create?
-        h2.sub-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam. 
+		section#about-services.flex.align-ver-center
+			.container
+				span 
+					| If you don’t know what to choose, learn more about each of this options and its difference 
+					a(href="#") here
+					| .
+		section#guarantee.flex.align-ver-center
+			.container
+				h1.title We guarantee
+				h2.sub-title Now you can give secure access to you’re community from anywhere at anytime. Your future visitor will receive a unique Sequr pin to access your community. You can specify if you want it to be send via text-message or email.
+				.features-container
+					.feature
+						img(src="../images/svg/1-quality.svg" width="68" height="76")
+						span Quality is first of all
+					.feature
+						img(src="../images/svg/2-english.svg" width="68" height="76")
+						span Specialist with good English
+					.feature
+						img(src="../images/svg/3-office.svg" width="68" height="76")
+						span Our office availabity for 24/7
+					.feature
+						img(src="../images/svg/4-meeting.svg" width="68" height="76")
+						span Personal meetings and direct comunication
+					.feature
+						img(src="../images/svg/5-seniors.svg" width="68" height="76")
+						span Seniors for seniors
+					.feature
+						img(src="../images/svg/6-risk.svg" width="68" height="76")
+						span Risk free cooperation
 
-    footer
-      .container
-        .menu-list
-          .menu-item About
-          .menu-item Services
-          .menu-item Portfolio
-          .menu-item Team
-          .menu-item Contact Us
-        .subscribe
-          h1 Keep up to date with us
-          .subscribe-form
-            input(type="text" placeholder="Enter your email")
-            button(role="button") OK
-        .contacts
-          address Kiev, Ukraine, 02140, Bazhana Ave 24/1, Office 118
-          p
-            span Tel:
-            a(href="tel:380955914765") 3-8099-461-2335
-          p
-            span Email:
-            a(href="mailto:info@uneedweb.com?subject=Contact UNeed Web") info@uneedweb.com
+		.gradient
 
-        .copyright
-          p
-            | &copy; 2017 UNeed Web All Right Reserved
+		section#portfolio
+			.container
+				h1.title.dark What can we create?
+				h2.sub-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam. 
+
+		include parts/footer
+		script(type="text/javascript" src="js/script.js")
 
