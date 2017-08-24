@@ -6,6 +6,11 @@ body {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/CirceRegular/Circe-Regular.eot"), url("../fonts/CirceRegular/Circe-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/CirceRegular/Circe-Regular.woff") format('woff'), url("../fonts/CirceRegular/Circe-Regular.ttf") format('truetype'), url("../fonts/CirceRegular/Circe-Regular.svg#webfont") format('svg');
+  text-rendering: optimizeLegibility;
+}
 body {
   font-weight: 300;
   font-size: 16px;
@@ -40,6 +45,9 @@ body.navbar-expanded #toggle-navbar .icon-bar:nth-child(3) {
   z-index: 1;
   padding: 2rem 0;
 }
+.mobile-nav .menu-list {
+  padding-top: 2rem;
+}
 .mobile-nav .menu-list .menu-item {
   font-size: 16px;
   text-transform: uppercase;
@@ -49,12 +57,43 @@ body.navbar-expanded #toggle-navbar .icon-bar:nth-child(3) {
 .mobile-nav .menu-list .menu-item:hover a {
   color: #fff;
 }
+header {
+  position: absolute;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+header nav .container {
+  padding-left: 1rem;
+}
+header nav .logo {
+  margin-right: 0.5rem;
+}
+header nav .logo-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header nav .logo-text-container .logo-text {
+  margin-bottom: 3px;
+}
+header nav .logo-text-container .company-subname {
+  font-family: Circe;
+  text-transform: uppercase;
+  font-size: 6.9px;
+  line-height: 1.59;
+  letter-spacing: 2.4px;
+  text-align: center;
+  color: #fff;
+}
 header #toggle-navbar {
   background-color: transparent;
   border: none;
   position: fixed;
   z-index: 2;
-  top: 1rem;
+  top: 1.6rem;
   right: 1rem;
   height: 1.4rem;
   width: 2rem;
@@ -155,6 +194,7 @@ h2.sub-title {
   background-image: linear-gradient(to left, #4444b9, #ec523e);
 }
 #landing {
+  padding-top: 3rem;
   height: 100%;
   background-image: url("../photos/landing.jpg");
   background-size: cover;
@@ -253,6 +293,7 @@ footer .subscribe .subscribe-form input {
   border: solid 1px #576076;
   padding: 1rem;
   color: #fff;
+  flex: 1;
 }
 footer .subscribe .subscribe-form input::-webkit-input-placeholder {
   font-size: 13px;

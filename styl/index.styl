@@ -5,6 +5,15 @@ html, body
 *
 	box-sizing: border-box
 
+@font-face
+	font-family: 'Circe'
+	src: url('../fonts/CirceRegular/Circe-Regular.eot'),
+		url('../fonts/CirceRegular/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/CirceRegular/Circe-Regular.woff') format('woff'),
+		url('../fonts/CirceRegular/Circe-Regular.ttf') format('truetype'),
+		url('../fonts/CirceRegular/Circe-Regular.svg#webfont') format('svg')
+	text-rendering: optimizeLegibility
+
 body
 	font-weight: 300
 	font-size: 16px
@@ -36,6 +45,7 @@ body
 	z-index: 1
 	padding: 2rem 0
 	.menu-list
+		padding-top: 2rem
 		.menu-item
 			font-size: 16px
 			text-transform: uppercase
@@ -46,12 +56,35 @@ body
 					color: #ffffff
 
 header
+	position: absolute
+	nav
+		display: flex
+		align-items: center
+		margin-top: 1rem
+		.container
+			padding-left: 1rem
+		.logo
+			margin-right: .5rem
+		.logo-text-container
+			display: flex
+			flex-direction: column
+			justify-content: center
+			.logo-text
+				margin-bottom: 3px
+			.company-subname
+				font-family: Circe
+				text-transform: uppercase
+				font-size: 6.9px
+				line-height: 1.59
+				letter-spacing: 2.4px
+				text-align: center
+				color: #ffffff
 	#toggle-navbar
 		background-color: transparent
 		border: none
 		position: fixed
 		z-index: 2
-		top: 1rem
+		top: 1.6rem
 		right: 1rem
 		height: 1.4rem
 		width: 2rem
@@ -139,6 +172,7 @@ h2.sub-title
 	background-image: linear-gradient(to left, #4444b9, #ec523e)
 
 #landing
+	padding-top: 3rem
 	height 100%
 	background-image url('../photos/landing.jpg')
 	background-size: cover
@@ -224,6 +258,7 @@ footer
 				border: solid 1px #576076
 				padding: 1rem
 				color: #ffffff
+				flex: 1
 				&::-webkit-input-placeholder
 					font-size: 13px
 					line-height: 1.38
