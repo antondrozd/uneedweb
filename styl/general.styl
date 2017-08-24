@@ -39,16 +39,30 @@ button
 	cursor: pointer
 	padding: .9rem 2.8rem
 	border-radius: 4px
-	background-color: #f3f8ff
+	background-color: transparent
 	border: solid 2px #8492af
 	font-size: 16px
 	letter-spacing: .3px
 	color: #8492af
-	transition: background-color .3s ease
-	&:hover, &:focus
-		border-color: #ff6955
+	position: relative
+	transition: color, border-color .3s ease
+	z-index: 1
+	&:before
+		position: absolute
+		z-index: -1
+		content: ''
+		top: 0
+		left: 0
+		border-radius: 2px
 		background-color: #ff6955
+		transition: width .3s ease
+		height: 100%
+		width: 0%
+	&:hover, &:focus
 		color: white
+		border-color: #ff6955
+		&:before
+			width: 100%
 
 h1.title
 	font-family Roboto
@@ -64,7 +78,7 @@ h1.title
 	
 h2.sub-title
 	font-size: 16px
-	font-weight: 300
+	font-weight: 400
 	line-height: 1.5
 	text-align: center
 	color: #8492af
@@ -72,7 +86,6 @@ h2.sub-title
 		width: 40rem
 		margin: auto
 		font-size: 18px
-		font-weight: 300
 		line-height: 1.33
 
 .gradient
@@ -124,6 +137,7 @@ body
 	background-color: #0e1a35
 	z-index: 1
 	padding: 2rem 0
+	overflow-y: auto
 	.menu-list
 		padding-top: 2rem
 		.menu-item
@@ -180,20 +194,24 @@ header
 				.menu-list
 					display: flex
 					.menu-item
+						cursor: pointer
 						position: relative
 						padding: 0 1rem
 						a
 							font-weight: 400
 							color: white
-						&.active, &:hover
+						&:after
+							content: ''
+							position: absolute
+							height: 2px
+							left: 0
+							bottom: 6px
+							width: 0%
+							transition: width .3s ease
+							background-image: linear-gradient(to left, #ec523e, #4444b9)
+						&:hover
 							&:after
-								content: ''
-								position: absolute
-								height: 2px
-								left: 0
-								bottom: 6px
 								width: 100%
-								background-image: linear-gradient(to left, #ec523e, #4444b9)
 
 	@media screen and (min-width: $screenMedium)
 		.container
@@ -298,6 +316,8 @@ footer
 		line-height: 2.31
 		text-align: center
 		color: #5a6379
+		&.desktop
+			display: none
 		
 	@media screen and (min-width: $screenSmall)
 		.subscribe-form
