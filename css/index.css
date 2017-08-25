@@ -8,7 +8,7 @@ body {
 }
 @font-face {
   font-family: 'Circe';
-  src: url("../fonts/CirceRegular/Circe-Regular.eot"), url("../fonts/CirceRegular/Circe-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/CirceRegular/Circe-Regular.woff") format('woff'), url("../fonts/CirceRegular/Circe-Regular.ttf") format('truetype'), url("../fonts/CirceRegular/Circe-Regular.svg#webfont") format('svg');
+  src: url("/fonts/CirceRegular/Circe-Regular.eot"), url("/fonts/CirceRegular/Circe-Regular.eot?#iefix") format('embedded-opentype'), url("/fonts/CirceRegular/Circe-Regular.woff") format('woff'), url("/fonts/CirceRegular/Circe-Regular.ttf") format('truetype'), url("/fonts/CirceRegular/Circe-Regular.svg#webfont") format('svg');
   text-rendering: optimizeLegibility;
 }
 .flex {
@@ -198,8 +198,8 @@ header nav .logo {
   width: 43px;
   height: 48px;
   background: linear-gradient(155deg, #ec523e 0%, #4444b9 80%);
-  -webkit-mask-image: url("../images/svg/alt-logo.svg");
-  mask-image: url("../images/svg/alt-logo.svg");
+  -webkit-mask-image: url("/images/svg/alt-logo.svg");
+  mask-image: url("/images/svg/alt-logo.svg");
 }
 header nav .logo-text-container {
   display: flex;
@@ -426,10 +426,209 @@ footer .copyright.desktop {
     display: none;
   }
 }
+#services-page header {
+  width: 100%;
+  background: #0e1a35;
+  padding-bottom: 1rem;
+}
+#services-page #description {
+  padding-top: 7rem;
+  padding-bottom: 1rem;
+}
+#services-page #description h2.sub-title {
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  #services-page #description {
+    padding-bottom: 3rem;
+  }
+  #services-page #description h1.title {
+    margin-bottom: 1rem;
+    font-size: 48px;
+  }
+  #services-page #description h2.sub-title {
+    width: 100%;
+    margin: auto;
+  }
+}
+#services-page #service-description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+  text-align: center;
+  color: #8492af;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+#services-page #service-table {
+  width: 100%;
+}
+#services-page #service-table .swipeshow {
+  height: auto;
+}
+#services-page #service-table .swipeshow .slide {
+  height: auto;
+  position: static;
+}
+#services-page #service-table .swipeshow .slides {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#services-page #service-table .services-titles {
+  display: none;
+}
+#services-page #service-table .services-slides {
+  width: 100%;
+}
+#services-page #service-table .slide-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f3f8ff;
+}
+#services-page #service-table .slide-header-container .slide-left,
+#services-page #service-table .slide-header-container .slide-right {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: solid 2px #778ab4;
+  transition: border-color 0.3s ease;
+}
+#services-page #service-table .slide-header-container .slide-left:hover,
+#services-page #service-table .slide-header-container .slide-right:hover {
+  border: solid 2px #576076;
+}
+#services-page #service-table .slide-header-container .slide-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#services-page #service-table .slide-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafc;
+  border-top: solid 1px #e3eaf3;
+  padding: 1rem;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #8492af;
+}
+#services-page #service-table .slide-option.footer {
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #576076;
+  transition: background-color 0.3s ease;
+}
+#services-page #service-table .slide-option.footer a {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+#services-page #service-table .slide-option.footer:hover {
+  background-color: #8492af;
+}
+#services-page #service-table .slide-option.button {
+  justify-content: center;
+  padding: 2rem;
+}
+#services-page #service-table .slide-option .option-name {
+  padding-right: 2rem;
+}
+#services-page #service-table .slide-option .option-value {
+  min-width: 5rem;
+  text-align: right;
+}
+#services-page #service-table .slide-option .option-checkbox {
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 50%;
+  opacity: 0.2;
+  background-color: #8492af;
+}
+#services-page #service-table .slide-option .option-checkbox.checked {
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  #services-page #service-table {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    border-radius: 4px;
+    background-color: #f3f8ff;
+    border: solid 1px #e3eaf3;
+  }
+  #services-page #service-table .services-titles {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  #services-page #service-table .services-titles .title-option,
+  #services-page #service-table .services-titles .title-header {
+    background-color: #f3f8ff;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #8492af;
+  }
+  #services-page #service-table .services-titles .title-option {
+    padding: 1rem;
+  }
+  #services-page #service-table .services-titles .title-header {
+    height: 172px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  #services-page #service-table .services-titles .title-option.last {
+    flex: 1;
+  }
+  #services-page #service-table .swipeshow {
+    flex: 1;
+  }
+  #services-page #service-table .swipeshow .slide-option {
+    justify-content: center;
+  }
+  #services-page #service-table .swipeshow .slide-option .option-name {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  #services-page #service-table .services-titles {
+    flex: 0;
+    min-width: 15rem;
+    border-right: 1px solid #e3eaf3;
+  }
+  #services-page #service-table .swipeshow .slides {
+    width: auto !important;
+  }
+  #services-page #service-table .swipeshow .slide {
+    width: 100%;
+    visibility: visible;
+    border-right: 1px solid #e3eaf3;
+  }
+  #services-page #service-table .slide-left,
+  #services-page #service-table .slide-right {
+    display: none;
+  }
+}
 #landing {
   padding-top: 3rem;
   height: 100%;
-  background-image: url("../photos/landing.jpg");
+  background-image: url("/photos/landing.jpg");
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
