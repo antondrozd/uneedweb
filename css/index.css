@@ -409,6 +409,9 @@ footer .copyright.desktop {
   footer .container .menu-container .menu-list .menu-item {
     margin: 0 1rem;
   }
+  footer .container .menu-container .menu-list .menu-item:hover a {
+    color: #fff;
+  }
   footer .container .contacts {
     margin: 0;
     text-align: left;
@@ -573,6 +576,7 @@ footer .copyright.desktop {
     display: flex;
     flex-direction: column;
     flex: 1;
+    max-width: 18rem;
   }
   #services-page #service-table .services-titles .title-option,
   #services-page #service-table .services-titles .title-header {
@@ -582,6 +586,7 @@ footer .copyright.desktop {
     letter-spacing: 0.3px;
     text-align: left;
     color: #8492af;
+    border-top: 1px solid #e3eaf3;
   }
   #services-page #service-table .services-titles .title-option {
     padding: 1rem;
@@ -596,11 +601,26 @@ footer .copyright.desktop {
   #services-page #service-table .services-titles .title-option.last {
     flex: 1;
   }
+  #services-page #service-table .title-option,
+  #services-page #service-table .slide-option {
+    height: 62px;
+    display: flex;
+    align-items: center;
+  }
+  #services-page #service-table .title-option.button,
+  #services-page #service-table .slide-option.button,
+  #services-page #service-table .title-option.footer,
+  #services-page #service-table .slide-option.footer {
+    height: auto;
+  }
   #services-page #service-table .swipeshow {
     flex: 1;
   }
   #services-page #service-table .swipeshow .slide-option {
     justify-content: center;
+  }
+  #services-page #service-table .swipeshow .slide-option .option-value {
+    text-align: center;
   }
   #services-page #service-table .swipeshow .slide-option .option-name {
     display: none;
@@ -614,6 +634,7 @@ footer .copyright.desktop {
   }
   #services-page #service-table .swipeshow .slides {
     width: auto !important;
+    transform: none !important;
   }
   #services-page #service-table .swipeshow .slide {
     width: 100%;
