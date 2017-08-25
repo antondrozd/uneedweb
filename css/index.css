@@ -195,6 +195,11 @@ header nav .logo-container {
 }
 header nav .logo {
   margin-right: 0.5rem;
+  width: 43px;
+  height: 48px;
+  background: linear-gradient(155deg, #ec523e 0%, #4444b9 80%);
+  -webkit-mask-image: url("../images/svg/alt-logo.svg");
+  mask-image: url("../images/svg/alt-logo.svg");
 }
 header nav .logo-text-container {
   display: flex;
@@ -252,11 +257,13 @@ header nav .logo-text-container .company-subname {
     left: 0;
     bottom: 6px;
     width: 0%;
+    right: 0;
+    margin: auto;
     transition: width 0.3s ease;
     background-image: linear-gradient(to left, #ec523e, #4444b9);
   }
   header nav .menu-container .menu-list .menu-item:hover:after {
-    width: 100%;
+    width: 80%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -356,10 +363,8 @@ footer .subscribe .subscribe-form button {
   letter-spacing: 0.3px;
   color: #fff;
   border: none;
-  transition: background-color 0.3s ease;
 }
-footer .subscribe .subscribe-form button:hover,
-footer .subscribe .subscribe-form button:focus {
+footer .subscribe .subscribe-form button:before {
   background-color: #8492af;
 }
 footer .contacts {

@@ -164,6 +164,11 @@ header
 			align-items: center
 		.logo
 			margin-right: .5rem
+			width: 43px
+			height: 48px
+			background: linear-gradient(155deg, #ec523e 0%, #4444b9 80%);
+			-webkit-mask-image: url('../images/svg/alt-logo.svg');
+			mask-image: url('../images/svg/alt-logo.svg');
 		.logo-text-container
 			display: flex
 			flex-direction: column
@@ -207,11 +212,13 @@ header
 							left: 0
 							bottom: 6px
 							width: 0%
+							right: 0
+							margin: auto
 							transition: width .3s ease
 							background-image: linear-gradient(to left, #ec523e, #4444b9)
 						&:hover
 							&:after
-								width: 100%
+								width: 80%
 
 	@media screen and (min-width: $screenMedium)
 		.container
@@ -296,8 +303,7 @@ footer
 				letter-spacing: 0.3px
 				color: #ffffff
 				border: none
-				transition: background-color .3s ease
-				&:hover, &:focus
+				&:before
 					background-color: #8492af
 	.contacts
 		margin: 2rem auto
