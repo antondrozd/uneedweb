@@ -5,15 +5,6 @@ html, body
 *
 	box-sizing: border-box
 
-@font-face
-	font-family: 'Circe'
-	src: url('/fonts/CirceRegular/Circe-Regular.eot'),
-		url('/fonts/CirceRegular/Circe-Regular.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/CirceRegular/Circe-Regular.woff') format('woff'),
-		url('/fonts/CirceRegular/Circe-Regular.ttf') format('truetype'),
-		url('/fonts/CirceRegular/Circe-Regular.svg#webfont') format('svg')
-	text-rendering: optimizeLegibility
-
 .flex
 	display flex
 	&.flex-row
@@ -32,8 +23,23 @@ a
 		text-decoration: none
 		color: #576076
 
-button, input 
+button, input, textarea
 	outline: none
+
+input, textarea
+	width: 100%
+	border-radius: 4px
+	border: solid 1px #8492af
+	padding: 1rem
+	color: #576076
+	&::-webkit-input-placeholder
+		font-size: 13px
+		font-family: 'Roboto'
+		font-weight: 400
+		line-height: 1.38
+		letter-spacing: 0.3px
+		text-align: left
+		color: rgba(87, 96, 118, 0.5)
 
 button
 	cursor: pointer
@@ -59,8 +65,9 @@ button
 		height: 100%
 		width: 0%
 	&:hover, &:focus
-		color: white
 		border-color: #ff6955
+		a
+			color: white
 		&:before
 			width: 100%
 
@@ -146,8 +153,7 @@ body
 			line-height: 3.75
 			font-weight: 400
 			&:hover
-				a
-					color: #ffffff
+				color: #ffffff
 
 header
 	position: absolute
@@ -166,23 +172,14 @@ header
 			margin-right: .5rem
 			width: 43px
 			height: 48px
-			background: linear-gradient(155deg, #ec523e 0%, #4444b9 80%);
-			-webkit-mask-image: url('/images/svg/alt-logo.svg');
-			mask-image: url('/images/svg/alt-logo.svg');
+			background: linear-gradient(155deg, #ec523e 0%, #4444b9 80%)
+			-webkit-mask-image: url('/images/svg/logo/42x48/logo-42x48.svg')
+			mask-image: url('/images/svg/logo/42x48/logo-42x48.svg')
 		.logo-text-container
-			display: flex
-			flex-direction: column
-			justify-content: center
-			.logo-text
-				margin-bottom: 3px
-			.company-subname
-				font-family: Circe
-				text-transform: uppercase
-				font-size: 6.9px
-				line-height: 1.59
-				letter-spacing: 2.4px
-				text-align: center
-				color: #ffffff
+			width: 75px
+			height: 28px
+			background-image: url('/images/svg/logo/42x48/text-logo-42x48.svg')
+			background-repeat: no-repeat
 	@media screen and (min-width: $screenSmall)
 		width: 100%
 		.container
@@ -192,6 +189,8 @@ header
 			.logo
 				width: 52px
 				height: 59px
+				-webkit-mask-image: url('/images/svg/logo/big/logo-eхp.svg')
+				mask-image: url('/images/svg/logo/big/logo-exp.svg')
 			.logo-text-container
 				display: none
 			.menu-container
@@ -202,9 +201,8 @@ header
 						cursor: pointer
 						position: relative
 						padding: 0 1rem
-						a
-							font-weight: 400
-							color: white
+						font-weight: 400
+						color: white
 						&:after
 							content: ''
 							position: absolute
@@ -229,13 +227,10 @@ header
 				margin-right: 1rem
 			.logo-text-container
 				display: flex !important
-				.logo-text
-					width: 113px
-					height: 26px
-				.company-subname
-					font-size: 10px
-					line-height: 1.59
-					letter-spacing: 3.5px
+				width: 113px
+				height: 41px
+				background-image: url('/images/svg/logo/big/text-logo.svg')
+				background-repeat: no-repeat
 				
 	#toggle-navbar
 		background-color: transparent
@@ -246,6 +241,7 @@ header
 		right: 1rem
 		height: 1.4rem
 		width: 2rem
+		cursor: pointer
 		display: flex
 		flex-direction: column
 		justify-content: space-between

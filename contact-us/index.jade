@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+	include ../parts/head
+	body#contact-us-page
+		include ../parts/header
+		include ../parts/mobile-nav
+
+		.body-wrapper
+			#contact-heading
+				h1.title.dark Contact Us
+				h2.sub-title We appreciate your impact. Need more information? Just let us know!
+
+			#contact-body
+				.contact-form
+					h1.title.dark Send Us a Message
+					form(name="contactForm")
+						.form-container
+							input#user_name(type="text" placeholder="Name" name="user_name" required)
+							input#user_email(type="email" placeholder="Email" name="user_email" required)
+							textarea#user_message(name="user_message" rows="5" placeholder="Message")
+						button(type="submit") Send Email
+
+				.contact-info
+					.details
+						h1.title Business Hours
+						h2.sub-title from 9 am to 8pm EEST
+					.contacts
+						address Kiev, Ukraine, 02140, Bazhana Ave 24/1, Office 118
+						p
+							a(href="tel:380955914765") +38 099 4612335
+						p
+							a(href="mailto:info@uneedweb.com?subject=Contact UNeed Web") info@uneedweb.com
+
+		#contact-footer
+			h1.title.dark Still have a questions?
+			h2.sub-title You can always send us a message, tweet or e-mail. We'd be happy to help you out.
+
+			button(role="button")
+				a(href="/services") Go to our Services
+
+		include ../parts/footer
+		include ../parts/scripts
+		script(type="text/javascript" src="/js/contact-us.js")
+

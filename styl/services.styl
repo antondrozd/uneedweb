@@ -3,6 +3,10 @@
 		width: 100%
 		background: #0e1a35
 		padding-bottom: 1rem
+		@media screen and (min-width: $screenMedium)
+			.menu-container
+				display: flex
+				align-items: center
 	
 	#description
 		padding-top: 7rem
@@ -64,6 +68,10 @@
 				justify-content: center
 				align-items: center
 				text-align: center
+				font-weight: 400
+				text-transform: uppercase
+				font-size: 13px
+				letter-spacing: 0.3px
 		.slide-option
 			display: flex
 			justify-content: space-between
@@ -129,7 +137,7 @@
 				.title-option
 					padding: 1rem
 				.title-header
-					height: 172px
+					height: 161px
 					padding: .5rem 1rem
 					display: flex
 					flex-direction: column

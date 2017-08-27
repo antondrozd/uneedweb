@@ -1,0 +1,126 @@
+#contact-us-page
+	header
+		width: 100%
+		background: #0e1a35
+		padding-bottom: 1rem
+		@media screen and (min-width: $screenMedium)
+			.menu-container
+				display: flex
+				align-items: center
+	
+	.body-wrapper
+		background-image: linear-gradient(to bottom, #f6f7fa, #ffffff)
+
+	#contact-heading
+		padding-top: 7rem
+		padding-bottom: 1rem
+		@media screen and (min-width: $screenMedium)
+			h1.title
+				font-size: 48px
+				font-weight: 100
+				color: #0e1a35
+				margin-bottom: 0
+			h2.sub-title
+				font-size: 18px
+				line-height: 1.33
+				text-align: center
+				margin-bottom: 2rem
+				color: #8492af
+		
+	#contact-body
+		.contact-form
+			max-width: 25rem
+			margin: auto
+			padding: 1rem 1rem 4rem 1rem
+			h1.title
+				display: none
+			form
+				display: flex
+				flex-direction: column
+				justify-content: center
+				input, textarea
+					margin-bottom: 1rem
+				textarea
+					resize: none
+		.contact-info
+			padding: 3rem 1rem
+			background-color: #0e1a35
+			box-shadow: 0 0 14px 0 rgba(14, 26, 53, 0.2)
+			.details
+				h1
+					font-size: 21px;
+					line-height: 1.14;
+					font-weight: 400
+					text-align: center;
+					color: #8492af;
+				h2
+					font-size: 18px;
+					line-height: 1.33;
+					font-weight: 400
+					text-align: center;
+					color: #576076;
+			.contacts
+				width: 10rem
+				margin: auto
+				font-size: 16px
+				line-height: 1.5
+				text-align: left
+				color: #8492af
+				address
+					font-style: normal
+			@media screen and (min-width: $screenSmall)
+				display: flex
+				justify-content: center
+				.contacts
+					margin: 0 0 0 5rem
+				.details
+					h1, h2
+						text-align: left
+		@media screen and (min-width: $screenMedium)
+			display: flex
+			width: 60rem
+			margin: auto
+			background-color: #ffffff
+			box-shadow: 0 0 14px 0 rgba(14, 26, 53, 0.2)
+			margin-bottom: 3rem
+			.contact-form, .contact-info
+				width: 50%
+			.contact-form
+				padding: 2rem 0
+				h1.title
+					display: block
+					font-size: 21px
+					font-weight: 400
+					text-align: left
+					line-height: 1.14
+					color: #0e1a35
+					margin-bottom: 3rem
+			.contact-info
+				padding: 0 3rem
+				flex-direction: column
+				.details
+					margin-bottom: 2rem
+				.contacts
+					margin: 0
+	
+	#contact-footer
+		padding: 3rem 1rem 5rem 1rem
+		border-radius: 4px
+		background-color: #f3f8ff
+		border: solid 1px #e3eaf3
+		display: flex
+		flex-direction: column
+		justify-content: center
+		button
+			width: 15rem
+			margin: auto
+		@media screen and (min-width: $screenMedium)
+			padding: 1rem 0 4rem 0
+			h1.title
+				font-size: 48px
+				text-align: center
+			h2.sub-title
+				width: 30rem
+				text-align: center
+				color: #8492af
+				margin-bottom: 2rem
