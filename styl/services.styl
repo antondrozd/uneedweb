@@ -174,9 +174,11 @@
 		height 20rem
 		position: relative
 		background-image url('/photos/landing.jpg')
-		background-size: cover
+		background-size: 1200px
 		background-position: 50% 25%
 		background-repeat: no-repeat
+		@media screen and (min-width: $screenSmall)
+			background-size: cover
 		
 	#switcher
 		margin: 0 1rem
@@ -193,30 +195,89 @@
 			letter-spacing: 0.3px
 			text-transform: uppercase
 			position: relative
-			&:after
-				content: ''
-				width: 11rem
-				height: 2px
-				background-color: #8492af
-				position: absolute
-				left: 0
-				right: 0
-				bottom: -12px
-				margin: auto
+			display: none
+			&.active
+				display: block
+				&:after
+					content: ''
+					width: 11rem
+					height: 2px
+					background-color: #8492af
+					position: absolute
+					left: 0
+					right: 0
+					bottom: -12px
+					margin: auto
+		@media screen and (min-width: $screenSmall)
+			justify-content: center
+			width: 722px
+			margin: auto
+			h2 
+				margin: 1rem 0
+				cursor: pointer
+				padding-left: 1rem
+				padding-right: 1rem
+				display: block
+				&.active:after
+					width: 100%
+					bottom: -17px
+			#switch-left, #switch-right
+				display: none
 	
 	#description
-		padding-top: 2rem
-		padding-bottom: 4rem
+		padding: 2rem 1rem 4rem 1rem
 		h1
 			font-size: 24px
 			text-align: left
 			color: #0e1a35
 		h2
 			text-align: left
+		@media screen and (min-width: $screenSmall)
+			position: relative
+			.container
+				padding-right: 20rem
+				width: 100%
+				h1
+					font-size: 48px
+					line-height: 1
+					color: #0e1a35
+				h2
+					font-size: 18px
+					line-height: 1.33
+					&:nth-child(3)
+						margin: 2rem 0
+			.service-image
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				height: 90%;
+				width: 22rem;
+				background-repeat: no-repeat;
+				background-size: 730px;
+				background-image: url('/images/png/outstaff.png')
+		@media screen and (min-width: $screenMedium)
+			.container
+				width: 772px
+				margin: auto
+				padding-right: 13rem
+			.service-image
+				width: 30%
+			h2.sub-title
+				width: auto
+		@media screen and (min-width: $screenLarge)
+			.container
+				padding-right: 7rem
 			
 	#workflow
 		padding: 2rem 0
 		background-color: #0e1a35
+		font-size: 14px
+		font-weight: 400
+		letter-spacing: 0.3px
+		color: #8492af
+		&.desktop
+			display: none
 		h1
 			font-size: 18px
 			font-weight: 300
@@ -228,10 +289,6 @@
 			padding: 0 2rem
 			li
 				position: relative
-				font-size: 14px
-				font-weight: 400
-				letter-spacing: 0.3px
-				color: #8492af
 				padding: .5rem 0 .5rem 1.5rem
 				&:before
 					content: ''
@@ -243,23 +300,123 @@
 					width: 1rem
 					height: 1rem
 					border-radius: 50%
-					background-color: red
-			.workflow-item-1:before
+		.color-1
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #e25245
-			.workflow-item-2:before
+			.workflow-item
+				border-color: #e25245
+		.color-2
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #cb5056
-			.workflow-item-3:before
+			.workflow-item
+				border-color: #cb5056
+		.color-3
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #b74e65
-			.workflow-item-4:before
+			.workflow-item
+				border-color: #b74e65
+		.color-4
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #a44c73
-			.workflow-item-5:before
+			.workflow-item
+				border-color: #a44c73
+		.color-5
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #8f4b82
-			.workflow-item-6:before
+			.workflow-item
+				border-color: #8f4b82
+		.color-6
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #794992
-			.workflow-item-7:before
+			.workflow-item
+				border-color: #794992
+		.color-7
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #6b479d
-			.workflow-item-8:before
+			.workflow-item
+				border-color: #6b479d
+		.color-8
+			&:before, .ball, .arrow, .arrow:after
 				background-color: #5b46a8
+			.workflow-item
+				border-color: #5b46a8
+			
+		@media screen and (min-width: $screenSmall)
+			&.mobile
+				display: none
+			&.desktop
+				display: block
+				.workflow-header
+					display: flex
+					justify-content: center
+					margin-top: 2rem
+					margin-bottom: 4rem
+					h1
+						padding: 0 6rem
+				.workflow-row
+					display: flex
+					.workflow-item
+						position: relative
+						width: 50%
+						padding: 1.5rem 1rem
+						margin: 1rem 0
+						.ball
+							position: absolute
+							width: 1rem
+							height: 1rem
+							border-radius: 50%
+							top: -1.5rem
+						.text
+							position: absolute
+							top: -1rem
+							transform: translateY(-50%)
+						.arrow
+							top: -1rem;
+							transform: translateY(-50%);
+							width: 4rem;
+							height: 1px;
+							position: absolute;
+							&:after
+								content: '';
+								position: absolute;
+								width: 5px;
+								height: 5px;
+								border-radius: 50%;
+								top: -2px;
+					&.right
+						justify-content: flex-end
+						.workflow-item
+							border-left-width: 1px
+							border-left-style: solid
+						.text
+							left: 6rem
+							text-align: left
+						.ball
+							left: 0
+							transform: translateX(-50%)
+						.arrow
+							left: 1rem
+							&:after
+								left: 0
+								
+					&.left
+						justify-content: flex-start
+						.workflow-item
+							right: -1px
+							border-right-width: 1px
+							border-right-style: solid
+						.text
+							right: 6rem
+							text-align: right
+						.ball
+							right: 0
+							transform: translateX(50%)
+						.arrow
+							right: 1rem
+							&:after
+								right: 0
+								
+							
 					
 	#result
 		padding: 2rem 0 4rem 0
@@ -270,3 +427,7 @@
 			width: 90%
 			padding-bottom: 1rem
 			margin: auto
+		@media screen and (min-width: $screenSmall)
+			h2
+				padding-bottom: 2rem
+				width: 35rem
