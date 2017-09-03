@@ -25,6 +25,10 @@ a {
   text-decoration: none;
   color: #576076;
 }
+a button:hover,
+a button:focus {
+  color: #fff;
+}
 a:visited {
   text-decoration: none;
   color: #576076;
@@ -194,6 +198,10 @@ body.navbar-expanded #toggle-navbar .icon-bar:nth-child(3) {
 }
 header {
   position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: #0e1a35;
+  padding-bottom: 1rem;
 }
 header nav {
   display: flex;
@@ -244,7 +252,7 @@ header nav .logo-text-container {
     display: none;
   }
   header nav .menu-container {
-    display: block;
+    display: flex;
   }
   header nav .menu-container .menu-list {
     display: flex;
@@ -273,6 +281,10 @@ header nav .logo-text-container {
   }
 }
 @media screen and (min-width: 992px) {
+  header .menu-container {
+    display: flex;
+    align-items: center;
+  }
   header .container {
     padding: 1rem 2rem;
   }
@@ -290,7 +302,7 @@ header nav .logo-text-container {
     background-repeat: no-repeat;
   }
 }
-header #toggle-navbar {
+#toggle-navbar {
   background-color: transparent;
   border: none;
   position: fixed;
@@ -304,7 +316,7 @@ header #toggle-navbar {
   flex-direction: column;
   justify-content: space-between;
 }
-header #toggle-navbar .icon-bar {
+#toggle-navbar .icon-bar {
   height: 4px;
   width: 100%;
   border-radius: 2px;
@@ -312,7 +324,7 @@ header #toggle-navbar .icon-bar {
   transition: transform 0.3s ease;
 }
 @media screen and (min-width: 768px) {
-  header #toggle-navbar {
+  #toggle-navbar {
     display: none;
   }
 }
@@ -429,17 +441,6 @@ footer .copyright.desktop {
   }
   footer .container .copyright.mobile {
     display: none;
-  }
-}
-#services-page header {
-  width: 100%;
-  background: #0e1a35;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 992px) {
-  #services-page header .menu-container {
-    display: flex;
-    align-items: center;
   }
 }
 #services-page #description {
@@ -658,6 +659,130 @@ footer .copyright.desktop {
     display: none;
   }
 }
+#service-page header {
+  background: transparent;
+}
+#service-page #landing {
+  padding-top: 3rem;
+  height: 20rem;
+  position: relative;
+  background-image: url("/photos/landing.jpg");
+  background-size: cover;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+}
+#service-page #switcher {
+  margin: 0 1rem;
+  border-bottom: 1px solid #e4e4f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#service-page #switcher #switch-left,
+#service-page #switcher #switch-right {
+  height: 2rem;
+  width: 2rem;
+  background: #000;
+}
+#service-page #switcher h2 {
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  position: relative;
+}
+#service-page #switcher h2:after {
+  content: '';
+  width: 11rem;
+  height: 2px;
+  background-color: #8492af;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  margin: auto;
+}
+#service-page #description {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+#service-page #description h1 {
+  font-size: 24px;
+  text-align: left;
+  color: #0e1a35;
+}
+#service-page #description h2 {
+  text-align: left;
+}
+#service-page #workflow {
+  padding: 2rem 0;
+  background-color: #0e1a35;
+}
+#service-page #workflow h1 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #fefefe;
+}
+#service-page #workflow ul {
+  list-style-type: none;
+  padding: 0 2rem;
+}
+#service-page #workflow ul li {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: #8492af;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+}
+#service-page #workflow ul li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.5rem;
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #f00;
+}
+#service-page #workflow ul .workflow-item-1:before {
+  background-color: #e25245;
+}
+#service-page #workflow ul .workflow-item-2:before {
+  background-color: #cb5056;
+}
+#service-page #workflow ul .workflow-item-3:before {
+  background-color: #b74e65;
+}
+#service-page #workflow ul .workflow-item-4:before {
+  background-color: #a44c73;
+}
+#service-page #workflow ul .workflow-item-5:before {
+  background-color: #8f4b82;
+}
+#service-page #workflow ul .workflow-item-6:before {
+  background-color: #794992;
+}
+#service-page #workflow ul .workflow-item-7:before {
+  background-color: #6b479d;
+}
+#service-page #workflow ul .workflow-item-8:before {
+  background-color: #5b46a8;
+}
+#service-page #result {
+  padding: 2rem 0 4rem 0;
+  background-color: #f3f8ff;
+  border: solid 1px #e3eaf3;
+  text-align: center;
+}
+#service-page #result h2 {
+  width: 90%;
+  padding-bottom: 1rem;
+  margin: auto;
+}
 #contact-us-page header {
   width: 100%;
   background: #0e1a35;
@@ -818,102 +943,135 @@ footer .copyright.desktop {
     margin-bottom: 2rem;
   }
 }
-#landing {
+#about-page header {
+  background: transparent;
+}
+#about-page #landing {
   padding-top: 3rem;
   height: 100%;
+  position: relative;
   background-image: url("/photos/landing.jpg");
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
 }
+#about-page #landing .scroll-down {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+#about-page #landing .scroll-down:before,
+#about-page #landing .scroll-down:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  width: 1.3rem;
+  height: 2px;
+  background-color: #667891;
+  position: absolute;
+}
+#about-page #landing .scroll-down:before {
+  transform: rotate(45deg) translateX(-45%);
+}
+#about-page #landing .scroll-down:after {
+  transform: rotate(-45deg) translateX(45%);
+}
 @media screen and (min-width: 992px) {
-  #landing {
+  #about-page #landing {
     padding-top: 0;
   }
 }
-#info {
+#about-page #info {
   padding: 4rem 0;
 }
-#info .main-title {
+#about-page #info .main-title {
   width: 11rem;
   margin: 1rem auto;
 }
-#services {
+#about-page #services {
   flex-direction: column;
 }
-#services .container {
+#about-page #services .container {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f3f8ff;
   border: solid 1px #e3eaf3;
 }
-#services .service-description {
+#about-page #services .service-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#services .service-image {
+#about-page #services .service-image {
   margin: 0 auto;
 }
-#services .service-title {
+#about-page #services .service-title {
   font-size: 18px;
   font-weight: bold;
   margin: 1rem 0 0 0;
   letter-spacing: 0.4px;
 }
-#services .service-subtitle {
+#about-page #services .service-subtitle {
   font-size: 13px;
   line-height: 1.38;
   letter-spacing: 0.3px;
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  #services .container {
+  #about-page #services .container {
     width: 100%;
     flex-direction: row;
     justify-content: center;
   }
-  #services .service-description {
+  #about-page #services .service-description {
     width: 23rem;
   }
-  #services .service-description h1,
-  #services .service-description h2 {
+  #about-page #services .service-description h1,
+  #about-page #services .service-description h2 {
     text-align: left;
   }
-  #services .service-description button {
+  #about-page #services .service-description button {
     width: 13rem;
   }
-  #services .service-image {
+  #about-page #services .service-image {
     margin: 0 3rem 0 0;
   }
 }
 @media screen and (min-width: 992px) {
-  #services {
+  #about-page #services {
     flex-direction: row;
     justify-content: center;
   }
-  #services .container.service {
+  #about-page #services .container.service {
     width: 19rem;
     margin: 0 2rem;
     flex-direction: column;
   }
-  #services .container.service .service-description {
+  #about-page #services .container.service .service-description {
     align-items: center;
     width: 100%;
   }
-  #services .container.service .service-description h1.title {
+  #about-page #services .container.service .service-description h1.title {
     text-align: center;
     margin-bottom: 0.5rem;
   }
-  #services .container.service .service-description h2.sub-title {
+  #about-page #services .container.service .service-description h2.sub-title {
     width: auto;
     text-align: center;
   }
-  #services .container.service .service-image {
+  #about-page #services .container.service .service-image {
     margin: auto;
   }
 }
-#about-services {
+#about-page #about-services {
   padding: 2rem 1rem 4rem 1rem;
   font-size: 16px;
   font-weight: 300;
@@ -922,7 +1080,7 @@ footer .copyright.desktop {
   color: #8492af;
 }
 @media screen and (min-width: 768px) {
-  #about-services {
+  #about-page #about-services {
     width: 35rem;
     margin: auto;
     font-size: 18px;
@@ -930,65 +1088,65 @@ footer .copyright.desktop {
   }
 }
 @media screen and (min-width: 992px) {
-  #about-services {
+  #about-page #about-services {
     margin-top: 2rem;
   }
 }
-#guarantee {
+#about-page #guarantee {
   padding: 2rem 0;
   background-color: #0e1a35;
 }
-#guarantee .sub-title {
+#about-page #guarantee .sub-title {
   color: #576076;
 }
-#guarantee .features-container {
+#about-page #guarantee .features-container {
   margin: 4rem 0;
 }
-#guarantee .features-container .feature {
+#about-page #guarantee .features-container .feature {
   padding: 0 1rem;
   margin: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-#guarantee .features-container .feature img {
+#about-page #guarantee .features-container .feature img {
   min-width: 68px;
   min-height: 76px;
   margin-right: 1rem;
 }
-#guarantee .features-container .feature span {
+#about-page #guarantee .features-container .feature span {
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.3px;
   color: #fefefe;
 }
 @media screen and (min-width: 768px) {
-  #guarantee .title {
+  #about-page #guarantee .title {
     font-size: 48px;
     font-weight: 100;
     line-height: 1;
   }
-  #guarantee .sub-title {
+  #about-page #guarantee .sub-title {
     font-size: 18px;
     font-weight: 300;
   }
-  #guarantee .features-container {
+  #about-page #guarantee .features-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  #guarantee .features-container .feature {
+  #about-page #guarantee .features-container .feature {
     width: 50%;
   }
 }
 @media screen and (min-width: 992px) {
-  #guarantee .features-container {
+  #about-page #guarantee .features-container {
     justify-content: center;
   }
-  #guarantee .features-container .feature {
+  #about-page #guarantee .features-container .feature {
     width: 24rem;
   }
 }
-#portfolio {
+#about-page #portfolio {
   padding: 4rem 0;
 }

@@ -1,0 +1,29 @@
+{
+  "name": "www.uneedweb.com",
+  "description": "UNeed Web website",
+  "main": "js/index.js",
+  "authors": [
+    "Kirill Buga"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "uneed",
+    "website",
+    "software",
+    "development",
+    "outsourcing",
+    "outstaffing"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "swipeshow": "^0.10.9"
+  }
+}

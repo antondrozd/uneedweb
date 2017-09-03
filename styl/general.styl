@@ -19,6 +19,9 @@ html, body
 a
 	text-decoration: none
 	color: #576076
+	button
+		&:hover, &:focus
+			color: white
 	&:visited
 		text-decoration: none
 		color: #576076
@@ -157,6 +160,10 @@ body
 
 header
 	position: absolute
+	width: 100%
+	z-index: 1
+	background: #0e1a35
+	padding-bottom: 1rem
 	nav
 		display: flex
 		align-items: center
@@ -194,7 +201,7 @@ header
 			.logo-text-container
 				display: none
 			.menu-container
-				display: block
+				display: flex
 				.menu-list
 					display: flex
 					.menu-item
@@ -219,6 +226,9 @@ header
 								width: 80%
 
 	@media screen and (min-width: $screenMedium)
+		.menu-container
+			display: flex
+			align-items: center
 		.container
 			padding: 1rem 2rem
 		nav
@@ -232,7 +242,7 @@ header
 				background-image: url('/images/svg/logo/big/text-logo.svg')
 				background-repeat: no-repeat
 				
-	#toggle-navbar
+#toggle-navbar
 		background-color: transparent
 		border: none
 		position: fixed

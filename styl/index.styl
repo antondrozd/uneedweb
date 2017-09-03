@@ -3,133 +3,164 @@
 @import 'services'
 @import 'contact-us'
 
-#landing
-	padding-top: 3rem
-	height 100%
-	background-image url('/photos/landing.jpg')
-	background-size: cover
-	background-position: 50%
-	background-repeat: no-repeat
-	@media screen and (min-width: $screenMedium)
-		padding-top: 0
-	
-#info
-	padding: 4rem 0
-	.main-title
-		width 11rem
-		margin 1rem auto
-		
-#services
-	flex-direction: column
-	.container
+#about-page
+
+	header
+		background: transparent
+
+	#landing
 		padding-top: 3rem
-		padding-bottom: 3rem
-		background-color: #f3f8ff
-		border: solid 1px #e3eaf3
-	.service-description
-		display: flex
-		flex-direction: column
-		justify-content: center
-	.service-image
-		margin: 0 auto
-	.service-title
-		font-size: 18px
-		font-weight: bold
-		margin: 1rem 0 0 0
-		letter-spacing: 0.4px
-	.service-subtitle
-		font-size: 13px
-		line-height: 1.38
-		letter-spacing: 0.3px
-		margin-bottom: 1.5rem
-	@media screen and (min-width: $screenSmall)
-		.container
-			width: 100%
-			flex-direction: row
-			justify-content: center
-		.service-description
-			width: 23rem
-			h1, h2
-				text-align: left
-			button
-				width: 13rem
-		.service-image
-			margin: 0 3rem 0 0
-	@media screen and (min-width: $screenMedium)
-		flex-direction: row
-		justify-content: center
-		.container.service
-			width: 19rem
-			margin: 0 2rem
-			flex-direction: column
-			.service-description
-				align-items: center
-				width: 100%
-				h1.title
-					text-align: center
-					margin-bottom: 0.5rem
-				h2.sub-title
-					width: auto
-					text-align: center
-			.service-image
+		height 100%
+		position: relative
+		background-image url('/photos/landing.jpg')
+		background-size: cover
+		background-position: 50%
+		background-repeat: no-repeat
+		.scroll-down
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+			margin: auto
+			width: 5rem
+			height: 5rem
+			cursor: pointer
+			&:before, &:after
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
 				margin: auto
+				content: ''
+				width: 1.3rem
+				height: 2px
+				background-color: #667891;
+				position: absolute
+			&:before
+				transform: rotate(45deg) translateX(-45%)
+			&:after
+				transform: rotate(-45deg) translateX(45%)
+				
+		@media screen and (min-width: $screenMedium)
+			padding-top: 0
 		
-#about-services
-	padding: 2rem 1rem 4rem 1rem
-	font-size: 16px
-	font-weight: 300
-	line-height: 1.5
-	text-align: center
-	color: #8492af
-	@media screen and (min-width: $screenSmall)
-		width: 35rem
-		margin: auto
-		font-size: 18px
-		line-height: 1.33
-	@media screen and (min-width: $screenMedium)
-		margin-top: 2rem
-
-#guarantee
-	padding: 2rem 0
-	background-color: #0e1a35
-	.sub-title
-		color: #576076
-	.features-container
-		margin: 4rem 0
-		.feature
-			padding: 0 1rem
-			margin: 1rem 0
+	#info
+		padding: 4rem 0
+		.main-title
+			width 11rem
+			margin 1rem auto
+			
+	#services
+		flex-direction: column
+		.container
+			padding-top: 3rem
+			padding-bottom: 3rem
+			background-color: #f3f8ff
+			border: solid 1px #e3eaf3
+		.service-description
 			display: flex
-			align-items: center
-			justify-content: flex-start
-			img
-				min-width: 68px
-				min-height: 76px
-				margin-right: 1rem
-			span
-				font-size: 16px
-				font-weight: 300
-				letter-spacing: 0.3px
-				color: #fefefe
-	@media screen and (min-width: $screenSmall)
-		.title
-			font-size: 48px
-			font-weight: 100
-			line-height: 1
-		.sub-title
-			font-size: 18px
-			font-weight: 300
-		.features-container
-			display: flex
-			flex-direction: row
-			flex-wrap: wrap
-			.feature
-				width: 50%
-	@media screen and (min-width: $screenMedium)
-		.features-container
+			flex-direction: column
 			justify-content: center
-			.feature
-				width: 24rem
+		.service-image
+			margin: 0 auto
+		.service-title
+			font-size: 18px
+			font-weight: bold
+			margin: 1rem 0 0 0
+			letter-spacing: 0.4px
+		.service-subtitle
+			font-size: 13px
+			line-height: 1.38
+			letter-spacing: 0.3px
+			margin-bottom: 1.5rem
+		@media screen and (min-width: $screenSmall)
+			.container
+				width: 100%
+				flex-direction: row
+				justify-content: center
+			.service-description
+				width: 23rem
+				h1, h2
+					text-align: left
+				button
+					width: 13rem
+			.service-image
+				margin: 0 3rem 0 0
+		@media screen and (min-width: $screenMedium)
+			flex-direction: row
+			justify-content: center
+			.container.service
+				width: 19rem
+				margin: 0 2rem
+				flex-direction: column
+				.service-description
+					align-items: center
+					width: 100%
+					h1.title
+						text-align: center
+						margin-bottom: 0.5rem
+					h2.sub-title
+						width: auto
+						text-align: center
+				.service-image
+					margin: auto
+			
+	#about-services
+		padding: 2rem 1rem 4rem 1rem
+		font-size: 16px
+		font-weight: 300
+		line-height: 1.5
+		text-align: center
+		color: #8492af
+		@media screen and (min-width: $screenSmall)
+			width: 35rem
+			margin: auto
+			font-size: 18px
+			line-height: 1.33
+		@media screen and (min-width: $screenMedium)
+			margin-top: 2rem
 
-#portfolio
-	padding: 4rem 0
+	#guarantee
+		padding: 2rem 0
+		background-color: #0e1a35
+		.sub-title
+			color: #576076
+		.features-container
+			margin: 4rem 0
+			.feature
+				padding: 0 1rem
+				margin: 1rem 0
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				img
+					min-width: 68px
+					min-height: 76px
+					margin-right: 1rem
+				span
+					font-size: 16px
+					font-weight: 300
+					letter-spacing: 0.3px
+					color: #fefefe
+		@media screen and (min-width: $screenSmall)
+			.title
+				font-size: 48px
+				font-weight: 100
+				line-height: 1
+			.sub-title
+				font-size: 18px
+				font-weight: 300
+			.features-container
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				.feature
+					width: 50%
+		@media screen and (min-width: $screenMedium)
+			.features-container
+				justify-content: center
+				.feature
+					width: 24rem
+
+	#portfolio
+		padding: 4rem 0

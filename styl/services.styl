@@ -1,13 +1,4 @@
 #services-page
-	header
-		width: 100%
-		background: #0e1a35
-		padding-bottom: 1rem
-		@media screen and (min-width: $screenMedium)
-			.menu-container
-				display: flex
-				align-items: center
-	
 	#description
 		padding-top: 7rem
 		padding-bottom: 1rem
@@ -173,3 +164,109 @@
 					border-right: 1px solid #e3eaf3
 			.slide-left, .slide-right
 				display: none
+
+#service-page
+	header
+		background: transparent
+
+	#landing
+		padding-top: 3rem
+		height 20rem
+		position: relative
+		background-image url('/photos/landing.jpg')
+		background-size: cover
+		background-position: 50% 25%
+		background-repeat: no-repeat
+		
+	#switcher
+		margin: 0 1rem
+		border-bottom: 1px solid #e4e4f1
+		display: flex
+		justify-content: space-between
+		align-items: center
+		#switch-left, #switch-right
+			height: 2rem
+			width: 2rem
+			background: black
+		h2
+			font-size: 13px
+			letter-spacing: 0.3px
+			text-transform: uppercase
+			position: relative
+			&:after
+				content: ''
+				width: 11rem
+				height: 2px
+				background-color: #8492af
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -12px
+				margin: auto
+	
+	#description
+		padding-top: 2rem
+		padding-bottom: 4rem
+		h1
+			font-size: 24px
+			text-align: left
+			color: #0e1a35
+		h2
+			text-align: left
+			
+	#workflow
+		padding: 2rem 0
+		background-color: #0e1a35
+		h1
+			font-size: 18px
+			font-weight: 300
+			letter-spacing: 0.4px
+			text-align: left
+			color: #fefefe
+		ul
+			list-style-type: none
+			padding: 0 2rem
+			li
+				position: relative
+				font-size: 14px
+				font-weight: 400
+				letter-spacing: 0.3px
+				color: #8492af
+				padding: .5rem 0 .5rem 1.5rem
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					left: -0.5rem
+					margin: auto
+					width: 1rem
+					height: 1rem
+					border-radius: 50%
+					background-color: red
+			.workflow-item-1:before
+				background-color: #e25245
+			.workflow-item-2:before
+				background-color: #cb5056
+			.workflow-item-3:before
+				background-color: #b74e65
+			.workflow-item-4:before
+				background-color: #a44c73
+			.workflow-item-5:before
+				background-color: #8f4b82
+			.workflow-item-6:before
+				background-color: #794992
+			.workflow-item-7:before
+				background-color: #6b479d
+			.workflow-item-8:before
+				background-color: #5b46a8
+					
+	#result
+		padding: 2rem 0 4rem 0
+		background-color: #f3f8ff
+		border: solid 1px #e3eaf3
+		text-align: center
+		h2
+			width: 90%
+			padding-bottom: 1rem
+			margin: auto
