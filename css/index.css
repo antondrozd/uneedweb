@@ -690,16 +690,20 @@ footer .copyright.desktop {
   background: #000;
 }
 #service-page #switcher h2 {
+  width: auto;
   font-size: 13px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
   position: relative;
+  font-weight: 400;
+}
+#service-page #switcher a {
   display: none;
 }
-#service-page #switcher h2.active {
+#service-page #switcher a.active {
   display: block;
 }
-#service-page #switcher h2.active:after {
+#service-page #switcher a.active h2:after {
   content: '';
   width: 11rem;
   height: 2px;
@@ -716,14 +720,16 @@ footer .copyright.desktop {
     width: 722px;
     margin: auto;
   }
-  #service-page #switcher h2 {
+  #service-page #switcher a {
+    display: block;
+  }
+  #service-page #switcher a h2 {
     margin: 1rem 0;
     cursor: pointer;
     padding-left: 1rem;
     padding-right: 1rem;
-    display: block;
   }
-  #service-page #switcher h2.active:after {
+  #service-page #switcher a.active h2:after {
     width: 100%;
     bottom: -17px;
   }
@@ -760,7 +766,7 @@ footer .copyright.desktop {
     font-size: 18px;
     line-height: 1.33;
   }
-  #service-page #description .container h2:nth-child(3) {
+  #service-page #description .container h2.result {
     margin: 2rem 0;
   }
   #service-page #description .service-image {
@@ -908,6 +914,9 @@ footer .copyright.desktop {
   }
   #service-page #workflow.desktop {
     display: block;
+  }
+  #service-page #workflow.desktop .container {
+    max-width: 900px;
   }
   #service-page #workflow.desktop .workflow-header {
     display: flex;

@@ -191,36 +191,42 @@
 			width: 2rem
 			background: black
 		h2
+			width: auto
 			font-size: 13px
 			letter-spacing: 0.3px
 			text-transform: uppercase
 			position: relative
+			font-weight: 400
+		a
 			display: none
 			&.active
 				display: block
-				&:after
-					content: ''
-					width: 11rem
-					height: 2px
-					background-color: #8492af
-					position: absolute
-					left: 0
-					right: 0
-					bottom: -12px
-					margin: auto
+				h2
+					&:after
+						content: ''
+						width: 11rem
+						height: 2px
+						background-color: #8492af
+						position: absolute
+						left: 0
+						right: 0
+						bottom: -12px
+						margin: auto
 		@media screen and (min-width: $screenSmall)
 			justify-content: center
 			width: 722px
 			margin: auto
-			h2 
-				margin: 1rem 0
-				cursor: pointer
-				padding-left: 1rem
-				padding-right: 1rem
+			a
 				display: block
-				&.active:after
-					width: 100%
-					bottom: -17px
+				h2
+					margin: 1rem 0
+					cursor: pointer
+					padding-left: 1rem
+					padding-right: 1rem
+				&.active
+					h2:after
+						width: 100%
+						bottom: -17px
 			#switch-left, #switch-right
 				display: none
 	
@@ -244,7 +250,7 @@
 				h2
 					font-size: 18px
 					line-height: 1.33
-					&:nth-child(3)
+					&.result
 						margin: 2rem 0
 			.service-image
 				position: absolute;
@@ -346,6 +352,8 @@
 				display: none
 			&.desktop
 				display: block
+				.container
+					max-width: 900px
 				.workflow-header
 					display: flex
 					justify-content: center
