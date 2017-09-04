@@ -778,7 +778,15 @@ footer .copyright.desktop {
     width: 22rem;
     background-repeat: no-repeat;
     background-size: 730px;
+  }
+  #service-page #description .service-image.outsource {
+    background-image: url("/images/png/outsource.png");
+  }
+  #service-page #description .service-image.outstaff {
     background-image: url("/images/png/outstaff.png");
+  }
+  #service-page #description .service-image.relocation {
+    background-image: url("/images/png/relocation.png");
   }
 }
 @media screen and (min-width: 992px) {

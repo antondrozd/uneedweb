@@ -261,7 +261,12 @@
 				width: 22rem;
 				background-repeat: no-repeat;
 				background-size: 730px;
-				background-image: url('/images/png/outstaff.png')
+				&.outsource
+					background-image: url('/images/png/outsource.png')
+				&.outstaff
+					background-image: url('/images/png/outstaff.png')
+				&.relocation
+					background-image: url('/images/png/relocation.png')
 		@media screen and (min-width: $screenMedium)
 			.container
 				width: 772px
@@ -423,8 +428,6 @@
 							right: 1rem
 							&:after
 								right: 0
-								
-							
 					
 	#result
 		padding: 2rem 0 4rem 0
