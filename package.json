@@ -4,7 +4,15 @@
   "description": "UNeed Web website",
   "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "autoprefixer": "npx postcss ./build/css/index.css --use autoprefixer -d build/css/",
+    "cleancss": "cleancss -o ./build/css/index.css ./build/css/index.css",
+    "stylus": "stylus styl/index.styl -o ./build/css/index.css",
+    "jade": "jade -H -o ./build ./",
+    "folders": "mkdir -p build/css build/bower_components/jquery/dist build/bower_components/swipeshow",
+    "copy": "cp -r images photos js build/ && cp ./bower_components/jquery/dist/jquery.min.js ./build/bower_components/jquery/dist/ && cp ./bower_components/swipeshow/jquery.swipeshow.min.js ./build/bower_components/swipeshow/",
+    "clean": "rm -fr ./build/",
+    "build": "npm run clean && npm run folders && npm run jade && npm run stylus && npm run autoprefixer && npm run cleancss && npm run copy"
   },
   "keywords": [
     "uneed",
@@ -17,8 +25,11 @@
   "author": "Kirill Buga",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "clean-css": "^4.1.8",
     "jade": "^1.11.0",
     "jade-watch": "^0.1.1",
+    "postcss-cli": "^4.1.1",
     "stylus": "^0.54.5"
   }
 }
