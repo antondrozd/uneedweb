@@ -196,6 +196,21 @@ body.navbar-expanded #toggle-navbar .icon-bar:nth-child(3) {
 .mobile-nav .menu-list .menu-item:hover {
   color: #fff;
 }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tags .tag {
+  font-size: 13px;
+  color: #8092ba;
+  font-weight: 400;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  background-color: #f3f8ff;
+  border: solid 1px #e3eaf3;
+}
 header {
   position: absolute;
   width: 100%;
@@ -300,6 +315,68 @@ header nav .logo-text-container {
     height: 41px;
     background-image: url("/images/svg/logo/big/text-logo.svg");
     background-repeat: no-repeat;
+  }
+}
+#switcher {
+  margin: 0 1rem;
+  border-bottom: 1px solid #e4e4f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#switcher #switch-left,
+#switcher #switch-right {
+  height: 2rem;
+  width: 2rem;
+  background: #000;
+}
+#switcher h2 {
+  width: auto;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+}
+#switcher a {
+  display: none;
+}
+#switcher a.active {
+  display: block;
+}
+#switcher a.active h2:after {
+  content: '';
+  width: 11rem;
+  height: 2px;
+  background-color: #8492af;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  #switcher {
+    justify-content: center;
+    width: 722px;
+    margin: auto;
+  }
+  #switcher a {
+    display: block;
+  }
+  #switcher a h2 {
+    margin: 1rem 0;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #switcher a.active h2:after {
+    width: 100%;
+    bottom: -17px;
+  }
+  #switcher #switch-left,
+  #switcher #switch-right {
+    display: none;
   }
 }
 #toggle-navbar {
@@ -674,68 +751,6 @@ footer .copyright.desktop {
 @media screen and (min-width: 768px) {
   #service-page #landing {
     background-size: cover;
-  }
-}
-#service-page #switcher {
-  margin: 0 1rem;
-  border-bottom: 1px solid #e4e4f1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#service-page #switcher #switch-left,
-#service-page #switcher #switch-right {
-  height: 2rem;
-  width: 2rem;
-  background: #000;
-}
-#service-page #switcher h2 {
-  width: auto;
-  font-size: 13px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  position: relative;
-  font-weight: 400;
-}
-#service-page #switcher a {
-  display: none;
-}
-#service-page #switcher a.active {
-  display: block;
-}
-#service-page #switcher a.active h2:after {
-  content: '';
-  width: 11rem;
-  height: 2px;
-  background-color: #8492af;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -12px;
-  margin: auto;
-}
-@media screen and (min-width: 768px) {
-  #service-page #switcher {
-    justify-content: center;
-    width: 722px;
-    margin: auto;
-  }
-  #service-page #switcher a {
-    display: block;
-  }
-  #service-page #switcher a h2 {
-    margin: 1rem 0;
-    cursor: pointer;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  #service-page #switcher a.active h2:after {
-    width: 100%;
-    bottom: -17px;
-  }
-  #service-page #switcher #switch-left,
-  #service-page #switcher #switch-right {
-    display: none;
   }
 }
 #service-page #description {
@@ -1191,6 +1206,235 @@ footer .copyright.desktop {
     color: #8492af;
     margin-bottom: 2rem;
   }
+}
+#portfolio-page #description {
+  padding-top: 7rem;
+}
+#portfolio-page #switcher {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+#portfolio-page #projects .container {
+  padding: 0;
+  width: 100%;
+}
+#portfolio-page #projects .project {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  border-bottom: 1px solid #fff;
+  background-image: url("/photos/travel/travel-portfolio-grid.png");
+}
+#portfolio-page #projects .project.travel {
+  background-image: url("/photos/travel/travel-portfolio-grid.png");
+}
+#portfolio-page #projects .project.sport {
+  background-image: url("/photos/sport/sport-portfolio-grid.png");
+}
+#portfolio-page #projects .project.yow {
+  background-image: url("/photos/YOW/YOW-portfolio-grid.png");
+}
+#portfolio-page #projects .project .overlay,
+#portfolio-page #projects .project .project-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#portfolio-page #projects .project .project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#portfolio-page #projects .project .project-footer {
+  display: flex;
+  flex-direction: column;
+}
+#portfolio-page #projects .project .overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: #102640;
+}
+#portfolio-page #projects .project .name {
+  font-size: 18px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+}
+#portfolio-page #projects .project .description {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  padding: 0 2rem 3rem 2rem;
+  text-align: center;
+  color: rgba(248,249,251,0.5);
+}
+#portfolio-page #projects .project a {
+  text-align: center;
+}
+#portfolio-page #projects .project a .details-button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  bottom: 2rem;
+  width: 10rem;
+  margin: auto;
+  border: solid 2px #8492af;
+}
+#portfolio-page #projects .project:hover .overlay,
+#portfolio-page #projects .project:focus .overlay {
+  opacity: 0.5;
+}
+#portfolio-page #projects .project:hover .description,
+#portfolio-page #projects .project:focus .description,
+#portfolio-page #projects .project:hover .details-button,
+#portfolio-page #projects .project:focus .details-button {
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  #portfolio-page #projects {
+    margin-top: 1rem;
+  }
+  #portfolio-page #projects .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #portfolio-page #projects .project {
+    width: 50%;
+    border-right: 1px solid #fff;
+  }
+}
+@media screen and (min-width: 992px) {
+  #portfolio-page #projects .project {
+    width: 33.33%;
+  }
+}
+#portfolio-page h2.type,
+#portfolio-project-page h2.type {
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  color: #fff;
+  opacity: 0.5;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+#portfolio-project-page header {
+  background: transparent;
+}
+#portfolio-project-page #landing {
+  padding-top: 3rem;
+  height: 20rem;
+  position: relative;
+  background-image: url("/photos/landing.jpg");
+  background-size: 1200px;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  #portfolio-project-page #landing {
+    background-size: cover;
+  }
+}
+#portfolio-project-page #description {
+  padding: 2rem 0;
+}
+#portfolio-project-page #description .type {
+  color: #8492af;
+}
+#portfolio-project-page #description h1.title {
+  margin-top: 0;
+}
+#portfolio-project-page #description .tags {
+  margin: 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  #portfolio-project-page #description .tags {
+    margin: 2rem auto;
+    width: 40rem;
+  }
+}
+#portfolio-project-page #approaches {
+  padding: 4rem 0;
+  background-size: cover;
+  background-image: url("/photos/travel/travel-image-1.png");
+}
+#portfolio-project-page #approaches h2.sub-title {
+  font-weight: 300;
+  color: #f3f8ff;
+}
+#portfolio-project-page #approaches.travel {
+  background-image: url("/photos/travel/travel-image-1.png");
+}
+#portfolio-project-page #gallery .container {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 3rem;
+}
+#portfolio-project-page #gallery .container .gallery-container {
+  height: 18rem;
+  width: 100%;
+}
+#portfolio-project-page #gallery .container .gallery-container .slides {
+  height: 13rem;
+}
+#portfolio-project-page #gallery .container .gallery-container.travel .slide {
+  background-size: cover;
+}
+#portfolio-project-page #gallery .container .gallery-container.travel .slide:nth-child(1) {
+  background-image: url("/photos/travel/travel-gallery-1.png");
+}
+#portfolio-project-page #gallery .container .gallery-container.travel .slide:nth-child(2) {
+  background-image: url("/photos/travel/travel-gallery-2.png");
+}
+#portfolio-project-page #gallery .container .gallery-container .dots {
+  height: 4rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#portfolio-project-page #gallery .container .gallery-container .dots .dot-item {
+  border: none;
+  width: 10px;
+  height: 10px;
+  margin: 0 0.5rem;
+  background-color: #f3f8ff;
+  border: solid 1px #e3eaf3;
+  border-radius: 50%;
+  padding: 0;
+}
+#portfolio-project-page #gallery .container .gallery-container .dots .dot-item.active {
+  background-color: #8492af;
+}
+#portfolio-project-page #gallery .container .gallery-container .dots .dot-item:before {
+  content: none;
+}
+@media screen and (min-width: 768px) {
+  #portfolio-project-page #gallery .container .gallery-container {
+    height: 29rem;
+  }
+  #portfolio-project-page #gallery .container .gallery-container .slides {
+    height: 25rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  #portfolio-project-page #gallery .container .gallery-container {
+    margin: auto;
+    max-width: 700px;
+  }
+}
+#portfolio-project-page #back {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  text-align: center;
 }
 #about-page header {
   background: transparent;

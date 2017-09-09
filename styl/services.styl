@@ -179,57 +179,7 @@
 		background-repeat: no-repeat
 		@media screen and (min-width: $screenSmall)
 			background-size: cover
-		
-	#switcher
-		margin: 0 1rem
-		border-bottom: 1px solid #e4e4f1
-		display: flex
-		justify-content: space-between
-		align-items: center
-		#switch-left, #switch-right
-			height: 2rem
-			width: 2rem
-			background: black
-		h2
-			width: auto
-			font-size: 13px
-			letter-spacing: 0.3px
-			text-transform: uppercase
-			position: relative
-			font-weight: 400
-		a
-			display: none
-			&.active
-				display: block
-				h2
-					&:after
-						content: ''
-						width: 11rem
-						height: 2px
-						background-color: #8492af
-						position: absolute
-						left: 0
-						right: 0
-						bottom: -12px
-						margin: auto
-		@media screen and (min-width: $screenSmall)
-			justify-content: center
-			width: 722px
-			margin: auto
-			a
-				display: block
-				h2
-					margin: 1rem 0
-					cursor: pointer
-					padding-left: 1rem
-					padding-right: 1rem
-				&.active
-					h2:after
-						width: 100%
-						bottom: -17px
-			#switch-left, #switch-right
-				display: none
-	
+
 	#description
 		padding: 2rem 1rem 4rem 1rem
 		h1

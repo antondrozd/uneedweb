@@ -1,0 +1,56 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	body#portfolio-project-page
+		include ../../parts/header
+		include ../../parts/mobile-nav
+
+		section#landing
+
+		section#description
+			#switch-left
+			#switch-right
+			.container
+				h2.type Web Development
+				h1.title.dark Custom Solution
+				h2.sub-title Travel system which introduces the new level of the travel experience. It gives a possibility to plan your trip, book the flight and hotel tickets, assists the customer during the vacation. Also it includes the innovative way to manage the user purchases and preferences, provides the new way of data input - NLP (Natural Language Processing). 
+
+		section#approaches.travel
+			.container
+				h2.sub-title Project bootstrapping, defining the initial requirements, selection of tools, frameworks and approaches. Building various application components (navigation, state tracker , geolocation service, custom sliders and carousel widgets). Maintaining Jenkins automated builds and setting up Amazon EC2 environments (Linux, Apache). Translating designs and style guides provided by the UI/UX team into functional user interfaces, ensuring cross browser compatibility and performance. 
+
+		section#description
+			.container
+				h1.title.dark Technologies
+				h2.sub-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				.tags
+					.tag AngularJS
+					.tag Jade
+					.tag Stylus
+					.tag GulpJS
+					.tag Yeoman
+					.tag GoogleMaps
+					.tag Geolocation
+					.tag Jenkins
+					.tag Git
+					.tag Karma
+					.tag Jasmine
+
+		section#gallery
+			.container
+				.gallery-container.swipeshow.travel
+					.slides
+						.slide
+						.slide
+					.dots
+					.slide-left
+					.slide-right
+
+		section#back
+			a(href="/portfolio")
+				button(role="button") Back to all projects
+
+		include ../../parts/footer
+		include ../../parts/scripts
+		script(type="text/javascript" src="/js/portfolio.js")
+
