@@ -35,8 +35,11 @@ html(lang="en")
 			h1.title.dark Still have a questions?
 			h2.sub-title You can always send us a message, tweet or e-mail. We'd be happy to help you out.
 
-			button(role="button")
-				a(href="/services") Go to our Services
+			a(href="/services")
+				button(role="button")
+					span Go to our Services
+					span.icon
+						include ../icons/arrow-go
 
 		include ../parts/footer
 		script(type="text/javascript" src="/js/contact-us.min.js")

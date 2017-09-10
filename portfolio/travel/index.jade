@@ -8,9 +8,18 @@ html(lang="en")
 		section#landing
 
 		section#description
-			#switch-left
-			#switch-right
 			.container
+				.buttons-container
+					a(href="/services")
+						button.prev-project
+							span.icon.rotated
+								include ../../icons/arrow-go
+							span Previous Project
+					a(href="/services")
+						button.next-project
+							span Next Project
+							span.icon
+								include ../../icons/arrow-go
 				h2.type Web Development
 				h1.title.dark Custom Solution
 				h2.sub-title Travel system which introduces the new level of the travel experience. It gives a possibility to plan your trip, book the flight and hotel tickets, assists the customer during the vacation. Also it includes the innovative way to manage the user purchases and preferences, provides the new way of data input - NLP (Natural Language Processing). 
@@ -48,7 +57,10 @@ html(lang="en")
 
 		section#back
 			a(href="/portfolio")
-				button(role="button") Back to all projects
+				button(role="button")
+					span Back to all projects
+					span.icon
+						include ../../icons/arrow-go
 
 		include ../../parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")

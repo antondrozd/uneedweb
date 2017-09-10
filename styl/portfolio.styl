@@ -37,6 +37,7 @@
 			.project-footer
 				display: flex
 				flex-direction: column
+				text-align: center
 			.overlay
 				visibility: hidden
 				opacity: 0
@@ -51,7 +52,7 @@
 			.description
 				visibility: hidden
 				opacity: 0
-				transition: opacity .3s ease
+				transition: opacity .5s ease
 				font-size: 14px
 				letter-spacing: 0.3px
 				font-weight: 400
@@ -60,19 +61,18 @@
 				color: rgba(248, 249, 251, 0.5)
 			a
 				text-align: center
+				visibility: hidden
+				opacity: 0
+				transition: opacity .5s ease
 				.details-button
-					visibility: hidden
-					opacity: 0
-					transition: opacity .3s ease
 					bottom: 2rem
-					width: 10rem
 					margin: auto
 					border: solid 2px #8492af
 			&:hover, &:focus, &:active
 				.overlay
 					opacity: .5
 					visibility: visible
-				.description, .details-button
+				.description, .details-link
 					opacity: 1
 					visibility: visible
 		@media screen and (min-width: $screenSmall)
@@ -127,7 +127,27 @@
 			background-size: cover
 
 	#description
-		padding: 2rem 0
+		padding-top: 2rem
+		padding-bottom: 5rem
+		.buttons-container
+			width: 100%
+			display: flex
+			justify-content: space-between
+			align-items: center
+			button
+				border: none
+				transition: color .3s ease
+				&:hover
+					color: black
+					&:before
+						content: none
+					svg
+						path
+							fill: black
+			.prev-project
+				.icon
+					svg
+						transform: rotate(180deg)
 		.type
 			color: #8492af
 		h1.title

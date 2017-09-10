@@ -22,6 +22,9 @@ a
 	button
 		&:hover, &:focus
 			color: white
+			svg
+				path
+					fill: white
 	&:visited
 		text-decoration: none
 		color: #576076
@@ -56,6 +59,16 @@ button
 	position: relative
 	transition: color, border-color .3s ease
 	z-index: 1
+	svg
+		path
+			transition: fill .3s ease
+	span
+		&.icon
+			margin-left: .7rem
+			vertical-align: middle
+		&.rotated
+			margin-left: 0
+			margin-right: .7rem
 	&:before
 		position: absolute
 		z-index: -1
