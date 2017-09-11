@@ -64,10 +64,10 @@
 				visibility: hidden
 				opacity: 0
 				transition: opacity .5s ease
-				.details-button
+				button
 					bottom: 2rem
 					margin: auto
-					border: solid 2px #8492af
+					border-color: solid 2px #8492af
 			&:hover, &:focus, &:active
 				.overlay
 					opacity: .5
@@ -187,27 +187,9 @@
 						&:nth-child(2)
 							background-image: url('/photos/travel/travel-gallery-2.png')
 				.dots
-					height: 4rem
-					width: 100%
 					position: absolute
 					bottom: 0
 					left: 0
-					display: flex
-					justify-content: center
-					align-items: center
-					.dot-item
-						border: none
-						width: 10px
-						height: 10px
-						margin: 0 0.5rem
-						background-color: #f3f8ff
-						border: solid 1px #e3eaf3
-						border-radius: 50%
-						padding: 0
-						&.active
-							background-color: #8492af
-						&:before
-							content: none
 			@media screen and (min-width: $screenSmall)
 				.gallery-container
 					height: 29rem

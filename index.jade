@@ -85,7 +85,85 @@ html(lang="en")
 		section#portfolio
 			.container
 				h1.title.dark Our Expertise
-				h2.sub-title Our team is comprised of devoted professionals who have expertise in multiple areas. We build web products that work and last, advance your customer journey, target and keep your customers in the loop. 
+				h2.sub-title Our team is comprised of devoted professionals who have expertise in multiple areas. We build web products that work and last, advance your customer journey, target and keep your customers in the loop.
+
+				#switcher
+					#switch-left
+						include icons/left-arrow
+					a(onclick="uneed.onChangePortfolio(1)").active
+						h2.sub-title Web Development
+					a(onclick="uneed.onChangePortfolio(2)")
+						h2.sub-title Mobile Development
+					a(onclick="uneed.onChangePortfolio(3)")
+						h2.sub-title Product Design
+					#switch-right
+						include icons/left-arrow
+
+				.portfolio-slides.swipeshow.autoheight
+					.slides
+						.slide(data-tappable="true")
+							.portfolio-item
+								h2.sub-title Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
+
+								.tags
+									.tag ReactJS
+									.tag AngularJS
+									.tag JavaScript
+									.tag CSS
+									.tag HTML
+
+								.portfolio-image.web
+
+								.dots
+
+								a(href="/portfolio")
+									button(role="button")
+										span Get more info
+										span.icon
+											include icons/arrow-go
+
+						.slide(data-tappable="true")
+							.portfolio-item
+								h2.sub-title Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
+
+								.tags
+									.tag ReactJS
+									.tag AngularJS
+									.tag JavaScript
+									.tag CSS
+									.tag HTML
+
+								.portfolio-image.mobile
+
+								.dots
+
+								a(href="/portfolio")
+									button(role="button")
+										span Get more info
+										span.icon
+											include icons/arrow-go
+						.slide(data-tappable="true")
+							.portfolio-item
+								h2.sub-title Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
+
+								.tags
+									.tag ReactJS
+									.tag AngularJS
+									.tag JavaScript
+									.tag CSS
+									.tag HTML
+
+								.portfolio-image.design
+
+								.dots
+
+								a(href="/portfolio")
+									button(role="button")
+										span Get more info
+										span.icon
+											include icons/arrow-go
 
 		include parts/footer
+		script(type="text/javascript" src="/js/libs.min.js")
+		script(type="text/javascript" src="/js/index.min.js")
 

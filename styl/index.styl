@@ -39,7 +39,7 @@
 				content: ''
 				width: 1.3rem
 				height: 2px
-				background-color: #667891;
+				background-color: #667891
 				position: absolute
 			&:before
 				transform: rotate(45deg) translateX(-45%)
@@ -179,4 +179,32 @@
 					width: 24rem
 
 	#portfolio
-		padding: 4rem 0
+		padding: 2rem 0 4rem 0
+		#switcher
+			margin: 2rem auto
+		.portfolio-slides
+			width: 100%
+			.slide
+				width: 100%
+				text-align: center
+				.portfolio-image
+					height: 165px
+					background-size: cover
+					margin-top: 1rem
+					&.web
+						background-image: url('/images/png/hp-1-web.png')
+					&.mobile
+						background-image: url('/images/png/hp-2-mobile.png')
+					&.design
+						background-image: url('/images/png/hp-3-design.png')
+				.sub-title
+					font-size: 13px
+					line-height: 1.38
+					letter-spacing: 0.3px
+					margin-bottom: 1rem
+		@media screen and (min-width: $screenSmall)
+			.portfolio-slides .slide
+				.portfolio-image
+					height: 400px
+					width: 500px
+					margin: auto
