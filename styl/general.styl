@@ -25,6 +25,9 @@ a
 			svg
 				path
 					fill: white
+	&.underlined
+		&:hover
+			text-decoration: underline
 	&:visited
 		text-decoration: none
 		color: #576076
@@ -57,8 +60,20 @@ button
 	letter-spacing: .3px
 	color: #8492af
 	position: relative
-	transition: color, border-color .3s ease
-	z-index: 1
+	transition: color .3s, border-color .3s ease
+	z-index: 0
+	&.white
+		&:hover, &:focus
+			color: white
+			border-color: white
+			&:before
+				content: none
+	&.black
+		&:hover, &:focus
+			color: #0e1a35
+			border-color: #0e1a35
+			&:before
+				content: none
 	svg
 		path
 			transition: fill .3s ease

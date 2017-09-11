@@ -6,7 +6,7 @@ footer
 				p
 					| &copy; 2017 UNeed Web All Right Reserved
 		.subscribe
-			h1 Keep up to date with us
+			h1 Get in touch with us
 			.subscribe-form
 				input(type="text" placeholder="Enter your email")
 				button(role="button") OK
@@ -22,3 +22,12 @@ footer
 		.copyright.mobile
 			p
 				| &copy; 2017 UNeed Web All Right Reserved
+
+	script(type="text/javascript").
+		(function() {
+			var navbarButton = document.getElementById('toggle-navbar');
+			var body = document.getElementsByTagName('body')[0];
+			navbarButton.addEventListener('click', function() {
+				body.classList.toggle('navbar-expanded');
+			});
+		})(window);
