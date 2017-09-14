@@ -11,6 +11,6 @@
 	window.uneed.onChangePortfolio = function(number) {
 		slides.swipeshow().goTo(number);
 		switcherOptions.removeClass('active');
-		$(switcherOptions[number-1]).addClass('active');
+		$(switcherOptions[number]).addClass('active');
 	}
 })();

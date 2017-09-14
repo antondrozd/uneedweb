@@ -13,11 +13,11 @@ html(lang="en")
 			#contact-body
 				.contact-form
 					h1.title.dark Send Us a Message
-					form(name="contactForm")
+					form(name="contactForm" action="/mail-us" method="POST")
 						.form-container
-							input#user_name(type="text" placeholder="Name" name="user_name" required)
-							input#user_email(type="email" placeholder="Email" name="user_email" required)
-							textarea#user_message(name="user_message" rows="5" placeholder="Message")
+							input#user_name(type="text" placeholder="Name" name="name" required)
+							input#user_email(type="email" placeholder="Email" name="email" required)
+							textarea#user_message(name="message" rows="5" placeholder="Message")
 						button.black(type="submit") Send Email
 
 				.contact-info
@@ -25,7 +25,7 @@ html(lang="en")
 						h1.title Business Hours
 						h2.sub-title from 9 am to 8pm EEST
 					.contacts
-						address Kiev, Ukraine, 02140, Bazhana Ave 24/1, Office 118
+						address Kiev, Ukraine, 02140, Bazhana Ave 24/1
 						p
 							a(href="tel:380955914765") +38 099 4612335
 						p
