@@ -39,8 +39,7 @@
 				flex-direction: column
 				text-align: center
 			.overlay
-				visibility: hidden
-				opacity: 0
+				opacity: 0.5
 				transition: opacity .3s ease
 				background-color: #102640
 			.name
@@ -50,8 +49,6 @@
 				font-weight: 400
 				color: white
 			.description
-				visibility: hidden
-				opacity: 0
 				transition: opacity .5s ease
 				font-size: 14px
 				letter-spacing: 0.3px
@@ -61,20 +58,11 @@
 				color: rgba(248, 249, 251, 0.5)
 			a
 				text-align: center
-				visibility: hidden
-				opacity: 0
 				transition: opacity .5s ease
 				button
 					bottom: 2rem
 					margin: auto
 					border-color: solid 2px #8492af
-			&:hover, &:focus, &:active
-				.overlay
-					opacity: .5
-					visibility: visible
-				.description, .details-link
-					opacity: 1
-					visibility: visible
 		@media screen and (min-width: $screenSmall)
 			margin-top: 1rem
 			.container
@@ -83,6 +71,16 @@
 			.project
 				width: 50%
 				border-right: 1px solid white
+				.overlay, .description, .details-link
+					visibility: hidden
+					opacity: 0
+				&:hover, &:focus, &:active
+					.overlay
+						opacity: .5
+						visibility: visible
+					.description, .details-link
+						opacity: 1
+						visibility: visible
 		@media screen and (min-width: $screenMedium)
 			.project
 				width: 33.33%

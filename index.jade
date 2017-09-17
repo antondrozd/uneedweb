@@ -7,7 +7,9 @@ html(lang="en")
 
 		section#landing.flex.align-ver-center
 			.container
-				h1.title Uneed
+				//- h1.title(class="typewrite" data-period="1000" data-type='[ "Web Development Company", "Software Development Company" ]')
+					span.wrap
+				h1.title Web Development Company
 				h2.sub-title Where quality is trend and digital progress an outcome
 				a.learn-more(href="/services")
 					button.white(role="button") Learn More
@@ -114,14 +116,6 @@ html(lang="en")
 
 								.portfolio-image.web
 
-								.dots
-
-								a(href="/portfolio")
-									button(role="button")
-										span Get more info
-										span.icon
-											include icons/arrow-go
-
 						.slide(data-tappable="true")
 							.portfolio-item
 								h2.sub-title Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
@@ -135,13 +129,6 @@ html(lang="en")
 
 								.portfolio-image.mobile
 
-								.dots
-
-								a(href="/portfolio")
-									button(role="button")
-										span Get more info
-										span.icon
-											include icons/arrow-go
 						.slide(data-tappable="true")
 							.portfolio-item
 								h2.sub-title Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
@@ -155,13 +142,13 @@ html(lang="en")
 
 								.portfolio-image.design
 
-								.dots
+					.dots
 
-								a(href="/portfolio")
-									button(role="button")
-										span Get more info
-										span.icon
-											include icons/arrow-go
+					a(href="/portfolio")
+						button(role="button")
+							span Get more info
+							span.icon
+								include icons/arrow-go
 
 		include parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")

@@ -6,9 +6,6 @@
 			font-weight: 300
 		@media screen and (min-width: $screenSmall)
 			padding-bottom: 3rem
-			h1.title
-				margin-bottom: 1rem
-				font-size: 48px
 			h2.sub-title
 				width: 100%
 				margin: auto
@@ -28,6 +25,10 @@
 			display: none
 		.services-slides
 			width: 100%
+		.service-image
+			width: 100px
+			height: 100px
+			padding-top: 0.7rem
 		.slide-header-container
 			display: flex
 			justify-content: center
@@ -198,14 +199,14 @@
 					&.result
 						margin: 2rem 0
 			.service-image
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-				height: 90%;
-				width: 22rem;
-				background-repeat: no-repeat;
-				background-size: 730px;
+				position: absolute
+				right: 0
+				bottom: 0
+				margin: auto
+				height: 90%
+				width: 22rem
+				background-repeat: no-repeat
+				background-size: 730px
 				&.outsource
 					background-image: url('/images/png/outsource.png')
 				&.outstaff
@@ -329,18 +330,18 @@
 							top: -1rem
 							transform: translateY(-50%)
 						.arrow
-							top: -1rem;
-							transform: translateY(-50%);
-							width: 4rem;
-							height: 1px;
-							position: absolute;
+							top: -1rem
+							transform: translateY(-50%)
+							width: 4rem
+							height: 1px
+							position: absolute
 							&:after
-								content: '';
-								position: absolute;
-								width: 5px;
-								height: 5px;
-								border-radius: 50%;
-								top: -2px;
+								content: ''
+								position: absolute
+								width: 5px
+								height: 5px
+								border-radius: 50%
+								top: -2px
 					&.right
 						justify-content: flex-end
 						.workflow-item
