@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	body#portfolio-project-page
+		include ../../parts/header
+		include ../../parts/mobile-nav
+
+		section#landing
+
+		section#description
+			.container
+				.buttons-container
+					a(href="/portfolio/yow")
+						button.prev-project
+							span.icon.rotated
+								include ../../icons/arrow-go
+							span Previous Project
+					a(href="/portfolio/gambling")
+						button.next-project
+							span Next Project
+							span.icon
+								include ../../icons/arrow-go
+				h2.type Banking / Finance
+				h1.title.dark What was the challenge?
+				h2.sub-title Create a fee billing system for a major Hong Kong corporate bank. The system has to charge regularly fees from institutional clients for management and performance on financial services.
+
+		section#approaches.banking
+			.container
+				h1.title Challenge accepted
+				h2.sub-title Based on set requirements, our developers team created a single fee management system that gradually reduced costs of the billing process for the bank. The software could optimize fee schedules, had an automated fee discount policy, included automated fee calculation, manual and automated billing workflows and reports, featured customized standard instructions workflow.
+
+		section#description
+			.container
+				h1.title.dark What technologies did we use?
+				.tags
+					.tag .NET 3.5
+					.tag ASP.NET MVC 4
+					.tag Oracle 11
+					.tag XPO
+					.tag Client side: CoffeeScript
+					.tag jQuery
+					.tag knockoutJS
+					.tag LESS
+					.tag HTML
+					.tag Watin
+					.tag SpecFlow
+
+		section#gallery
+			.container
+				.gallery-container.swipeshow.banking
+					.slides
+						.slide
+						.slide
+					.dots
+					.slide-left
+					.slide-right
+
+		section#back
+			a(href="/portfolio")
+				button(role="button")
+					span Back to all projects
+					span.icon
+						include ../../icons/arrow-go
+
+		include ../../parts/footer
+		script(type="text/javascript" src="/js/libs.min.js")
+		script(type="text/javascript" src="/js/portfolio.min.js")
+

@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	body#portfolio-project-page
+		include ../../parts/header
+		include ../../parts/mobile-nav
+
+		section#landing
+
+		section#description
+			.container
+				.buttons-container
+					a(href="/portfolio/gambling")
+						button.prev-project
+							span.icon.rotated
+								include ../../icons/arrow-go
+							span Previous Project
+					a(href="/portfolio/social-travel")
+						button.next-project
+							span Next Project
+							span.icon
+								include ../../icons/arrow-go
+				h2.type Data Management
+				h1.title.dark What was the challenge?
+				h2.sub-title Provide a solution for web sport application translation in 32 languages.
+
+		section#approaches.localisation
+			.container
+				h1.title Challenge accepted
+				h2.sub-title To solve the problem of multiple languages our team developed an additional web application that managed project’s localization. The localization helper was an excellent tool to find untranslated or missing words/phrases in translations, securely protected content and prevented from damaging, pulled and gathered data that was previously stored in Google spreadsheets. It divided the users by their role and rights, tracked their activities and provided a back up for accumulated data.
+
+		section#description
+			.container
+				h1.title.dark What technologies did we use?
+				.tags
+					.tag NodeJS
+					.tag Google Spreadsheet API
+					.tag MongoDB
+					.tag Angular JS
+					.tag Stylus
+					.tag Jade
+
+
+		section#gallery
+			.container
+				.gallery-container.swipeshow.localisation
+					.slides
+						.slide
+						.slide
+					.dots
+					.slide-left
+					.slide-right
+
+		section#back
+			a(href="/portfolio")
+				button(role="button")
+					span Back to all projects
+					span.icon
+						include ../../icons/arrow-go
+
+		include ../../parts/footer
+		script(type="text/javascript" src="/js/libs.min.js")
+		script(type="text/javascript" src="/js/portfolio.min.js")
+

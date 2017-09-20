@@ -1,0 +1,72 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	body#portfolio-project-page
+		include ../../parts/header
+		include ../../parts/mobile-nav
+
+		section#landing
+
+		section#description
+			.container
+				.buttons-container
+					a(href="/portfolio/localisation")
+						button.prev-project
+							span.icon.rotated
+								include ../../icons/arrow-go
+							span Previous Project
+					a(href="/portfolio/travel")
+						button.next-project
+							span Next Project
+							span.icon
+								include ../../icons/arrow-go
+				h2.type Travel
+				h1.title.dark What was the challenge?
+				h2.sub-title Create an engaging travel-oriented social network service. Build a platform that facilitates interaction between travel organizers, tourists, agencies, equipment stores. Consolidate network environment with e-commerce. 
+
+		section#approaches.social-travel
+			.container
+				h1.title Challenge accepted
+				h2.sub-title
+					p Our team of experts developed a social media application that enabled users to create, book activities (canoeing, climbing, horse-riding, hiking and mountaineering). The activities could be organized both by agencies as well as by single travelers. 
+					p An e-commerce platform was integrated to the web application and facilitated processing not only activity payments, but also allowed equipment stores to sell their products onsite. As a social media, the network provided feedback tools, reviews, commentaries, messaging. 
+
+		section#description
+			.container
+				h1.title.dark What technologies did we use?
+				.tags
+					.tag Angular
+					.tag Bower
+					.tag Sylus
+					.tag Jade
+					.tag Google maps API
+					.tag Java 8
+					.tag Spring MVC
+					.tag ElasticSearch
+					.tag WebSockets
+					.tag Spring Boot
+					.tag Spring Data
+
+
+		section#gallery
+			.container
+				.gallery-container.swipeshow.social-travel
+					.slides
+						.slide
+						.slide
+						.slide
+					.dots
+					.slide-left
+					.slide-right
+
+		section#back
+			a(href="/portfolio")
+				button(role="button")
+					span Back to all projects
+					span.icon
+						include ../../icons/arrow-go
+
+		include ../../parts/footer
+		script(type="text/javascript" src="/js/libs.min.js")
+		script(type="text/javascript" src="/js/portfolio.min.js")
+

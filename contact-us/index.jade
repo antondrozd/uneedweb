@@ -8,7 +8,7 @@ html(lang="en")
 		.body-wrapper
 			#contact-heading
 				h1.title.dark Contact Us
-				h2.sub-title We appreciate your impact. Need more information? Just let us know!
+				h2.sub-title Lets discuss how we can leverage leverage your IT resources.
 
 			#contact-body
 				.contact-form
@@ -17,29 +17,27 @@ html(lang="en")
 						.form-container
 							input#user_name(type="text" placeholder="Name" name="name" required)
 							input#user_email(type="email" placeholder="Email" name="email" required)
+							input#user_phone(type="tel" placeholder="Phone Number (optional)" name="phone" pattern="^\d{4}-\d{3}-\d{4}$")
 							textarea#user_message(name="message" rows="5" placeholder="Message")
 						button.black(type="submit") Send Email
 
 				.contact-info
-					.details
-						h1.title Business Hours
-						h2.sub-title from 9 am to 8pm EEST
 					.contacts
 						address Kiev, Ukraine, 02140, Bazhana Ave 24/1
 						p
 							a(href="tel:380955914765") +38 099 4612335
 						p
-							a(href="mailto:info@uneedweb.com?subject=Contact UNeed Web") info@uneedweb.com
+							a(href="mailto:info@uneedweb.com?subject=Contact Uneed Web") info@uneedweb.com
 
-		#contact-footer
-			h1.title.dark Still have a questions?
-			h2.sub-title You can always send us a message, tweet or e-mail. We'd be happy to help you out.
+		//- #contact-footer
+		//- 	h1.title.dark Still have a questions?
+		//- 	h2.sub-title You can always send us a message, tweet or e-mail. We'd be happy to help you out.
 
-			a(href="/services")
-				button(role="button")
-					span Go to our Services
-					span.icon
-						include ../icons/arrow-go
+		//- 	a(href="/services")
+		//- 		button(role="button")
+		//- 			span Go to our Services
+		//- 			span.icon
+		//- 				include ../icons/arrow-go
 
 		include ../parts/footer
 		script(type="text/javascript" src="/js/contact-us.min.js")

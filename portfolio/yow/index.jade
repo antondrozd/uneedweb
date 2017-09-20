@@ -1,0 +1,69 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	body#portfolio-project-page
+		include ../../parts/header
+		include ../../parts/mobile-nav
+
+		section#landing
+
+		section#description
+			.container
+				.buttons-container
+					a(href="/portfolio/sport")
+						button.prev-project
+							span.icon.rotated
+								include ../../icons/arrow-go
+							span Previous Project
+					a(href="/portfolio/banking")
+						button.next-project
+							span Next Project
+							span.icon
+								include ../../icons/arrow-go
+				h1.title.dark YOW
+				h2.sub-title You travel a lot, but you don’t keep track of the places you visited? Your friend asks you about countries you’ve seen and you scratch you head thinking? Better scratch the map. Try our epic application YOW.
+				h2.sub-title As we travel extensively throughout the year for fellow travel-lovers we have crafted an application.
+
+
+		section#approaches.yow
+			.container
+				h1.title What is YOW?
+				h2.sub-title 
+					p Our team of experts developed a social media application that enabled users to create, book activities (canoeing, climbing, horse-riding, hiking and mountaineering). The activities could be organized both by agencies as well as by single travelers.
+					p An e-commerce platform was integrated to the web application and facilitated processing not only activity payments, but also allowed equipment stores to sell their products onsite. As a social media, the network provided feedback tools, reviews, commentaries, messaging.
+
+		section#description
+			.container
+				h1.title.dark What technologies did we use?
+				.tags
+					.tag C#
+					.tag Xamarin Framework
+					.tag Open GeoData
+					.tag Google Maps
+					.tag Google Places
+					.tag Geolocation
+					.tag AWS (EC2)
+					.tag Jenkins
+					.tag Git
+
+		section#gallery
+			.container
+				.gallery-container.swipeshow.yow
+					.slides
+						.slide
+						.slide
+					.dots
+					.slide-left
+					.slide-right
+
+		section#back
+			a(href="/portfolio")
+				button(role="button")
+					span Back to all projects
+					span.icon
+						include ../../icons/arrow-go
+
+		include ../../parts/footer
+		script(type="text/javascript" src="/js/libs.min.js")
+		script(type="text/javascript" src="/js/portfolio.min.js")
+
