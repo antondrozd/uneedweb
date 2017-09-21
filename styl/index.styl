@@ -5,6 +5,15 @@
 @import 'contact-us'
 @import 'portfolio'
 
+@keyframe enterScale {
+	0% {
+		transform: scale(2.0);
+	}
+	100% {
+		transform: scale(1.0);
+	}
+}
+
 #about-page
 
 	header
@@ -19,7 +28,11 @@
 		background-position: 50%
 		background-repeat: no-repeat
 		text-align: center
-		min-height: 500px;
+		min-height: 500px
+		animation: enterScale 1s ease-in-out infinite alternate;
+		.title
+			font-weight: 300
+			margin-bottom: 1.25rem
 		.sub-title
 			margin-bottom: 2rem
 		.scroll-down
@@ -41,20 +54,18 @@
 				width: 1.3rem
 				height: 2px
 				background-color: #667891
+				transition: background-color .3s ease
 				position: absolute
 			&:before
 				transform: rotate(45deg) translateX(-45%)
 			&:after
 				transform: rotate(-45deg) translateX(45%)
+			&:hover
+				&:before, &:after
+					background-color: white
 				
 		@media screen and (min-width: $screenMedium)
 			padding-top: 0
-		
-	#info
-		padding: 4rem 0
-		.main-title
-			width 11rem
-			margin 1rem auto
 			
 	#services
 		flex-direction: column
@@ -108,6 +119,11 @@
 				width: 20rem
 				margin: 0 2rem
 				flex-direction: column
+				cursor: pointer
+				border-radius: 4px
+				transition: box-shadow .3s ease
+				&:hover
+					box-shadow: 0 0 30px 0 rgba(195, 206, 228, 0.3)
 				.service-description
 					align-items: center
 					width: 100%
@@ -121,7 +137,6 @@
 					margin: auto
 			
 	#about-services
-		padding: 2rem 1rem 4rem 1rem
 		font-size: 16px
 		font-weight: 300
 		line-height: 1.5
@@ -133,17 +148,16 @@
 			font-size: 18px
 			line-height: 1.33
 		@media screen and (min-width: $screenMedium)
-			margin-top: 2rem
 			.container
 				width: 30rem
 
 	#guarantee
-		padding: 2rem 0
 		background-color: #0e1a35
 		.sub-title
 			color: #576076
 		.features-container
-			margin: 4rem 0
+			margin-top: -1rem
+			margin-bottom: 5rem
 			.feature
 				padding: 0 1rem
 				margin: 1rem 0
@@ -182,10 +196,10 @@
 					width: 24rem
 
 	#portfolio
-		padding: 2rem 0 4rem 0
 		text-align: center
+		padding-bottom: 5rem
 		#switcher
-			margin: 2rem auto
+			margin-bottom: 3.125rem
 		.swipeshow-active .slides
 			cursor: default
 		.portfolio-slides

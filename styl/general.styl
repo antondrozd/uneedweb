@@ -25,9 +25,13 @@ a
 			svg
 				path
 					fill: white
+	&.link
+		font-weight: 300
+		color: #8492af
+		text-decoration: underline
 	&.underlined
 		&:hover
-			text-decoration: underline
+			color: #0e1a35
 	&:visited
 		text-decoration: none
 		color: #576076
@@ -102,12 +106,21 @@ button
 		&:before
 			width: 100%
 
+.section-top
+	padding: 5rem 0 3.125rem 0
+
+.section-bottom
+	padding: 3.125rem 0 5rem 0
+
 h1.title
 	font-family Roboto
 	font-size 30px
 	font-weight 100
 	text-align center
+	line-height: 1
 	color #ffffff
+	margin-top: 0
+	margin-bottom: 1.25rem
 	&.dark
 		color: #0e1a35
 	@media screen and (min-width: $screenMedium)
@@ -261,7 +274,7 @@ header
 							width: 0%
 							right: 0
 							margin: auto
-							transition: width .3s ease
+							transition: width .5s ease
 							background-image: linear-gradient(to left, #ec523e, #4444b9)
 						&:hover
 							&:after
@@ -494,4 +507,3 @@ footer
 				margin-left: 1rem
 			.copyright.mobile
 				display: none
-		
