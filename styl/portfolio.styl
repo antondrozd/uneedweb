@@ -4,8 +4,7 @@
 		padding-top: 7rem
 		
 	#switcher
-		margin-top: 3rem
-		margin-bottom: 3rem
+		margin-bottom: 3.125rem
 
 	#projects
 		.container
@@ -94,17 +93,14 @@
 				width: 33.33%
 				
 	#result
-		padding: 2rem 0 4rem 0
 		background-color: #f3f8ff
 		border: solid 1px #e3eaf3
 		text-align: center
 		h2
 			width: 90%
-			padding-bottom: 1rem
-			margin: auto
+			margin: 0 auto 3.25rem auto
 		@media screen and (min-width: $screenSmall)
 			h2
-				padding-bottom: 2rem
 				width: 35rem
 
 #portfolio-page, #portfolio-project-page			
@@ -122,7 +118,7 @@
 		background: transparent
 
 	#landing
-		padding-top: 3rem
+		padding-top: 21rem
 		height 20rem
 		position: relative
 		background-image url('/photos/landing.jpg')
@@ -133,7 +129,7 @@
 			background-size: cover
 
 	#description
-		padding: 2rem 0 4rem 0
+		padding-top: .5rem
 		.buttons-container
 			width: 100%
 			display: flex
@@ -149,10 +145,8 @@
 					svg
 						path
 							fill: black
-			.prev-project
-				.icon
-					svg
-						transform: rotate(180deg)
+		.prev-project, .next-project
+			display: none
 		.type
 			color: #8492af
 		h1.title
@@ -160,12 +154,21 @@
 		.tags
 			margin: 2rem 0
 		@media screen and (min-width: $screenSmall)
+			.prev-project, .next-project
+				display: block
+			.prev-project
+				.icon
+					svg
+						transform: rotate(180deg)
+	#technologies
+		.tags
+			margin-top: 2rem
+		@media screen and (min-width: $screenSmall)
 			.tags
-				margin: 2rem auto
+				margin: 2rem auto 0 auto
 				width: 40rem
 			
 	#approaches
-		padding: 1rem 0 5rem 0
 		background-size: cover
 		h2.sub-title
 			font-weight: 300
@@ -189,7 +192,6 @@
 		.container
 			width: 100%
 			padding: 0
-			padding-bottom: 3rem
 			.gallery-container
 				height: 18rem
 				width: 100%
@@ -260,6 +262,6 @@
 					margin: auto
 					max-width: 700px
 	#back
-		padding-top: 2rem
+		padding-top: 3.125rem
 		padding-bottom: 5rem
 		text-align: center

@@ -2,6 +2,7 @@
 	window.uneed = window.uneed || {};
 	var slides = $(".portfolio-slides"),
 		switcherOptions = $('#switcher > a'),
+		scrollDown = $('#scroll-down'),
 		swipeshowConfig = {
 			autostart: false,
 			$next: $(".slide-right"),
@@ -13,6 +14,10 @@
 		switcherOptions.removeClass('active');
 		$(switcherOptions[number]).addClass('active');
 	};
+	scrollDown.on('click', function() {
+		window.scrollBy(0, window.innerHeight);
+	});
+
 	var TxtType = function(el, toRotate, period) {
 		this.toRotate = toRotate;
 		this.el = el;

@@ -7,8 +7,9 @@ html(lang="en")
 
 		.body-wrapper
 			#contact-heading
-				h1.title.dark Contact Us
-				h2.sub-title Lets discuss how we can leverage leverage your IT resources.
+				.section-top
+					h1.title.dark Contact Us
+					h2.sub-title Lets discuss how we can leverage leverage your IT resources.
 
 			#contact-body
 				.contact-form
@@ -25,11 +26,20 @@ html(lang="en")
 					.details
 						h1.title Contact Details
 					.contacts
-						address Kiev, Ukraine, 02140, Bazhana Ave 24/1
+						address.flex.align-ver-center
+							span.icon
+								include ../icons/address
+							span Kiev, Ukraine, 02140, Bazhana Ave 24/1
 						p
-							a(href="tel:380955914765") +38 099 4612335
+							a.flex.align-ver-center(href="tel:380955914765")
+								span.icon
+									include ../icons/phone
+								span +38 099 4612335
 						p
-							a(href="mailto:info@uneedweb.com?subject=Contact Uneed Web") info@uneedweb.com
+							a.flex.align-ver-center(href="mailto:info@uneedweb.com?subject=Contact Uneed Web")
+								span.icon
+									include ../icons/mail
+								span info@uneedweb.com
 
 		//- #contact-footer
 		//- 	h1.title.dark Still have a questions?
