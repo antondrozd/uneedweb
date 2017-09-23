@@ -1,21 +1,37 @@
 (function() {
 	window.uneed = window.uneed || {};
-	var slides = $(".portfolio-slides"),
-		switcherOptions = $('#switcher > a'),
-		scrollDown = $('#scroll-down'),
-		swipeshowConfig = {
-			autostart: false,
-			$next: $(".slide-right"),
-			$previous: $(".slide-left")
-		};
-	slides.swipeshow(swipeshowConfig);
+
 	window.uneed.onChangePortfolio = function(number) {
 		slides.swipeshow().goTo(number);
 		switcherOptions.removeClass('active');
 		$(switcherOptions[number]).addClass('active');
 	};
+
+	var slides = $(".portfolio-slides"),
+		switcherOptions = $('#switcher > a'),
+		scrollDown = $('#scroll-down'),
+		blockLinks = $('[data-href]'),
+		swipeshowConfig = {
+			autostart: false,
+			$next: $("#switch-right"),
+			$previous: $("#switch-left"),
+			onactivate: function(slide, index) {
+				switcherOptions.removeClass('active');
+				$(switcherOptions[index]).addClass('active');
+			}
+		};
+
+	slides.swipeshow(swipeshowConfig);
+
 	scrollDown.on('click', function() {
-		window.scrollBy(0, window.innerHeight);
+		$('html, body').animate({
+			scrollTop: window.innerHeight
+		}, 800);
+	});
+
+	blockLinks.on('click', function() {
+		var href = $(this).data('href');
+		window.location.href = href;
 	});
 
 	var TxtType = function(el, toRotate, period) {

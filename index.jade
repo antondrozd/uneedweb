@@ -6,6 +6,7 @@ html(lang="en")
 		include parts/mobile-nav
 
 		section#landing.flex.align-ver-center
+			.background-image
 			.container
 				//- h1.title(class="typewrite" data-period="1000" data-type='[ "Web Development Company", "Software Development Company" ]')
 					span.wrap
@@ -18,40 +19,61 @@ html(lang="en")
 		section#info.section-top.flex.align-ver-center
 			.container
 				h1.title.dark Our Services
-				h2.sub-title Depending on time, budget, scope we provide 3 options to help your business maintain, extend and acquire qualitative IT resources.
+				h2.sub-title Depending on time, budget, scope and complexity of your projects we provide 3 options to help your business maintain, extend and acquire qualitative IT resources.
 
 		section#services.flex.align-ver-center
-			.container.service.flex.flex-column.align-ver-center
+			.container.service.flex.flex-column.align-ver-center(data-href="/services/outsource")
 				img.service-image(src="/images/gif/outsource.gif" width="100" height="100")
 				.service-description
 					h1.title.dark.service-title Project Development
 					h2.sub-title.service-subtitle recommended for
 					ul.service-list
-						li short term projects
-						li fixed cost/time or budget
-						li small to middle scale projects
+						li 
+							span 
+								include icons/checkmark
+							span short term projects
+						li 
+							span 
+								include icons/checkmark
+							span fixed cost/time or budget
+						li 
+							span 
+								include icons/checkmark
+							span small to middle scale projects
 					a(href="/services/outsource")
 						button(role="button") Get more info
 
-			.container.service.flex.flex-column.align-ver-center
+			.container.service.flex.flex-column.align-ver-center(data-href="/services/outstaff")
 				img.service-image(src="/images/gif/outstaff.gif" width="100" height="100")
 				.service-description
 					h1.title.dark.service-title Dedicated Development Team
 					h2.sub-title.service-subtitle recommended for
 					ul.service-list
-						li medium/large scale projects
-						li full-cycle development and maintenance
+						li 
+							span 
+								include icons/checkmark
+							span medium/large scale projects
+						li 
+							span 
+								include icons/checkmark
+							span full-cycle development and maintenance
 					a(href="/services/outstaff")
 						button(role="button") Get more info
 
-			.container.service.flex.flex-column.align-ver-center
+			.container.service.flex.flex-column.align-ver-center(data-href="/services/relocation")
 				img.service-image(src="/images/gif/relocation.gif" width="100" height="100")
 				.service-description
 					h1.title.dark.service-title Specialist for Relocation
 					h2.sub-title.service-subtitle recommended for
 					ul.service-list
-						li building/extending your IT department
-						li limited recruitment capabilities
+						li 
+							span 
+								include icons/checkmark
+							span building/extending your IT department
+						li 
+							span 
+								include icons/checkmark
+							span limited recruitment capabilities
 					a(href="/services/relocation")
 						button(role="button") Get more info
 
@@ -62,8 +84,8 @@ html(lang="en")
 		section#guarantee.flex.align-ver-center
 			.container
 				.section-top
-					h1.title We provide our customers with
-					h2.sub-title Lorem ipsum dasj fsahks fahksf asfha kfsakfakshfkas
+					h1.title Our Added Value
+					h2.sub-title With delivering what we do the best: development and design of software we provide our customers with 
 				.features-container
 					.feature
 						include icons/1-quality
@@ -118,6 +140,12 @@ html(lang="en")
 									.tag HTML
 
 								.portfolio-image.web
+								.desktop-button
+									a(href="/portfolio")
+										button(role="button")
+											span Go to potfolio
+											span.icon
+												include icons/arrow-go
 
 						.slide(data-tappable="true")
 							.portfolio-item
@@ -131,6 +159,12 @@ html(lang="en")
 									.tag HTML
 
 								.portfolio-image.mobile
+								.desktop-button
+									a(href="/portfolio")
+										button(role="button")
+											span Go to potfolio
+											span.icon
+												include icons/arrow-go
 
 						.slide(data-tappable="true")
 							.portfolio-item
@@ -144,14 +178,20 @@ html(lang="en")
 									.tag HTML
 
 								.portfolio-image.design
+								.desktop-button
+									a(href="/portfolio")
+										button(role="button")
+											span Go to potfolio
+											span.icon
+												include icons/arrow-go
 
 					.dots
-
-					a(href="/portfolio")
-						button(role="button")
-							span Get in touch with us
-							span.icon
-								include icons/arrow-go
+					.mobile-button
+						a(href="/portfolio")
+							button(role="button")
+								span Get in touch with us
+								span.icon
+									include icons/arrow-go
 
 		include parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")

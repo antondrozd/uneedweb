@@ -72,7 +72,7 @@ button
 	letter-spacing: .3px
 	color: #8492af
 	position: relative
-	transition: color .3s, border-color .3s ease
+	transition: color .3s, border-color .3s, background-color .3s ease
 	z-index: 0
 	&.white
 		&:hover, &:focus
@@ -96,23 +96,11 @@ button
 		&.rotated
 			margin-left: 0
 			margin-right: .7rem
-	&:before
-		position: absolute
-		z-index: -1
-		content: ''
-		top: 0
-		left: 0
-		border-radius: 2px
-		background-color: #ff6955
-		transition: width .3s ease
-		height: 100%
-		width: 0%
 	&:hover, &:focus
 		border-color: #ff6955
+		background-color: #ff6955
 		a
 			color: white
-		&:before
-			width: 100%
 
 .section-top
 	padding: 5rem 0 3.125rem 0
@@ -242,14 +230,15 @@ header
 			margin-right: .5rem
 			width: 43px
 			height: 48px
-			background: linear-gradient(155deg, #ec523e 0%, #4444b9 80%)
-			-webkit-mask-image: url('/images/svg/logo/42x48/logo-42x48.svg')
-			mask-image: url('/images/svg/logo/42x48/logo-42x48.svg')
+			svg
+				width: 100%
+				height: 100%
 		.logo-text-container
 			width: 75px
 			height: 28px
-			background-image: url('/images/svg/logo/42x48/text-logo-42x48.svg')
-			background-repeat: no-repeat
+			svg
+				width: 100%
+				height: 100%
 	@media screen and (min-width: $screenSmall)
 		width: 100%
 		.container
@@ -259,8 +248,6 @@ header
 			.logo
 				width: 52px
 				height: 59px
-				-webkit-mask-image: url('/images/svg/logo/big/logo-eхp.svg')
-				mask-image: url('/images/svg/logo/big/logo-exp.svg')
 			.logo-text-container
 				display: none
 			.menu-container
@@ -302,8 +289,6 @@ header
 				display: flex !important
 				width: 113px
 				height: 41px
-				background-image: url('/images/svg/logo/big/text-logo.svg')
-				background-repeat: no-repeat
 
 .swipeshow.autoheight
 	height: auto
@@ -360,7 +345,7 @@ header
 		text-transform: uppercase
 		position: relative
 		font-weight: 400
-	a
+	> a
 		display: none
 		&.active
 			display: block
@@ -453,7 +438,7 @@ footer
 				letter-spacing: 0.3px
 				color: #ffffff
 				border: none
-				&:before
+				&:hover
 					background-color: #8492af
 	.contacts
 		margin: 2rem auto

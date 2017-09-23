@@ -47,24 +47,18 @@
 				textarea
 					resize: none
 		.contact-info
-			padding: 3rem 1rem
+			padding: 3rem
 			background-color: #0e1a35
 			box-shadow: 0 0 14px 0 rgba(14, 26, 53, 0.2)
 			.icon
 				margin-right: .9rem
 			.details
 				h1
-					font-size: 21px;
-					line-height: 1.14;
+					font-size: 21px
+					line-height: 1.14
 					font-weight: 400
-					text-align: center;
-					color: #8492af;
-				h2
-					font-size: 18px;
-					line-height: 1.33;
-					font-weight: 400
-					text-align: center;
-					color: #576076;
+					text-align: left
+					color: #8492af
 			.contacts
 				font-size: 16px
 				line-height: 1.5
@@ -73,12 +67,9 @@
 				address
 					font-style: normal
 					width: 15rem
-			@media screen and (min-width: $screenSmall)
-				.contacts
-					margin: 0 0 0 5rem
-				.details
-					h1, h2
-						text-align: left
+			.contacts, .details
+				width: 13rem
+				margin: auto
 		@media screen and (min-width: $screenMedium)
 			display: flex
 			width: 60rem
@@ -88,6 +79,8 @@
 			margin-bottom: 5rem
 			.contact-form, .contact-info
 				width: 50%
+			.contact-info
+				padding: 3rem 1rem
 			.contact-form
 				padding: 2rem 0
 				h1.title
