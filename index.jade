@@ -2,9 +2,10 @@ doctype html
 html(lang="en")
 	include parts/head
 	body#about-page
+		#loader
+			.gif
 		include parts/header
 		include parts/mobile-nav
-
 		section#landing.flex.align-ver-center
 			.background-image
 			.container
@@ -69,11 +70,11 @@ html(lang="en")
 						li 
 							span 
 								include icons/checkmark
-							span building/extending your IT department
+							span limited recruitment capabilities
 						li 
 							span 
 								include icons/checkmark
-							span limited recruitment capabilities
+							span building/extending your IT department
 					a(href="/services/relocation")
 						button(role="button") Get more info
 
@@ -196,4 +197,5 @@ html(lang="en")
 		include parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")
 		script(type="text/javascript" src="/js/index.min.js")
+		include parts/loader
 

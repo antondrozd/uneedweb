@@ -2,6 +2,8 @@ doctype html
 html(lang="en")
 	include ../parts/head
 	body#portfolio-page
+		#loader
+			.gif
 		include ../parts/header
 		include ../parts/mobile-nav
 
@@ -130,4 +132,6 @@ html(lang="en")
 						include ../icons/arrow-go
 
 		include ../parts/footer
+		script(type="text/javascript" src="/js/libs.min.js")
+		include ../parts/loader
 
