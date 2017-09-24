@@ -43,9 +43,10 @@ button, input, textarea
 input, textarea
 	width: 100%
 	border-radius: 4px
-	border: solid 1px #576076
+	border: solid 1px #8492af
 	padding: 1rem
-	color: #576076
+	color: #8492af
+	font-size: 14px
 	transition: border-color .5s ease
 	background-color: transparent
 	&::-webkit-input-placeholder
@@ -56,12 +57,14 @@ input, textarea
 		letter-spacing: 0.3px
 		text-align: left
 		color: rgba(87, 96, 118, 0.5)
-		transition: color .5s ease
+		transition: color .5s, opacity .5s ease
 	&:hover, &:focus
-		border-color: #8492af
+		border-color: #576076
 		&::-webkit-input-placeholder
 			color: #576076
-
+	&:focus
+		&::-webkit-input-placeholder
+			opacity: 0
 button
 	cursor: pointer
 	padding: .9rem 2.8rem
@@ -120,8 +123,8 @@ h1.title
 	margin-bottom: 1.25rem
 	&.dark
 		color: #0e1a35
-	@media screen and (min-width: $screenMedium)
-		font-size: 60px
+	@media screen and (min-width: $screenSmall)
+		font-size: 48px
 	
 h2.sub-title
 	font-size: 16px
@@ -129,7 +132,7 @@ h2.sub-title
 	line-height: 1.5
 	text-align: center
 	color: #8492af
-	@media screen and (min-width: $screenMedium)
+	@media screen and (min-width: $screenSmall)
 		width: 41rem
 		margin: auto
 		font-size: 18px
@@ -182,7 +185,7 @@ body
 	transition: transform .3s ease
 	transform: translateY(-100%)
 	background-color: #0e1a35
-	z-index: 1
+	z-index: 2
 	padding: 2rem 0
 	overflow-y: auto
 	.menu-list
@@ -281,6 +284,12 @@ header
 			align-items: center
 		.container
 			padding: 1rem 2rem
+		.logo-container
+			.logo
+				transition: transform 1s ease
+			&:hover
+				.logo
+					transform: rotateY(180deg)
 		nav
 			align-items: stretch
 			.logo
@@ -342,12 +351,13 @@ header
 		width: auto
 		font-size: 14px
 		letter-spacing: 0.3px
+		white-space: nowrap
 		text-transform: uppercase
 		position: relative
 		font-weight: 400
 	> a
 		display: none
-		&.active
+		&.active, &:hover
 			display: block
 			h2
 				&:after
@@ -371,10 +381,13 @@ header
 				cursor: pointer
 				padding-left: 2rem
 				padding-right: 2rem
-			&.active
+			&.active, &:hover
 				h2:after
 					width: 100%
 					bottom: -17px
+			&:hover
+				h2:after
+					opacity: .7
 		#switch-left, #switch-right
 			display: none
 		
@@ -382,7 +395,7 @@ header
 	background-color: transparent
 	border: none
 	position: fixed
-	z-index: 2
+	z-index: 3
 	top: 1.6rem
 	right: 1rem
 	height: 1.4rem
@@ -427,6 +440,12 @@ footer
 			input
 				border-radius: 4px 0 0 4px
 				flex: 1
+				font-size: 14px
+				border-color: #576076
+				&:hover
+					border-color: #8492af
+					&::webkit-input-placeholder
+						color: #8492af
 			button
 				position: relative
 				left: -4px
@@ -444,10 +463,13 @@ footer
 		width: 11rem
 		font-size: 14px
 		text-align: center
-		color: #576076
+		color: #8492af
+		opacity: .7
 		font-weight: 400
 		p
 			margin: 0
+			a
+				color: #8492af
 		address
 			font-style: normal
 			margin-bottom: 1rem
@@ -485,6 +507,7 @@ footer
 				text-align: left
 			.subscribe
 				h1
+					font-weight: 400
 					text-align: left
 					margin: 0 0 1rem 0
 			.copyright.desktop

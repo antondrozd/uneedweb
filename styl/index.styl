@@ -88,10 +88,10 @@ body.content-loaded
 			font-weight: 400
 			line-height: 1.7
 			color: #0e1a35
-			margin-bottom: 1.75rem
-			margin-top: 1.25rem
-			padding-left: 0
-			width: 13rem
+			margin-bottom: 1.25rem
+			margin-top: 1rem
+			padding-left: 1.5rem
+			width: 14rem
 			li
 				position: relative
 			svg
@@ -102,7 +102,9 @@ body.content-loaded
 			display: flex
 			flex-direction: column
 			justify-content: center
-			text-align: left
+			text-align: center
+			h2.sub-title
+				margin-bottom: 0
 		.service-image
 			margin: 0 auto
 		.service-title
@@ -121,19 +123,30 @@ body.content-loaded
 				justify-content: center
 			.service-description
 				width: 23rem
-				h1, h2
+				text-align: left
+				h1.title
 					text-align: left
+					margin-bottom: 0.5rem
+				h2.sub-title
+					text-align: left
+					margin: 0
+					width: auto
 				button
 					width: 13rem
 			.service-image
-				margin: 0 3rem 0 0
+				margin: .6rem 3rem 0 0
+				align-self: flex-start
 		@media screen and (min-width: $screenMedium)
 			flex-direction: row
-			justify-content: center
+			justify-content: space-between
 			align-items: stretch
+			max-width: 71rem
+			margin: auto
+			.service-list
+				margin-bottom: 1.75rem
+				margin-top: 1.25rem
 			.container.service
 				width: 20rem
-				margin: 0 2rem
 				flex-direction: column
 				cursor: pointer
 				border-radius: 4px
@@ -146,9 +159,7 @@ body.content-loaded
 					width: 100%
 					h1.title
 						text-align: center
-						margin-bottom: 0.5rem
 					h2.sub-title
-						width: auto
 						text-align: center
 				.service-image
 					margin: auto
@@ -195,7 +206,6 @@ body.content-loaded
 						width: 13rem
 		@media screen and (min-width: $screenSmall)
 			.title
-				font-size: 48px
 				line-height: 1
 			.sub-title
 				font-size: 18px
@@ -216,6 +226,8 @@ body.content-loaded
 		padding-bottom: 5rem
 		#switcher
 			margin-bottom: 3.125rem
+			a h2
+				margin-top: 0
 		.desktop-button
 			display: none
 		.swipeshow-active .slides
@@ -243,8 +255,8 @@ body.content-loaded
 		@media screen and (min-width: $screenSmall)
 			.portfolio-slides .slide
 				.portfolio-image
-					height: 400px
-					width: 500px
+					height: 165px
+					width: 320px
 		@media screen and (min-width: $screenMedium)
 			.portfolio-slides .slide
 				overflow: hidden
