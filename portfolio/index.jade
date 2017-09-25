@@ -2,8 +2,7 @@ doctype html
 html(lang="en")
 	include ../parts/head
 	body#portfolio-page
-		#loader
-			.gif
+		include ../parts/loader
 		include ../parts/header
 		include ../parts/mobile-nav
 
@@ -36,7 +35,7 @@ html(lang="en")
 							h2.type Web Development
 							.name Travel
 						.project-footer
-							.description Development of a web application for a traveling company with a complete 			customer planning journey features.
+							.description Development of a web application for a travel company with a complete 			customer planning journey features.
 							a.details-link(href="/portfolio/travel")
 								button.details-button(type="button")
 									span Details
@@ -101,7 +100,7 @@ html(lang="en")
 							h2.type Web Development
 							.name Travel
 						.project-footer
-							.description Creation of an engaging travel-oriented social network service with embedded e-commerce platform.
+							.description Creation of an engaging travel-oriented social network service with an embedded e-commerce platform.
 							a.details-link(href="/portfolio/social-travel")
 								button.details-button(type="button")
 									span Details
@@ -114,7 +113,7 @@ html(lang="en")
 							h2.type Web Development
 							.name Data Management
 						.project-footer
-							.description Localisation helper a software that eases the translation of an online sport application into multiple languages.
+							.description Localisation helper a software that eases the translation of an online sports application into multiple languages.
 							a.details-link(href="/portfolio/localisation")
 								button.details-button(type="button")
 									span Details
@@ -122,16 +121,38 @@ html(lang="en")
 										include ../icons/arrow-go
 
 		section#result.section-top
-			h1.title.dark Result
-			h2.sub-title You get well-qualified team member, clean and robust code and successfully implemented product
+			h1.title.dark Technologies
+			h2.sub-title Working through a variety of projects, our main technologies are:
+			h2.sub-title.fe-dev Front-end development:
+			.tags
+				.tag JS
+				.tag HTML
+				.tag CSS
+				.tag PHP
+				.tag SQL
+				.tag Responsive Design
+				.tag React
+				.tag Angular JS
+				.tag Node
+				.tag JQuery
+			h2.sub-title.be-dev Back-end development:
+			.tags
+				.tag PHP
+				.tag Python
+				.tag Java
+				.tag SQL
+				.tag Perl
+				.tag RESTful
+				.tag Yii
+				.tag Django
 
 			a(href="/contact-us")
 				button(role="button")
-					span Share your requirements
+					span Configure Technologies for my project
 					span.icon
 						include ../icons/arrow-go
 
 		include ../parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")
-		include ../parts/loader
+		include ../parts/scripts
 

@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "swipeshow": "^0.10.9"
+    "swipeshow": "^0.10.9",
+    "jquery_appear": "^0.3.6"
   }
 }

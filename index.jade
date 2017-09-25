@@ -2,25 +2,21 @@ doctype html
 html(lang="en")
 	include parts/head
 	body#about-page
-		#loader
-			.gif
+		include parts/loader
 		include parts/header
 		include parts/mobile-nav
 		section#landing.flex.align-ver-center
 			.background-image
 			.container
-				//- h1.title(class="typewrite" data-period="1000" data-type='[ "Web Development Company", "Software Development Company" ]')
-					span.wrap
 				h1.title Get What Uneed
-				h2.sub-title Equipped with latest technologies and best tech talents, we bring qualitative and efficient (progressive) software to light up your digital world
-				//- a.learn-more(href="/services")
-				//- 	button.white(role="button") Learn More
+				h2.sub-title Equipped with latest technologies and best tech talents, we bring qualitative and efficient software to light up your digital world
 			#scroll-down
+				include icons/arrow
 
 		section#info.section-top.flex.align-ver-center
 			.container
 				h1.title.dark Our Services
-				h2.sub-title Depending on time, budget, scope and complexity of your projects we provide 3 options to help your business maintain, extend and acquire qualitative IT resources.
+				h2.sub-title Depending on time, budget, scope, and complexity of your projects we provide 3 options to help your business maintain, extend and acquire qualitative IT resources.
 
 		section#services.flex.align-ver-center
 			.container.service.flex.flex-column.align-ver-center(data-href="/services/outsource")
@@ -32,7 +28,7 @@ html(lang="en")
 						li 
 							span 
 								include icons/checkmark
-							span short term projects
+							span short-term projects
 						li 
 							span 
 								include icons/checkmark
@@ -53,11 +49,11 @@ html(lang="en")
 						li 
 							span 
 								include icons/checkmark
-							span medium/large scale projects
+							span direct control over project stages
 						li 
 							span 
 								include icons/checkmark
-							span full-cycle development and maintenance
+							span full-time engagement of IT experts to your project
 					a(href="/services/outstaff")
 						button(role="button") Get more info
 
@@ -135,7 +131,7 @@ html(lang="en")
 
 								.tags
 									.tag ReactJS
-									.tag AngularJS
+									.tag Angular JS
 									.tag JavaScript
 									.tag CSS
 									.tag HTML
@@ -144,17 +140,17 @@ html(lang="en")
 								.desktop-button
 									a(href="/portfolio")
 										button(role="button")
-											span Go to potfolio
+											span Go to portfolio
 											span.icon
 												include icons/arrow-go
 
 						.slide(data-tappable="true")
 							.portfolio-item
-								h2.sub-title Uneed Web builds mobile applications by using cross platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
+								h2.sub-title Uneed Web builds mobile applications by using cross-platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
 
 								.tags
 									.tag ReactJS
-									.tag AngularJS
+									.tag Angular JS
 									.tag JavaScript
 									.tag CSS
 									.tag HTML
@@ -163,7 +159,7 @@ html(lang="en")
 								.desktop-button
 									a(href="/portfolio")
 										button(role="button")
-											span Go to potfolio
+											span Go to portfolio
 											span.icon
 												include icons/arrow-go
 
@@ -173,7 +169,7 @@ html(lang="en")
 
 								.tags
 									.tag ReactJS
-									.tag AngularJS
+									.tag Angular JS
 									.tag JavaScript
 									.tag CSS
 									.tag HTML
@@ -182,7 +178,7 @@ html(lang="en")
 								.desktop-button
 									a(href="/portfolio")
 										button(role="button")
-											span Go to potfolio
+											span Go to portfolio
 											span.icon
 												include icons/arrow-go
 
@@ -190,12 +186,12 @@ html(lang="en")
 					.mobile-button
 						a(href="/portfolio")
 							button(role="button")
-								span Get in touch with us
+								span Go to portfolio
 								span.icon
 									include icons/arrow-go
 
 		include parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")
 		script(type="text/javascript" src="/js/index.min.js")
-		include parts/loader
+		include parts/scripts
 

@@ -1,0 +1,52 @@
+script(type="text/javascript").
+	$(window).ready(function() {
+		var toBeLoaded = {},
+			imageCount = 0,
+			imageToBeLoaded = [];
+
+		var navbarButton = document.getElementById('toggle-navbar');
+		var body = document.getElementsByTagName('body')[0];
+		navbarButton.addEventListener('click', function() {
+			body.classList.toggle('navbar-expanded');
+		});
+
+		function checkIfLoading() {
+			if(imageCount === 0) {
+				setTimeout(function() {
+					$('body').addClass('content-loaded');
+				}, 1000);
+			}
+		}
+
+		$(document).find('*').each(function() { 
+			var imageUrl = $(this).css('backgroundImage');
+			var	valuePattern = /url\(\s*(['"]?)(.*?)\1\s*\)/g,
+				keyPattern = /photos\/(['"]?)(.*?)\1\s*\)/g;
+			if(imageUrl !== "none") {
+				var key = keyPattern.exec(imageUrl),
+					value = valuePattern.exec(imageUrl);
+
+				if(key !== null && value !== null) {
+					toBeLoaded[key[2]] = value[2];
+					imageToBeLoaded.push(value[2]);
+				}
+			}
+		});
+
+		imageCount = imageToBeLoaded.length;
+
+		checkIfLoading();
+
+		imageToBeLoaded.forEach(function(src) {
+			var image = new Image();
+			image.src =	src;
+			$(image).one('load error', function() {
+				imageCount--;
+				checkIfLoading();
+			}).each(function() {
+				if(this.complete || typeof this.complete === 'undefined') { 
+					$(this).load();
+				}
+			});
+		});
+	});

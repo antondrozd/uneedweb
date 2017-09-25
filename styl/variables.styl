@@ -7,11 +7,26 @@ $screenLargeXLarge = 1300px
 $screenXLarge = 1400px
 // end dimentions
 
-@keyframes enterScale {
-	0% {
+@keyframes enterScale
+	0%
 		transform: scale(1.2)
-	}
-	100% {
+	100%
 		transform: scale(1.0)
-	}
-}
+
+@keyframes pop
+	0%
+		opacity:0
+		transform: scale(.5)
+	50%
+		opacity: 1
+	100%
+		opacity: 1
+		transform: scale(1)
+		
+@keyframes jumping
+	0%
+		transform: translateY(0)
+	50%
+		transform: translateY(7px)
+	100%
+		transform: translateY(0)

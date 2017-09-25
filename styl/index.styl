@@ -9,6 +9,7 @@ body.content-loaded
 	#landing
 		.background-image
 			animation: enterScale 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards
+			background-size: cover
 
 #about-page
 
@@ -33,7 +34,6 @@ body.content-loaded
 			z-index: -1
 			transform: scale(1.2)
 			background-image url('/photos/landing.jpg')
-			background-size: cover
 			background-position: 50%
 			background-repeat: no-repeat
 		.title
@@ -50,25 +50,17 @@ body.content-loaded
 			width: 5rem
 			height: 5rem
 			cursor: pointer
-			&:before, &:after
-				top: 0
-				left: 0
-				right: 0
-				bottom: 0
-				margin: auto
-				content: ''
-				width: 1.3rem
-				height: 2px
-				background-color: #667891
-				transition: background-color .3s ease
-				position: absolute
-			&:before
-				transform: rotate(45deg) translateX(-45%)
-			&:after
-				transform: rotate(-45deg) translateX(45%)
+			animation: jumping 1.5s ease infinite
+			transition: transform .3s ease
+			svg
+				path
+					transition: fill .3s ease
 			&:hover
-				&:before, &:after
-					background-color: white
+				animation: none
+				transform: translateY(0)
+				svg
+					path
+						fill: white
 				
 		@media screen and (min-width: $screenMedium)
 			padding-top: 0
@@ -91,7 +83,7 @@ body.content-loaded
 			margin-bottom: 1.25rem
 			margin-top: 1rem
 			padding-left: 1.5rem
-			width: 14rem
+			width: 15rem
 			li
 				position: relative
 			svg
@@ -181,12 +173,19 @@ body.content-loaded
 
 	#guarantee
 		background-color: #0e1a35
+		&.visible
+			.feature
+				transform: scale(.5)
+				for items in 1..10
+					&:nth-child({items})
+						animation: pop .5s .3s*items 1 forwards
 		.sub-title
 			color: #8c9ab5
 		.features-container
 			margin-top: -1rem
 			margin-bottom: 5rem
 			.feature
+				opacity: 0
 				padding: 0 1rem
 				margin: 1rem 0
 				display: flex
