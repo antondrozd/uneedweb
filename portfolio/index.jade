@@ -15,20 +15,20 @@ html(lang="en")
 		section#switcher
 			#switch-left
 				include ../icons/left-arrow
-			a.active(href="#")
+			a#all-filter.active(onclick="uneed.onChangePortfolioFilter('all')")
 				h2.sub-title All
-			a(href="#")
+			a#web-filter(onclick="uneed.onChangePortfolioFilter('web')")
 				h2.sub-title Web Development
-			a(href="#")
+			a#mobile-filter(onclick="uneed.onChangePortfolioFilter('mobile')")
 				h2.sub-title Mobile Development
-			a(href="#")
+			a#design-filter(onclick="uneed.onChangePortfolioFilter('design')")
 				h2.sub-title Product Design
 			#switch-right
 				include ../icons/left-arrow
 
-		section#projects
+		section#projects.all-filter
 			.container
-				.project.travel
+				.project.travel.web
 					.overlay
 					.project-content
 						.project-header
@@ -41,7 +41,7 @@ html(lang="en")
 									span Details
 									span.icon
 										include ../icons/arrow-go
-				.project.sport
+				.project.sport.web
 					.overlay
 					.project-content
 						.project-header
@@ -54,7 +54,7 @@ html(lang="en")
 									span Details
 									span.icon
 										include ../icons/arrow-go
-				.project.yow
+				.project.yow.mobile.design
 					.overlay
 					.project-content
 						.project-header
@@ -67,7 +67,7 @@ html(lang="en")
 									span Details
 									span.icon
 										include ../icons/arrow-go
-				.project.banking
+				.project.banking.web
 					.overlay
 					.project-content
 						.project-header
@@ -80,7 +80,7 @@ html(lang="en")
 									span Details
 									span.icon
 										include ../icons/arrow-go
-				.project.gammling
+				.project.gammling.web
 					.overlay
 					.project-content
 						.project-header
@@ -93,7 +93,7 @@ html(lang="en")
 									span Details
 									span.icon
 										include ../icons/arrow-go
-				.project.social-travel
+				.project.social-travel.web
 					.overlay
 					.project-content
 						.project-header
@@ -106,7 +106,7 @@ html(lang="en")
 									span Details
 									span.icon
 										include ../icons/arrow-go
-				.project.localisation
+				.project.localisation.web.design
 					.overlay
 					.project-content
 						.project-header
@@ -120,39 +120,40 @@ html(lang="en")
 									span.icon
 										include ../icons/arrow-go
 
-		section#result.section-top
-			h1.title.dark Technologies
-			h2.sub-title Working through a variety of projects, our main technologies are:
-			h2.sub-title.fe-dev Front-end development:
-			.tags
-				.tag JS
-				.tag HTML
-				.tag CSS
-				.tag PHP
-				.tag SQL
-				.tag Responsive Design
-				.tag React
-				.tag Angular JS
-				.tag Node
-				.tag JQuery
-			h2.sub-title.be-dev Back-end development:
-			.tags
-				.tag PHP
-				.tag Python
-				.tag Java
-				.tag SQL
-				.tag Perl
-				.tag RESTful
-				.tag Yii
-				.tag Django
+		//- section#result.section-top
+		//- 	h1.title.dark Technologies
+		//- 	h2.sub-title Working through a variety of projects, our main technologies are:
+		//- 	h2.sub-title.fe-dev Front-end development:
+		//- 	.tags
+		//- 		.tag JS
+		//- 		.tag HTML
+		//- 		.tag CSS
+		//- 		.tag PHP
+		//- 		.tag SQL
+		//- 		.tag Responsive Design
+		//- 		.tag React
+		//- 		.tag Angular JS
+		//- 		.tag Node
+		//- 		.tag JQuery
+		//- 	h2.sub-title.be-dev Back-end development:
+		//- 	.tags
+		//- 		.tag PHP
+		//- 		.tag Python
+		//- 		.tag Java
+		//- 		.tag SQL
+		//- 		.tag Perl
+		//- 		.tag RESTful
+		//- 		.tag Yii
+		//- 		.tag Django
 
-			a(href="/contact-us")
-				button(role="button")
-					span Configure Technologies for my project
-					span.icon
-						include ../icons/arrow-go
+		//- 	a(href="/contact-us")
+		//- 		button(role="button")
+		//- 			span Contact Us
+		//- 			span.icon
+		//- 				include ../icons/arrow-go
 
 		include ../parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")
+		script(type="text/javascript" src="/js/portfolio.min.js")
 		include ../parts/scripts
 

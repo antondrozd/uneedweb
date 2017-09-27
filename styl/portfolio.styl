@@ -1,5 +1,5 @@
 #portfolio-page
-	
+
 	#description
 		padding-top: 7rem
 		
@@ -16,6 +16,8 @@
 			height: 400px
 			background-size: cover
 			border-bottom: 1px solid white
+			transform scale(0)
+			transition: transform .3s ease
 			background-image: url('/photos/travel/travel-portfolio-grid.png')
 			&.travel
 				background-image: url('/photos/travel/travel-portfolio-grid.png')
@@ -70,6 +72,27 @@
 					bottom: 2rem
 					margin: auto
 					border-color: solid 2px #8492af
+		&.all-filter
+			.project
+				animation: appear .5s ease forwards
+		&.web-filter
+			.project
+				&.web
+					animation: appear .5s ease forwards
+				&:not(.web)
+					display: none
+		&.mobile-filter
+			.project
+				&.mobile
+					animation: appear .5s ease forwards
+				&:not(.mobile)
+					display: none
+		&.design-filter
+			.project
+				&.design
+					animation: appear .5s ease forwards
+				&:not(.design)
+					display: none
 		@media screen and (min-width: $screenSmall)
 			margin-top: 1rem
 			.container
@@ -99,9 +122,19 @@
 		h2
 			width: 90%
 			margin: 0 auto 3.25rem auto
+		.fe-dev, .be-dev
+			margin-bottom: 0.5rem
+		.tags
+			margin-bottom: 2.5rem
 		@media screen and (min-width: $screenSmall)
 			h2
 				width: 35rem
+			.fe-dev, .be-dev
+				margin-bottom: 0.5rem
+			.tags
+				width: 35rem
+				margin: auto
+				margin-bottom: 2.5rem
 
 #portfolio-page, #portfolio-project-page			
 	h2.type

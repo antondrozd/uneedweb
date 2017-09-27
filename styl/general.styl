@@ -112,6 +112,14 @@ button
 .section-bottom
 	padding: 3.125rem 0 5rem 0
 
+section.animated
+	opacity: 0
+	transition: opacity .5s linear, transform .5s ease
+	transform: translateY(15px)
+	&.visible
+		opacity: 1
+		transform: translateY(0)
+
 h1.title
 	font-family Roboto
 	font-size 30px

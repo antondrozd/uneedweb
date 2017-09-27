@@ -23,6 +23,23 @@ $screenXLarge = 1400px
 		opacity: 1
 		transform: scale(1)
 		
+@keyframes appear
+	0%
+		transform: scale(0)
+		opacity: 0
+	100%
+		opacity: 1
+		transform: scale(1)
+
+@keyframes disappear
+	0%
+		transform: scale(1)
+		opacity: 1
+	100%
+		opacity: 0
+		transform: scale(0)
+		display: none
+
 @keyframes jumping
 	0%
 		transform: translateY(0)

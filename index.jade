@@ -13,12 +13,12 @@ html(lang="en")
 			#scroll-down
 				include icons/arrow
 
-		section#info.section-top.flex.align-ver-center
+		section#info.animated.section-top.flex.align-ver-center
 			.container
 				h1.title.dark Our Services
 				h2.sub-title Depending on time, budget, scope, and complexity of your projects we provide 3 options to help your business maintain, extend and acquire qualitative IT resources.
 
-		section#services.flex.align-ver-center
+		section#services.animated.flex.align-ver-center
 			.container.service.flex.flex-column.align-ver-center(data-href="/services/outsource")
 				img.service-image(src="/images/gif/outsource.gif" width="100" height="100")
 				.service-description
@@ -74,11 +74,11 @@ html(lang="en")
 					a(href="/services/relocation")
 						button(role="button") Get more info
 
-		section#about-services.section-bottom.flex.align-ver-center
+		section#about-services.animated.section-bottom.flex.align-ver-center
 			.container
 				| Learn more about each of these options and their difference 
 				a.link.underlined(href="/services") here
-		section#guarantee.flex.align-ver-center
+		section#guarantee.animated.flex.align-ver-center
 			.container
 				.section-top
 					h1.title Our Added Value
@@ -105,7 +105,7 @@ html(lang="en")
 
 		.gradient
 
-		section#portfolio
+		section#portfolio.animated
 			.container
 				.section-top
 					h1.title.dark Our Expertise
@@ -126,7 +126,7 @@ html(lang="en")
 				.portfolio-slides.swipeshow.autoheight
 					.slides
 						.slide(data-tappable="true")
-							.portfolio-item
+							.portfolio-item(data-tappable="true")
 								h2.sub-title Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
 
 								.tags
@@ -145,7 +145,7 @@ html(lang="en")
 												include icons/arrow-go
 
 						.slide(data-tappable="true")
-							.portfolio-item
+							.portfolio-item(data-tappable="true")
 								h2.sub-title Uneed Web builds mobile applications by using cross-platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
 
 								.tags
@@ -164,7 +164,7 @@ html(lang="en")
 												include icons/arrow-go
 
 						.slide(data-tappable="true")
-							.portfolio-item
+							.portfolio-item(data-tappable="true")
 								h2.sub-title Uneed Web creates a unique product web design to match you company’s unique brand. A customized web design which is search engine friendly, stands out from your competitors and focuses on your customers. To optimize your customers browsing experience we create sites and systems based on responsive design.
 
 								.tags

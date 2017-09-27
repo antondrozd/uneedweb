@@ -37,16 +37,25 @@ script(type="text/javascript").
 
 		checkIfLoading();
 
+		setTimeout(function() {
+			if (imageCount !== 0) {
+				$('body').addClass('content-loaded');
+			}
+		}, 5000);
+
 		imageToBeLoaded.forEach(function(src) {
 			var image = new Image();
 			image.src =	src;
-			$(image).one('load error', function() {
+			var images = $(image).one('load error', function() {
 				imageCount--;
 				checkIfLoading();
-			}).each(function() {
-				if(this.complete || typeof this.complete === 'undefined') { 
-					$(this).load();
-				}
 			});
+			if (images) {
+				images.each(function() {
+					if(this.complete || typeof this.complete === 'undefined') { 
+						$(this).load();
+					}
+				});
+			}
 		});
 	});
