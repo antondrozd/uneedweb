@@ -4,12 +4,6 @@ script(type="text/javascript").
 			imageCount = 0,
 			imageToBeLoaded = [];
 
-		var navbarButton = document.getElementById('toggle-navbar');
-		var body = document.getElementsByTagName('body')[0];
-		navbarButton.addEventListener('click', function() {
-			body.classList.toggle('navbar-expanded');
-		});
-
 		function checkIfLoading() {
 			if(imageCount === 0) {
 				setTimeout(function() {

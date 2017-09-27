@@ -56,8 +56,6 @@ body.content-loaded
 				path
 					transition: fill .3s ease
 			&:hover
-				animation: none
-				transform: translateY(0)
 				svg
 					path
 						fill: white
@@ -234,8 +232,10 @@ body.content-loaded
 		.portfolio-slides
 			width: 100%
 			.slide
+				overflow: hidden
 				width: 100%
 				.portfolio-image
+					width: 400px;
 					height: 300px
 					background-size: cover
 					margin: auto
@@ -258,7 +258,6 @@ body.content-loaded
 					width: 320px
 		@media screen and (min-width: $screenMedium)
 			.portfolio-slides .slide
-				overflow: hidden
 				.sub-title
 					text-align: left
 					width: auto

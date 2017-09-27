@@ -112,13 +112,15 @@ button
 .section-bottom
 	padding: 3.125rem 0 5rem 0
 
-section.animated
-	opacity: 0
-	transition: opacity .5s linear, transform .5s ease
-	transform: translateY(15px)
-	&.visible
-		opacity: 1
-		transform: translateY(0)
+
+@media screen and (min-width: $screenMedium)
+	section.animated
+		opacity: 0
+		transition: opacity .5s linear, transform .5s ease
+		transform: translateY(15px)
+		&.visible
+			opacity: 1
+			transform: translateY(0)
 
 h1.title
 	font-family Roboto
@@ -177,6 +179,10 @@ body
 	&.navbar-expanded
 		.mobile-nav
 			transform: translateY(0)
+			.menu-list a
+				for items in 1..10
+					&:nth-child({items})
+						animation: appearToTop .5s linear forwards
 		#toggle-navbar
 			justify-content: center
 			.icon-bar:nth-child(1)
@@ -385,14 +391,12 @@ header
 		a
 			display: block
 			h2
-				margin: 1rem 0
+				padding: 1rem 2rem
 				cursor: pointer
-				padding-left: 2rem
-				padding-right: 2rem
 			&.active, &:hover
 				h2:after
 					width: 100%
-					bottom: -17px
+					bottom: 0
 			&:hover
 				h2:after
 					opacity: .7

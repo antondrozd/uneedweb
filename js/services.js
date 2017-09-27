@@ -2,11 +2,22 @@
 	var jWindow = $(window),
 		serviceSlides = $(".services-slides"),
 		isSwipeInitialized = false,
+		sections = $('section'),
 		swipeshowConfig = {
 			autostart: false,
 			$next: $(".slide-right"),
 			$previous: $(".slide-left")
 		};
+
+	sections.appear();
+
+	sections.on('appear', function(event, elements) {
+		elements.each(function(index, el) {
+			$(el).addClass('visible');
+		});
+	});
+
+	$.force_appear();
 
 	function throttle(callback, limit) {
 		var wait = false;                  // Initially, we're not waiting

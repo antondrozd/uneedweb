@@ -95,7 +95,7 @@
 					opacity: 1
 		@media screen and (min-width: $screenSmall)
 			width: 90%
-			max-width: 970px
+			max-width: 700px
 			margin: 0 auto 5rem auto
 			display: flex
 			border-radius: 4px
@@ -106,6 +106,7 @@
 				flex-direction: column
 				flex: 1
 				max-width: 18rem
+				border-right: 1px solid #e3eaf3
 				.title-option, .title-header
 					background-color: #f3f8ff
 					font-size: 13px
@@ -139,10 +140,11 @@
 					.option-name
 						display: none
 		@media screen and (min-width: $screenMedium)
+			width: auto
+			max-width: 970px
 			.services-titles
 				flex: 0
-				min-width: 15rem
-				border-right: 1px solid #e3eaf3
+				min-width: 12rem
 			.swipeshow
 				.slides
 					width: auto !important
@@ -151,6 +153,8 @@
 					width: 100%
 					visibility: visible
 					border-right: 1px solid #e3eaf3
+					&:last-of-type
+						border-right: none
 			.slide-left, .slide-right
 				display: none
 
@@ -305,8 +309,14 @@
 					margin-bottom: 4rem
 					h1
 						padding: 0 6rem
+				&.visible
+					.workflow-row
+						for items in 1..10
+							&:nth-child({items})
+								animation: appearToTop .5s .3s*items linear forwards
 				.workflow-row
 					display: flex
+					opacity: 0
 					.workflow-item
 						position: relative
 						width: 50%
