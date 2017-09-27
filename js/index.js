@@ -43,6 +43,8 @@
 		});
 	});
 
+	$.force_appear();
+
 	// sections.on('disappear', function(event, elements) {
 	// 	elements.each(function(index, el) {
 	// 		$(el).removeClass('visible');
