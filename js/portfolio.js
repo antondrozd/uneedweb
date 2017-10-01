@@ -2,7 +2,15 @@
 	window.uneed = window.uneed || {};
 	var filterOptions = ['all', 'web', 'mobile', 'design'],
 		projects = $('#projects'),
-		filterEls = $('#all-filter, #web-filter, #mobile-filter, #design-filter');
+		slides = $(".gallery-container")
+		filterEls = $('#all-filter, #web-filter, #mobile-filter, #design-filter'),
+		swipeshowConfig = {
+			autostart: false,
+			$next: $("#switch-right"),
+			$previous: $("#switch-left")
+		};
+
+	slides.swipeshow(swipeshowConfig);
 
 	window.uneed.onChangePortfolioFilter = function(filter) {
 		filterEls.removeClass('active');

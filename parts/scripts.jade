@@ -31,25 +31,22 @@ script(type="text/javascript").
 
 		checkIfLoading();
 
-		setTimeout(function() {
-			if (imageCount !== 0) {
-				$('body').addClass('content-loaded');
-			}
-		}, 5000);
-
 		imageToBeLoaded.forEach(function(src) {
 			var image = new Image();
-			image.src =	src;
-			var images = $(image).one('load error', function() {
+			image.onload = function() {
 				imageCount--;
 				checkIfLoading();
-			});
-			if (images) {
-				images.each(function() {
-					if(this.complete || typeof this.complete === 'undefined') { 
-						$(this).load();
-					}
-				});
+			};
+			image.onerror = function() {
+				imageCount--;
+				checkIfLoading();
+			};
+			if (image.complete && image.naturalHeight !== 0) {
+				imageCount--;
+				checkIfLoading();
+				image.onload = undefined;
+				image.onerror = undefined;
 			}
+			image.src =	src;
 		});
 	});
