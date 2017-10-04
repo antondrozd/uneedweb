@@ -206,13 +206,14 @@ html(lang="en")
 		script(type="text/javascript").
 			window.onload = function loadStuff() {
 				var win, doc, img, header, enhancedClass;
+				var items = Array.prototype.slice.call(document.querySelectorAll('.lazy-load-image'), 0);
 
 				// Quit early if older browser (e.g. IE 8).
 				if (!('addEventListener' in window)) {
 					return;
 				}
 
-				document.querySelectorAll('.lazy-load-image').forEach(function(lazyLoadImage) {
+				items.forEach(function(lazyLoadImage) {
 					var targetImage = lazyLoadImage.querySelector('.large');
 					var imageUrl = getComputedStyle(targetImage)['backgroundImage'];
 
