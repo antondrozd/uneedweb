@@ -5,12 +5,6 @@
 @import 'contact-us'
 @import 'portfolio'
 
-body.content-loaded
-	#landing
-		.background-image
-			animation: enterScale 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards
-			background-size: cover
-
 #about-page
 
 	header
@@ -32,10 +26,30 @@ body.content-loaded
 			width: 100%
 			height: 100%
 			z-index: -1
-			transform: scale(1.2) translate3d(0,0,0)
-			background-image url('/photos/landing.jpg')
-			background-position: 50%
-			background-repeat: no-repeat
+			.small, .large
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-size: cover
+				background-repeat: no-repeat
+				transition: opacity 1s linear;
+			.small
+				transform: scale(1.1) translate3d(0,0,0)
+				svg
+					width: 100%
+					height: 100%
+			.large
+				display: none
+				opacity: 0
+				background-image url('/photos/landing.jpg')
+			&.loaded
+				.small
+					opacity: 0
+				.large
+					opacity: 1
+					display: block
 		.title
 			font-weight: 300
 			margin-bottom: 1.25rem

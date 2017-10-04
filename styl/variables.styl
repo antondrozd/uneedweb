@@ -55,3 +55,19 @@ $screenXLarge = 1400px
 		transform: translateY(7px)
 	100%
 		transform: translateY(0)
+		
+@keyframes appearFromHidden
+	0%
+		visibility: hidden
+		opacity: 0
+	100%
+		opacity: 1
+		visibility: visible
+
+@keyframes disappearToHidden
+	0%
+		opacity: 1
+		visibility: visible
+	100%
+		visibility: hidden
+		opacity: 0
