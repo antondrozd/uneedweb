@@ -227,11 +227,20 @@ body
 		border: solid 1px #e3eaf3
 
 header
-	position: absolute
+	position: fixed
 	width: 100%
 	z-index: 1
 	background: #0e1a35
 	padding-bottom: 1rem
+	transition: transform .3s ease
+	.container
+		transition: padding .3s ease
+	&.nav-up
+		transform: translateY(-100%)
+	&.scrolled
+		.container
+			padding-top: 0
+			padding-bottom: 0
 	nav
 		display: flex
 		align-items: center

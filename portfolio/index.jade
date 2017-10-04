@@ -14,7 +14,8 @@ html(lang="en")
 
 		section#switcher
 			#switch-left
-				include ../icons/left-arrow
+				a(onclick="uneed.onPrevPortfolioFilter()")
+					include ../icons/left-arrow
 			a#all-filter.active(onclick="uneed.onChangePortfolioFilter('all')")
 				h2.sub-title All
 			a#web-filter(onclick="uneed.onChangePortfolioFilter('web')")
@@ -24,7 +25,8 @@ html(lang="en")
 			a#design-filter(onclick="uneed.onChangePortfolioFilter('design')")
 				h2.sub-title Product Design
 			#switch-right
-				include ../icons/left-arrow
+				a(onclick="uneed.onNextPortfolioFilter()")
+					include ../icons/left-arrow
 
 		section#projects.all-filter
 			.container
@@ -162,4 +164,5 @@ html(lang="en")
 		include ../parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")
 		script(type="text/javascript" src="/js/portfolio.min.js")
+		include ../parts/navbar
 

@@ -26,6 +26,8 @@
 			width: 100%
 			height: 100%
 			z-index: -1
+			transform: translate3d(0, 0, 0)
+			overflow: hidden
 			.small, .large
 				position: absolute
 				top: 0
@@ -34,22 +36,23 @@
 				height: 100%
 				background-size: cover
 				background-repeat: no-repeat
-				transition: opacity 1s linear;
 			.small
-				transform: scale(1.1) translate3d(0,0,0)
+				transform: scale(1.1)
 				svg
 					width: 100%
 					height: 100%
 			.large
-				display: none
+				transform: scale(1.2)
 				opacity: 0
 				background-image url('/photos/landing.jpg')
 			&.loaded
 				.small
+					transition: opacity 10s linear;
 					opacity: 0
 				.large
+					transition: opacity 1s linear, transform .3s linear;
+					transform: scale(1)
 					opacity: 1
-					display: block
 		.title
 			font-weight: 300
 			margin-bottom: 1.25rem
@@ -185,12 +188,6 @@
 
 	#guarantee
 		background-color: #0e1a35
-		&.visible
-			.feature
-				transform: scale(.5)
-				for items in 1..10
-					&:nth-child({items})
-						animation: pop .5s .3s*items 1 forwards
 		.sub-title
 			color: #8c9ab5
 		.features-container
@@ -226,11 +223,32 @@
 				flex-wrap: wrap
 				.feature
 					width: 50%
+			&.visible
+				.feature
+					transform: scale(.5)
+					for items in 1..10
+						&:nth-child({items})
+							animation: pop .5s .3s*items 1 forwards
 		@media screen and (min-width: $screenMedium)
 			.features-container
 				justify-content: center
 				.feature
 					width: 24rem
+			&.visible
+				.feature
+					transform: scale(.5)
+					&:nth-child(1)
+						animation: pop .5s .3s 1 forwards
+					&:nth-child(2)
+						animation: pop .5s .3s 1 forwards
+					&:nth-child(3)
+						animation: pop .5s .6s 1 forwards
+					&:nth-child(4)
+						animation: pop .5s .6s 1 forwards
+					&:nth-child(5)
+						animation: pop .5s .9s 1 forwards
+					&:nth-child(6)
+						animation: pop .5s .9s 1 forwards
 
 	#portfolio
 		text-align: center
@@ -249,17 +267,11 @@
 				overflow: hidden
 				width: 100%
 				.portfolio-image
-					width: 400px;
+					width: 400px
 					height: 300px
 					background-size: cover
 					margin: auto
 					margin-top: 1rem
-					&.web
-						background-image: url('/images/png/hp-1-web.png')
-					&.mobile
-						background-image: url('/images/png/hp-2-mobile.png')
-					&.design
-						background-image: url('/images/png/hp-3-design.png')
 				.sub-title
 					font-size: 14px
 					line-height: 1.38

@@ -7,7 +7,6 @@ html(lang="en")
 		include parts/mobile-nav
 		section#landing.flex.align-ver-center
 			.background-image.lazy-load-image
-				.large
 				.small
 					svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='1800', height='823', viewbox='0 0 1800 823' preserveAspectRatio="xMinYMin slice")
 						filter#blur(filterunits='userSpaceOnUse', color-interpolation-filters='sRGB')
@@ -15,6 +14,7 @@ html(lang="en")
 								fecomponenttransfer
 									fefunca(type='discrete', tablevalues='1 1')
 						image(filter='url(#blur)', xlink:href='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCABDAGQDAREAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAECAwQG/8QAKBABAAIBBAEDBAIDAAAAAAAAAQACEQMSITFBIlFhEzKBkXGhBLHw/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARESIf/aAAwDAQACEQMRAD8A8RPS4HjiBLbbxGid7juTVwsxqjiADiNFFx7l1MW6amZQzR9OW0gzwviUG19oBtfaBptkZNMUywrB7mVGDbmBOYUZgMLWeCBen9PGL9wOoBpxLohrLA9IyYlZXtgLbKFtwczKMNe3VTxJVjI5+A8yNLrqVrWx9OtsmBtnJz4gTtLG6h12e0gRtO+YDra27Gmdyh0oNzN65/LA7afawF5lgWnxdJpGuIQsSg1MW6mWY5ri/My2ytTPfB8RgRQ57gS7qWEf4YU0pbnmj7YySAUK7aZw9r2yg0/vkV1adsPwksFDySxA8aozaVtiEGIGeoh9swRjfg5hUJ6CBNTjMAa73H6gRbTtT7qv8yKnECqmHjmMG5Z2m0zxKpVtez9sHhWvalvV4momOuti1RHuaZPJ7wMabN2Wzx0PvM2MxOsZttOYaFq8lTxIIt1glkLRXJ6h5JeU1VtVTDjMmNajUp0/6IzDdSGPhjANEFH9MYrPj3/uRQGeMyjSnWMyoG5VwnMGNcWxwP6mtck7nMmqN7ATd/4gw63z4mpVwqlbW9TiZVpqW9AY/uLSQ9O1V6V8meoitjR09TTtbeieAijnf8fSBW9uPiZXRomiKr+UlDtbSH03x+IHPqfTbZ32fxCugsfEORoWVtZywElTIrmFK1StcvOfMKmtw6MfMAGihgH3V5kUtRBMPzKDTuCq+fEDRth5gZajTwQrKqC8HfkkU7Y9uWAttfeBs9yuR9WhRa1rGbOXMKEzpq9jBGZx1CpOyRWqCKnOIGXmUWubEBah1IIx6R8wqcwC3cK//9k=', x="0" y="0" width="100%")
+				.large
 			.container
 				h1.title Get What Uneed
 				h2.sub-title Equipped with latest technologies and best tech talents, we bring qualitative and efficient software to light up your digital world
@@ -138,13 +138,14 @@ html(lang="en")
 								h2.sub-title Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
 
 								.tags
-									.tag ReactJS
+									.tag React JS
 									.tag Angular JS
 									.tag JavaScript
 									.tag CSS
 									.tag HTML
 
-								.portfolio-image.web
+								.portfolio-image
+									img(src="/images/png/hp-1-web.png", alt="Web image", width="100%" height="100%")
 								.desktop-button
 									a(href="/portfolio")
 										button(role="button")
@@ -157,13 +158,12 @@ html(lang="en")
 								h2.sub-title Uneed Web builds mobile applications by using cross-platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
 
 								.tags
-									.tag ReactJS
-									.tag Angular JS
-									.tag JavaScript
-									.tag CSS
-									.tag HTML
+									.tag ReactJS Native
+									.tag Ionic
+									.tag Xamarin Framework
 
-								.portfolio-image.mobile
+								.portfolio-image
+									img(src="/images/png/hp-2-mobile.png", alt="Mobile image", width="100%" height="100%")
 								.desktop-button
 									a(href="/portfolio")
 										button(role="button")
@@ -176,13 +176,14 @@ html(lang="en")
 								h2.sub-title Uneed Web creates a unique product web design to match you company’s unique brand. A customized web design which is search engine friendly, stands out from your competitors and focuses on your customers. To optimize your customers browsing experience we create sites and systems based on responsive design.
 
 								.tags
-									.tag ReactJS
-									.tag Angular JS
-									.tag JavaScript
-									.tag CSS
-									.tag HTML
+									.tag Sketch
+									.tag Adobe Photoshop
+									.tag Adobe Illustrator
+									.tag Mobile Interfaces
+									.tag Web Design \ UX
 
-								.portfolio-image.design
+								.portfolio-image
+									img(src="/images/png/hp-3-design.png", alt="Design image", width="100%" height="100%")
 								.desktop-button
 									a(href="/portfolio")
 										button(role="button")
@@ -201,6 +202,7 @@ html(lang="en")
 		include parts/footer
 		script(type="text/javascript" src="/js/libs.min.js")
 		script(type="text/javascript" src="/js/index.min.js")
+		include parts/navbar
 		script(type="text/javascript").
 			window.onload = function loadStuff() {
 				var win, doc, img, header, enhancedClass;
