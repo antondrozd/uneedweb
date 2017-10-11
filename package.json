@@ -13,7 +13,7 @@
     "libs": "uglifyjs bower_components/jquery/dist/jquery.min.js bower_components/swipeshow/jquery.swipeshow.min.js bower_components/jquery_appear/jquery.appear.js -o build/js/libs.min.js -c",
     "js": "npm run uglifyjs && npm run libs",
     "folders": "mkdir -p build/css build/js",
-    "copy": "cp -r images photos build/ && cp *.png manifest.json *.svg *.xml build/",
+    "copy": "cp -r images photos build/ && cp *.png manifest.json *.svg *.xml *.txt build/",
     "clean": "rm -fr build/",
     "css": "npm run stylus && npm run autoprefixer && npm run cleancss",
     "build": "npm run clean && npm run folders && npm run jade && npm run js && npm run css && npm run copy"
