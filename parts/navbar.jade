@@ -15,12 +15,13 @@ script(type="text/javascript").
 			hasScrolled();
 			didScroll = false;
 		}
-	}, 250);
+	}, 50);
 
 	function hasScrolled() {
 		var st = $(this).scrollTop();
 
-		header.toggleClass('scrolled', st !== 0);
+		header.toggleClass('scrolled', st > 0);
+		header.toggleClass('scrolled-down', st > 150);
 		
 		// Make sure they scroll more than delta
 		if(Math.abs(lastScrollTop - st) <= delta)

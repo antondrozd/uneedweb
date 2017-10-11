@@ -230,19 +230,18 @@ header
 	position: fixed
 	width: 100%
 	z-index: 5
-	background: #0e1a35
+	background: linear-gradient(to left, #18243d, #0e1a35)
 	padding-bottom: 1rem
-	transition: transform .3s ease
+	transition: transform .3s ease, background .3s ease
 	.container
 		transition: padding .3s ease
-	&.nav-up
-		transform: translateY(-100%)
 	&.scrolled
-		background: #0e1a35 !important
-		border-bottom: 1px solid #576076
+		background: linear-gradient(to left, #18243d, #0e1a35) !important
 		.container
 			padding-top: 0
 			padding-bottom: 0
+	&.scrolled-down.nav-up
+		transform: translateY(-100%)
 	nav
 		display: flex
 		align-items: center
