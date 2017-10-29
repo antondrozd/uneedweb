@@ -45,7 +45,10 @@
 			.large
 				transform: scale(1.2)
 				opacity: 0
-				background-image url('/photos/landing.jpg')
+				background-image url('/photos/landing-mini.jpg')
+				@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+					background-image url('/photos/landing.jpg')
+				}
 			&.loaded
 				.small
 					transition: opacity 10s linear;
@@ -277,11 +280,22 @@
 				overflow: hidden
 				width: 100%
 				.portfolio-image
-					width: 400px
-					height: 300px
-					background-size: cover
+					background-size: 100%
+					background-repeat: no-repeat
 					margin: auto
 					margin-top: 1rem
+					&.web
+						height: 176px
+						width: 355px
+						background-image: url('/images/png/hp-1-web.png')
+					&.mobile
+						height: 270px
+						width: 250px
+						background-image: url('/images/png/hp-2-mobile.png')
+					&.design
+						height: 265px
+						width: 250px
+						background-image: url('/images/png/hp-3-design.png')
 				.sub-title
 					font-size: 14px
 					line-height: 1.38
@@ -306,16 +320,24 @@
 					position: relative
 					min-height: 22rem
 				.portfolio-image
-					width: 758px
-					height: 350px
 					position: absolute
-					top: -15px
-					right: -100%
-					transform: translateX(-300px)
+					top: 0;
+					right: 0;
 					background-size: contain
 					background-repeat: no-repeat
 					&.web
-						top: -40px
+						transform: translateX(57%)
+						width: 737px
+						height: 340px
+						top: -12px
+					&.mobile
+						transform: translateX(57%)
+						width: 758px
+						height: 350px
+					&.design
+						transform: translateX(64%)
+						width: 758px
+						height: 335px
 			.desktop-button
 				display: block
 				text-align: left
