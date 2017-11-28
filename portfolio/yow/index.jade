@@ -2,11 +2,11 @@ doctype html
 html(lang="en")
 	include ../../parts/head
 	+head("Portfolio - YOW | Uneedweb", "Travel application, Mobile Development, online scratch map", "Our own mobile application that keeps track of the places you visit and shows your exploration progress.")
-	body#portfolio-project-page
+	body#portfolio-project-page.project-yow
 		include ../../parts/header
 		include ../../parts/mobile-nav
 
-		section#landing
+		section#top-yow
 
 		section#description
 			.container
@@ -22,36 +22,71 @@ html(lang="en")
 							span.icon
 								include ../../icons/arrow-go
 				.section-top
-					h2.type Travel
-					h1.title.dark YOW
-					h2.sub-title You travel a lot, but you don’t keep track of the places you visited? Your friend asks you about countries you’ve seen and you scratch your head thinking? Better scratch the map. Try our epic application YOW.
-					h2.sub-title As we travel extensively throughout the year for fellow travel-lovers we have crafted an application.
-
-
-		section#approaches.section-top.yow
-			.container
-				h1.title What is YOW?
-				h2.sub-title YOW is a travel scratch map. Whenever you visit a new country, city, street it uncovers them on the map and marks places you have been to. Travel scratch map is based on Google Maps API keeps track of places you have visited, shows your exploration progress and lets you share them on social networks. It stores photos of your favorite places and suggests the new ones in nearby.
+					h2.type mobile Development
+					h1.title.dark Your Open World
+					h2.sub-title You travel a lot, but do not keep track of the places you visit? Your friend asks you about countries you have seen and you scratch your head thinking? Better scratch the map. With our new application YOW you can keep track of your journeys’ history. As we travel extensively throughout the year for fellow travel-lovers we crafted this handful tool.
 
 		section#technologies
+
+			.yow-decorative-block.yow-decorative-block-logo
+
 			.container
 				.section-top
-					h1.title.dark What technologies did we use?
+					h1.title.dark Technologies
+					h2.sub-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					.tags
-						.tag C#
-						.tag Xamarin Framework
-						.tag Open GeoData
-						.tag Google Maps
-						.tag Google Places
+						.tag Angular JS
+						.tag Jade
+						.tag Stylus
+						.tag GulpJS, lodash
+						.tag Yeoman
+						.tag Google Maps API
 						.tag Geolocation
 						.tag AWS (EC2)
 						.tag Jenkins
 						.tag Git
+						.tag Karma
+						.tag Jasmine
+
+		section#about
+
+			.yow-decorative-block.yow-decorative-block-map
+
+			.container
+				.section-top
+					h1.title.dark About App
+					h2.sub-title In the beginning, your travel map is black, but whenever you visit a new country, city or street it unveils an area which was black before and marks the place you have been to. The map is based on the Google Maps API. You can build the list of the favorite places, use navigation for finding spots.
+
+		section#share
+
+			.yow-decorative-block.yow-decorative-block-phone
+
+			.container
+				.section-top
+					h1.title.dark Share with friends
+					h2.sub-title Your friend asks you about countries you have seen and you scratch your head thinking? Let your friends know how many countries/cities you have seen so far. You can share your exploration progress by clicking on social media buttons (Facebook, Twitter, Google+...)
+
+
+		section#features
+			.container
+				.section-top
+					h1.title Our Features
+					ul.features-list
+						li.feature-item.feature-item-offline-work
+							h2.feature-name Offline Working
+							p.feature-descr YOW works offline, including maps, which means there is no need to look for Wi-Fi spots.
+						li.feature-item.feature-item-stor-pict
+							h2.feature-name Storing Pictures
+							p.feature-descr Every time you take your finest snapshots you can attach them to the places on the map through the app.
+						li.feature-item.feature-item-smart-adviser
+							h2.feature-name Smart Adviser
+							p.feature-descr Once you go on a trip to a new area, the app will give you suggestions for the places to see in nearby. 
 
 		section#gallery
 			.container
 				.gallery-container.swipeshow.yow
 					.slides
+						.slide
 						.slide
 						.slide
 					.dots
@@ -61,7 +96,7 @@ html(lang="en")
 		section#back
 			a(href="/portfolio")
 				button(role="button")
-					span Back to all projects
+					span Next projects
 					span.icon
 						include ../../icons/arrow-go
 
@@ -69,4 +104,3 @@ html(lang="en")
 		script(type="text/javascript" src="/js/libs.min.js")
 		script(type="text/javascript" src="/js/portfolio.min.js")
 		include ../../parts/navbar
-

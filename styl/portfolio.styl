@@ -207,15 +207,21 @@
 			margin-top: 0
 		.tags
 			margin: 2rem 0
-		@media screen and (min-width: $screenSmall)
-			.prev-project, .next-project
-				display: block
-				&:hover
-					background-color: transparent
-			.prev-project
-				.icon
-					svg
-						transform: rotate(180deg)
+			
+		// стрелочка разворачивалась начиная с планшетной ширины
+
+		// @media screen and (min-width: $screenSmall)
+		.prev-project, .next-project
+			display: block
+			&:hover
+				background-color: transparent
+		.prev-project
+			.icon
+				svg
+					transform: rotate(180deg)
+					
+		// -----------------------------------------------------
+
 	#technologies
 		.tags
 			margin-top: 2rem
@@ -269,11 +275,14 @@
 							background-image: url('/photos/sport/sport-gallery-2.png')
 				&.yow
 					.slide
-						background-size: cover
+						background: no-repeat center
+						background-size: contain
 						&:nth-child(1)
 							background-image: url('/photos/yow/yow-gallery-1.png')
 						&:nth-child(2)
 							background-image: url('/photos/yow/yow-gallery-2.png')
+						&:nth-child(3)
+							background-image: url('/photos/yow/yow-gallery-3.png')
 				&.banking
 					.slide
 						background-size: cover
