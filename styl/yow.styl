@@ -4,10 +4,21 @@
 		min-height: 269px
 		background: url('../images/YOW/yow-top-background.png') no-repeat top right 40%
 		background-size: 150%
+		
+		@media screen and (min-width: $screenSmall)
+		
+			min-height: 350px
+			background-position: top
+			background-size: 100%
+			
+		@media screen and (min-width: $screenLarge)
+		
+			background-position: left top -60px
 
 	#description
 		
 		.buttons-container
+			
 			button
 				display: block
 				font-size: 0
@@ -15,6 +26,10 @@
 					padding-left: 0
 				&.next-project
 					padding-right: 0
+					
+				@media screen and (min-width: $screenSmall)
+				
+					font-size: 16px
 		
 		.section-top
 			padding-top: 3rem
@@ -23,54 +38,204 @@
 		min-height: 280px
 		background: no-repeat center
 		&-logo
-			background-image: url('../images/YOW/icon-3.png')
 			background-color: #413357
+			
+			.container
+				display: flex
+				min-height: inherit
+				
+				.yow-icon-wrapper
+					margin: auto
+					&.icon-1, &.icon-2
+						display: none
+					
+				svg
+					display: none
+				
+				@media screen and (min-width: $screenSmall)
+					
+					min-height: 296px
+					
+					.yow-icon-wrapper
+						&.icon-1, &.icon-2
+							display: block
+						
+					.arrow-wrapper
+						margin: auto
+						
+					svg
+						display: block
+						width: 19px
+						height: 36px
+						
+				@media screen and (min-width: $screenLarge)
+					
+					width: 742px
+					background-position: center left 15.5rem, center, center right 15.5rem
+					
+					svg
+						&:nth-child(1)
+							left: 28.5rem
+						&:nth-child(2)
+							right: 28.5rem
+
 		&-map
 			background-image: url('../images/YOW/about-image.png')
 			background-size: contain
+			
+			@media screen and (min-width: $screenSmall)
+				min-height: 546px
+			
 		&-phone
 			background-image: url('../images/YOW/share-image.png')
 			background-size: contain
 			
-	#about
-		padding-top: 81px
-		background-image: linear-gradient(to bottom, #f6f7fa, #ffffff)
+			@media screen and (min-width: $screenSmall)
+				min-height: 649px
+			
+			@media screen and (min-width: $screenLarge)
+				background-image: url('../images/YOW/share-image-desktop.png')
 		
+	#technologies
+		
+		.container
+			
+			.section-top
+				@media screen and (min-width: $screenSmall)
+					padding-top: 4rem
+			
+	#about
+		padding-top: 5rem
+		background-image: linear-gradient(to bottom, #f6f7fa, #ffffff)
+
 		.section-top
 			padding-top: 1.8rem
+			
+			@media screen and (min-width: $screenSmall)
+				padding-top: 2.8rem
+				
+		@media screen and (min-width: $screenLarge)
+		
+			.desktop-container
+				display: flex
+				flex-wrap: wrap
+				width: 1130px;
+				margin: 0 auto
+				> *
+					width: 50%
+
+				.section-top
+					padding-top: 10rem
+					
+				.title
+					text-align: left
+
+				.sub-title
+					width: auto
+					text-align: left
 			
 	#share
 		
 		.section-top
 			padding-top: 2.5rem
+			
+			@media screen and (min-width: $screenSmall)
+				padding-top: 4rem
+				
+		@media screen and (min-width: $screenLarge)
+		
+			.desktop-container
+				display: flex
+				flex-wrap: wrap
+				width: 1130px;
+				margin: 0 auto
+				> *
+					width: 50%
+					
+				.yow-decorative-block
+					order: 2
+					
+				.container
+					padding-left: 3rem
+
+				.section-top
+					padding-top: 12.2rem
+
+				.title
+					text-align: left
+
+				.sub-title
+					width: auto
+					text-align: left
 	
 	#features
-		margin-bottom: 79px
+		margin-bottom: 5rem
 		background: url('../photos/YOW/yow-features-background.jpg') no-repeat top left -150px
 		background-size: cover
 		
+		@media screen and (min-width: $screenSmall)
+		
+			background-position: top left -480px
+			
+		@media screen and (min-width: $screenLarge)
+		
+			background-position: center
+		
 		.title
-			margin-bottom: 91px
+			margin-bottom: 5.7rem
+			
+			@media screen and (min-width: $screenLarge)
+				
+				margin-bottom: 1.2rem
+			
+		.sub-title
+			display: none
+			
+			@media screen and (min-width: $screenLarge)
+			
+				display: block
+				width: 635px
+				margin-bottom: 4.4rem
+				color: #ffffff
 
 		.features-list
 			padding: 0
 			margin: 0
 			list-style: none
 			
+			@media screen and (min-width: $screenSmall)
+			
+				width: 260px
+				margin: 0 auto
+				
+			@media screen and (min-width: $screenLarge)
+			
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				width: 840px
+			
 			.feature-item
-				padding-top: 97px
-				padding-bottom: 51px
+				padding-top: 6rem
+				padding-bottom: 3rem
 				background: no-repeat top center
+				
 				&-offline-work
 					background-image: url('../images/YOW/ic-1-offline.svg')
+				
 				&-stor-pict
 					background-image: url('../images/YOW/ic-2-storing.svg')
+				
 				&-smart-adviser
 					background-image: url('../images/YOW/ic-3-smart.svg')
 
+				@media screen and (min-width: $screenLarge)
+				
+					width: 255px
+
 			.feature-name
 				margin: 0
-				margin-bottom: 11px
+				margin-bottom: 0.7rem
 				font-size: 18px
 				letter-spacing: 0.4px
 				font-weight: normal
@@ -85,7 +250,47 @@
 				text-align: center
 				color: #ffffff
 				
+	#gallery
+
+		.slide-left, .slide-right
+			display: none
+			
+		@media screen and (min-width: $screenLarge)
+		
+			.container
+			
+				position: relative
+				width: 1005px
+		
+			.slide-left, .slide-right
+				position: absolute
+				top: 50%
+				display: block
+				padding: 0.65rem 1.5rem
+				transform: translateY(-50%)
+				cursor: pointer
+				user-select: none
+				
+				svg
+					path
+						fill: #8492af
+			
+			.slide-left
+				left: 0
+
+				svg
+					transform: rotate(180deg)
+					
+			.slide-right
+				right: 0
+
 	&.project-yow
 
 		footer
 			background-color: #372f57
+			
+	@media screen and (min-width: $screenLarge)
+	
+		.sub-title
+			width: 52rem
+			

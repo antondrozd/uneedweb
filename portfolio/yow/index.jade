@@ -29,6 +29,17 @@ html(lang="en")
 		section#technologies
 
 			.yow-decorative-block.yow-decorative-block-logo
+				.container
+					.yow-icon-wrapper.icon-1
+						img(src="../../images/YOW/yow-icon-1.png" alt="YOW")
+					.arrow-wrapper
+						include ../../icons/arrow-right
+					.yow-icon-wrapper.icon-2
+						img(src="../../images/YOW/yow-icon-2.png" alt="YOW")
+					.arrow-wrapper
+						include ../../icons/arrow-right
+					.yow-icon-wrapper.icon-3
+						img(src="../../images/YOW/yow-icon-3.png" alt="YOW")
 
 			.container
 				.section-top
@@ -40,7 +51,7 @@ html(lang="en")
 						.tag Stylus
 						.tag GulpJS, lodash
 						.tag Yeoman
-						.tag Google Maps API
+						.tag Google Maps
 						.tag Geolocation
 						.tag AWS (EC2)
 						.tag Jenkins
@@ -49,28 +60,30 @@ html(lang="en")
 						.tag Jasmine
 
 		section#about
+			.desktop-container
+				.yow-decorative-block.yow-decorative-block-map
 
-			.yow-decorative-block.yow-decorative-block-map
-
-			.container
-				.section-top
-					h1.title.dark About App
-					h2.sub-title In the beginning, your travel map is black, but whenever you visit a new country, city or street it unveils an area which was black before and marks the place you have been to. The map is based on the Google Maps API. You can build the list of the favorite places, use navigation for finding spots.
+				.container
+					.section-top
+						h1.title.dark About App
+						h2.sub-title In the beginning, your travel map is black, but whenever you visit a new country, city or street it unveils an area which was black before and marks the place you have been to. The map is based on the Google Maps API. You can build the list of the favorite places, use navigation for finding spots.
 
 		section#share
 
-			.yow-decorative-block.yow-decorative-block-phone
+			.desktop-container
 
-			.container
-				.section-top
-					h1.title.dark Share with friends
-					h2.sub-title Your friend asks you about countries you have seen and you scratch your head thinking? Let your friends know how many countries/cities you have seen so far. You can share your exploration progress by clicking on social media buttons (Facebook, Twitter, Google+...)
+				.yow-decorative-block.yow-decorative-block-phone
 
+				.container
+					.section-top
+						h1.title.dark Share with friends
+						h2.sub-title Your friend asks you about countries you have seen and you scratch your head thinking? Let your friends know how many countries/cities you have seen so far. You can share your exploration progress by clicking on social media buttons (Facebook, Twitter, Google+...)
 
 		section#features
 			.container
 				.section-top
 					h1.title Our Features
+					h2.sub-title Our technical team used a comprehensive set of tools and technologies during YOW development.
 					ul.features-list
 						li.feature-item.feature-item-offline-work
 							h2.feature-name Offline Working
@@ -90,8 +103,11 @@ html(lang="en")
 						.slide
 						.slide
 					.dots
-					.slide-left
-					.slide-right
+				.controls
+					.slide-left.previous
+						include ../../icons/arrow-right
+					.slide-right.next
+						include ../../icons/arrow-right
 
 		section#back
 			a(href="/portfolio")
