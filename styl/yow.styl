@@ -35,6 +35,7 @@
 			padding-top: 3rem
 
 	.yow-decorative-block
+		display: flex
 		min-height: 280px
 		background: no-repeat center
 		&-logo
@@ -42,10 +43,10 @@
 			
 			.container
 				display: flex
-				min-height: inherit
+				align-items: center
+				justify-content: space-around
 				
 				.yow-icon-wrapper
-					margin: auto
 					&.icon-1, &.icon-2
 						display: none
 					
@@ -59,10 +60,7 @@
 					.yow-icon-wrapper
 						&.icon-1, &.icon-2
 							display: block
-						
-					.arrow-wrapper
-						margin: auto
-						
+							
 					svg
 						display: block
 						width: 19px
