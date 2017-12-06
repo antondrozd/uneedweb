@@ -122,7 +122,7 @@ button
 			opacity: 1
 			transform: translateY(0)
 
-h1.title
+.title
 	font-family Roboto
 	font-size 30px
 	font-weight 300
@@ -136,7 +136,7 @@ h1.title
 	@media screen and (min-width: $screenSmall)
 		font-size: 48px
 	
-h2.sub-title
+.sub-title
 	font-size: 16px
 	font-weight: 400
 	line-height: 1.5
@@ -377,8 +377,9 @@ header
 	#switch-right
 		svg
 			transform: rotate(180deg)
-	h2
+	.sub-title
 		width: auto
+		margin: 0.75rem 0
 		font-size: 14px
 		letter-spacing: 0.3px
 		white-space: nowrap
@@ -389,7 +390,7 @@ header
 		display: none
 		&.active, &:hover
 			display: block
-			h2
+			.sub-title
 				&:after
 					content: ''
 					width: 11rem
@@ -406,15 +407,16 @@ header
 		margin: auto
 		a
 			display: block
-			h2
+			.sub-title
 				padding: 1rem 2rem
+				margin: 0
 				cursor: pointer
 			&.active, &:hover
-				h2:after
+				.sub-title:after
 					width: 100%
 					bottom: 0
 			&:hover
-				h2:after
+				.sub-title:after
 					opacity: .7
 		#switch-left, #switch-right
 			display: none
@@ -457,7 +459,7 @@ footer
 	padding: 2rem 0
 	background-color: #0e1a35
 	.subscribe
-		h1
+		.subscribe-title
 			margin: 2rem 0
 			font-size: 18px
 			text-align: center
@@ -534,7 +536,7 @@ footer
 				margin: 0
 				text-align: left
 			.subscribe
-				h1
+				.subscribe-title
 					font-weight: 400
 					text-align: left
 					margin: 0 0 1rem 0

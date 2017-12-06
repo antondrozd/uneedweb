@@ -63,6 +63,10 @@
 			margin-bottom: 1.25rem
 		.sub-title
 			margin-bottom: 2rem
+			br
+				display: none
+				@media screen and (min-width: $screenSmall)
+					display: block
 		#scroll-down
 			position: absolute
 			bottom: 0
@@ -115,7 +119,7 @@
 			flex-direction: column
 			justify-content: center
 			text-align: center
-			h2.sub-title
+			.sub-title
 				margin-bottom: 0
 		.service-image
 			margin: 0 auto
@@ -136,10 +140,10 @@
 			.service-description
 				width: 23rem
 				text-align: left
-				h1.title
+				.title
 					text-align: left
 					margin-bottom: 0.5rem
-				h2.sub-title
+				.sub-title
 					text-align: left
 					margin: 0
 					width: auto
@@ -169,9 +173,9 @@
 					text-align: center
 					align-items: center
 					width: 100%
-					h1.title
+					.title
 						text-align: center
-					h2.sub-title
+					.sub-title
 						text-align: center
 				.service-image
 					margin: auto
@@ -269,8 +273,11 @@
 		padding-bottom: 5rem
 		#switcher
 			margin-bottom: 3.125rem
-			a h2
+			a .sub-title
 				margin-top: 0
+				margin-bottom: 0.75rem
+				@media screen and (min-width: $screenSmall)
+					margin-bottom: 0
 		.desktop-button
 			display: none
 		.swipeshow-active .slides
@@ -297,11 +304,18 @@
 						height: 265px
 						width: 250px
 						background-image: url('/images/png/hp-3-design.png')
-				.sub-title
+				.portfolio-item-descr
+					margin-top: 0
 					font-size: 14px
 					line-height: 1.38
 					letter-spacing: 0.3px
+					font-weight: 400
 					margin-bottom: 1rem
+					color: #8492af;
+					@media screen and (min-width: $screenSmall)
+						width: 41rem
+						margin-right: auto
+						margin-left: auto
 		@media screen and (min-width: $screenSmall)
 			.portfolio-slides .slide
 				.portfolio-image
@@ -309,7 +323,7 @@
 					width: 320px
 		@media screen and (min-width: $screenMedium)
 			.portfolio-slides .slide
-				.sub-title
+				.portfolio-item-descr
 					text-align: left
 					width: auto
 				.tags
