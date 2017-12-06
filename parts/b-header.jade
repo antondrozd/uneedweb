@@ -10,5 +10,7 @@ mixin b-header(modifier, title, text)
 					include ../icons/logo
 					include ../icons/logo-text
 			include b-main-nav
-			h1.page-header__title #{title}
-			p.page-header__text #{text}
+			- if (title)
+				h1.page-header__title #{title}
+			- if (text)
+				p.page-header__text #{text}
