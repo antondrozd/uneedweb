@@ -5,7 +5,7 @@ mixin b-header(modifier, title, text)
 	// End Google Tag Manager (noscript)
 	header.page-header(class="page-header--#{modifier}")
 		.page-header__wrapper
-			.logo
+			.page-header__logo.logo
 				a(href="/")
 					include ../icons/logo
 					include ../icons/logo-text
@@ -14,3 +14,6 @@ mixin b-header(modifier, title, text)
 				h1.page-header__title #{title}
 			- if (text)
 				p.page-header__text #{text}
+			- if (modifier == "main")
+				a.page-header__scroll-btn(href="#main")
+					include ../icons/arrow

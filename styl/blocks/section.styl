@@ -1,0 +1,34 @@
+.section
+	padding-top 5rem
+	padding-bottom 5rem
+	font-family $main-font
+	&--without-title
+		padding-top 0
+	&--dark
+		.section__title
+			color #fefefe
+		.section__text
+			color #576076
+	&--blue
+		background-color $main-color
+	&--bottom-with-gradient
+		bottom-with-gradient(#4444b9, #ec523e)
+
+.section__wrapper
+	wrapper()
+	
+.section__title
+	padding 0
+	margin 0
+	margin-bottom 1.25rem
+	font-size 30px
+	font-weight 100
+	text-align center
+	color #0e1a35
+	
+.section__text
+	padding 0
+	margin 0
+	font-size 16px
+	text-align center
+	color #8492af
