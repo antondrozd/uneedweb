@@ -18,30 +18,44 @@ html(lang="en")
 				section.section.section--without-title
 					.services
 						ul.services__list
-							li.services__item
+							li.services__item.services__item--project
 								.services__item-wrapper
 									h3.services__title Project Development
 									span.services__recommend recommended for
-									ul.services__-wrapper
-										li.services__ short-term projects
-										li.services__ fixed cost/time or budget
-										li.services__ small to middle scale
+									ul.services__recommends-list
+										li.services__recommends-item
+											include icons/checkmark
+											span short-term projects
+										li.services__recommends-item
+											include icons/checkmark
+											span fixed cost/time or budget
+										li.services__recommends-item
+											include icons/checkmark
+											span small to middle scale
 									a.services__link.btn(href="#") Get more info
-							li.services__item
+							li.services__item.services__item--team
 								.services__item-wrapper
 									h3.services__title Dedicated Development Team
 									span.services__recommend recommended for
-									ul.services__-wrapper
-										li.services__ direct control over project stages
-										li.services__ full-time engagement of IT experts to your project
+									ul.services__recommends-list
+										li.services__recommends-item
+											include icons/checkmark
+											span direct control over project stages
+										li.services__recommends-item
+											include icons/checkmark
+											span full-time engagement of IT experts to your project
 									a.services__link.btn(href="#") Get more info
-							li.services__item
+							li.services__item.services__item--relocation
 								.services__item-wrapper
 									h3.services__title Specialist for Relocation
 									span.services__recommend recommended for
-									ul.services__-wrapper
-										li.services__ limited recruitment capabilities
-										li.services__ building/extending your IT department
+									ul.services__recommends-list
+										li.services__recommends-item
+											include icons/checkmark
+											span limited recruitment capabilities
+										li.services__recommends-item
+											include icons/checkmark
+											span building/extending your IT department
 									a.services__link.btn(href="#") Get more info
 					.section__wrapper
 						p.section__text Learn more about each of these options and their difference 
@@ -54,18 +68,24 @@ html(lang="en")
 						.features
 							.features__wrapper
 								ul.features__list
-									li.features__item
-										span.features__descr Outstanding quality
-									li.features__item
-										span.features__descr Specialist with proficient technical and language skills
-									li.features__item
-										span.features__descr Protected intellectual property rights
-									li.features__item
-										span.features__descr Personal meetings and direct comunication
-									li.features__item
-										span.features__descr Candidates market overview within 24 hours
-									li.features__item
-										span.features__descr Long-term partnership
+									li.features-item.features-item--icon-left
+										include icons/1-quality
+										span.features-item__descr Outstanding quality
+									li.features-item.features-item--icon-left
+										include icons/2-english
+										span.features-item__descr Specialist with proficient technical and language skills
+									li.features-item.features-item--icon-left
+										include icons/3-office
+										span.features-item__descr Protected intellectual property rights
+									li.features-item.features-item--icon-left
+										include icons/4-meeting
+										span.features-item__descr Personal meetings and direct comunication
+									li.features-item.features-item--icon-left
+										include icons/5-seniors
+										span.features-item__descr Candidates market overview within 24 hours
+									li.features-item.features-item--icon-left
+										include icons/6-risk
+										span.features-item__descr Long-term partnership
 
 				section.section
 					.section__wrapper
@@ -111,4 +131,4 @@ html(lang="en")
 											img(src="" alt="")
 										a.portfolio-item__link.btn(href="/portfolio") Go to portfolio
 											include icons/arrow-go
-				include parts/b-footer
+			include parts/b-footer
