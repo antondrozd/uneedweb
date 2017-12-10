@@ -1,13 +1,33 @@
 .logo
-	> a
+	a
 		display flex
 		justify-content center
 		align-items center
 		svg
 			&:first-child
 				width 43px
-				height 48px
 				margin-right 0.5rem
 			&:last-child
 				width 75px
-				height 28px
+				
+@media $tablet-widths
+	
+	.logo
+		a
+			svg
+				&:first-child
+					width 52px
+					margin-right 0
+				&:last-child
+					display none
+					
+@media $desktop-widths
+
+	.logo
+		a
+			svg
+				&:first-child
+					margin-right 1rem
+				&:last-child
+					display block
+					width 113px

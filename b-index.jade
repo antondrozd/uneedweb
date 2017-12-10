@@ -59,7 +59,7 @@ html(lang="en")
 									a.services__link.btn(href="#") Get more info
 					.section__wrapper
 						p.section__text Learn more about each of these options and their difference 
-							a(href="/services") here
+							a.link(href="/services") here
 
 				section.section.section--dark.section--blue.section--bottom-with-gradient
 					.section__wrapper
@@ -68,19 +68,19 @@ html(lang="en")
 						.features
 							.features__wrapper
 								ul.features__list
-									li.features-item.features-item--icon-left
+									li.features__item.features-item.features-item--icon-left
 										include icons/1-quality
 										span.features-item__descr Outstanding quality
-									li.features-item.features-item--icon-left
+									li.features__item.features-item.features-item--icon-left
 										include icons/2-english
 										span.features-item__descr Specialist with proficient technical and language skills
-									li.features-item.features-item--icon-left
+									li.features__item.features-item.features-item--icon-left
 										include icons/3-office
 										span.features-item__descr Protected intellectual property rights
-									li.features-item.features-item--icon-left
+									li.features__item.features-item.features-item--icon-left
 										include icons/4-meeting
 										span.features-item__descr Personal meetings and direct comunication
-									li.features-item.features-item--icon-left
+									li.features__item.features-item.features-item--icon-left
 										include icons/5-seniors
 										span.features-item__descr Candidates market overview within 24 hours
 									li.features-item.features-item--icon-left
@@ -132,3 +132,20 @@ html(lang="en")
 										a.portfolio-item__link.btn(href="/portfolio") Go to portfolio
 											include icons/arrow-go
 			include parts/b-footer
+		script.
+			(function() {
+				var navMain = document.querySelector('.main-nav');
+				var navToggle = document.querySelector('.main-nav__toggle');
+
+				navMain.classList.remove('main-nav--nojs');
+
+				navToggle.addEventListener('click', function() {
+					if (navMain.classList.contains('main-nav--closed')) {
+						navMain.classList.remove('main-nav--closed');
+						navMain.classList.add('main-nav--opened');
+					} else {
+						navMain.classList.remove('main-nav--opened');
+						navMain.classList.add('main-nav--closed');
+					}
+				});
+			})();

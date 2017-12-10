@@ -11,9 +11,11 @@
 .page-header__wrapper
 	wrapper()
 	position relative
+	display flex
+	flex-direction column
+	justify-content center
 	box-sizing border-box
 	height 100%
-	padding-top 12rem
 	
 .page-header__logo
 	position absolute
@@ -30,6 +32,8 @@
 	color #fff
 	
 .page-header__text
+	padding 0
+	margin 0
 	font-size 16px
 	font-weight 400
 	line-height 1.5
@@ -48,3 +52,13 @@
 	justify-content center
 	svg
 		animation jumping 1.5s ease infinite
+		
+@media $tablet-widths
+	
+	.page-header__title
+		font-size 48px
+		
+	.page-header__text
+		padding-right 7rem
+		padding-left 7rem
+		font-size 18px

@@ -3,6 +3,8 @@
 
 .services__list
 	ul-reset()
+	display flex
+	flex-direction column
 	
 .services__item
 	background-color #f3f8ff
@@ -67,3 +69,26 @@
 .services__link
 	width 12.5rem
 	text-align center
+	
+@media $tablet-widths
+
+	.services__item
+		background-position left 6.5rem top 2.5rem
+
+	.services__item-wrapper
+		padding-top 3.125rem
+		
+@media $desktop-widths
+
+	.services__list
+		wrapper()
+		flex-direction row
+		justify-content space-around
+		
+	.services__item
+		background-position top 25px center
+		background-size 32%
+		
+	.services__item-wrapper
+		width 20rem
+		padding-top 9rem

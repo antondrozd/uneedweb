@@ -8,6 +8,9 @@
 	wrapper()
 	text-align center
 	
+.page-footer__main-nav
+	margin-bottom 2rem
+	
 .page-footer__contact
 	margin-top 2rem
 	margin-bottom 2rem
@@ -47,3 +50,33 @@
 	letter-spacing 0.3px
 	text-align center
 	color #576076
+	
+@media $tablet-widths
+
+	.page-footer__subscribe
+		width 60%
+		margin 0 auto
+		
+@media $desktop-widths
+
+	.page-footer__wrapper
+		display flex
+		flex-wrap wrap
+		> *
+			width 33.33%
+			
+	.page-footer__main-nav
+		display flex
+		align-items flex-start
+		margin-bottom 0
+		
+	.page-footer__subscribe
+		width auto
+		
+	.page-footer__contact
+		margin 0
+		
+	.page-footer__copyrights
+		position relative
+		top -1.5rem
+		text-align left

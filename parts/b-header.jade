@@ -4,12 +4,22 @@ mixin b-header(modifier, title, text)
 		iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PW9LSKQ", height="0", width="0", style="display:none;visibility:hidden")
 	// End Google Tag Manager (noscript)
 	header.page-header(class="page-header--#{modifier}")
+		nav.main-nav.main-nav--top.main-nav--closed
+			.main-nav__wrapper
+				.main-nav__logo.logo
+						a(href="/")
+							include ../icons/logo
+							include ../icons/logo-text
+				button.main-nav__toggle(type="button")
+			.main-nav__list-wrapper
+				ul.main-nav__list
+					li.main-nav__item
+						a(href="/services") Services
+					li.main-nav__item
+						a(href="/portfolio") Portfolio
+					li.main-nav__item
+						a(href="/contact-us") Contact Us	
 		.page-header__wrapper
-			.page-header__logo.logo
-				a(href="/")
-					include ../icons/logo
-					include ../icons/logo-text
-			include b-main-nav
 			- if (title)
 				h1.page-header__title #{title}
 			- if (text)

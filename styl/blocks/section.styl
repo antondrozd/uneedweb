@@ -2,6 +2,10 @@
 	padding-top 5rem
 	padding-bottom 5rem
 	font-family $main-font
+	&--first-after-menu
+		margin-top 88px
+	&--without-padding-top
+		padding-top 0
 	&--without-title
 		padding-top 0
 	&--dark
@@ -32,3 +36,17 @@
 	font-size 16px
 	text-align center
 	color #8492af
+	
+@media $tablet-widths
+	
+	.section__title
+		font-size 48px
+		
+	.section__text
+		font-size 18px
+		
+@media $desktop-widths
+
+	.section__text
+		padding-right 5rem
+		padding-left 5rem
