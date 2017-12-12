@@ -1,0 +1,96 @@
+doctype html
+html(lang="en")
+	include ../parts/b-head
+	+head("Portfolio | UNeed Web", "Web development projects, mobile development projects, product design", "Uneed Web drives innovation into services by crafting web and mobile applications, enlivening them with web design.")
+	body
+		.page-wrapper
+
+			include ../parts/b-header
+			+b-header("portfolio")
+
+			main.page-content
+		
+				section.section.section--first-after-menu
+					.section__wrapper
+						h1.section__title Portfolio
+						p.section__text We have a proven track record of building high-quality solutions for customers all over the world. Browse through our case studies and see projects that we have implemented.
+
+				section.section
+					.projects-gallery
+						.slider__switcher
+							button.slider__switch-btn.slider__switch-btn--prev(type="button")
+								include ../icons/left-arrow
+							h3.slider__slide-name.slider__slide-name--active All
+							h3.slider__slide-name Web Development
+							h3.slider__slide-name Mobile Development
+							h3.slider__slide-name Product Design
+							button.slider__switch-btn.slider__switch-btn--next(type="button")
+								include ../icons/left-arrow
+						ul.projects-gallery__list
+							li.project-item
+								.project-item__wrapper
+									span.project-item__type Web Development
+									h4.project-item__title Booking
+									p.project-item__descr Development of a web application for a travel company with a complete 			customer planning journey features.
+									a.project-item__link-btn.btn Details
+										include ../icons/arrow-go
+							li.project-item
+								.project-item__wrapper
+									span.project-item__type Web Development
+									h4.project-item__title Entertainment
+									p.project-item__descr Development a web application for a sports betting company for the audience of 5 million users.
+									a.project-item__link-btn.btn Details
+										include ../icons/arrow-go
+							li.project-item
+								.project-item__wrapper
+									span.project-item__type Mobile Development
+									h4.project-item__title Travel
+									p.project-item__descr Our own mobile application that keeps track of the places you visit and shows your exploration progress.
+									a.project-item__link-btn.btn Details
+										include ../icons/arrow-go
+							li.project-item
+								.project-item__wrapper
+									span.project-item__type Web Development
+									h4.project-item__title Banking / Finance
+									p.project-item__descr Creation of a fee billing system for a major Hong Kong corporate bank. A software that calculates operational and managerial fees.
+									a.project-item__link-btn.btn Details
+										include ../icons/arrow-go
+							li.project-item
+								.project-item__wrapper
+									span.project-item__type Web Development
+									h4.project-item__title Gambling
+									p.project-item__descr Revamping of existing gambling web applications for a betting company with interactive components.
+									a.project-item__link-btn.btn Details
+										include ../icons/arrow-go
+							li.project-item
+								.project-item__wrapper
+									span.project-item__type Web Development
+									h4.project-item__title Social Network
+									p.project-item__descr Creation of an engaging travel-oriented social network service with an embedded e-commerce platform.
+									a.project-item__link-btn.btn Details
+										include ../icons/arrow-go
+							li.project-item
+								.project-item__wrapper
+									span.project-item__type Web Development
+									h4.project-item__title Data Management
+									p.project-item__descr Localisation helper: a software that eases the translation of an online sports application into multiple languages.
+									a.project-item__link-btn.btn Details
+										include ../icons/arrow-go
+			include ../parts/b-footer
+		script.
+			(function() {
+				var navMain = document.querySelector('.main-nav');
+				var navToggle = document.querySelector('.main-nav__toggle');
+
+				navMain.classList.remove('main-nav--nojs');
+
+				navToggle.addEventListener('click', function() {
+					if (navMain.classList.contains('main-nav--closed')) {
+						navMain.classList.remove('main-nav--closed');
+						navMain.classList.add('main-nav--opened');
+					} else {
+						navMain.classList.remove('main-nav--opened');
+						navMain.classList.add('main-nav--closed');
+					}
+				});
+			})();

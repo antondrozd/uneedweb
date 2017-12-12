@@ -41,12 +41,12 @@
 			transform translateY(0)
 			
 	&--top
-		position fixed
+		position absolute
 		display flex
 		align-items center
 		justify-content center
 		width 100%
-		min-height 88px
+		min-height 5.5rem
 		z-index 2
 		background-color #0e1a35
 		.main-nav__list
@@ -102,6 +102,9 @@
 		letter-spacing 0.3px
 		text-decoration none
 		color #8492af
+		transition all 0.3s
+		&:hover, &:active
+			color #c3cee4
 		
 @media $desktop-widths
 

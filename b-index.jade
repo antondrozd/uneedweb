@@ -61,7 +61,7 @@ html(lang="en")
 						p.section__text Learn more about each of these options and their difference 
 							a.link(href="/services") here
 
-				section.section.section--dark.section--blue.section--bottom-with-gradient
+				section.section.section--dark.section--main-color.section--bottom-with-gradient
 					.section__wrapper
 						h2.section__title Our Added Value
 						p.section__text With delivering what we do the best: development and design of software we provide our customers with
@@ -87,12 +87,21 @@ html(lang="en")
 										include icons/6-risk
 										span.features-item__descr Long-term partnership
 
-				section.section
+				section.section.section--small-padding-bottom
 					.section__wrapper
 						h2.section__title Our Expertise
 						p.section__text Our team is comprised of devoted professionals who have expertise in multiple areas. We build web products that work and last, advance your customer journey, target and keep your customers in the loop.
+				section.section.section--without-padding-top.section--small-padding-bottom
+					.section__wrapper
 						.slider
 							.slider__switcher
+								button.slider__switch-btn.slider__switch-btn--prev(type="button")
+									include icons/left-arrow
+								h3.slider__slide-name.slider__slide-name--active Web Development
+								h3.slider__slide-name Mobile Development
+								h3.slider__slide-name Product Design
+								button.slider__switch-btn.slider__switch-btn--next(type="button")
+									include icons/left-arrow
 							ul.slider__slides-wrapper
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
@@ -103,10 +112,8 @@ html(lang="en")
 											li.tag JavaScript
 											li.tag CSS
 											li.tag HTML
-										.portfolio-item__img-wrapper
-											img(src="" alt="")
-										a.portfolio-item__link.btn(href="/portfolio") Go to portfolio
-											include icons/arrow-go
+										.portfolio-item__img-wrapper.portfolio-item__img-wrapper--img-horisontal
+											img(src="images/png/hp-1-web.png" alt="web")
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
 										p.portfolio-item__descr Uneed Web builds mobile applications by using cross-platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
@@ -115,9 +122,7 @@ html(lang="en")
 											li.tag Ionic
 											li.tag Xamarin Framework
 										.portfolio-item__img-wrapper
-											img(src="" alt="")
-										a.portfolio-item__link.btn(href="/portfolio") Go to portfolio
-											include icons/arrow-go
+											img(src="images/png/hp-2-mobile.png" alt="mobile")
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
 										p.portfolio-item__descr Uneed Web creates a unique product web design to match you company’s unique brand. A customized web design which is search engine friendly, stands out from your competitors and focuses on your customers. To optimize your customers browsing experience we create sites and systems based on responsive design.
@@ -128,14 +133,18 @@ html(lang="en")
 											li.tag Interfaces
 											li.tag Web Design \ UX
 										.portfolio-item__img-wrapper
-											img(src="" alt="")
-										a.portfolio-item__link.btn(href="/portfolio") Go to portfolio
-											include icons/arrow-go
+											img(src="images/png/hp-3-design.png" alt="design")
+							.slider__dots
+								button.slider__dot.slider__dot--active(type="button")
+								button.slider__dot(type="button")
+								button.slider__dot(type="button")
+						a.section__btn.btn(href="/portfolio") Go to portfolio
+							include icons/arrow-go
 			include parts/b-footer
 		script.
 			(function() {
-				var navMain = document.querySelector('.main-nav');
-				var navToggle = document.querySelector('.main-nav__toggle');
+				var navMain = document.querySelector('.main-nav'),
+						navToggle = document.querySelector('.main-nav__toggle');
 
 				navMain.classList.remove('main-nav--nojs');
 
@@ -147,5 +156,51 @@ html(lang="en")
 						navMain.classList.remove('main-nav--opened');
 						navMain.classList.add('main-nav--closed');
 					}
+				});
+			})();
+
+			(function () {
+				var slider = document.querySelector('.slider'),
+						slidesWrapper = slider.querySelector('.slider__slides-wrapper'),
+						slideItems = slider.querySelectorAll('.slider__slide'),
+						slidesCount = slideItems.length,
+						sliderStepValue = 100/slidesCount,
+						slideCurrent = 1,
+						slideName = slider.querySelectorAll('.slider__slide-name'),
+						sliderPrev = slider.querySelector('.slider__switch-btn--prev'),
+						sliderNext = slider.querySelector('.slider__switch-btn--next'),
+						sliderDots = slider.querySelectorAll('.slider__dot');
+
+				//- slideItems.forEach(function(item, index) {
+				//- 	slideItems[index].setAttribute('data-index', index+1);
+				//- });
+
+				function slideChange(index) {
+					var	sliderTransValue = (index-1)*sliderStepValue;
+					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
+					sliderDots[slideCurrent-1].classList.remove('slider__dot--active');
+					sliderDots[index-1].classList.add('slider__dot--active');
+					slideName[slideCurrent-1].classList.remove('slider__slide-name--active');
+					slideName[index-1].classList.add('slider__slide-name--active');
+					slideCurrent = index;
+					//- console.log(slideCurrent);
+				};
+
+				sliderPrev.addEventListener('click', function() { 
+					if (slideCurrent > 1) {
+						slideChange(slideCurrent-1);
+					}
+				});
+
+				sliderNext.addEventListener('click', function() {
+					if (slideCurrent < slidesCount) {
+						slideChange(slideCurrent+1);
+					}
+				});
+
+				sliderDots.forEach(function(item, index) {
+					sliderDots[index].addEventListener('click', function() {
+						slideChange(index+1);
+					});
 				});
 			})();

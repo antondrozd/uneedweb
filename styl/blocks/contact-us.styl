@@ -1,8 +1,5 @@
 .contact-us
 	padding-top 0
-	
-.contact-us__wrapper
-	wrapper()
 
 .contact-us__title
 	display none
@@ -12,3 +9,22 @@
 	
 .contact-us__btn
 	width 100%
+	
+@media $tablet-widths
+
+	.contact-us__wrapper
+		max-width 25rem
+		margin 0 auto
+			
+@media $desktop-widths
+
+	.contact-us
+		box-sizing border-box
+		width 28rem
+		padding 2.5rem
+		box-shadow 0 0 14px 0 rgba(14, 26, 53, 0.2)
+
+	.contact-us__title
+		display block
+		font-size 21px
+		font-weight 400

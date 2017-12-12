@@ -2,12 +2,13 @@
 	// background-color $main-color
 	
 .contact-info__wrapper
-	wrapper()
+	display flex
+	flex-direction column
+	align-items center
 
 .contact-info__item-inner
 	display flex
 	align-items center
-	padding-left 2.75rem
 	margin-bottom 1rem
 	svg
 		margin-right 1rem
@@ -26,4 +27,22 @@
 	a
 		display block
 		text-decoration none
+		color #8492af
+		
+@media $desktop-widths
+
+	.contact-info
+		box-sizing border-box
+		width 28rem
+		padding 2.5rem
+		background-color #0e1a35
+		box-shadow 0 0 14px 0 rgba(14, 26, 53, 0.2)
+
+	.contact-info__wrapper
+		height 100%
+		justify-content center
+
+	.contact-info__title
+		font-size 21px
+		font-weight 400
 		color #8492af

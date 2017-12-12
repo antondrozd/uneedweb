@@ -5,6 +5,8 @@
 	justify-content center
 
 .portfolio-item__descr
+	margin-top 1rem
+	margin-bottom 1rem
 	font-size 14px
 	line-height 1.38
 	letter-spacing 0.3px
@@ -17,6 +19,28 @@
 	flex-wrap wrap
 	justify-content center
 	
-.portfolio-item__link
-	svg
-		margin-left 0.7rem
+.portfolio-item__img-wrapper
+	display flex
+	align-items center
+	justify-content center
+	padding-top 3rem
+	padding-bottom 1rem
+	img
+		width 15rem
+	&--img-horisontal
+		img
+			width 17rem
+		
+@media $tablet-widths
+
+	.portfolio-item__img-wrapper
+		img
+			width 17rem
+		&--img-horisontal
+			img
+				width 28rem
+		
+// @media $desktop-widths
+
+// 	.portfolio-item
+// 		flex-direction row
