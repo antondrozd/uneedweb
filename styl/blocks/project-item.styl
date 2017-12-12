@@ -1,7 +1,48 @@
+.project-item
+	position relative
+	max-width 24rem
+	min-height 25rem
+	background-repeat no-repeat
+	background-size cover
+	transition all 0.3s
+	*
+		z-index 2
+	&--booking
+		background-image url("../photos/travel/travel-portfolio-grid.png")
+		
+	&--entertaiment
+		background-image url("../photos/sport/sport-portfolio-grid.png")
+		
+	&--travel
+		background-image url("../photos/yow/yow-portfolio-grid.png")
+		
+	&--banking
+		background-image url("../photos/banking/banking-portfolio-grid.png")
+		
+	&--gambling
+		background-image url("../photos/gambling/gambling-portfolio-grid.png")
+		
+	&--social
+		background-image url("../photos/social-travel/social-travel-portfolio-grid.png")
+		
+	&--data
+		background-image url("../photos/localisation/localisation-portfolio-grid.png")
+
+	&::before
+		content ''
+		position absolute
+		width 100%
+		height 100%
+		background-color #102640
+		opacity 0.5
+		z-index 1
+
 .project-item__wrapper
 	display flex
 	flex-direction column
 	align-items center
+	box-sizing border-box
+	height 100%
 	padding 1rem
 
 .project-item__type
@@ -24,4 +65,31 @@
 .project-item__descr
 	padding 0
 	margin 0
+	margin-top auto
+	margin-bottom 2rem
+	font-size: 14px;
+	letter-spacing: 0.3px;
+	line-height 1.5
 	text-align center
+	color: rgba(248,249,251,.5);
+	transition all 0.3s
+	
+@media $desktop-widths
+
+	.project-item
+		max-width 33.33%
+		&::before
+			display none
+		&:hover
+			background-size 120%
+			&::before
+				display block
+			.project-item__descr,
+			.project-item__link-btn
+				opacity 1
+				
+	.project-item__descr
+		opacity 0
+		
+	.project-item__link-btn
+		opacity 0
