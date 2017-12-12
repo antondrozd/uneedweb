@@ -30,7 +30,8 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
-    "clean-css": "^4.1.8",
+    "clean-css": "^4.1.9",
+    "clean-css-cli": "^4.1.10",
     "jade": "^1.11.0",
     "jade-watch": "^0.1.1",
     "postcss-cli": "^4.1.1",
