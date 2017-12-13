@@ -6,7 +6,7 @@ html(lang="en")
 		.page-wrapper
 
 			include parts/b-header
-			+b-header("main", "Distinctive Web Development", "Shaping your tech ideas with smart engineering, creating an outreach for your business.")
+			+b-header("main")
 
 			main.page-content#main
 
@@ -61,31 +61,31 @@ html(lang="en")
 						p.section__text Learn more about each of these options and their difference 
 							a.link(href="/services") here
 
-				section.section.section--dark.section--main-color.section--bottom-with-gradient
+				section.section.section--main-color.section--bottom-with-gradient
 					.section__wrapper
 						h2.section__title Our Added Value
 						p.section__text With delivering what we do the best: development and design of software we provide our customers with
-						.features
-							.features__wrapper
-								ul.features__list
-									li.features__item.features-item.features-item--icon-left
+						.main-features
+							.main-features__wrapper
+								ul.main-features__list
+									li.main-features__item.main-features-item.main-features-item--icon-left
 										include icons/1-quality
-										span.features-item__descr Outstanding quality
-									li.features__item.features-item.features-item--icon-left
+										span.main-features-item__descr Outstanding quality
+									li.main-features__item.main-features-item.main-features-item--icon-left
 										include icons/2-english
-										span.features-item__descr Specialist with proficient technical and language skills
-									li.features__item.features-item.features-item--icon-left
+										span.main-features-item__descr Specialist with proficient technical and language skills
+									li.main-features__item.main-features-item.main-features-item--icon-left
 										include icons/3-office
-										span.features-item__descr Protected intellectual property rights
-									li.features__item.features-item.features-item--icon-left
+										span.main-features-item__descr Protected intellectual property rights
+									li.main-features__item.main-features-item.main-features-item--icon-left
 										include icons/4-meeting
-										span.features-item__descr Personal meetings and direct comunication
-									li.features__item.features-item.features-item--icon-left
+										span.main-features-item__descr Personal meetings and direct comunication
+									li.main-features__item.main-features-item.main-features-item--icon-left
 										include icons/5-seniors
-										span.features-item__descr Candidates market overview within 24 hours
-									li.features-item.features-item--icon-left
+										span.main-features-item__descr Candidates market overview within 24 hours
+									li.main-features-item.main-features-item--icon-left
 										include icons/6-risk
-										span.features-item__descr Long-term partnership
+										span.main-features-item__descr Long-term partnership
 
 				section.section.section--small-padding-bottom
 					.section__wrapper
@@ -106,32 +106,32 @@ html(lang="en")
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
 										p.portfolio-item__descr Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
-										ul.portfolio-item__tags-list
-											li.tag React JS
-											li.tag Angular JS
-											li.tag JavaScript
-											li.tag CSS
-											li.tag HTML
+										ul.tags
+											li.tags__item React JS
+											li.tags__item Angular JS
+											li.tags__item JavaScript
+											li.tags__item CSS
+											li.tags__item HTML
 										.portfolio-item__img-wrapper.portfolio-item__img-wrapper--img-horisontal
 											img(src="images/png/hp-1-web.png" alt="web")
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
 										p.portfolio-item__descr Uneed Web builds mobile applications by using cross-platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
-										ul.portfolio-item__tags-list
-											li.tag ReactJS Native
-											li.tag Ionic
-											li.tag Xamarin Framework
+										ul.tags
+											li.tags__item ReactJS Native
+											li.tags__item Ionic
+											li.tags__item Xamarin Framework
 										.portfolio-item__img-wrapper
 											img(src="images/png/hp-2-mobile.png" alt="mobile")
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
 										p.portfolio-item__descr Uneed Web creates a unique product web design to match you company’s unique brand. A customized web design which is search engine friendly, stands out from your competitors and focuses on your customers. To optimize your customers browsing experience we create sites and systems based on responsive design.
-										ul.portfolio-item__tags-list
-											li.tag Sketch
-											li.tag Adobe Photoshop
-											li.tag Adobe Illustrator
-											li.tag Interfaces
-											li.tag Web Design \ UX
+										ul.tags
+											li.tags__item Sketch
+											li.tags__item Adobe Photoshop
+											li.tags__item Adobe Illustrator
+											li.tags__item Interfaces
+											li.tags__item Web Design \ UX
 										.portfolio-item__img-wrapper
 											img(src="images/png/hp-3-design.png" alt="design")
 							.slider__dots
@@ -141,6 +141,7 @@ html(lang="en")
 						a.section__btn.btn(href="/portfolio") Go to portfolio
 							include icons/arrow-go
 			include parts/b-footer
+			+b-footer("main")
 		script.
 			(function() {
 				var navMain = document.querySelector('.main-nav'),

@@ -1,24 +1,25 @@
-footer.page-footer
-	.page-footer__wrapper
-		nav.page-footer__main-nav.main-nav.main-nav--footer
-			.main-nav__list-wrapper
-				ul.main-nav__list
-					li.main-nav__item
-						a(href="/services/b-index.html") Services
-					li.main-nav__item
-						a(href="/portfolio/b-index.html") Portfolio
-					li.main-nav__item
-						a(href="/contact-us/b-index.html") Contact Us
-		.page-footer__subscribe.subscribe
-			h2.subscribe__title Get in touch with us
-			form.subscribe__form
-				.input-box.input-box--with-btn-right
-					input(type="email" placeholder="Enter your email")
-					button.subscribe__btn.btn(type="submit") OK
-		.page-footer__contact
-			address.page-footer__address Kiev, Ukraine, 02140, <br>Bazhana Ave 24/1
-			span.page-footer__phone
-				a(href="tel:380955914765") +38 095 591 4765
-			span.page-footer__email
-				a(href="mailto:info@uneedweb.com?subject=Contact UNeed Web") info@uneedweb.com
-		p.page-footer__copyrights &copy; 2017 UNeed Web All Right Reserved
+mixin b-footer(modifier)
+	footer.page-footer(class="page-footer--#{modifier}")
+		.page-footer__wrapper
+			nav.page-footer__main-nav.main-nav.main-nav--footer
+				.main-nav__list-wrapper
+					ul.main-nav__list
+						li.main-nav__item
+							a(href="/services/b-index.html") Services
+						li.main-nav__item
+							a(href="/portfolio/b-index.html") Portfolio
+						li.main-nav__item
+							a(href="/contact-us/b-index.html") Contact Us
+			.page-footer__subscribe.subscribe
+				h2.subscribe__title Get in touch with us
+				form.subscribe__form
+					.input-box.input-box--with-btn-right
+						input(type="email" placeholder="Enter your email")
+						button.subscribe__btn.btn(type="submit") OK
+			.page-footer__contact
+				address.page-footer__address Kiev, Ukraine, 02140, <br>Bazhana Ave 24/1
+				span.page-footer__phone
+					a(href="tel:380955914765") +38 095 591 4765
+				span.page-footer__email
+					a(href="mailto:info@uneedweb.com?subject=Contact UNeed Web") info@uneedweb.com
+			p.page-footer__copyrights &copy; 2017 UNeed Web All Right Reserved

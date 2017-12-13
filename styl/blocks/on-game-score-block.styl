@@ -1,0 +1,58 @@
+.on-game-score-block__logos
+	position relative
+	min-height 206px
+	background-image url("../images/on-game/image-bg.png")
+	background-repeat no-repeat
+	background-size cover
+	
+.on-game-score-block__logo
+	position absolute
+	top 7%
+	&--columb
+		left 9.5%
+	&--united
+		right 8.5%
+	
+.on-game-score-block__table
+	width 100%
+	border-collapse collapse
+	
+.on-game-score-block__table-row
+	align-items center
+	margin-top 0.6rem
+	background-color #f1f1f1
+	border none
+	&--grey
+		background-color #e2e1e1
+	&--dark
+		background-color #303030
+		.on-game-score-block__table-cell
+			color #ffde2b
+		
+.on-game-score-block__table-cell
+	padding 0
+	font-size 12px
+	font-weight 500
+	letter-spacing 1.2px
+	text-transform uppercase
+	color #555555
+	border none
+	&:nth-child(4)
+		text-align right
+	&--logo
+		width 28px
+		height 28px
+		padding 11px 14px
+		background-repeat no-repeat
+		background-position center
+		background-size 28px
+	&--columb
+		background-image url("../images/on-game/columb-logo.png")
+	&--united
+		background-image url("../images/on-game/united-logo.png")
+	&--score
+		position relative
+		top 2px
+		font-size 16px
+		text-align center
+		color #555555

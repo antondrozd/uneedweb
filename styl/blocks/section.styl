@@ -6,22 +6,48 @@
 		padding-top 10.5rem
 	&--without-padding-top
 		padding-top 0
+	&--without-padding-bottom
+		padding-bottom 0
 	&--small-padding-bottom
 		padding-bottom 3.125rem
 	&--without-title
 		padding-top 0
-	&--dark
+	&--main-color
+		background-color $main-color
 		.section__title
 			color #fefefe
 		.section__text
 			color #576076
-	&--main-color
-		background-color $main-color
 	&--bottom-with-gradient
 		bottom-with-gradient(#4444b9, #ec523e)
+	&--on-game-score-block
+		padding-top 0
+	&--on-game-big-section
+		background-image url("../photos/on-game/bg.jpg")
+		background-size cover
+		.section__title
+			color #dbdbdb
+		.section__text
+			color #fff
+	&--on-game-technologies
+		background-image linear-gradient(to bottom, #ffe244, #d7bb0e)
+		.section__title
+			color #0e1a35
+		.section__text
+			margin-bottom 2.3rem
+			color #555
 
 .section__wrapper
 	wrapper()
+	
+.section__project-type
+	display block
+	margin-bottom 1.25rem
+	font-size 13px
+	letter-spacing 0.3px
+	text-transform uppercase
+	text-align center
+	color #555555	
 	
 .section__title
 	padding 0
@@ -36,8 +62,25 @@
 	padding 0
 	margin 0
 	font-size 16px
+	font-weight 200
 	text-align center
 	color #8492af
+	
+.section__decorative-img
+	display none
+	background-repeat no-repeat
+	background-size contain
+	&--phone-1
+		min-height 370px
+		background-image url("../images/on-game/image-1.png")
+	&--phone-2
+		min-height 298px
+		background-image url("../images/on-game/image-2.png")
+	&--phone-3
+		min-height 517px
+		background-image url("../images/on-game/image-3.png")
+.section__tags
+	margin-bottom 6.125rem
 	
 .section__btn
 	display block
@@ -45,7 +88,7 @@
 	margin 0 auto
 	svg
 		margin-left 0.7rem
-	
+
 @media $tablet-widths
 	
 	.section__title
