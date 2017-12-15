@@ -25,6 +25,7 @@
 	&--on-game-big-section
 		background-image url("../photos/on-game/bg.jpg")
 		background-size cover
+		background-position center
 		.section__title
 			color #dbdbdb
 		.section__text
@@ -67,27 +68,24 @@
 	color #8492af
 	
 .section__decorative-img
-	// display none
 	margin-top 2.75rem
 	background-repeat no-repeat
-	// background-size contain
 	&--on-game-phone-1
-		min-height 370px
+		height 370px
 		background-image url("../images/on-game/image-1.png")
-		// background-size 120%
-		background-size auto 370px
+		background-size auto 100%
 		background-position center
 	&--on-game-phone-2
-		min-height 298px
+		height 298px
 		background-image url("../images/on-game/image-2.png")
-		// background-size 160%
-		background-size auto 298px
+		background-size auto 100%
 		background-position center
 	&--on-game-phone-3
-		min-height 517px
+		height 517px
+		// padding-top 160%
 		background-image url("../images/on-game/image-3.png")
-		background-size auto 517px
-		background-position 25px
+		background-size auto 100%
+		background-position 43px
 .section__tags
 	margin-bottom 6.125rem
 	
@@ -99,12 +97,25 @@
 		margin-left 0.7rem
 
 @media $tablet-widths
-	
+
+	.section
+		&--on-game-score-block
+			background-image linear-gradient(to top, #ffffff, #f7f7f7)
+
 	.section__title
 		font-size 48px
 		
 	.section__text
 		font-size 18px
+		
+	.section__decorative-img
+		&--on-game-phone-1
+			height 584px
+		&--on-game-phone-2
+			height 484px
+		&--on-game-phone-3
+			height 693px
+			background-position 225px
 		
 @media $desktop-widths
 
