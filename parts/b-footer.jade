@@ -10,12 +10,20 @@ mixin b-footer(modifier)
 							a(href="/portfolio/b-index.html") Portfolio
 						li.main-nav__item
 							a(href="/contact-us/b-index.html") Contact Us
-			.page-footer__subscribe.subscribe
-				h2.subscribe__title Get in touch with us
-				form.subscribe__form
-					.input-box.input-box--with-btn-right
-						input(type="email" placeholder="Enter your email")
-						button.subscribe__btn.btn(type="submit") OK
+			//- .page-footer__subscribe.subscribe
+			//- 	h2.subscribe__title Get in touch with us
+			//- 	form.subscribe__form
+			//- 		.input-box.input-box--with-btn-right
+			//- 			input(type="email" placeholder="Enter your email")
+			//- 			button.subscribe__btn.btn(type="submit") OK
+			.page-footer__social.social
+				ul.social__list
+					li.social__item
+						a(href="https://www.facebook.com/uneedweb/" target="_blank")
+							img(src="/images/png/services/facebook.png", alt="facebook icon", width="35")
+					li.social__item
+						a(href="https://www.linkedin.com/company/18188825/" target="_blank")
+							img(src="/images/png/services/linkedin.png", alt="linkedin icon", width="35")
 			.page-footer__contact
 				address.page-footer__address Kiev, Ukraine, 02140, <br>Bazhana Ave 24/1
 				span.page-footer__phone

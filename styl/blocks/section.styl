@@ -67,18 +67,27 @@
 	color #8492af
 	
 .section__decorative-img
-	display none
+	// display none
+	margin-top 2.75rem
 	background-repeat no-repeat
-	background-size contain
-	&--phone-1
+	// background-size contain
+	&--on-game-phone-1
 		min-height 370px
 		background-image url("../images/on-game/image-1.png")
-	&--phone-2
+		// background-size 120%
+		background-size auto 370px
+		background-position center
+	&--on-game-phone-2
 		min-height 298px
 		background-image url("../images/on-game/image-2.png")
-	&--phone-3
+		// background-size 160%
+		background-size auto 298px
+		background-position center
+	&--on-game-phone-3
 		min-height 517px
 		background-image url("../images/on-game/image-3.png")
+		background-size auto 517px
+		background-position 25px
 .section__tags
 	margin-bottom 6.125rem
 	
