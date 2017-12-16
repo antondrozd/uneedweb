@@ -10,6 +10,17 @@ html(lang="en")
 
 			main.page-content
 
+				.project-switcher
+					.project-switcher__wrapper
+						a.project-switcher__link.project-switcher__link--prev(href="#")
+							span.project-switcher__arrow-icon
+								include ../../icons/arrow-go
+							span Previous Project
+						a.project-switcher__link.project-switcher__link--next(href="#")
+							span Next Project
+							span.project-switcher__arrow-icon
+								include ../../icons/arrow-go
+
 				section.section
 					.section__wrapper
 						span.section__project-type Mobile Development
