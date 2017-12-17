@@ -39,7 +39,7 @@
 			color #555
 
 .section__wrapper
-	wrapper()
+	wrapper-fluid()
 	
 .section__project-type
 	display block
@@ -91,7 +91,7 @@
 	
 .section__btn
 	display block
-	width 85%
+	width 15rem
 	margin 0 auto
 	svg
 		margin-left 0.7rem
@@ -118,6 +118,10 @@
 			background-position 225px
 		
 @media $desktop-widths
+
+	.section
+		&--on-game-score-block
+			padding-top 5rem
 
 	.section__text
 		padding-right 5rem

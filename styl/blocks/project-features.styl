@@ -18,9 +18,18 @@
 		.project-features__icon-wrapper
 			left 51%
 			transform translateX(-51%)
+			
+		.project-features__item-title
+			color #555
+			
+		.project-features__item-descr
+			color #555
 	
 .project-features__list
 	ul-reset()
+	wrapper-fluid()
+	display flex
+	flex-direction column
 	
 .project-features__item
 	position relative
@@ -42,7 +51,6 @@
 	font-weight 400
 	letter-spacing 0.4px
 	text-align center
-	color #555555
 
 .project-features__item-descr
 	padding 0
@@ -51,7 +59,6 @@
 	font-weight 300
 	letter-spacing 0.3px
 	text-align center
-	color #555555
 	
 @media $tablet-widths
 
@@ -60,7 +67,6 @@
 			.project-features__list
 				box-sizing border-box
 				width 26rem
-				margin 0 auto
 				
 			.project-features__item
 				padding-top 0
@@ -111,3 +117,20 @@
 				
 			.project-features__item-descr
 				text-align left
+				
+@media $desktop-widths
+
+	.project-features
+		&--on-game
+			.project-features__list
+				wrapper-fluid()
+	
+			.project-features__item
+				padding-top 6rem
+				padding-left 0
+				&:nth-child(n+2)
+					padding-top 6rem
+					padding-left 0
+
+	.project-features__list
+		flex-direction row

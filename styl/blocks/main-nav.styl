@@ -20,7 +20,7 @@
 			padding-top 4rem
 			background-color rgba(#0e1a35, 0.97)
 			z-index 3
-			transition all 0.3s ease
+			transition all $transition-duration ease
 			
 		.main-nav__item
 			a
@@ -33,8 +33,7 @@
 			flex-direction column
 
 .main-nav__wrapper
-	width 90%
-	margin 0 auto
+	wrapper-fluid()
 	display flex
 	align-items center
 	justify-content space-between
@@ -55,7 +54,7 @@
 		letter-spacing 0.3px
 		text-decoration none
 		color #8492af
-		transition all 0.3s
+		transition all $transition-duration
 		&:hover, &:active
 			color #c3cee4
 
@@ -83,7 +82,6 @@
 		&--opened
 			.main-nav__toggle
 				position fixed
-				right 5%
 				&::before,
 				&::after
 					content ""
@@ -105,7 +103,8 @@
 				transform translateY(0)
 				
 	.main-nav__toggle
-		position relative
+		position absolute
+		right 5%
 		display block
 		width 63px
 		height 55px
@@ -116,7 +115,7 @@
 		border none
 		z-index 4
 		&::before, &::after
-			transition all 0.3s
+			transition all $transition-duration
 
 @media $tablet-widths
 
@@ -136,12 +135,27 @@
 				
 			.main-nav__item
 				a
-					padding 0
+					position relative
+					padding 0 0.5rem
 					font-size 15px
 					text-transform none
 					letter-spacing 0.3px
 					color #ffffff
-		
+					&::after
+						content ""
+						position absolute
+						height 2px
+						left 0
+						bottom -10px
+						width 0
+						right 0
+						margin auto
+						transition width $transition-duration ease
+						background-image linear-gradient(to left, #ec523e, #4444b9)	
+					&:hover
+						&::after
+							width 100%
+							
 @media $desktop-widths
 
 	.main-nav
