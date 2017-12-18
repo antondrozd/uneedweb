@@ -59,6 +59,12 @@
 	justify-content center
 	svg
 		animation jumping 1.5s ease infinite
+		*
+			transition all $transition-duration
+	&:hover
+		svg
+			*
+				fill #fff
 		
 @media $tablet-widths
 	

@@ -1,17 +1,19 @@
 .on-game-score-block__logos
 	position relative
+	display flex
 	height 206px
 	background-image url("../images/on-game/image-bg.png")
 	background-repeat no-repeat
 	background-size cover
+	background-position center
 	
 .on-game-score-block__logo
-	position absolute
+	position relative
 	top 7%
-	&--columb
-		left 9.5%
-	&--united
-		right 8.5%
+	display flex
+	align-items flex-start
+	justify-content center
+	flex-grow 1
 	
 .on-game-score-block__table
 	width 100%
