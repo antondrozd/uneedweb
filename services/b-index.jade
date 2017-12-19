@@ -136,3 +136,28 @@ html(lang="en")
 						}
 					});
 				})();
+
+				var table = document.querySelector('.services-table table'),
+						tableColumnFirst = table.querySelectorAll('tr > *:nth-child(2)'),
+						tableColumnSecond = table.querySelectorAll('tr > *:nth-child(3)'),
+						tableColumnThird = table.querySelectorAll('tr > *:nth-child(4)'),
+						columnCurrent = 1,
+						switchPrev = table.querySelector('.services-table__switch-btn--prev'),
+						switchNext = table.querySelector('.services-table__switch-btn--next');
+
+				function tableSwitch (index) {
+					
+					columnCurrent = index;
+				}
+
+				switchPrev.addEventListener('click', function () {
+					if (columnCurrent > 1) {
+						tableSwitch(columnCurrent-1);
+						}
+				});
+
+				switchNext.addEventListener('click', function () {
+					if (columnCurrent < 3) {
+						tableSwitch(columnCurrent+1);
+						}
+				});

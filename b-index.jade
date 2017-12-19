@@ -172,10 +172,6 @@ html(lang="en")
 						sliderNext = slider.querySelector('.slider__switch-btn--next'),
 						sliderDots = slider.querySelectorAll('.slider__dot');
 
-				//- slideItems.forEach(function(item, index) {
-				//- 	slideItems[index].setAttribute('data-index', index+1);
-				//- });
-
 				function slideChange(index) {
 					var	sliderTransValue = (index-1)*sliderStepValue;
 					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
@@ -184,7 +180,6 @@ html(lang="en")
 					slideName[slideCurrent-1].classList.remove('slider__slide-name--active');
 					slideName[index-1].classList.add('slider__slide-name--active');
 					slideCurrent = index;
-					//- console.log(slideCurrent);
 				};
 
 				sliderPrev.addEventListener('click', function() { 

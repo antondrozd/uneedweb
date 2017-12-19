@@ -62,8 +62,9 @@
 	justify-content center !important
 	width 100vw !important
 	padding-top 7rem !important
-	color #0e1a35 !important
+	font-weight 400
 	text-transform uppercase
+	color #0e1a35 !important
 	background-color #f3f8ff !important
 	background-repeat no-repeat
 	background-position top 10px center
@@ -119,6 +120,8 @@
 	text-align center
 	color #fff
 	background-color #576076
+	&:hover, &:active
+		background-color #8492af
 	
 @media $tablet-widths
 
@@ -188,11 +191,13 @@
 		display none !important
 
 	.services-table__big-row
+		border-bottom none !important
 		td
 			&:first-child
 				width 28% !important
 				
-	.services-table__row-with-btns
+	.services-table__row-with-btns	
 		td
 			&:first-child
 				width 28% !important
+				
