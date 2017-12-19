@@ -1,0 +1,138 @@
+doctype html
+html(lang="en")
+	include ../parts/b-head
+	+head("Uneed Services | Uneed Web", "web software development, web design development, dedicated development team, project web development, team extension, agile software engingeering", "Uneed Web partners with companies to sustain them by project development, providing dedicated teams and specialists for relocation.")
+	body
+		.page-wrapper
+
+			include ../parts/b-header
+			+b-header("services")
+
+			main.page-content
+		
+				section.section.section--first-after-menu
+					.section__wrapper
+						h1.section__title Services
+						p.section__text Based on scope and duration of a project, on-site or off-premise delivery team location we provide 3 services. <br>The combination of services is available.
+
+				section.section.section--without-padding-top.services-table
+					.services-table__wrapper
+						table
+							tr.services-table__row-headings
+								td We provide:
+								th.services-table__heading.services-table__heading--project Project Development
+								th.services-table__heading.services-table__heading--team Dedicated Development Team
+								th.services-table__heading.services-table__heading--relocation Specialist for Relocation
+								td.services-table__switcher
+									btn.services-table__switch-btn.services-table__switch-btn--prev(type="button")
+										include ../icons/arrow-go
+									btn.services-table__switch-btn.services-table__switch-btn--next(type="button")
+										include ../icons/arrow-go
+							tr.services-table__row-group
+								td People:
+							tr
+								td Onsite Developer/Team
+								td.services-table__cell-with-point.services-table__cell-with-point--disabled
+								td.services-table__cell-with-point.services-table__cell-with-point--disabled
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+							tr
+								td Workspace/Equipment
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--disabled
+							tr
+								td PM
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td On Demand
+								td.services-table__cell-with-point.services-table__cell-with-point--disabled
+							tr
+								td QA
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td On Demand
+								td.services-table__cell-with-point.services-table__cell-with-point--disabled
+							tr.services-table__row-group
+								td Facilities:
+							tr
+								td Developer/Team solely engaged with your project
+								td On Demand
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+							tr.services-table__row-group
+								td Processes:
+							tr
+								td Fast Start of the Project
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td Depends on Visa availability
+							tr
+								td PM methodology
+								td SCRUM
+								td On Demand
+								td On Demand
+							tr
+								td Instant Feedback
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td Until the final relocation
+							tr
+								td Candidates Interview
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+							tr
+								td Continuous Client Engagement
+								td On Demand
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+							tr
+								td Estimates
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td Salary for the Team/Developer
+							tr
+								td After Release Support
+								td.services-table__cell-with-point.services-table__cell-with-point--active
+								td On Demand
+								td.services-table__cell-with-point.services-table__cell-with-point--disabled
+							tr
+								td Billing
+								td Monthly Payment
+								td Monthly Rates
+								td %
+							tr.services-table__big-row
+								td
+								td
+									a.btn(href="#") Learn More
+								td
+									a.btn(href="#") Learn More
+								td
+									a.btn(href="#") Learn More
+							tr.services-table__row-with-btns
+								td
+								td
+									a.services-table__btn(href="/contact-us/b-index.html") Start Now
+								td
+									a.services-table__btn(href="/contact-us/b-index.html") Start Now
+								td
+									a.services-table__btn(href="/contact-us/b-index.html") Start Now
+
+			include ../parts/b-footer
+			+b-footer("main")
+
+			script.
+				(function() {
+					var navMain = document.querySelector('.main-nav');
+					var navToggle = document.querySelector('.main-nav__toggle');
+
+					navMain.classList.remove('main-nav--nojs');
+
+					navToggle.addEventListener('click', function() {
+						if (navMain.classList.contains('main-nav--closed')) {
+							navMain.classList.remove('main-nav--closed');
+							navMain.classList.add('main-nav--opened');
+						} else {
+							navMain.classList.remove('main-nav--opened');
+							navMain.classList.add('main-nav--closed');
+						}
+					});
+				})();

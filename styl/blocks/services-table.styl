@@ -1,0 +1,198 @@
+.services-table__wrapper
+	overflow hidden
+	table
+		width 300vw
+		border-collapse collapse
+	th, td
+		padding 1.3rem 1rem	
+	tr
+		display flex
+		border-bottom solid 1px #e3eaf3
+		> *
+			box-sizing border-box
+			display flex
+			align-items center
+			font-size 13px
+			letter-spacing 0.3px
+			color #8492af
+			background-color #fafafc
+			transition all $transition-duration
+		> *:nth-child(1)
+			position relative
+			width 65vw
+			z-index 1
+		> *:nth-child(n+2)
+			justify-content flex-end
+			width 35vw
+			text-align right
+			
+.services-table__row-headings
+	position relative
+	border-top solid 1px #e3eaf3
+	td
+		display none
+		
+.services-table__switcher
+	position absolute !important
+	top 50%
+	justify-content space-between !important
+	display flex !important
+	width 100vw !important
+	background-color transparent !important
+	transform translateY(-50%)
+	
+.services-table__switch-btn
+	display flex
+	align-items center
+	justify-content center
+	width 3rem
+	height 3rem
+	border-radius 4px
+	border solid 2px #778ab4
+	transition all $transition-duration
+	&:hover, &:active
+		opacity 0.5
+		svg
+			opacity 0.5
+	&--prev
+		svg
+			transform rotate(180deg)
+		
+.services-table__heading
+	justify-content center !important
+	width 100vw !important
+	padding-top 7rem !important
+	color #0e1a35 !important
+	text-transform uppercase
+	background-color #f3f8ff !important
+	background-repeat no-repeat
+	background-position top 10px center
+	background-size 90px
+	&--project
+		background-image url("../images/gif/outsource.gif")
+	&--team
+		background-image url("../images/gif/outstaff.gif")
+	&--relocation
+		background-image url("../images/gif/relocation.gif")
+		
+.services-table__row-group
+	td
+		width 100% !important
+		padding-top 0.5rem
+		padding-bottom 0.5rem
+		background-color #e3eaf3 !important
+
+.services-table__cell-with-point
+	position relative
+	&::before
+		content ""
+		position absolute
+		top 50%
+		right 15%
+		width 1rem
+		height 1rem
+		border-radius 50%
+		background-color #8492af
+		transform translateY(-50%)
+	&--disabled
+		&::before
+			opacity 0.2
+		
+.services-table__big-row
+	td
+		justify-content center !important
+		width 100vw !important
+		&:first-child
+			display none
+		
+.services-table__row-with-btns
+	td
+		width 100vw !important
+		padding 0
+		&:first-child
+				display none
+		
+.services-table__btn
+	width 100%
+	padding 1.3rem 1rem
+	text-decoration none
+	text-align center
+	color #fff
+	background-color #576076
+	
+@media $tablet-widths
+
+	.services-table__wrapper
+		width 90vw
+		margin 0 auto
+		table
+			width 270vw
+		tr
+			> *
+				border-right solid 1px #e3eaf3
+			> *:nth-child(1)
+				width 30vw
+				background-color #f3f8ff
+				border-left solid 1px #e3eaf3
+			>	*:nth-child(n+2)
+				justify-content center
+				width 60vw
+				text-align center
+				
+	.services-table__row-headings
+		td
+			display block
+			font-size 0
+				
+	.services-table__switcher
+		left 30vw
+		width 60vw !important
+				
+	.services-table__heading
+		width 60vw !important
+		
+	.services-table__cell-with-point
+		&::before
+			right auto
+			left 50%
+			transform translate(-50%, -50%)
+		
+	.services-table__big-row
+		td
+			width 60vw !important
+			&:first-child
+				display flex
+				width 30vw !important
+			
+	.services-table__row-with-btns
+		td
+			width 60vw !important
+			&:first-child
+				display flex
+				width 30vw !important
+				
+@media $desktop-widths
+
+	.services-table__wrapper
+		width 90%
+		max-width 1200px
+		table
+			width 100%
+			tr
+				> *:nth-child(1)
+					width 28%
+				> *:nth-child(n+2)
+					width 24% !important
+	
+	.services-table__switcher
+		display none !important
+
+	.services-table__big-row
+		td
+			&:first-child
+				width 28% !important
+				
+	.services-table__row-with-btns
+		td
+			&:first-child
+				width 28% !important
