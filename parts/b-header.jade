@@ -1,10 +1,10 @@
-mixin b-header(modifier1, modifier2)
+mixin b-header(modifier)
 	// Google Tag Manager (noscript)
 	noscript
 		iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PW9LSKQ", height="0", width="0", style="display:none;visibility:hidden")
 	// End Google Tag Manager (noscript)
-	header.page-header(class="page-header--#{modifier1} page-header--#{modifier2}")
-		nav.main-nav.main-nav--top.main-nav--closed
+	header.page-header(class="page-header--#{modifier}")
+		nav.main-nav.main-nav--top.main-nav--closed(class="main-nav--#{modifier}")
 			.main-nav__wrapper
 				.main-nav__logo.logo
 						a(href="/b-index.html")
@@ -19,7 +19,7 @@ mixin b-header(modifier1, modifier2)
 					li.main-nav__item
 						a(href="/contact-us/b-index.html") Contact Us	
 		.page-header__wrapper
-			- if (modifier1 == "main")
+			- if (modifier == "hp")
 				h1.page-header__title Distinctive Web Development
 				p.page-header__text Shaping your tech ideas with smart engineering, creating an outreach for your business.
 				a.page-header__scroll-btn(href="#main")
