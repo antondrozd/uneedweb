@@ -92,15 +92,15 @@ html(lang="en")
 						h2.section__title Our Expertise
 						p.section__text Our team is comprised of devoted professionals who have expertise in multiple areas. We build web products that work and last, advance your customer journey, target and keep your customers in the loop.
 				section.section.section--without-padding-top.section--small-padding-bottom
-					.section__wrapper
+					.section__wrapper.section__wrapper--tight
 						.slider
-							.slider__switcher
-								button.slider__switch-btn.slider__switch-btn--prev(type="button")
+							.slider__switcher.switcher
+								button.switcher__btn.switcher__btn--prev(type="button")
 									include icons/left-arrow
-								h3.slider__slide-name.slider__slide-name--active Web Development
-								h3.slider__slide-name Mobile Development
-								h3.slider__slide-name Product Design
-								button.slider__switch-btn.slider__switch-btn--next(type="button")
+								h3.switcher__name.switcher__name--active Web Development
+								h3.switcher__name Mobile Development
+								h3.switcher__name Product Design
+								button.switcher__btn.switcher__btn--next(type="button")
 									include icons/left-arrow
 							ul.slider__slides-wrapper
 								li.slider__slide
@@ -112,8 +112,8 @@ html(lang="en")
 											li.tags__item JavaScript
 											li.tags__item CSS
 											li.tags__item HTML
-										.portfolio-item__img-wrapper.portfolio-item__img-wrapper--img-horisontal
-											img(src="images/png/hp-1-web.png" alt="web")
+										//- .portfolio-item__img-wrapper.portfolio-item__img-wrapper--img-horisontal
+										//- 	img(src="images/png/hp-1-web.png" alt="web")
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
 										p.portfolio-item__descr Uneed Web builds mobile applications by using cross-platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
@@ -121,8 +121,8 @@ html(lang="en")
 											li.tags__item ReactJS Native
 											li.tags__item Ionic
 											li.tags__item Xamarin Framework
-										.portfolio-item__img-wrapper
-											img(src="images/png/hp-2-mobile.png" alt="mobile")
+										//- .portfolio-item__img-wrapper
+										//- 	img(src="images/png/hp-2-mobile.png" alt="mobile")
 								li.slider__slide
 									.slider__slide-inner.portfolio-item
 										p.portfolio-item__descr Uneed Web creates a unique product web design to match you company’s unique brand. A customized web design which is search engine friendly, stands out from your competitors and focuses on your customers. To optimize your customers browsing experience we create sites and systems based on responsive design.
@@ -132,8 +132,8 @@ html(lang="en")
 											li.tags__item Adobe Illustrator
 											li.tags__item Interfaces
 											li.tags__item Web Design \ UX
-										.portfolio-item__img-wrapper
-											img(src="images/png/hp-3-design.png" alt="design")
+										//- .portfolio-item__img-wrapper
+										//- 	img(src="images/png/hp-3-design.png" alt="design")
 							.slider__dots
 								button.slider__dot.slider__dot--active(type="button")
 								button.slider__dot(type="button")
@@ -167,35 +167,41 @@ html(lang="en")
 						slidesCount = slideItems.length,
 						sliderStepValue = 100/slidesCount,
 						slideCurrent = 1,
-						slideName = slider.querySelectorAll('.slider__slide-name'),
-						sliderPrev = slider.querySelector('.slider__switch-btn--prev'),
-						sliderNext = slider.querySelector('.slider__switch-btn--next'),
+						slideNames = slider.querySelectorAll('.switcher__name'),
+						sliderPrev = slider.querySelector('.switcher__btn--prev'),
+						sliderNext = slider.querySelector('.switcher__btn--next'),
 						sliderDots = slider.querySelectorAll('.slider__dot');
 
-				function slideChange(index) {
+				function slideChange (index) {
 					var	sliderTransValue = (index-1)*sliderStepValue;
 					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
 					sliderDots[slideCurrent-1].classList.remove('slider__dot--active');
 					sliderDots[index-1].classList.add('slider__dot--active');
-					slideName[slideCurrent-1].classList.remove('slider__slide-name--active');
-					slideName[index-1].classList.add('slider__slide-name--active');
+					slideNames[slideCurrent-1].classList.remove('switcher__name--active');
+					slideNames[index-1].classList.add('switcher__name--active');
 					slideCurrent = index;
 				};
 
-				sliderPrev.addEventListener('click', function() { 
+				sliderPrev.addEventListener('click', function () { 
 					if (slideCurrent > 1) {
 						slideChange(slideCurrent-1);
 					}
 				});
 
-				sliderNext.addEventListener('click', function() {
+				sliderNext.addEventListener('click', function () {
 					if (slideCurrent < slidesCount) {
 						slideChange(slideCurrent+1);
 					}
 				});
 
-				sliderDots.forEach(function(item, index) {
-					sliderDots[index].addEventListener('click', function() {
+				slideNames.forEach(function (item, index) {
+					slideNames[index].addEventListener('click', function () {
+						slideChange(index+1);
+					});
+				});
+
+				sliderDots.forEach(function (item, index) {
+					sliderDots[index].addEventListener('click', function () {
 						slideChange(index+1);
 					});
 				});

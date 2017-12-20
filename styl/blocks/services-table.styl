@@ -50,10 +50,14 @@
 	border-radius 4px
 	border solid 2px #778ab4
 	transition all $transition-duration
-	&:hover, &:active
-		opacity 0.5
+	svg
+		*
+			transition all $transition-duration
+	&:active
+		border-color #576076
 		svg
-			opacity 0.5
+			*
+				fill #576076
 	&--prev
 		svg
 			transform rotate(180deg)

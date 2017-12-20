@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+	include ../../parts/b-head
+	+head("Uneed Services | Uneed Web", "web software development, web design development, dedicated development team, project web development, team extension, agile software engingeering", "Uneed Web partners with companies to sustain them by project development, providing dedicated teams and specialists for relocation.")
+	body
+		.page-wrapper
+
+			include ../../parts/b-header
+			+b-header("services")
+
+			main.page-content
+
+				section.section.section--first-after-menu.section--without-padding-bottom
+					.section__wrapper.section__wrapper--tight
+						.slider
+							.slider__switcher.switcher
+								button.switcher__btn.switcher__btn--prev(type="button")
+										include ../../icons/left-arrow
+									h3.switcher__name.switcher__name--active Project Development
+									h3.switcher__name Dedicated Development Team
+									h3.switcher__name Specialist for Relocation
+									button.switcher__btn.switcher__btn--next(type="button")
+										include ../../icons/left-arrow
+							ul.slider__slides-wrapper
+								li.slider__slide
+									section.slider__slide-inner.section.section--without-padding-top.section--without-padding-bottom
+										h2.section__title.section__title--text-left Project Development
+										p.section__text.section__text--text-left.section__text--with-margin-bottom Aimed at businesses that have a defined objective for the project, constrained in time or budget and do not consider establishing an on-going software development team. With offloading your project to us you will optimize work and save the best in-house staff for more valuable tasks.
+										p.section__text.section__text--text-left.section__text--with-margin-bottom For long-term projects (6+ months) we suggest you consider the Dedicated Development Team model.
+										p.section__text.section__text--text-left You do 5%, we do the remaining 95% for you.
+										a.btn(href="#") Services comparison
+								li.slider__slide
+									section.slider__slide-inner.section.section--without-padding-top.section--without-padding-bottom
+										h2.section__title.section__title--text-left Dedicated Development Team
+										p.section__text.section__text--text-left.section__text--with-margin-bottom A cost-effective model for businesses that require high-quality, efficient resources within an optimized time frame. You get control over the selection and management of your dedicated IT team, with no unexpected costs, flexible workload and scope.
+										p.section__text.section__text--text-left.section__text--with-margin-bottom While you focus on your projects, we will take care of all time-consuming tasks and ensure clear communication between your in-house team and offshore team.
+										p.section__text.section__text--text-left You do 5%, we do the remaining 95% for you.
+										a.btn(href="#") Services comparison
+								li.slider__slide
+									section.slider__slide-inner.section.section--without-padding-top.section--without-padding-bottom
+										h2.section__title.section__title--text-left Specialist for Relocation
+										p.section__text.section__text--text-left.section__text--with-margin-bottom The cost-benefit service that allows you to access a richer pool of IT experts and leverage your human capital. When the top talents for your industry are above your budget or simply not located in your area we will provide you with high-skilled candidates that are willing to relocate to your place.
+										p.section__text.section__text--text-left You do 5%, we do the remaining 95% for you.
+										a.btn(href="#") Services comparison
+
+			include ../../parts/b-footer
+			+b-footer("services")
+
+		script.
+			(function() {
+				var navMain = document.querySelector('.main-nav');
+				var navToggle = document.querySelector('.main-nav__toggle');
+
+				navMain.classList.remove('main-nav--nojs');
+
+				navToggle.addEventListener('click', function() {
+					if (navMain.classList.contains('main-nav--closed')) {
+						navMain.classList.remove('main-nav--closed');
+						navMain.classList.add('main-nav--opened');
+					} else {
+						navMain.classList.remove('main-nav--opened');
+						navMain.classList.add('main-nav--closed');
+					}
+				});
+			})();
+
+			(function () {
+				var slider = document.querySelector('.slider'),
+						slidesWrapper = slider.querySelector('.slider__slides-wrapper'),
+						slideItems = slider.querySelectorAll('.slider__slide'),
+						slidesCount = slideItems.length,
+						sliderStepValue = 100/slidesCount,
+						slideCurrent = 1,
+						slideNames = slider.querySelectorAll('.switcher__name'),
+						sliderPrev = slider.querySelector('.switcher__btn--prev'),
+						sliderNext = slider.querySelector('.switcher__btn--next');
+
+				function slideChange(index) {
+					var	sliderTransValue = (index-1)*sliderStepValue;
+					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
+					slideNames[slideCurrent-1].classList.remove('switcher__name--active');
+					slideNames[index-1].classList.add('switcher__name--active');
+					slideCurrent = index;
+				};
+
+				sliderPrev.addEventListener('click', function() { 
+					if (slideCurrent > 1) {
+						slideChange(slideCurrent-1);
+					}
+				});
+
+				sliderNext.addEventListener('click', function() {
+					if (slideCurrent < slidesCount) {
+						slideChange(slideCurrent+1);
+					}
+				});
+
+				slideNames.forEach(function (item, index) {
+					slideNames[index].addEventListener('click', function () {
+						slideChange(index+1);
+					});
+				});
+			})();

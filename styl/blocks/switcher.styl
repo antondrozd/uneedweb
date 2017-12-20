@@ -1,0 +1,57 @@
+.switcher
+	display flex
+	align-items center
+	justify-content space-between
+	margin-bottom 1rem
+	border-bottom 1px solid #e4e4f1
+
+.switcher__btn
+	width 2rem
+	height 2rem
+	padding 0
+	background-color transparent
+	border none
+	outline none
+	cursor pointer
+	&--next
+		svg
+			transform rotate(180deg)
+	
+.switcher__name
+	position relative
+	display none
+	padding 1rem
+	margin 0
+	font-size 14px
+	font-weight 400
+	letter-spacing 0.3px
+	text-transform uppercase
+	text-align center
+	color #8492af
+	cursor pointer
+	&::after
+		content ""
+		position absolute
+		bottom -1px
+		left 0
+		width 100%
+		height 2px
+		transition all 0.1s
+	&--active
+		display block
+		&::after
+			background-color #8492af
+	&:not(&--active):hover
+		&::after
+			background-color rgba(#8492af, 0.5)
+		
+@media $tablet-widths
+
+	.switcher
+		justify-content space-around
+
+	.switcher__btn
+		visually-hidden()
+
+	.switcher__name
+		display block

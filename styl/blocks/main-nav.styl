@@ -2,12 +2,19 @@
 	font-family $main-font
 	
 	&--hp
-		background-color transparent
-		
+		background-color transparent // scroll up - $main-color
+		.main-nav__list
+			background-color rgba($main-color, 0.97)
 	&--services,
 	&--portfolio,
 	&--contact-us
 		background-color $main-color
+		.main-nav__list
+			background-color rgba($main-color, 0.97)
+	&--project-on-game
+		background-color transparent // scroll up - $main-color--on-game
+		.main-nav__list
+			background-color rgba($main-color--on-game, 0.97)
 			
 	&--top
 		position absolute
@@ -17,7 +24,6 @@
 		width 100%
 		min-height 5.5rem
 		z-index 2
-		// background-color #0e1a35
 		.main-nav__list
 			position fixed
 			top 0
@@ -26,7 +32,6 @@
 			width 100vw
 			height 100vh
 			padding-top 4rem
-			background-color rgba(#0e1a35, 0.97)
 			z-index 3
 			transition all $transition-duration ease
 			
