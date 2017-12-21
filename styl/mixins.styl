@@ -1,17 +1,17 @@
 wrapper()
-	width: 280px
-	margin: 0 auto
+	width 280px
+	margin 0 auto
 	@media $tablet-widths
-		width: 648px
+		width 648px
 		
 	@media $desktop-widths
-		width: 1200px
+		width 1200px
 		
 	@media $desktop-large-widths
 		width 1400px
 		
 wrapper-fluid()
-	width: 85%
+	width 85%
 	margin 0 auto
 	
 	@media $desktop-large-widths
@@ -19,30 +19,34 @@ wrapper-fluid()
 
 clearfix()
 	&::after
-		content: ""
-		display: table
-		clear: both
+		content ""
+		display table
+		clear both
 
 ul-reset()
-	margin: 0
-	padding: 0
-	list-style: none
+	margin 0
+	padding 0
+	list-style none
 
 
 visually-hidden()
-	position: absolute
-	width: 1px
-	height: 1px
-	margin: -1px
-	padding: 0
-	border: 0
-	clip: rect(0 0 0 0)
-	overflow: hidden
+	position absolute
+	width 1px
+	height 1px
+	margin -1px
+	padding 0
+	border 0
+	clip rect(0 0 0 0)
+	overflow hidden
 
 
 max-font-size($size)
-	@media (min-height: 700px)
-		font-size: $size
+	@media (min-height 700px)
+		font-size $size
+		
+max-bg-size($size, $width)
+	@media (min-width $width)
+		background-size $size
 
 bottom-with-gradient($from, $to)
 	position relative

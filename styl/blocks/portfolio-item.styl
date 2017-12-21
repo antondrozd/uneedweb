@@ -3,6 +3,21 @@
 	flex-direction column
 	align-items center
 	justify-content center
+	padding-bottom 20rem
+	background-repeat no-repeat
+	background-size 100%
+	&--web
+		background-image url("../images/png/hp-1-web.png")
+		background-position center bottom 5rem
+		max-bg-size(450px, 530px)
+	&--mobile
+		background-image url("../images/png/hp-2-mobile.png")
+		background-position center bottom
+		max-bg-size(290px, 340px)
+	&--design
+		background-image url("../images/png/hp-3-design.png")
+		background-position center bottom 2rem
+		background-size 272px
 
 .portfolio-item__descr
 	margin-top 1rem
@@ -12,20 +27,16 @@
 	letter-spacing 0.3px
 	text-align center
 	color #8492af
-
-.portfolio-item__img-wrapper
-	display flex
-	align-items center
-	justify-content center
-	padding-top 3rem
-	padding-bottom 1rem
-	img
-		width 15rem
-	&--img-horisontal
-		img
-			width 17rem
+	
+.portfolio-item__btn
+	display none
 		
 @media $tablet-widths
+
+	.portfolio-item
+		padding-bottom 23rem
+		&--mobile
+			background-position center bottom 2rem
 
 	.portfolio-item__img-wrapper
 		img
@@ -38,6 +49,24 @@
 
 	.portfolio-item
 		align-items flex-start
+		min-height 320px
+		padding-bottom 0
+		&--web
+			background-position right center
+			background-size 395px
+		&--mobile
+			background-position right 3rem center
+		&--design
+			background-position right center
 		
 	.portfolio-item__descr
+		width 30rem
 		text-align left
+		
+	.portfolio-item__tags
+		justify-content flex-start
+		width 30rem
+		
+	.portfolio-item__btn
+		display block
+		margin-top 4rem

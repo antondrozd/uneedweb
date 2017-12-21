@@ -104,41 +104,38 @@ html(lang="en")
 									include icons/left-arrow
 							ul.slider__slides-wrapper
 								li.slider__slide
-									.slider__slide-inner.portfolio-item
+									.slider__slide-inner.portfolio-item.portfolio-item--web
 										p.portfolio-item__descr Developing customized web products is our core competence. We bring online presence to businesses by creating applications that resemble services and products as a distinctive brand. Our experienced team of developers organize and structure both front-end and back-end to create smooth and intuitive navigation for browsing as well as rich user experience.
-										ul.tags
+										ul.portfolio-item__tags.tags
 											li.tags__item React JS
 											li.tags__item Angular JS
 											li.tags__item JavaScript
 											li.tags__item CSS
 											li.tags__item HTML
-										//- .portfolio-item__img-wrapper.portfolio-item__img-wrapper--img-horisontal
-										//- 	img(src="images/png/hp-1-web.png" alt="web")
+										a.portfolio-item__btn.btn(href="/portfolio") Go to portfolio
 								li.slider__slide
-									.slider__slide-inner.portfolio-item
+									.slider__slide-inner.portfolio-item.portfolio-item--mobile
 										p.portfolio-item__descr Uneed Web builds mobile applications by using cross-platform mobile application development. It enables you to have one codebase and to customize for multiple platforms, brings cost-effectiveness and simplicity once changes and synchronization are applied.
-										ul.tags
+										ul.portfolio-item__tags.tags
 											li.tags__item ReactJS Native
 											li.tags__item Ionic
 											li.tags__item Xamarin Framework
-										//- .portfolio-item__img-wrapper
-										//- 	img(src="images/png/hp-2-mobile.png" alt="mobile")
+										a.portfolio-item__btn.btn(href="/portfolio") Go to portfolio
 								li.slider__slide
-									.slider__slide-inner.portfolio-item
+									.slider__slide-inner.portfolio-item.portfolio-item--design
 										p.portfolio-item__descr Uneed Web creates a unique product web design to match you company’s unique brand. A customized web design which is search engine friendly, stands out from your competitors and focuses on your customers. To optimize your customers browsing experience we create sites and systems based on responsive design.
-										ul.tags
+										ul.portfolio-item__tags.tags
 											li.tags__item Sketch
 											li.tags__item Adobe Photoshop
 											li.tags__item Adobe Illustrator
 											li.tags__item Interfaces
 											li.tags__item Web Design \ UX
-										//- .portfolio-item__img-wrapper
-										//- 	img(src="images/png/hp-3-design.png" alt="design")
+										a.portfolio-item__btn.btn(href="/portfolio") Go to portfolio
 							.slider__dots
 								button.slider__dot.slider__dot--active(type="button")
 								button.slider__dot(type="button")
 								button.slider__dot(type="button")
-						a.section__btn.btn(href="/portfolio") Go to portfolio
+						a.section__btn.section__btn--hidden-on-desktop.btn(href="/portfolio") Go to portfolio
 							include icons/arrow-go
 			include parts/b-footer
 			+b-footer("hp")
