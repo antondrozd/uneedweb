@@ -1,0 +1,86 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	+head("Augmented Development Team | Uneed Web", "Team Extension, Dedicated Team, Outstaffing, Benefits of offshore software development", "43% of companies who outsource look for scaling their operations. With augmented development team you will attain higher flexibility for scaling.")
+
+	body
+		.page-wrapper
+
+			include ../../parts/b-header
+			+b-header("services")
+
+			main.page-content
+
+				section.section.section--first-after-menu.section--without-padding-bottom
+					.section__wrapper.section__wrapper--margin-left-only
+						.switcher
+							a.switcher__btn.switcher__btn--prev(href="/services/outsource/b-index.html")
+								include ../../icons/left-arrow
+							a.switcher__name(href="/services/outsource/b-index.html") Project Development
+							a.switcher__name.switcher__name--active(href="/services/outstaff/b-index.html") Dedicated Development Team
+							a.switcher__name(href="/services/relocation/b-index.html") Specialist for Relocation
+							a.switcher__btn.switcher__btn--next(href="/services/relocation/b-index.html")
+								include ../../icons/left-arrow
+
+						section.section.section--without-padding-top.section--small-padding-bottom.section--slide.section--slide-team
+							h2.section__title.section__title--text-left Dedicated Development Team
+							p.section__text.section__text--text-left.section__text--with-margin-bottom A cost-effective model for businesses that require high-quality, efficient resources within an optimized time frame. You get control over the selection and management of your dedicated IT team, with no unexpected costs, flexible workload and scope.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom While you focus on your projects, we will take care of all time-consuming tasks and ensure clear communication between your in-house team and offshore team.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom You do 5%, we do the remaining 95% for you.
+							a.section__btn.btn(href="/services/b-index.html") Services comparison
+								include ../../icons/arrow-go
+
+			section.section.section--without-padding-top.section--without-padding-bottom.section--main-color.workflow.workflow--team
+					.workflow__wrapper
+						.workflow__inner.workflow__inner--right
+							h3.workflow__title You do
+							ul.workflow__list.workflow__list
+								li.workflow__item
+									span Provide a number and a skill set of required IT experts
+								li.workflow__item
+									span Evaluate and approve team
+								li.workflow__item
+									span Assign project tasks
+								li.workflow__item
+									span Renew the contract
+						.workflow__inner.workflow__inner--left
+							h3.workflow__title We do
+							ul.workflow__list.workflow__list
+								li.workflow__item
+									span Candidates market overview in 24 hours
+								li.workflow__item
+									span Conduct recruitment process to check candidates’ personal skills and language proficiency
+								li.workflow__item
+									span Conduct technical interviews
+								li.workflow__item
+									span Suggest candidates and schedule an interview with your team
+								li.workflow__item
+									span Provide workspace, facilities and technical equipment
+								li.workflow__item
+									span Take care of daily administrative things
+
+				section.section
+					.section__wrapper
+						h2.section__title Result
+						p.section__text You get well-qualified team member, clean and robust code and successfully implemented product
+
+			include ../../parts/b-footer
+			+b-footer("services")
+
+		script.
+			(function() {
+				var navMain = document.querySelector('.main-nav');
+				var navToggle = document.querySelector('.main-nav__toggle');
+
+				navMain.classList.remove('main-nav--nojs');
+
+				navToggle.addEventListener('click', function() {
+					if (navMain.classList.contains('main-nav--closed')) {
+						navMain.classList.remove('main-nav--closed');
+						navMain.classList.add('main-nav--opened');
+					} else {
+						navMain.classList.remove('main-nav--opened');
+						navMain.classList.add('main-nav--closed');
+					}
+				});
+			})();

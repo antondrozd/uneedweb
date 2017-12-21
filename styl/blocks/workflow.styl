@@ -1,0 +1,297 @@
+$workflow-item-height = 5rem
+$workflow-item-color-1 = #e25245
+$workflow-item-color-2 = #cb5056
+$workflow-item-color-3 = #b74e65
+$workflow-item-color-4 = #a44c73
+$workflow-item-color-5 = #a44c73
+$workflow-item-color-6 = #8f4b82
+$workflow-item-color-7 = #794992
+$workflow-item-color-8 = #794992
+$workflow-item-color-9 = #6b479d
+$workflow-item-color-10 = #5b46a8
+$workflow-item-shadow-ball-right = 20px 0px 0px -5px
+$workflow-item-shadow-ball-left = -20px 0px 0px -5px
+$workflow-item-line-horisontal-size = 4rem
+$workflow-item-line-vertical-size = 3rem
+
+.workflow__wrapper
+	wrapper-fluid()
+	padding-top 0.75rem
+	padding-bottom 2rem
+
+.workflow__title
+	padding 1.25rem 0
+	margin 0
+	font-size 18px
+	font-weight 300
+	letter-spacing 0.4px
+	text-align left
+	color #fefefe
+
+.workflow__list
+	ul-reset()
+	
+.workflow__inner
+	&--right
+		.workflow__item
+			&:nth-child(1)
+				&::before
+					background-color $workflow-item-color-1
+			&:nth-child(2)
+					&::before
+						background-color $workflow-item-color-2
+			&:nth-child(3)
+					&::before
+						background-color $workflow-item-color-3
+			&:nth-child(4)
+					&::before
+						background-color $workflow-item-color-4
+	&--left
+		.workflow__item
+			&:nth-child(1)
+				&::before
+					background-color $workflow-item-color-5
+			&:nth-child(2)
+					&::before
+						background-color $workflow-item-color-6
+			&:nth-child(3)
+					&::before
+						background-color $workflow-item-color-7
+			&:nth-child(4)
+					&::before
+						background-color $workflow-item-color-8
+			&:nth-child(5)
+					&::before
+						background-color $workflow-item-color-9
+			&:nth-child(6)
+					&::before
+						background-color $workflow-item-color-10
+		
+	
+.workflow__item
+	position relative
+	padding 0.5rem 0 0.5rem 3rem
+	font-size 14px
+	font-weight 400
+	letter-spacing 0.3px
+	line-height 1.5
+	color #8492af
+	&::before
+		content ""
+		position absolute
+		top 50%
+		left 1rem
+		width 1rem
+		height 1rem
+		border-radius 50%
+		transform translateY(-50%)
+		
+@media $tablet-widths
+
+	.workflow
+		&--project
+			.workflow__inner
+				&--right
+					.workflow__item
+						&:nth-child(1)
+							margin-bottom $workflow-item-height*2
+						&:nth-child(2)
+							margin-bottom $workflow-item-height*3
+							
+				&--left
+					.workflow__item
+						&:nth-child(1)
+							margin-top $workflow-item-height
+						&:nth-child(2)
+							margin-bottom $workflow-item-height
+						&:nth-child(5)
+							margin-bottom $workflow-item-height
+		&--team
+			.workflow__inner
+				&--right
+					.workflow__item
+						&:nth-child(1)
+							margin-bottom $workflow-item-height*4
+						&:nth-child(2)
+							margin-bottom $workflow-item-height
+						&:nth-child(3)
+							margin-bottom $workflow-item-height
+						&:nth-child(4)
+							margin-bottom $workflow-item-height
+							
+				&--left
+					.workflow__item
+						&:nth-child(1)
+							margin-top $workflow-item-height
+						&:nth-child(4)
+							margin-bottom $workflow-item-height
+						&:nth-child(5)
+							margin-bottom $workflow-item-height
+		&--relocation
+			.workflow__inner
+				&--right
+					.workflow__item
+						&:nth-child(1)
+							margin-bottom $workflow-item-height*4
+						&:nth-child(2)
+							margin-bottom $workflow-item-height
+						&:nth-child(3)
+							margin-bottom $workflow-item-height
+							
+				&--left
+					.workflow__item
+						&:nth-child(1)
+							margin-top $workflow-item-height
+						&:nth-child(4)
+							margin-bottom $workflow-item-height
+						&:nth-child(5)
+							margin-bottom $workflow-item-height
+
+	.workflow__wrapper
+		display flex
+		flex-direction row-reverse
+
+	.workflow__inner
+		width 50%
+		&--right
+			.workflow__title
+				padding-left 6rem
+			.workflow__item
+				padding-right 0
+				padding-left 6rem
+				&:nth-child(1)
+					&::before
+						background-color $workflow-item-color-1
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-1
+					&::after
+						background-color $workflow-item-color-1
+					span
+						&::before
+							background-color $workflow-item-color-1
+				&:nth-child(2)
+					margin-bottom $workflow-item-height
+					&::before
+						background-color $workflow-item-color-6
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-6
+					&::after
+						background-color $workflow-item-color-6
+					span
+						&::before
+							background-color $workflow-item-color-6
+				&:nth-child(3)
+					&::before
+						background-color $workflow-item-color-8
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-8
+					&::after
+						background-color $workflow-item-color-8
+					span
+						&::before
+							background-color $workflow-item-color-8
+				&:nth-child(4)
+					&::before
+						background-color $workflow-item-color-10
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-10
+					&::after
+						background-color $workflow-item-color-10
+					span
+						&::before
+							background-color $workflow-item-color-10
+				&::before
+					left -0.5rem
+				&::after
+					left 0
+				span
+					&::before
+						left 21px
+					
+		&--left
+			.workflow__title
+				padding-right 6rem
+				text-align right
+			.workflow__item
+				justify-content flex-end
+				padding-right 6rem
+				padding-left 0
+				text-align right
+				&:nth-child(1)
+					&::before
+						background-color $workflow-item-color-2
+						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-2
+					&::after
+						background-color $workflow-item-color-2
+					span
+						&::before
+							background-color $workflow-item-color-2
+				&:nth-child(2)
+					&::before
+						background-color $workflow-item-color-3
+						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-3
+					&::after
+						background-color $workflow-item-color-3
+					span
+						&::before
+							background-color $workflow-item-color-3
+				&:nth-child(3)
+					&::before
+						background-color $workflow-item-color-4
+						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-4
+					&::after
+						background-color $workflow-item-color-4
+					span
+						&::before
+							background-color $workflow-item-color-4
+				&:nth-child(4)
+					&::before
+						background-color $workflow-item-color-5
+						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-5
+					&::after
+						background-color $workflow-item-color-5
+					span
+						&::before
+							background-color $workflow-item-color-5
+				&:nth-child(5)
+					&::before
+						background-color $workflow-item-color-7
+						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-7
+					&::after
+						background-color $workflow-item-color-7
+					span
+						&::before
+							background-color $workflow-item-color-7
+				&:nth-child(6)
+					&::before
+						background-color $workflow-item-color-9
+						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-9
+					&::after
+						background-color $workflow-item-color-9
+					span
+						&::before
+							background-color $workflow-item-color-9
+				&::before
+					right -0.5rem
+					left auto
+				&::after
+					right 0
+				span
+					&::before
+						right 21px
+					
+	.workflow__item
+		display flex
+		align-items center
+		box-sizing border-box
+		height $workflow-item-height
+		&::after
+			content ""
+			position absolute
+			bottom -1.5rem
+			width 1px
+			height $workflow-item-line-vertical-size
+		span
+			&::before
+				content ""
+				position absolute
+				top 50%
+				width $workflow-item-line-horisontal-size
+				height 1px
+				transform translateY(-50%)

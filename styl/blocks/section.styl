@@ -20,6 +20,16 @@
 			color #576076
 	&--bottom-with-gradient
 		bottom-with-gradient(#4444b9, #ec523e)
+	&--slide
+		display flex
+		flex-direction column
+		box-sizing border-box
+		height 100%
+		.section__btn
+			width auto
+			margin-top auto
+			margin-right auto
+			margin-left 0
 	&--on-game-score-block
 		padding-top 0
 	&--on-game-big
@@ -66,12 +76,13 @@
 	margin 0
 	font-size 16px
 	font-weight 200
+	line-height 1.33
 	text-align center
 	color #8492af
 	&--text-left
 		text-align left
 	&--with-margin-bottom
-		margin-bottom 1rem
+		margin-bottom 1.5rem
 	&--hidden-on-mobile
 		display none
 	
@@ -107,8 +118,29 @@
 @media $tablet-widths
 
 	.section
+		&--slide
+			background-repeat no-repeat			
+			background-size cover
+			> *
+				width 70%
+		&--slide-project
+			background-image url("../images/png/outsource.png")
+			background-position top left 52vw
+		&--slide-team
+			background-image url("../images/png/outstaff.png")
+			background-position top left 57vw
+		&--slide-relocation
+			background-image url("../images/png/relocation.png")
+			background-position top left
+			
 		&--on-game-score-block
 			background-image linear-gradient(to top, #ffffff, #f7f7f7)
+			
+	.section__wrapper
+		&--margin-left-only
+			width auto
+			margin-left 5%
+			margin-right 0
 
 	.section__title
 		font-size 48px
@@ -153,10 +185,6 @@
 			
 		&--on-game-score-block
 			padding-top 5rem
-			
-	.section__wrapper
-		&--tight
-			width 55rem
 			
 	.section__btn
 		&--hidden-on-desktop

@@ -1,0 +1,81 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	+head("Specialist for Relocation | UNeed Web", "full-stack, fron-end developer, back-end developer, PHP developer, Java developer, Web Developer, in-house developer", "Access strategic talents that adds value beyond standard options. We are your committed partner to find top specialists for relocation.")
+
+	body
+		.page-wrapper
+
+			include ../../parts/b-header
+			+b-header("services")
+
+			main.page-content
+
+				section.section.section--first-after-menu.section--without-padding-bottom
+					.section__wrapper.section__wrapper--margin-left-only
+						.switcher
+							a.switcher__btn.switcher__btn--prev(href="/services/outstaff/b-index.html")
+								include ../../icons/left-arrow
+							a.switcher__name(href="/services/outsource/b-index.html") Project Development
+							a.switcher__name(href="/services/outstaff/b-index.html") Dedicated Development Team
+							a.switcher__name.switcher__name--active(href="/services/relocation/b-index.html") Specialist for Relocation
+							a.switcher__btn.switcher__btn--next
+								include ../../icons/left-arrow
+
+						section.slider__slide-inner.section.section--without-padding-top.section--small-padding-bottom.section--slide.section--slide-relocation
+							h2.section__title.section__title--text-left Specialist for Relocation
+							p.section__text.section__text--text-left.section__text--with-margin-bottom The cost-benefit service that allows you to access a richer pool of IT experts and leverage your human capital. When the top talents for your industry are above your budget or simply not located in your area we will provide you with high-skilled candidates that are willing to relocate to your place.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom You do 5%, we do the remaining 95% for you.
+							a.section__btn.btn(href="/services/b-index.html") Services comparison
+								include ../../icons/arrow-go
+
+				section.section.section--without-padding-top.section--without-padding-bottom.section--main-color.workflow.workflow--relocation
+					.workflow__wrapper
+						.workflow__inner.workflow__inner--right
+							h3.workflow__title You do
+							ul.workflow__list.workflow__list
+								li.workflow__item
+									span Provide technical requirements for candidates
+								li.workflow__item
+									span Evaluate and approve candidates
+								li.workflow__item
+									span Sign contract with candidates
+						.workflow__inner.workflow__inner--left
+							h3.workflow__title We do
+							ul.workflow__list.workflow__list
+								li.workflow__item
+									span Candidates market overview in 24 hours
+								li.workflow__item
+									span Conduct recruitment process to check candidates’ personal skills and language proficiency
+								li.workflow__item
+									span Conduct technical interviews
+								li.workflow__item
+									span Suggest candidates and schedule an interview with your team
+								li.workflow__item
+									span Handle relocation and settlement
+
+				section.section
+					.section__wrapper
+						h2.section__title Result
+						p.section__text You get well-qualified team member, clean and robust code and successfully implemented product
+
+			include ../../parts/b-footer
+			+b-footer("services")
+
+		script.
+			(function() {
+				var navMain = document.querySelector('.main-nav');
+				var navToggle = document.querySelector('.main-nav__toggle');
+
+				navMain.classList.remove('main-nav--nojs');
+
+				navToggle.addEventListener('click', function() {
+					if (navMain.classList.contains('main-nav--closed')) {
+						navMain.classList.remove('main-nav--closed');
+						navMain.classList.add('main-nav--opened');
+					} else {
+						navMain.classList.remove('main-nav--opened');
+						navMain.classList.add('main-nav--closed');
+					}
+				});
+			})();
