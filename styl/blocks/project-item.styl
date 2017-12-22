@@ -1,10 +1,17 @@
 .project-item
 	position relative
+	box-sizing border-box
 	width 100%
 	min-height 25rem
 	background-repeat no-repeat
 	background-size cover
-	transition all $transition-duration
+	background-position center
+	border 0.5px solid #fff
+	webkit-transition: background-size $transition-duration linear;
+	-moz-transition: background-size $transition-duration linear;
+	-o-transition: background-size $transition-duration linear;
+	-ms-transition: background-size $transition-duration linear;
+	transition: background-size $transition-duration linear;
 	*
 		z-index 1
 	&--booking
@@ -36,6 +43,7 @@
 		background-color #102640
 		opacity 0.5
 		z-index 1
+		transition all $transition-duration
 
 .project-item__wrapper
 	display flex
@@ -71,30 +79,34 @@
 	letter-spacing: 0.3px;
 	line-height 1.5
 	text-align center
-	color: rgba(248,249,251,.5);
+	color: rgba(248, 249, 251, 0.5);
 	transition all $transition-duration
 	
 @media $tablet-widths
 
 	.project-item
 		width 50%
+		background-size 112%
+		&::before
+			opacity 0
+		&:hover
+			background-size 135%
+			&::before
+				opacity 0.5
+			.project-item__descr,
+			.project-item__link-btn
+				opacity 1
+				transform translateY(0)
+				
+	.project-item__descr
+		opacity 0
+		transform translateY(25%)
+		
+	.project-item__link-btn
+		opacity 0
+		transform translateY(25%)
 		
 @media $desktop-widths
 
 	.project-item
 		max-width 33.33%
-		&::before
-			display none
-		&:hover
-			background-size 120%
-			&::before
-				display block
-			.project-item__descr,
-			.project-item__link-btn
-				opacity 1
-				
-	.project-item__descr
-		opacity 0
-		
-	.project-item__link-btn
-		opacity 0

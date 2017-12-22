@@ -17,7 +17,7 @@
 		.section__title
 			color #fefefe
 		.section__text
-			color #576076
+			color #8c9ab5
 	&--bottom-with-gradient
 		bottom-with-gradient(#4444b9, #ec523e)
 	&--slide
@@ -73,7 +73,8 @@
 	
 .section__text
 	padding 0
-	margin 0
+	margin 0 auto
+	max-width 41rem
 	font-size 16px
 	font-weight 400
 	line-height 1.33
@@ -81,6 +82,7 @@
 	color #8492af
 	&--text-left
 		text-align left
+		margin 0
 	&--with-margin-bottom
 		margin-bottom 1.5rem
 	&--hidden-on-mobile
@@ -120,18 +122,18 @@
 	.section
 		&--slide
 			background-repeat no-repeat			
-			background-size cover
+			background-size auto 100%
 			> *
-				width 70%
-		// &--slide-project
-		// 	background-image url("../images/png/outsource.png")
-		// 	background-position top left 52vw
-		// &--slide-team
-		// 	background-image url("../images/png/outstaff.png")
-		// 	background-position top left 57vw
-		// &--slide-relocation
-		// 	background-image url("../images/png/relocation.png")
-		// 	background-position top left
+				width 31rem
+		&--slide-project
+			background-image url("../images/png/outsource.png")
+			background-position top left 28rem
+		&--slide-team
+			background-image url("../images/png/outstaff.png")
+			background-position top left 31rem
+		&--slide-relocation
+			background-image url("../images/png/relocation.png")
+			background-position top left 32rem
 			
 		&--on-game-score-block
 			background-image linear-gradient(to top, #ffffff, #f7f7f7)
@@ -186,6 +188,10 @@
 		&--on-game-score-block
 			padding-top 5rem
 			
+	.section__wrapper
+		&--tight
+			width 46rem
+
 	.section__btn
 		&--hidden-on-desktop
 			display none

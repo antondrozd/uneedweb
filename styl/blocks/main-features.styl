@@ -1,14 +1,21 @@
 .main-features
 	margin-top 3.125rem
+	
+.main-features__wrapper
+	margin 0 auto
 
 .main-features__list
 	ul-reset()
 	display flex
 	flex-wrap wrap
-	width 85%
-	margin 0 auto
 	
 @media $tablet-widths
 
-	.main-features__item
-		width 50%
+	.main-features__list
+		wrapper()
+		justify-content space-around
+
+@media $desktop-widths
+
+	.main-features__list
+		max-width 46rem
