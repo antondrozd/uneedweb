@@ -7,13 +7,13 @@ html(lang="en")
 		.page-wrapper
 
 			include ../../parts/b-header
-			+b-header("services")
+			+b-header("services-slide")
 
 			main.page-content
 
-				section.section.section--first-after-menu.section--without-padding-bottom
+				section.section.section--without-padding-bottom
 					.section__wrapper.section__wrapper--margin-left-only
-						.switcher
+						.switcher.switcher--left
 							a.switcher__btn.switcher__btn--prev
 								include ../../icons/left-arrow
 							a.switcher__name.switcher__name--active(href="/services/outsource/b-index.html") Project Development
@@ -36,22 +36,22 @@ html(lang="en")
 						.workflow__inner.workflow__inner--right
 							h3.workflow__title You do
 							ul.workflow__list.workflow__list
-								li.workflow__item
+								li.workflow__item.workflow__item--color-1
 									span Provide technical requirements
-								li.workflow__item
+								li.workflow__item.workflow__item--color-2
 									span Approve estimate and project offer
 						.workflow__inner.workflow__inner--left
 							h3.workflow__title We do
 							ul.workflow__list.workflow__list
-								li.workflow__item
+								li.workflow__item.workflow__item--color-3
 									span Analyze, gather and offer the project estimate (timeline and budget)
-								li.workflow__item
+								li.workflow__item.workflow__item--color-4
 									span Submit project offer, pricing and schedule
-								li.workflow__item
+								li.workflow__item.workflow__item--color-5
 									span Set up a team and start a project
-								li.workflow__item
+								li.workflow__item.workflow__item--color-6
 									span Test and launch of a project
-								li.workflow__item
+								li.workflow__item.workflow__item--color-7
 									span In case needed, continuous project support
 
 				section.section
@@ -60,7 +60,7 @@ html(lang="en")
 						p.section__text You get well-qualified team member, clean and robust code and successfully implemented product
 
 			include ../../parts/b-footer
-			+b-footer("services")
+			+b-footer("services-slide")
 
 		script.
 			(function() {

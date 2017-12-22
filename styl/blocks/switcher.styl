@@ -57,9 +57,19 @@
 			max-width 46rem
 			margin-right auto
 			margin-left auto
+		&--left
+			justify-content space-between
+			margin-right auto
+			margin-left 0
 
 	.switcher__btn
 		visually-hidden()
 
 	.switcher__name
 		display block
+		
+@media $desktop-widths
+
+	.switcher
+		&--left
+			width 65%

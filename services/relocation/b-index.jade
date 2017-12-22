@@ -7,13 +7,13 @@ html(lang="en")
 		.page-wrapper
 
 			include ../../parts/b-header
-			+b-header("services")
+			+b-header("services-slide")
 
 			main.page-content
 
-				section.section.section--first-after-menu.section--without-padding-bottom
+				section.section.section--without-padding-bottom
 					.section__wrapper.section__wrapper--margin-left-only
-						.switcher
+						.switcher.switcher--left
 							a.switcher__btn.switcher__btn--prev(href="/services/outstaff/b-index.html")
 								include ../../icons/left-arrow
 							a.switcher__name(href="/services/outsource/b-index.html") Project Development
@@ -35,24 +35,24 @@ html(lang="en")
 						.workflow__inner.workflow__inner--right
 							h3.workflow__title You do
 							ul.workflow__list.workflow__list
-								li.workflow__item
+								li.workflow__item.workflow__item--color-1
 									span Provide technical requirements for candidates
-								li.workflow__item
+								li.workflow__item.workflow__item--color-2
 									span Evaluate and approve candidates
-								li.workflow__item
+								li.workflow__item.workflow__item--color-3
 									span Sign contract with candidates
 						.workflow__inner.workflow__inner--left
 							h3.workflow__title We do
 							ul.workflow__list.workflow__list
-								li.workflow__item
+								li.workflow__item.workflow__item--color-4
 									span Candidates market overview in 24 hours
-								li.workflow__item
+								li.workflow__item.workflow__item--color-5
 									span Conduct recruitment process to check candidates’ personal skills and language proficiency
-								li.workflow__item
+								li.workflow__item.workflow__item--color-6
 									span Conduct technical interviews
-								li.workflow__item
+								li.workflow__item.workflow__item--color-7
 									span Suggest candidates and schedule an interview with your team
-								li.workflow__item
+								li.workflow__item.workflow__item--color-8
 									span Handle relocation and settlement
 
 				section.section
@@ -61,7 +61,7 @@ html(lang="en")
 						p.section__text You get well-qualified team member, clean and robust code and successfully implemented product
 
 			include ../../parts/b-footer
-			+b-footer("services")
+			+b-footer("services-slide")
 
 		script.
 			(function() {
