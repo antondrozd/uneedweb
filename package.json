@@ -16,7 +16,9 @@
     "copy": "cp -r images photos build/ && cp *.png manifest.json *.svg *.xml *.txt build/",
     "clean": "rm -fr build/",
     "css": "npm run stylus && npm run autoprefixer && npm run cleancss",
-    "build": "npm run clean && npm run folders && npm run jade && npm run js && npm run css && npm run copy"
+    "build": "npm run clean && npm run folders && npm run jade && npm run js && npm run css && npm run copy",
+  	"jade-w": "jade -H -w -o build ./",
+  	"stylus-w": "stylus -w --include-css styl/index.styl -o build/css/index.css"
   },
   "keywords": [
     "uneed",
@@ -37,5 +39,11 @@
     "postcss-cli": "^4.1.1",
     "stylus": "^0.54.5",
     "uglifyjs-folder": "^1.2.0"
+  },
+  "dependencies": {
+    "bower": "^1.8.2",
+    "cli": "^1.0.1",
+    "http-server": "^0.10.0",
+    "jade-cli": "^0.1.1"
   }
 }
