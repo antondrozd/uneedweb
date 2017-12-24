@@ -10,7 +10,7 @@
     "stylus": "stylus --include-css styl/index.styl -o build/css/index.css",
     "jade": "jade -H -o build ./",
     "uglifyjs": "uglifyjs-folder js -eo build/js",
-    "libs": "uglifyjs bower_components/jquery/dist/jquery.min.js bower_components/swipeshow/jquery.swipeshow.min.js bower_components/jquery_appear/jquery.appear.js -o build/js/libs.min.js -c",
+    "libs": "uglifyjs bower_components/jquery/dist/jquery.min.js bower_components/swipeshow/jquery.swipeshow.min.js bower_components/jquery_appear/jquery.appear.js bower_components/waypoints/lib/jquery.waypoints.min.js -o build/js/libs.min.js -c",
     "js": "npm run uglifyjs && npm run libs",
     "folders": "mkdir -p build/ build/css build/js",
     "copy": "cp -r images photos build/ && cp *.png manifest.json *.svg *.xml *.txt build/",
