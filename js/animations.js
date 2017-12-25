@@ -7,7 +7,7 @@ $(document).ready(function(){
 		element.waypoint(function() {
 			element.addClass('animated').addClass(animationType).css('opacity', '');
 			console.log(animationType);
-		}, { offset: '50%' });
+		}, { offset: '70%' });
 	});
 
 });

@@ -87,6 +87,14 @@
 	.project-item
 		width 50%
 		background-size 112%
+		
+	.project-item__descr
+		opacity 0
+		
+@media $desktop-widths
+
+	.project-item
+		max-width 33.33%
 		&::before
 			opacity 0
 		&:hover
@@ -105,8 +113,3 @@
 	.project-item__link-btn
 		opacity 0
 		transform translateY(25%)
-		
-@media $desktop-widths
-
-	.project-item
-		max-width 33.33%
