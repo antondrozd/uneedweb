@@ -1,3 +1,21 @@
+@keyframes main-nav-show {
+	from {
+		transform translateY(-100%)
+	}
+	to {
+		transform translateY(0)
+	}
+}
+
+@keyframes main-nav-hide {
+	from {
+		transform translateY(0)
+	}
+	to {
+		transform translateY(-100%)
+	}
+}
+
 .main-nav
 	font-family $main-font
 	
@@ -41,6 +59,16 @@
 			a
 				text-transform uppercase
 				text-align center
+				
+	&--scroll-up
+		position fixed
+		background-color $main-color
+		animation main-nav-show 0.5s ease forwards
+		
+	&--scroll-down
+		position fixed
+		background-color $main-color
+		animation main-nav-hide 0.5s ease forwards
 
 	&--footer
 		.main-nav__list

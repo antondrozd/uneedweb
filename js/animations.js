@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$(document).ready(function () {
 
 	var elementToAnimate = $('[data-animation]');
 	elementToAnimate.each(function () {
@@ -15,19 +15,19 @@ $(document).ready(function (){
 		};
 	});
 
-	var animationsGroup = $('[data-animations-group]');
-	animationsGroup.each(function () {
-		var group = $(this);
-		group.find(elementToAnimate).each(function () {
-			var element = $(this);
-			var animationType = element.attr('data-animation');
-			group.waypoint(function () {
-				element
-					.addClass('animated')
-					.addClass(animationType)
-					.css('opacity', '');
-			}, {offset: '90%'});
-		});
-	});
+	// var animationsGroup = $('[data-animations-group]');
+	// animationsGroup.each(function () {
+	// 	var group = $(this);
+	// 	group.find(elementToAnimate).each(function () {
+	// 		var element = $(this);
+	// 		var animationType = element.attr('data-animation');
+	// 		group.waypoint(function () {
+	// 			element
+	// 				.addClass('animated')
+	// 				.addClass(animationType)
+	// 				.css('opacity', '');
+	// 		}, {offset: '90%'});
+	// 	});
+	// });
 
 });

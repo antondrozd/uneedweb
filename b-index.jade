@@ -145,23 +145,8 @@ html(lang="en")
 							include icons/arrow-go
 			include parts/b-footer
 			+b-footer("hp")
+		script(src="js/main-nav.min.js")
 		script.
-			(function() {
-				var navMain = document.querySelector('.main-nav'),
-						navToggle = document.querySelector('.main-nav__toggle');
-
-				navMain.classList.remove('main-nav--nojs');
-
-				navToggle.addEventListener('click', function() {
-					if (navMain.classList.contains('main-nav--closed')) {
-						navMain.classList.remove('main-nav--closed');
-						navMain.classList.add('main-nav--opened');
-					} else {
-						navMain.classList.remove('main-nav--opened');
-						navMain.classList.add('main-nav--closed');
-					}
-				});
-			})();
 
 			(function () {
 				var slider = document.querySelector('.slider'),
