@@ -11,7 +11,7 @@ $(document).ready(function(){
 					.addClass('animated')
 					.addClass(animationType)
 					.css('opacity', '');
-			}, { offset: '70%' });
+			}, { offset: '100%' });
 		}
 	});
 
@@ -26,7 +26,7 @@ $(document).ready(function(){
 					.addClass('animated')
 					.addClass(animationType)
 					.css('opacity', '');
-			}, { offset: '70%'});
+			}, { offset: '100%'});
 		});
 	});
 
