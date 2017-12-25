@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+	include ../../parts/b-head
+	+head("Contact Us | Uneed Web", "where to outsource software development, how to find offshore software development company, why outsource web development, how to find web design company", "We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!")
+	body
+		.page-wrapper
+
+			include ../../parts/b-header
+			+b-header("contact-us")
+
+			main.page-content
+
+				section.section.section--first-after-menu.section--full-screen
+					.section__wrapper
+						h1.section__title Thank you for contacting us
+						p.section__text.section__text--with-margin-bottom We appreciate you contacting us. We will reply to you as soon as possible.<br>Have a great day!
+						a.section__btn.btn(href="/b-index.html") Back to home page
+							include ../../icons/arrow-go
+
+			include ../../parts/b-footer
+			+b-footer("contact-us")
+		script(src="/js/main-nav.min.js")

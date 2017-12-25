@@ -52,6 +52,11 @@
 		.section__text
 			margin-bottom 2.3rem
 			color #555
+	&--full-screen
+		display flex
+		align-items center
+		justify-content center
+		background-image linear-gradient(to bottom, #f6f7fa, #ffffff)
 
 .section__wrapper
 	wrapper-fluid()
@@ -118,8 +123,7 @@
 	margin-bottom 6.125rem
 	
 .section__btn
-	display block
-	// width 15rem
+	display flex
 	align-self center
 	margin 0 auto
 	svg
@@ -145,6 +149,10 @@
 			
 		&--on-game-score-block
 			background-image linear-gradient(to top, #ffffff, #f7f7f7)
+			
+		&--full-screen
+			.section__wrapper
+				margin auto
 			
 	.section__wrapper
 		&--tight
