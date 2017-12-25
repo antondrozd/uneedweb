@@ -13,6 +13,7 @@ $workflow-item-shadow-ball-right = 20px 0px 0px -5px
 $workflow-item-shadow-ball-left = -20px 0px 0px -5px
 $workflow-item-line-horisontal-size = 4rem
 $workflow-item-line-vertical-size = 3rem
+$animation-delay-step = 0.3s
 
 .workflow__wrapper
 	wrapper-fluid()
@@ -99,96 +100,37 @@ $workflow-item-line-vertical-size = 3rem
 			.workflow__item
 				padding-right 0
 				padding-left 6rem
-				&--tablet-color-1
+				&--tablet-position-1
 					&::before
-						background-color: $workflow-item-color-1
 						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-1
-					&::after
-						background-color $workflow-item-color-1
-					span
-						&::before
-							background-color: $workflow-item-color-1
-				&--tablet-color-2
+				&--tablet-position-2
 					&::before
-						background-color: $workflow-item-color-2
 						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-2
-					&::after
-						background-color $workflow-item-color-2
-					span
-						&::before
-							background-color: $workflow-item-color-2
-				&--tablet-color-3
+				&--tablet-position-3
 					&::before
-						background-color: $workflow-item-color-3
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-3
-					&::after
-						background-color $workflow-item-color-3
-					span
-						&::before
-							background-color: $workflow-item-color-3
-				&--tablet-color-4
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-3			
+				&--tablet-position-4
 					&::before
-						background-color: $workflow-item-color-4
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-4
-					&::after
-						background-color $workflow-item-color-4
-					span
-						&::before
-							background-color: $workflow-item-color-4
-				&--tablet-color-5
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-4			
+				&--tablet-position-5
 					&::before
-						background-color: $workflow-item-color-5
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-5
-					&::after
-						background-color $workflow-item-color-5
-					span
-						&::before
-							background-color: $workflow-item-color-5
-				&--tablet-color-6
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-5			
+				&--tablet-position-6
 					&::before
-						background-color: $workflow-item-color-6
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-6
-					&::after
-						background-color $workflow-item-color-6
-					span
-						&::before
-							background-color: $workflow-item-color-6
-				&--tablet-color-7
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-6			
+				&--tablet-position-7
 					&::before
-						background-color: $workflow-item-color-7
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-7
-					&::after
-						background-color $workflow-item-color-7
-					span
-						&::before
-							background-color: $workflow-item-color-7
-				&--tablet-color-8
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-7			
+				&--tablet-position-8
 					&::before
-						background-color: $workflow-item-color-8
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-8
-					&::after
-						background-color $workflow-item-color-8
-					span
-						&::before
-							background-color: $workflow-item-color-8
-				&--tablet-color-9
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-8			
+				&--tablet-position-9
 					&::before
-						background-color: $workflow-item-color-9
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-9
-					&::after
-						background-color $workflow-item-color-9
-					span
-						&::before
-							background-color: $workflow-item-color-9
-				&--tablet-color-10
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-9			
+				&--tablet-position-10
 					&::before
-						background-color: $workflow-item-color-10
-						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-10
-					&::after
-						background-color $workflow-item-color-10
+						box-shadow $workflow-item-shadow-ball-right $workflow-item-color-10				
 					span
-						&::before
-							background-color: $workflow-item-color-10
 				&::before
 					left -0.5rem
 				&::after
@@ -206,96 +148,36 @@ $workflow-item-line-vertical-size = 3rem
 				padding-right 6rem
 				padding-left 0
 				text-align right
-				&--tablet-color-1
+				&--tablet-position-1
 					&::before
-						background-color: $workflow-item-color-1
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-1
-					&::after
-						background-color $workflow-item-color-1
-					span
-						&::before
-							background-color: $workflow-item-color-1
-				&--tablet-color-2
+				&--tablet-position-2
 					&::before
-						background-color: $workflow-item-color-2
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-2
-					&::after
-						background-color $workflow-item-color-2
-					span
-						&::before
-							background-color: $workflow-item-color-2
-				&--tablet-color-3
+				&--tablet-position-3
 					&::before
-						background-color: $workflow-item-color-3
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-3
-					&::after
-						background-color $workflow-item-color-3
-					span
-						&::before
-							background-color: $workflow-item-color-3
-				&--tablet-color-4
+				&--tablet-position-4
 					&::before
-						background-color: $workflow-item-color-4
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-4
-					&::after
-						background-color $workflow-item-color-4
-					span
-						&::before
-							background-color: $workflow-item-color-4
-				&--tablet-color-5
+				&--tablet-position-5
 					&::before
-						background-color: $workflow-item-color-5
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-5
-					&::after
-						background-color $workflow-item-color-5
-					span
-						&::before
-							background-color: $workflow-item-color-5
-				&--tablet-color-6
+				&--tablet-position-6
 					&::before
-						background-color: $workflow-item-color-6
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-6
-					&::after
-						background-color $workflow-item-color-6
-					span
-						&::before
-							background-color: $workflow-item-color-6
-				&--tablet-color-7
+				&--tablet-position-7
 					&::before
-						background-color: $workflow-item-color-7
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-7
-					&::after
-						background-color $workflow-item-color-7
-					span
-						&::before
-							background-color: $workflow-item-color-7
-				&--tablet-color-8
+				&--tablet-position-8
 					&::before
-						background-color: $workflow-item-color-8
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-8
-					&::after
-						background-color $workflow-item-color-8
-					span
-						&::before
-							background-color: $workflow-item-color-8
-				&--tablet-color-9
+				&--tablet-position-9
 					&::before
-						background-color: $workflow-item-color-9
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-9
-					&::after
-						background-color $workflow-item-color-9
-					span
-						&::before
-							background-color: $workflow-item-color-9
-				&--tablet-color-10
+				&--tablet-position-10
 					&::before
-						background-color: $workflow-item-color-10
 						box-shadow $workflow-item-shadow-ball-left $workflow-item-color-10
-					&::after
-						background-color $workflow-item-color-10
-					span
-						&::before
-							background-color: $workflow-item-color-10
 				&::before
 					right -0.5rem
 					left auto
@@ -322,6 +204,106 @@ $workflow-item-line-vertical-size = 3rem
 			margin-top $workflow-item-height
 		&--tablet-hidden
 			display none
+		&--tablet-position-1
+			animation-delay $animation-delay-step
+			&::before
+				background-color: $workflow-item-color-1
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-1
+			&::after
+				background-color $workflow-item-color-1
+			span
+				&::before
+					background-color: $workflow-item-color-1
+		&--tablet-position-2
+			animation-delay $animation-delay-step*2
+			&::before
+				background-color: $workflow-item-color-2
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-2
+			&::after
+				background-color $workflow-item-color-2
+			span
+				&::before
+					background-color: $workflow-item-color-2
+		&--tablet-position-3
+			animation-delay $animation-delay-step*3
+			&::before
+				background-color: $workflow-item-color-3
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-3
+			&::after
+				background-color $workflow-item-color-3
+			span
+				&::before
+					background-color: $workflow-item-color-3
+		&--tablet-position-4
+			animation-delay $animation-delay-step*4
+			&::before
+				background-color: $workflow-item-color-4
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-4
+			&::after
+				background-color $workflow-item-color-4
+			span
+				&::before
+					background-color: $workflow-item-color-4
+		&--tablet-position-5
+			animation-delay $animation-delay-step*5
+			&::before
+				background-color: $workflow-item-color-5
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-5
+			&::after
+				background-color $workflow-item-color-5
+			span
+				&::before
+					background-color: $workflow-item-color-5
+		&--tablet-position-6
+			animation-delay $animation-delay-step*6
+			&::before
+				background-color: $workflow-item-color-6
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-6
+			&::after
+				background-color $workflow-item-color-6
+			span
+				&::before
+					background-color: $workflow-item-color-6
+		&--tablet-position-7
+			animation-delay $animation-delay-step*7
+			&::before
+				background-color: $workflow-item-color-7
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-7
+			&::after
+				background-color $workflow-item-color-7
+			span
+				&::before
+					background-color: $workflow-item-color-7
+		&--tablet-position-8
+			animation-delay $animation-delay-step*8
+			&::before
+				background-color: $workflow-item-color-8
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-8
+			&::after
+				background-color $workflow-item-color-8
+			span
+				&::before
+					background-color: $workflow-item-color-8
+		&--tablet-position-9
+			animation-delay $animation-delay-step*9
+			&::before
+				background-color: $workflow-item-color-9
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-9
+			&::after
+				background-color $workflow-item-color-9
+			span
+				&::before
+					background-color: $workflow-item-color-9
+		&--tablet-position-10
+			animation-delay $animation-delay-step*10
+			&::before
+				background-color: $workflow-item-color-10
+				box-shadow $workflow-item-shadow-ball-right $workflow-item-color-10
+			&::after
+				background-color $workflow-item-color-10
+			span
+				&::before
+					background-color: $workflow-item-color-10
 		&::after
 			content ""
 			position absolute
