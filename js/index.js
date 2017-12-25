@@ -45,9 +45,12 @@
 
 	$.force_appear();
 
-	// sections.on('disappear', function(event, elements) {
-	// 	elements.each(function(index, el) {
-	// 		$(el).removeClass('visible');
-	// 	});
-	// });
+	$('a[href^="#"]:not([href="#"])').click(function (event) {
+		event.preventDefault();
+    var scrollTo = $(this).attr('href');
+    $('html, body').animate({
+    	scrollTop: $(scrollTo).offset().top
+    }, 1000);
+  });
+
 })();
