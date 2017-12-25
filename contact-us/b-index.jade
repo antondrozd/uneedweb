@@ -16,7 +16,7 @@ html(lang="en")
 						p.section__text We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!
 						
 				.page-content__wrapper
-					section.section.contact-us
+					section.section.contact-us(data-animation="fadeInLeft")
 						.contact-us__wrapper
 							h2.section__title.contact-us__title Send Us a Message
 							form.contact-us__form(name="contactForm" action="/mail-us" method="post")
@@ -30,7 +30,7 @@ html(lang="en")
 									textarea(name="message" rows="5" placeholder="Message")
 								button.contact-us__btn.btn(type="submit") Send Email
 
-					section.section.section--without-padding-top.contact-info
+					section.section.section--without-padding-top(data-animation="fadeInRight").contact-info
 						.contact-info__wrapper
 							h2.section__title.contact-info__title Contact Details
 							.contact-info__items-wrapper
