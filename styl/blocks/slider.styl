@@ -1,10 +1,17 @@
 .slider
 	overflow hidden
+	&--project
+		.slider__slide-inner
+			display flex
+			justify-content center
+			max-height 420px
+			img
+				max-height 320px
 		
 .slider__slides-wrapper
 	ul-reset()
 	display flex
-	width 300%
+	margin-bottom 2rem
 	transition all $transition-duration ease
 
 .slider__slide

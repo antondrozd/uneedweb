@@ -185,6 +185,8 @@ html(lang="en")
 					slideCurrent = index;
 				};
 
+				slidesWrapper.style.width = slidesCount*100+'%';
+
 				sliderPrev.addEventListener('click', function () { 
 					if (slideCurrent > 1) {
 						slideChange(slideCurrent-1);

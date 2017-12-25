@@ -15,7 +15,7 @@
 	&--main-color
 		background-color $main-color
 		.section__title
-			color #fefefe
+			color #fff
 		.section__text
 			color #8c9ab5
 	&--bottom-with-gradient
@@ -30,6 +30,11 @@
 			margin-top auto
 			margin-right auto
 			margin-left 0
+	&--approaches
+		.section__title
+			color #fff
+		.section__text
+			color #f3f8ff
 	&--on-game-score-block
 		padding-top 0
 	&--on-game-big
@@ -50,6 +55,8 @@
 
 .section__wrapper
 	wrapper-fluid()
+	display flex
+	flex-direction column
 	
 .section__project-type
 	display block
@@ -112,7 +119,8 @@
 	
 .section__btn
 	display block
-	width 15rem
+	// width 15rem
+	align-self center
 	margin 0 auto
 	svg
 		margin-left 0.7rem
@@ -139,6 +147,8 @@
 			background-image linear-gradient(to top, #ffffff, #f7f7f7)
 			
 	.section__wrapper
+		&--tight
+			width 46rem	
 		&--margin-left-only
 			width 95%
 			margin-right 0
@@ -159,7 +169,7 @@
 		&--on-game-phone-3
 			height 693px
 			background-position 225px
-		
+
 @media $desktop-widths
 
 	.section
@@ -188,8 +198,6 @@
 			padding-top 5rem
 			
 	.section__wrapper
-		&--tight
-			width 46rem
 		&--margin-left-only
 			width 75%
 

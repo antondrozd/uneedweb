@@ -1,0 +1,112 @@
+doctype html
+html(lang="en")
+	include ../../parts/b-head
+	+head("Banking App Development | Uneed Web", "Fee billing system, fee management system, Web Development, Automated billing workflow", "Creation of a fee billing system for a major Hong Kong corporate bank. A software that calculates operational and managerial fees.")
+
+	body
+		.page-wrapper
+
+			include ../../parts/b-header
+			+b-header("project")
+
+			main.page-content
+
+				.project-switcher
+					.project-switcher__wrapper
+						a.project-switcher__link.project-switcher__link--prev(href="#")
+							span.project-switcher__arrow-icon
+								include ../../icons/arrow-go
+							span Previous Project
+						a.project-switcher__link.project-switcher__link--next(href="#")
+							span Next Project
+							span.project-switcher__arrow-icon
+								include ../../icons/arrow-go
+
+				section.section
+					.section__wrapper
+						span.section__project-type Banking / Finance
+						h1.section__title What was the challenge?
+						p.section__text Create a fee billing system for a major Hong Kong corporate bank. The system has to charge regular fees from institutional clients for management and performance on financial services.
+
+				section.section.section--approaches.approaches.approaches--banking
+					.section__wrapper
+						h2.section__title Challenge accepted
+						p.section__text Based on set requirements, our developers team created a single fee management system that gradually reduced costs of the billing process for the bank. The software could optimize fee schedules, had an automated fee discount policy, included automated fee calculation, manual and automated billing workflows and reports, featured customized standard instructions workflow.
+
+				section.section
+					.section__wrapper.section__wrapper--tight
+						h2.section__title What technologies did we use?
+						ul.section__tags.tags
+							li.tags__item .NET 3.5
+							li.tags__item ASP.NET MVC 4
+							li.tags__item Oracle 11
+							li.tags__item XPO
+							li.tags__item Client side: CoffeeScript
+							li.tags__item jQuery
+							li.tags__item knockoutJS
+							li.tags__item LESS
+							li.tags__item HTML
+							li.tags__item Watin
+							li.tags__item SpecFlow
+					.slider.slider--project
+						ul.slider__slides-wrapper
+							li.slider__slide
+								.slider__slide-inner
+									.slider__img-wrapper
+										img(src="../../photos/banking/banking-gallery-1.png")
+							li.slider__slide
+								.slider__slide-inner
+									.slider__img-wrapper
+										img(src="../../photos/banking/banking-gallery-2.png")
+						.slider__dots
+							button.slider__dot.slider__dot--active(type="button")
+							button.slider__dot(type="button")
+					.section__wrapper.section__wrapper--tight
+						a.section__btn.btn(href="/portfolio/b-index.html") Back to all projects
+							include ../../icons/arrow-go
+
+			include ../../parts/b-footer
+			+b-footer("project")
+		script.
+			(function() {
+				var navMain = document.querySelector('.main-nav'),
+						navToggle = document.querySelector('.main-nav__toggle');
+
+				navMain.classList.remove('main-nav--nojs');
+
+				navToggle.addEventListener('click', function() {
+					if (navMain.classList.contains('main-nav--closed')) {
+						navMain.classList.remove('main-nav--closed');
+						navMain.classList.add('main-nav--opened');
+					} else {
+						navMain.classList.remove('main-nav--opened');
+						navMain.classList.add('main-nav--closed');
+					}
+				});
+			})();
+
+			(function () {
+				var slider = document.querySelector('.slider'),
+						slidesWrapper = slider.querySelector('.slider__slides-wrapper'),
+						slideItems = slider.querySelectorAll('.slider__slide'),
+						slidesCount = slideItems.length,
+						sliderStepValue = 100/slidesCount,
+						slideCurrent = 1,
+						sliderDots = slider.querySelectorAll('.slider__dot');
+
+				function slideChange (index) {
+					var	sliderTransValue = (index-1)*sliderStepValue;
+					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
+					sliderDots[slideCurrent-1].classList.remove('slider__dot--active');
+					sliderDots[index-1].classList.add('slider__dot--active');
+					slideCurrent = index;
+				};
+
+				slidesWrapper.style.width = slidesCount*100+'%';
+
+				sliderDots.forEach(function (item, index) {
+					sliderDots[index].addEventListener('click', function () {
+						slideChange(index+1);
+					});
+				});
+			})();
