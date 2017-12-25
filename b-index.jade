@@ -10,13 +10,13 @@ html(lang="en")
 
 			main.page-content#main
 
-				section.section
+				section.section(data-animation="fadeIn")
 					.section__wrapper
 						h2.section__title Our Services
 						p.section__text Depending on time, budget, scope, and complexity of your projects we provide 3 options to help shape your tech endeavors by providing IT services as well as extending, relocating of dedicated IT resources.
 
 				section.section.section--without-title
-					.services
+					.services(data-animation="fadeIn")
 						ul.services__list
 							li.services__item.services__item--project
 								.services__item-wrapper
@@ -57,11 +57,11 @@ html(lang="en")
 											include icons/checkmark
 											span extension of in-house application development teams
 									a.services__link.btn(href="#") Get more info
-					.section__wrapper
+					.section__wrapper(data-animation="fadeIn")
 						p.section__text Learn more about each of these options and their difference 
 							a.link(href="/services") here
 
-				section.section.section--main-color.section--bottom-with-gradient
+				section.section.section--main-color.section--bottom-with-gradient(data-animation="fadeIn")
 					.section__wrapper
 						h2.section__title Our Added Value
 						p.section__text With delivering what we are most adept at - Distinctive Web Development - we provide our customers with
@@ -69,29 +69,35 @@ html(lang="en")
 							.main-features__wrapper
 								ul.main-features__list
 									li.main-features__item.main-features-item.main-features-item--icon-left
-										include icons/1-quality
+										span.main-features__item-icon-wrapper(data-animation="zoomIn")
+											include icons/1-quality
 										span.main-features-item__descr Thorough process-related involvement 
 									li.main-features__item.main-features-item.main-features-item--icon-left
-										include icons/2-english
+										span.main-features__item-icon-wrapper(data-animation="zoomIn")
+											include icons/2-english
 										span.main-features-item__descr Specialist with proficient technical and language skills
 									li.main-features__item.main-features-item.main-features-item--icon-left
-										include icons/3-office
+										span.main-features__item-icon-wrapper(data-animation="zoomIn")
+											include icons/3-office
 										span.main-features-item__descr Protected intellectual property rights
 									li.main-features__item.main-features-item.main-features-item--icon-left
-										include icons/4-meeting
+										span.main-features__item-icon-wrapper(data-animation="zoomIn")
+											include icons/4-meeting
 										span.main-features-item__descr Personal meetings and direct comunication
 									li.main-features__item.main-features-item.main-features-item--icon-left
-										include icons/5-seniors
+										span.main-features__item-icon-wrapper(data-animation="zoomIn")
+											include icons/5-seniors
 										span.main-features-item__descr Candidates market overview within 24 hours
 									li.main-features-item.main-features-item--icon-left
-										include icons/6-risk
+										span.main-features__item-icon-wrapper(data-animation="zoomIn")
+											include icons/6-risk
 										span.main-features-item__descr Competence with fair value
 
-				section.section.section--small-padding-bottom
+				section.section.section--small-padding-bottom(data-animation="fadeIn")
 					.section__wrapper
 						h2.section__title Our Expertise
 						p.section__text Our team is comprised of devoted professionals who have expertise in multiple areas. We build web products that work and last, advance your customer journey, target and keep your customers in the loop.
-				section.section.section--without-padding-top.section--small-padding-bottom
+				section.section.section--without-padding-top.section--small-padding-bottom(data-animation="fadeIn")
 					.section__wrapper.section__wrapper--tight
 						.slider
 							.slider__switcher.switcher
