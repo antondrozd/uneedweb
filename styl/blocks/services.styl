@@ -75,12 +75,18 @@
 		background-position left 6.5rem top 2.5rem
 
 	.services__item-wrapper
+		align-items flex-start
+		box-sizing border-box
 		padding-top 3.125rem
+		padding-left 15rem
+	
+	.services__recommends-list
+		margin-right 0
+		margin-left 0
 		
-@media $desktop-widths
+@media $tablet-landscape-widths
 
 	.services__list
-		wrapper()
 		flex-direction row
 		justify-content space-around
 		
@@ -89,5 +95,13 @@
 		background-size 32%
 		
 	.services__item-wrapper
-		width 20rem
+		align-items center
+		// width 32%
+		max-width 20rem
 		padding-top 9rem
+		padding-left 0
+		
+@media $desktop-widths
+
+	.services__list
+		wrapper()
