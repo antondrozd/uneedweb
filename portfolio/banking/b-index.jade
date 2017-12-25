@@ -109,4 +109,14 @@ html(lang="en")
 						slideChange(index+1);
 					});
 				});
+
+				window.addEventListener('keydown', function (event) {
+					if (event.keyCode == 37 && slideCurrent > 1) {
+						slideChange(slideCurrent-1);
+					}
+					if (event.keyCode == 39 && slideCurrent < slidesCount) {
+						slideChange(slideCurrent+1);
+					}
+				});
+
 			})();
