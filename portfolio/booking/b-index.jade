@@ -11,30 +11,30 @@ html(lang="en")
 
 			main.page-content
 
-				.project-switcher
+				.project-switcher(data-animation="bounceIn")
 					.project-switcher__wrapper
-						a.project-switcher__link.project-switcher__link--prev(href="#")
+						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/localisation/b-index.html")
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-						a.project-switcher__link.project-switcher__link--next(href="#")
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/on-game/b-index.html")
 							span Next Project
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 
-				section.section
+				section.section(data-animation="fadeInUp")
 					.section__wrapper
 						span.section__project-type Travel
 						h1.section__title What was the challenge?
 						p.section__text Develop a web application for a travel company with a complete customer planning journey features. Improve user search performance by using NLP technology.
 
-				section.section.section--approaches.approaches.approaches--booking
+				section.section.section--approaches.approaches.approaches--booking(data-animation="fadeInUp")
 					.section__wrapper
 						h2.section__title Challenge accepted
 						p.section__text.section__text--with-margin-bottom After defining initial requirements, tools and frameworks for the project, the travel website was developed and featured GDS integration with booking engine, invoicing and payment system. Built on a cross platform and with a responsive design it contained a simplified booking process with real-time results.
 						p.section__text The natural language processing entity linking was implemented for user search performance improvement. This data input technology allowed determining the identity of entities mentioned in the text by user.
 
-				section.section
+				section.section(data-animation="fadeInUp")
 					.section__wrapper.section__wrapper--tight
 						h2.section__title What technologies did we use?
 						ul.section__tags.tags

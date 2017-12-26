@@ -11,29 +11,29 @@ html(lang="en")
 
 			main.page-content
 
-				.project-switcher
+				.project-switcher(data-animation="bounceIn")
 					.project-switcher__wrapper
-						a.project-switcher__link.project-switcher__link--prev(href="#")
+						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/yow/b-index.html")
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-						a.project-switcher__link.project-switcher__link--next(href="#")
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/gambling/b-index.html")
 							span Next Project
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 
-				section.section
+				section.section(data-animation="fadeInUp")
 					.section__wrapper
 						span.section__project-type Banking / Finance
 						h1.section__title What was the challenge?
 						p.section__text Create a fee billing system for a major Hong Kong corporate bank. The system has to charge regular fees from institutional clients for management and performance on financial services.
 
-				section.section.section--approaches.approaches.approaches--banking
+				section.section.section--approaches.approaches.approaches--banking(data-animation="fadeInUp")
 					.section__wrapper
 						h2.section__title Challenge accepted
 						p.section__text Based on set requirements, our developers team created a single fee management system that gradually reduced costs of the billing process for the bank. The software could optimize fee schedules, had an automated fee discount policy, included automated fee calculation, manual and automated billing workflows and reports, featured customized standard instructions workflow.
 
-				section.section
+				section.section(data-animation="fadeInUp")
 					.section__wrapper.section__wrapper--tight
 						h2.section__title What technologies did we use?
 						ul.section__tags.tags

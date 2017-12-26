@@ -11,29 +11,29 @@ html(lang="en")
 
 			main.page-content
 
-				.project-switcher
+				.project-switcher(data-animation="bounceIn")
 					.project-switcher__wrapper
-						a.project-switcher__link.project-switcher__link--prev(href="#")
+						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/banking/b-index.html")
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-						a.project-switcher__link.project-switcher__link--next(href="#")
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/social-travel/b-index.html")
 							span Next Project
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 
-				section.section
+				section.section(data-animation="fadeInUp")
 					.section__wrapper
 						span.section__project-type Gambling
 						h1.section__title What was the challenge?
 						p.section__text Revamp an existing gambling web applications for an Israeli-based betting company. Enable a real-time video stream for games like blackjack, roulette, and baccarat.
 
-				section.section.section--approaches.approaches.approaches--gambling
+				section.section.section--approaches.approaches.approaches--gambling(data-animation="fadeInUp")
 					.section__wrapper
 						h2.section__title Challenge accepted
 						p.section__text To enable a real-time visual experience, the tech team developed the wrapper for video streaming. The users now could watch and participate in the game. A live web chat was created for direct communication. An additional option of spectator mode was designed. The interactive system of betting was introduced by using functional video layers and WebSocket technology.
 
-				section.section
+				section.section(data-animation="fadeInUp")
 					.section__wrapper.section__wrapper--tight
 						h2.section__title What technologies did we use?
 						ul.section__tags.tags

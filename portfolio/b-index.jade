@@ -18,7 +18,7 @@ html(lang="en")
 				section.section.section--without-padding-top
 					.projects-gallery
 						.projects-gallery__wrapper
-							.switcher.switcher--tight
+							.switcher.switcher--tight(data-animation="fadeInDown")
 								button.switcher__btn.switcher__btn--prev(type="button")
 									include ../icons/left-arrow
 								h3.switcher__name.switcher__name--active All
@@ -28,49 +28,49 @@ html(lang="en")
 								button.switcher__btn.switcher__btn--next(type="button")
 									include ../icons/left-arrow
 							ul.projects-gallery__list
-								li.project-item.project-item--booking
+								li.project-item.project-item--booking(data-animation="zoomIn" data-type="web")
 									.project-item__wrapper
 										span.project-item__type Web Development
 										h4.project-item__title Booking
 										p.project-item__descr Development of a web application for a travel company with a complete customer planning journey features.
 										a.project-item__link-btn.btn(href="/portfolio/booking/b-index.html") Details
 											include ../icons/arrow-go
-								li.project-item.project-item--entertaiment
+								li.project-item.project-item--entertaiment(data-animation="zoomIn" data-type="web")
 									.project-item__wrapper
 										span.project-item__type Web Development
 										h4.project-item__title Entertainment
 										p.project-item__descr Development a web application for a sports betting company for the audience of 5 million users.
 										a.project-item__link-btn.btn(href="/portfolio/on-game") Details
 											include ../icons/arrow-go
-								li.project-item.project-item--travel
+								li.project-item.project-item--travel(data-animation="zoomIn" data-type="mobile")
 									.project-item__wrapper
 										span.project-item__type Mobile Development
 										h4.project-item__title Travel
 										p.project-item__descr Our own mobile application that keeps track of the places you visit and shows your exploration progress.
 										a.project-item__link-btn.btn(href="/portfolio/yow/b-index.html") Details
 											include ../icons/arrow-go
-								li.project-item.project-item--banking
+								li.project-item.project-item--banking(data-animation="zoomIn" data-type="web")
 									.project-item__wrapper
 										span.project-item__type Web Development
 										h4.project-item__title Banking / Finance
 										p.project-item__descr Creation of a fee billing system for a major Hong Kong corporate bank. A software that calculates operational and managerial fees.
 										a.project-item__link-btn.btn(href="/portfolio/banking/b-index.html") Details
 											include ../icons/arrow-go
-								li.project-item.project-item--gambling
+								li.project-item.project-item--gambling(data-animation="zoomIn" data-type="web")
 									.project-item__wrapper
 										span.project-item__type Web Development
 										h4.project-item__title Gambling
 										p.project-item__descr Revamping of existing gambling web applications for a betting company with interactive components.
 										a.project-item__link-btn.btn(href="/portfolio/gambling/b-index.html") Details
 											include ../icons/arrow-go
-								li.project-item.project-item--social
+								li.project-item.project-item--social(data-animation="zoomIn" data-type="web")
 									.project-item__wrapper
 										span.project-item__type Web Development
 										h4.project-item__title Social Network
 										p.project-item__descr Creation of an engaging travel-oriented social network service with an embedded e-commerce platform.
 										a.project-item__link-btn.btn(href="/portfolio/social-travel/b-index.html") Details
 											include ../icons/arrow-go
-								li.project-item.project-item--data
+								li.project-item.project-item--data(data-animation="zoomIn" data-type="web")
 									.project-item__wrapper
 										span.project-item__type Web Development
 										h4.project-item__title Data Management
