@@ -1,4 +1,5 @@
 $animation-delay-step-rows = 0.2s
+$animation-delay-step-logos = 0.3s
 
 .on-game-score-block__logos
 	position relative
@@ -16,6 +17,7 @@ $animation-delay-step-rows = 0.2s
 	align-items flex-start
 	justify-content center
 	flex-grow 1
+	animation-delay $animation-delay-step-logos*2
 	
 .on-game-score-block__table
 	width 100%
@@ -34,6 +36,9 @@ $animation-delay-step-rows = 0.2s
 	for num in (1..5)
 		&:nth-child({num})
 			animation-delay $animation-delay-step-rows*num
+			.on-game-score-block__table-cell
+				&--logo
+					animation-delay $animation-delay-step-logos*num
 		
 .on-game-score-block__table-cell
 	padding 0
