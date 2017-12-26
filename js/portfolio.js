@@ -1,4 +1,4 @@
-// (function filter () {
+(function filter () {
 
 	var filterOptions = ['all', 'web', 'mobile', 'design'],
 			gallery = document.querySelector('.projects-gallery'),
@@ -58,9 +58,6 @@
 		result.forEach(function (item) {
 			item.classList.add('project-item--visible');
 		});
-		// filterItems.forEach(function (item) {
-		// 	item.classList.remove('switcher__name--active');
-		// });
 		if (!firstRendering) {
 			filterItems[currentFilterIndex].classList.remove('switcher__name--active');
 			currentFilter = filter;
@@ -71,4 +68,4 @@
 	onFilterChange('all');
 	firstRendering = false;
 
-// })();
+})();
