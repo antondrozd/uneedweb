@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+	include ../../parts/b-head
+	+head("Contact Us | Uneed Web", "where to outsource software development, how to find offshore software development company, why outsource web development, how to find web design company", "We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!")
+	body
+		.page-wrapper
+
+			include ../../parts/b-header
+			+b-header("contact-us")
+
+			main.page-content
+
+				section.section.section--first-after-menu.section--full-screen(data-animation="shake")
+					.section__wrapper
+						h1.section__title Something went wrong!
+						p.section__text.section__text Please try again later
+
+			include ../../parts/b-footer
+			+b-footer("contact-us")
+		script(src="/js/main-nav.min.js")

@@ -10,7 +10,7 @@ html(lang="en")
 
 			main.page-content
 		
-				section.section.section--first-after-menu
+				section.section.section--first-after-menu(data-animation="fadeIn")
 					.section__wrapper
 						h1.section__title Portfolio
 						p.section__text We have a proven track record of building high-quality solutions for customers all over the world. Browse through our case studies and see projects that we have implemented.
@@ -27,7 +27,7 @@ html(lang="en")
 								h3.switcher__name Product Design
 								button.switcher__btn.switcher__btn--next(type="button")
 									include ../icons/left-arrow
-							ul.projects-gallery__list
+							ul.projects-gallery__list(data-animations-group)
 								li.project-item.project-item--booking(data-animation="zoomIn" data-type="web")
 									.project-item__wrapper
 										span.project-item__type Web Development
@@ -40,7 +40,7 @@ html(lang="en")
 										span.project-item__type Web Development
 										h4.project-item__title Entertainment
 										p.project-item__descr Development a web application for a sports betting company for the audience of 5 million users.
-										a.project-item__link-btn.btn(href="/portfolio/on-game") Details
+										a.project-item__link-btn.btn(href="#") Details
 											include ../icons/arrow-go
 								li.project-item.project-item--travel(data-animation="zoomIn" data-type="mobile")
 									.project-item__wrapper
@@ -80,3 +80,4 @@ html(lang="en")
 			include ../parts/b-footer
 			+b-footer("portfolio")
 		script(src="/js/main-nav.min.js")
+		script(src="/js/portfolio.min.js")

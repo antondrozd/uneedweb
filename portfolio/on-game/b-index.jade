@@ -10,18 +10,18 @@ html(lang="en")
 
 			main.page-content
 
-				.project-switcher
+				.project-switcher(data-animation="bounceIn")
 					.project-switcher__wrapper
-						a.project-switcher__link.project-switcher__link--prev(href="#")
+						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/booking/b-index.html")
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-						a.project-switcher__link.project-switcher__link--next(href="#")
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/yow/b-index.html")
 							span Next Project
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 
-				section.section
+				section.section(data-animation="fadeInUp")
 					.section__wrapper
 						span.section__project-type Mobile Development
 						h1.section__title ON-GAME
@@ -29,80 +29,81 @@ html(lang="en")
 							span.section__text.section__text--hidden-on-mobile The project had to enable client’s audience to easily follow major sports’ updates, statistics, upcoming events, as well as to place a wager. The company’s audience already had a 5 million users, so the mobile application had to be compatible with the already existing website and moreover be convenient for the users. Based on client requirements, our team developed a technologically complex mobile application. Placing a wager through mobile app became the same simple as placing through the website. 
 							| ON-GAME gained more than 120 million sessions per month. The ability to find and watch particular game highlights was implemented through an extension to existing IPTV software. ON-GAME also has integrated video batch downloading.
 				
-				section.section.section--on-game-score-block
+				section.section.section--on-game-score-block(data-animation="fadeInUp")
 					.on-game-score-block
 						.on-game-score-block__logos
-							.on-game-score-block__logo
+							.on-game-score-block__logo(data-animation="zoomIn")
 								img(src="../../images/on-game/columb-logo.png", alt="columb-logo")
-							.on-game-score-block__logo
+							.on-game-score-block__logo(data-animation="zoomIn")
 								img(src="../../images/on-game/united-logo.png", alt="united-logo")
 
 						table.on-game-score-block__table
-							tr.on-game-score-block__table-row
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb
+							tr.on-game-score-block__table-row(data-animation="fadeInDown")
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb(data-animation="pulse")
 								td.on-game-score-block__table-cell win
 								td.on-game-score-block__table-cell.on-game-score-block__table-cell--score 6-4
 								td.on-game-score-block__table-cell lose
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united
-							tr.on-game-score-block__table-row.on-game-score-block__table-row--grey
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united(data-animation="pulse")
+							tr.on-game-score-block__table-row.on-game-score-block__table-row--grey(data-animation="fadeInDown")
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb(data-animation="pulse")
 								td.on-game-score-block__table-cell lose
 								td.on-game-score-block__table-cell.on-game-score-block__table-cell--score 3-4
 								td.on-game-score-block__table-cell win
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united
-							tr.on-game-score-block__table-row.on-game-score-block__table-row--dark
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united(data-animation="pulse")
+							tr.on-game-score-block__table-row.on-game-score-block__table-row--dark(data-animation="fadeInDown")
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb(data-animation="pulse")
 								td.on-game-score-block__table-cell win
 								td.on-game-score-block__table-cell.on-game-score-block__table-cell--score 6-3
 								td.on-game-score-block__table-cell lose
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united
-							tr.on-game-score-block__table-row.on-game-score-block__table-row--grey
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united(data-animation="pulse")
+							tr.on-game-score-block__table-row.on-game-score-block__table-row--grey(data-animation="fadeInDown")
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb(data-animation="pulse")
 								td.on-game-score-block__table-cell win
 								td.on-game-score-block__table-cell.on-game-score-block__table-cell--score 6-4
 								td.on-game-score-block__table-cell lose
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united
-							tr.on-game-score-block__table-row
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united(data-animation="pulse")
+							tr.on-game-score-block__table-row(data-animation="fadeInDown")
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--columb(data-animation="pulse")
 								td.on-game-score-block__table-cell lose
 								td.on-game-score-block__table-cell.on-game-score-block__table-cell--score 3-4
 								td.on-game-score-block__table-cell win
-								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united
+								td.on-game-score-block__table-cell.on-game-score-block__table-cell--logo.on-game-score-block__table-cell--united(data-animation="pulse")
 
-				section.section.project-features.project-features--on-game
+				section.section.project-features.project-features--on-game(data-animation="fadeInUp")
 					ul.project-features__list
 						li.project-features__item
-							.project-features__icon-wrapper
+							.project-features__icon-wrapper(data-animation="zoomIn")
 								include ../../icons/on-game-features-ic1
 							h3.project-features__item-title Challenge
 							p.project-features__item-descr Improve desktop app performance two folds and mobile app performance from 30 seconds to 10 seconds.
 						li.project-features__item
-							.project-features__icon-wrapper
+							.project-features__icon-wrapper(data-animation="zoomIn")
 								include ../../icons/on-game-features-ic2
 							h3.project-features__item-title Challenge Accepted
 							p.project-features__item-descr Uneed Web tech team tracked and optimized the app’s performance as well as response time, monitored for multiple devices, compared different operating systems and networks for app functioning.
 						li.project-features__item
-							.project-features__icon-wrapper
+							.project-features__icon-wrapper(data-animation="zoomIn")
 								include ../../icons/on-game-features-ic3
 							h3.project-features__item-title Performance Improvement
 							p.project-features__item-descr Desktop app performance was improved from 9 seconds to 5 seconds, mobile app performance was drastically improved from 30 seconds to 4 seconds.
 
 				section.section.section--without-padding-bottom.section--projects-reverse.section--on-game-big
-					section.section.section--without-padding-top.section--without-padding-bottom
-						.section__wrapper
-							h2.section__title Variety of sports
-							p.section__text The application allows users to follow their favorite teams, sportsmen, and sportswomen across more than 10 sports including Soccer, Basketball, Baseball, Hockey Tennis, Golf among others.
-						.section__decorative-img.section__decorative-img--on-game-phone-1
-					section.section.section--without-padding-top.section--without-padding-bottom
-						.section__wrapper
-							h2.section__title Real-time updates
-							p.section__text ON-GAME enables users to build a personalized feed and get the latest updates on the game. The users can customize ON-GAME in order to get instant alerts for upcoming games. The live commentary shows minute-by-minute match/game highlights.
-						.section__decorative-img.section__decorative-img--on-game-phone-2
-					section.section.section--without-padding-top.section--without-padding-bottom
-						.section__wrapper
-							h2.section__title Statistics
-							p.section__text The application includes detailed statistics, schedules, makes possible to display team standings, fixtures, pre-match lineups, close game situations.
-						.section__decorative-img.section__decorative-img--on-game-phone-3
+					.section__wrapper
+						section.section.section--without-padding-top.section--without-padding-bottom
+							.section__inner
+								h2.section__title Variety of sports
+								p.section__text The application allows users to follow their favorite teams, sportsmen, and sportswomen across more than 10 sports including Soccer, Basketball, Baseball, Hockey Tennis, Golf among others.
+							.section__decorative-img.section__decorative-img--on-game-phone-1
+						section.section.section--without-padding-top.section--without-padding-bottom
+							.section__inner
+								h2.section__title Real-time updates
+								p.section__text ON-GAME enables users to build a personalized feed and get the latest updates on the game. The users can customize ON-GAME in order to get instant alerts for upcoming games. The live commentary shows minute-by-minute match/game highlights.
+							.section__decorative-img.section__decorative-img--on-game-phone-2
+						section.section.section--without-padding-top.section--without-padding-bottom
+							.section__inner
+								h2.section__title Statistics
+								p.section__text The application includes detailed statistics, schedules, makes possible to display team standings, fixtures, pre-match lineups, close game situations.
+							.section__decorative-img.section__decorative-img--on-game-phone-3
 
 				section.section.section--on-game-technologies
 					.section__wrapper

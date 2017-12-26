@@ -21,6 +21,11 @@
 		var lastScrollTopValue = 0;
 		$(window).scroll(function () {
 			var scrollTopValue = $(this).scrollTop();
+			if (scrollTopValue <= 0) {
+				navMain.classList.remove('main-nav--scroll-up');
+				navMain.classList.remove('main-nav--scroll-down');
+				return;
+			}
 			if (scrollTopValue <= lastScrollTopValue) {
 				navMain.classList.add('main-nav--scroll-up');
 				navMain.classList.remove('main-nav--scroll-down');
@@ -29,9 +34,6 @@
 				navMain.classList.remove('main-nav--scroll-up');
 			}
 			lastScrollTopValue = scrollTopValue;
-			if (scrollTopValue == 0) {
-				navMain.classList.remove('main-nav--scroll-up');
-			}
 		});
 
 	});

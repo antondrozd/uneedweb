@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
 	include ../../parts/b-head
-	+head("Booking App Development | Uneed Web", "Travel application, Web Development, NLP technology", "Development of a web application for a travel company with a complete customer planning journey features: booking, invoicing, payment system.")
+	+head("Mobile Development - YOW | Uneed Web", "Web development projects, mobile development projects, product design", "YOW - YOUR OPEN WORLD. Is our own developed mobile app that keeps track of the places you visit and shows your exploration progress.")
 
 	body
 		.page-wrapper
@@ -13,52 +13,49 @@ html(lang="en")
 
 				.project-switcher(data-animation="bounceIn")
 					.project-switcher__wrapper
-						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/localisation/b-index.html")
+						a.project-switcher__link.project-switcher__link--prev(href="#")
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-						a.project-switcher__link.project-switcher__link--next(href="#")
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/banking/b-index.html")
 							span Next Project
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 
 				section.section(data-animation="fadeInUp")
 					.section__wrapper
-						span.section__project-type Travel
-						h1.section__title What was the challenge?
-						p.section__text Develop a web application for a travel company with a complete customer planning journey features. Improve user search performance by using NLP technology.
+						span.section__project-type mobile Development
+						h1.section__title Your Open World
+						p.section__text You travel a lot, but do not keep track of the places you visit? Your friend asks you about countries you have seen and you scratch your head thinking? Better scratch the map. With our new application yow you can keep track of your journeys’ history. As we travel extensively throughout the year for fellow travel-lovers we crafted this handful tool.
 
-				section.section.section--approaches.approaches.approaches--booking(data-animation="fadeInUp")
+				section.section.section--approaches.approaches.approaches--yow(data-animation="fadeInUp")
 					.section__wrapper
-						h2.section__title Challenge accepted
-						p.section__text.section__text--with-margin-bottom After defining initial requirements, tools and frameworks for the project, the travel website was developed and featured GDS integration with booking engine, invoicing and payment system. Built on a cross platform and with a responsive design it contained a simplified booking process with real-time results.
-						p.section__text The natural language processing entity linking was implemented for user search performance improvement. This data input technology allowed determining the identity of entities mentioned in the text by user.
+						h2.section__title What is YOW?
+						p.section__text.section__text YOW is a travel scratch map. Whenever you visit a new country, city, street it uncovers them on the map and marks places you have been to. Travel scratch map is based on Google Maps API keeps track of places you have visited, shows your exploration progress and lets you share them on social networks. It stores photos of your favorite places and suggests the new ones in nearby.
 
 				section.section(data-animation="fadeInUp")
 					.section__wrapper.section__wrapper--tight
 						h2.section__title What technologies did we use?
 						ul.section__tags.tags
-							li.tags__item .NET 3.5
-							li.tags__item ASP.NET MVC 4
-							li.tags__item Oracle 11
-							li.tags__item XPO
-							li.tags__item Client side: CoffeeScript
-							li.tags__item jQuery
-							li.tags__item knockoutJS
-							li.tags__item LESS
-							li.tags__item HTML
-							li.tags__item Watin
-							li.tags__item SpecFlow
+							li.tags__item C#
+							li.tags__item Xamarin Framework
+							li.tags__item Open GeoData
+							li.tags__item Google Maps
+							li.tags__item Google Places
+							li.tags__item Geolocation
+							li.tags__item AWS (EC2)
+							li.tags__item Jenkins
+							li.tags__item Git
 					.slider.slider--project
 						ul.slider__slides-wrapper
 							li.slider__slide
 								.slider__slide-inner
 									.slider__img-wrapper
-										img(src="../../photos/booking/booking-gallery-1.png")
+										img(src="../../photos/yow/yow-gallery-1.png")
 							li.slider__slide
 								.slider__slide-inner
 									.slider__img-wrapper
-										img(src="../../photos/booking/booking-gallery-2.png")
+										img(src="../../photos/yow/yow-gallery-3.png")
 						.slider__dots
 							button.slider__dot.slider__dot--active(type="button")
 							button.slider__dot(type="button")

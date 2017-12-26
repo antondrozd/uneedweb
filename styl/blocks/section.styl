@@ -38,15 +38,25 @@
 	&--on-game-score-block
 		padding-top 0
 	&--on-game-big
-		background-image url("../photos/on-game/bg.jpg")
-		background-size cover
-		background-position center
+		padding-bottom 405px
+		background-image url("../images/on-game/image-3.png"), url("../photos/on-game/bg.jpg")
+		background-repeat no-repeat
+		background-size 320px, cover
+		background-position bottom, center
+		
+		// background-image url("../images/on-game/image-3.png")
+		// background-size auto 100%
+		.section__wrapper
+			width 100%
 		.section__title
 			color #dbdbdb
 		.section__text
 			color #fff
 	&--on-game-technologies
-		background-image linear-gradient(to bottom, #ffe244, #d7bb0e)
+		background-image url("../images/on-game/on-game-yellow.png")
+		background-repeat no-repeat
+		background-size cover
+		background-position center
 		.section__title
 			color #0e1a35
 		.section__text
@@ -67,10 +77,11 @@
 	display block
 	margin-bottom 1.25rem
 	font-size 13px
+	font-weight 700
 	letter-spacing 0.3px
 	text-transform uppercase
 	text-align center
-	color #555555	
+	color rgba(#8492af, 0.5)	
 	
 .section__title
 	padding 0
@@ -86,7 +97,7 @@
 .section__text
 	padding 0
 	margin 0 auto
-	max-width 41rem
+	max-width 85%
 	font-size 16px
 	font-weight 400
 	line-height 1.33
@@ -113,12 +124,12 @@
 		background-image url("../images/on-game/image-2.png")
 		background-size auto 100%
 		background-position center
-	&--on-game-phone-3
-		height 517px
-		// padding-top 160%
-		background-image url("../images/on-game/image-3.png")
-		background-size auto 100%
-		background-position 43px
+	// &--on-game-phone-3
+	// 	height 517px
+	// 	// padding-top 160%
+	// 	background-image url("../images/on-game/image-3.png")
+	// 	background-size auto 100%
+	// 	background-position 43px
 .section__tags
 	margin-bottom 6.125rem
 	
@@ -165,6 +176,7 @@
 		font-size 48px
 		
 	.section__text
+		max-width 41rem
 		font-size 18px
 		&--hidden-on-mobile
 			display inline
@@ -174,9 +186,9 @@
 			height 584px
 		&--on-game-phone-2
 			height 484px
-		&--on-game-phone-3
-			height 693px
-			background-position 225px
+		// &--on-game-phone-3
+		// 	height 693px
+		// 	background-position 225px
 
 @media $desktop-widths
 
@@ -184,23 +196,26 @@
 		&--projects-reverse
 			display flex
 			flex-wrap wrap
-			> .section
+			.section
 				display flex
 				&:nth-child(even)
-					> .section__wrapper
+					> .section__inner
 						order 2
 						.section__title, .section__text
 							text-align left
 				> *
 					width 50%
 					margin 0
-				> .section__wrapper
+				> .section__inner
 					display flex
 					flex-direction column
 					justify-content center
 					padding 0 5rem
 					.section__title, .section__text
 						text-align right
+		&--on-game-big
+			.section__wrapper
+				width 1170px
 			
 		&--on-game-score-block
 			padding-top 5rem
