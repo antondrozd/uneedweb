@@ -17,6 +17,7 @@
 }
 
 .main-nav
+	max-width 100vw !important
 	font-family $main-font
 	
 	&--hp,
@@ -64,11 +65,15 @@
 		position fixed
 		background-color $main-color
 		animation main-nav-show 0.5s ease forwards
+		&.main-nav--project-on-game
+			background-color $main-color--on-game
 		
 	&--scroll-down
 		position fixed
 		background-color $main-color
 		animation main-nav-hide 0.5s ease forwards
+		&.main-nav--project-on-game
+			background-color $main-color--on-game
 
 	&--footer
 		.main-nav__list

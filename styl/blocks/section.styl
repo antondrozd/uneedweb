@@ -38,11 +38,17 @@
 	&--on-game-score-block
 		padding-top 0
 	&--on-game-big
-		padding-bottom 405px
-		background-image url("../images/on-game/image-3.png"), url("../photos/on-game/bg.jpg")
+		// padding-bottom 405px
+		// background-image url("../images/on-game/image-3.png"), url("../photos/on-game/bg.jpg")
+		// background-repeat no-repeat
+		// background-size 320px, cover
+		// background-position bottom, center
+		
+		background-image url("../photos/on-game/bg.jpg")
 		background-repeat no-repeat
-		background-size 320px, cover
-		background-position bottom, center
+		background-size cover
+		background-position center
+
 		.section__wrapper
 			width 100%
 		.section__title
@@ -114,22 +120,20 @@
 .section__decorative-img
 	margin-top 2.75rem
 	background-repeat no-repeat
+	background-size auto 100%
 	&--on-game-phone-1
 		height 370px
 		background-image url("../images/on-game/image-1.png")
-		background-size auto 100%
 		background-position center
 	&--on-game-phone-2
 		height 298px
 		background-image url("../images/on-game/image-2.png")
-		background-size auto 100%
 		background-position center
-	// &--on-game-phone-3
-	// 	height 517px
-	// 	// padding-top 160%
-	// 	background-image url("../images/on-game/image-3.png")
-	// 	background-size auto 100%
-	// 	background-position 43px
+	&--on-game-phone-3
+		position relative
+		left calc(50% - 7rem)
+		height 517px
+		background-image url("../images/on-game/image-3.png")
 .section__tags
 	margin-bottom 6.125rem
 	
@@ -186,9 +190,9 @@
 			height 584px
 		&--on-game-phone-2
 			height 484px
-		// &--on-game-phone-3
-		// 	height 693px
-		// 	background-position 225px
+		&--on-game-phone-3
+			height 693px
+			left calc(50% - 9rem)
 
 @media $desktop-widths
 
@@ -203,14 +207,17 @@
 						order 2
 						.section__title, .section__text
 							text-align left
-				> *
-					width 50%
+				.section__decorative-img
+					width 60%
 					margin 0
-				> .section__inner
+					background-size contain
+				.section__inner
 					display flex
 					flex-direction column
 					justify-content center
-					padding 0 5rem
+					width 40%
+					// padding 0 5rem
+					margin 0
 					.section__title, .section__text
 						text-align right
 		&--on-game-big
@@ -223,6 +230,20 @@
 	.section__wrapper
 		&--margin-left-only
 			width 75%
+			
+	.section__text
+		&--on-game
+			max-width 50rem
+			
+	.section__decorative-img
+		position relative
+		background-position center
+		&--on-game-phone-1
+			left 5rem
+		&--on-game-phone-2
+			left -8rem
+		&--on-game-phone-3
+			left 13rem
 
 	.section__btn
 		&--hidden-on-desktop
