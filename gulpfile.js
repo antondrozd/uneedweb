@@ -1,8 +1,8 @@
 var gulp = require('gulp');
-var tiny = require('gulp-tinypng-nokey');
+var imagemin = require('gulp-tinypng');
 
 gulp.task('tinypng', function(cb) {
-	gulp.src('images/**/*.png')
-		.pipe(tiny())
-		.pipe(gulp.dest('build/tiny/'));
+	gulp.src('images/**/*.{png,jpg}')
+		.pipe(imagemin('ZiZYm9giK0yP_007ofWJgQT5YaUXDy2Y'))
+		.pipe(gulp.dest('tiny'));
 });

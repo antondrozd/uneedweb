@@ -10,13 +10,13 @@ html(lang="en")
 
 			main.page-content
 		
-				section.section.section--first-after-menu
+				section.section.section--first-after-menu(data-animation="fadeIn")
 					.section__wrapper
 						h1.section__title Contact Us
 						p.section__text We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!
 						
 				.page-content__wrapper
-					section.section.contact-us(data-animation="fadeInLeft")
+					section.section.contact-us(data-animation="fadeInUp")
 						.contact-us__wrapper
 							h2.section__title.contact-us__title Send Us a Message
 							form.contact-us__form(name="contactForm" action="/mail-us" method="post")
@@ -30,7 +30,7 @@ html(lang="en")
 									textarea(name="message" rows="5" placeholder="Message")
 								button.contact-us__btn.btn(type="submit") Send Email
 
-					section.section.section--without-padding-top(data-animation="fadeInRight").contact-info
+					section.section.section--without-padding-top(data-animation="fadeInUp").contact-info
 						.contact-info__wrapper
 							h2.section__title.contact-info__title Contact Details
 							.contact-info__items-wrapper

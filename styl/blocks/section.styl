@@ -35,15 +35,11 @@
 			color #fff
 		.section__text
 			color #f3f8ff
+	&--projects-reverse
+		overflow hidden
 	&--on-game-score-block
 		padding-top 0
-	&--on-game-big
-		// padding-bottom 405px
-		// background-image url("../images/on-game/image-3.png"), url("../photos/on-game/bg.jpg")
-		// background-repeat no-repeat
-		// background-size 320px, cover
-		// background-position bottom, center
-		
+	&--on-game-big		
 		background-image url("../photos/on-game/bg.jpg")
 		background-repeat no-repeat
 		background-size cover
@@ -87,7 +83,9 @@
 	letter-spacing 0.3px
 	text-transform uppercase
 	text-align center
-	color rgba(#8492af, 0.5)	
+	color rgba(#8492af, 0.5)
+	&--on-game
+		color #555
 	
 .section__title
 	padding 0
@@ -99,6 +97,8 @@
 	color #0e1a35
 	&--text-left
 		text-align left
+	&--on-game
+		color #333
 	
 .section__text
 	padding 0
@@ -116,6 +116,10 @@
 		margin-bottom 1.5rem
 	&--hidden-on-mobile
 		display none
+	&--on-game
+		color #555
+		*
+			color #555
 	
 .section__decorative-img
 	margin-top 2.75rem
@@ -216,7 +220,6 @@
 					flex-direction column
 					justify-content center
 					width 40%
-					// padding 0 5rem
 					margin 0
 					.section__title, .section__text
 						text-align right
@@ -228,6 +231,8 @@
 			padding-top 5rem
 			
 	.section__wrapper
+		&--slider
+			width 52rem
 		&--margin-left-only
 			width 75%
 			

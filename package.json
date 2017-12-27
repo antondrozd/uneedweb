@@ -35,7 +35,7 @@
     "clean-css": "^4.1.9",
     "clean-css-cli": "^4.1.10",
     "gulp": "^3.9.1",
-    "gulp-tinypng-nokey": "^1.1.0",
+    "gulp-tinypng": "^1.0.2",
     "jade": "^1.11.0",
     "jade-watch": "^0.1.1",
     "postcss-cli": "^4.1.1",

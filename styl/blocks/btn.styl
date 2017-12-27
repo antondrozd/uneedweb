@@ -3,7 +3,7 @@
 	align-items center
 	justify-content center
 	box-sizing border-box
-	padding 1rem 2.5rem
+	padding 0.8rem 2.5rem
 	font-family $main-font
 	font-size 16px
 	font-weight 400
@@ -19,7 +19,11 @@
 	&--on-game
 		color #555
 		border-color #555
+		svg
+			*
+				fill #555
 	svg
+		margin-left 0.5rem
 		*
 			transition all $transition-duration
 	&:hover, &:active
