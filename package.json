@@ -17,8 +17,8 @@
     "clean": "rm -fr build/",
     "css": "npm run stylus && npm run autoprefixer && npm run cleancss",
     "build": "npm run clean && npm run folders && npm run jade && npm run js && npm run css && npm run copy",
-  	"jade-w": "jade -H -w -o build ./",
-  	"stylus-w": "stylus -w --include-css styl/index.styl -o build/css/index.css"
+    "jade-w": "jade -H -w -o build ./",
+    "stylus-w": "stylus -w --include-css styl/index.styl -o build/css/index.css"
   },
   "keywords": [
     "uneed",
@@ -34,6 +34,8 @@
     "autoprefixer": "^7.1.4",
     "clean-css": "^4.1.9",
     "clean-css-cli": "^4.1.10",
+    "gulp": "^3.9.1",
+    "gulp-tinypng-nokey": "^1.1.0",
     "jade": "^1.11.0",
     "jade-watch": "^0.1.1",
     "postcss-cli": "^4.1.1",
