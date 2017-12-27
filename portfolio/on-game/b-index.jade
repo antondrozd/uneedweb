@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
 	include ../../parts/b-head
-	+head("Portfolio | UNeed Web", "Web development projects, mobile development projects, product design", "Uneed Web drives innovation into services by crafting web and mobile applications, enlivening them with web design.")
+	+head("Portfolio | Uneed Web", "Web development projects, mobile development projects, product design", "Uneed Web drives innovation into services by crafting web and mobile applications, enlivening them with web design.")
 	body
 		.page-wrapper
 
@@ -32,10 +32,14 @@ html(lang="en")
 				section.section.section--on-game-score-block(data-animation="fadeInUp")
 					.on-game-score-block
 						.on-game-score-block__logos(data-animations-group)
-							.on-game-score-block__logo
-								img(src="../../images/on-game/columb-logo.png", alt="columb-logo" data-animation="zoomIn")
-							.on-game-score-block__logo
-								img(src="../../images/on-game/united-logo.png", alt="united-logo" data-animation="zoomIn")
+							.on-game-score-block__inner
+								.on-game-score-block__logo-wrapper
+									img(src="../../images/on-game/columb-logo.png", alt="columb-logo" data-animation="zoomIn")
+								span.on-game-score-block__text.on-game-score-block__text--dark Columbus Crew<br>Soccer Club<br>(win)
+							.on-game-score-block__inner
+								.on-game-score-block__logo-wrapper
+									img(src="../../images/on-game/united-logo.png", alt="united-logo" data-animation="zoomIn")
+								span.on-game-score-block__text D.C. United<br>Washington<br>(lose)
 
 						table.on-game-score-block__table(data-animations-group)
 							tr.on-game-score-block__table-row(data-animation="fadeInDown")
