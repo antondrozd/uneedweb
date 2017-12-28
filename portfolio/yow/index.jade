@@ -2,118 +2,104 @@ doctype html
 html(lang="en")
 	include ../../parts/head
 	+head("Mobile Development - YOW | Uneed Web", "Web development projects, mobile development projects, product design", "YOW - YOUR OPEN WORLD. Is our own developed mobile app that keeps track of the places you visit and shows your exploration progress.")
-	body#portfolio-project-page.project-yow
-		include ../../parts/header
-		include ../../parts/mobile-nav
 
-		section#top-yow
+	body
+		.page-wrapper
 
-		section#description
-			.container
-				.buttons-container
-					a(href="/portfolio/sport")
-						button.prev-project
-							span.icon.rotated
+			include ../../parts/header
+			+header("project")
+
+			main.page-content
+
+				.project-switcher(data-animation="bounceIn")
+					.project-switcher__wrapper
+						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/on-game/")
+							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-					a(href="/portfolio/banking")
-						button.next-project
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/banking/")
 							span Next Project
-							span.icon
+							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
-				.section-top
-					h4.type mobile Development
-					h1.title.dark Your Open World
-					h3.sub-title You travel a lot, but do not keep track of the places you visit? Your friend asks you about countries you have seen and you scratch your head thinking? Better scratch the map. With our new application yow you can keep track of your journeys’ history. As we travel extensively throughout the year for fellow travel-lovers we crafted this handful tool.
 
-		section#technologies
+				section.section(data-animation="fadeInUp")
+					.section__wrapper
+						span.section__project-type mobile Development
+						h1.section__title Your Open World
+						p.section__text You travel a lot, but do not keep track of the places you visit? Your friend asks you about countries you have seen and you scratch your head thinking? Better scratch the map. With our new application yow you can keep track of your journeys’ history. As we travel extensively throughout the year for fellow travel-lovers we crafted this handful tool.
 
-			.yow-decorative-block.yow-decorative-block-logo
-				.container
-					.yow-icon-wrapper.icon-1
-						img(src="../../images/yow/yow-icon-1.png" alt="yow")
-					.arrow-wrapper
-						include ../../icons/arrow-right
-					.yow-icon-wrapper.icon-2
-						img(src="../../images/yow/yow-icon-2.png" alt="yow")
-					.arrow-wrapper
-						include ../../icons/arrow-right
-					.yow-icon-wrapper.icon-3
-						img(src="../../images/yow/yow-icon-3.png" alt="yow")
+				section.section.section--approaches.approaches.approaches--yow(data-animation="fadeInUp")
+					.section__wrapper
+						h2.section__title What is YOW?
+						p.section__text.section__text YOW is a travel scratch map. Whenever you visit a new country, city, street it uncovers them on the map and marks places you have been to. Travel scratch map is based on Google Maps API keeps track of places you have visited, shows your exploration progress and lets you share them on social networks. It stores photos of your favorite places and suggests the new ones in nearby.
 
-			.container
-				.section-top
-					h2.title.dark Technologies
-					h3.sub-title Our technical team used a comprehensive set of tools and technologies during YOW development.
-					.tags
-						.tag C#
-						.tag Xamarin Framework
-						.tag Open GeoData
-						.tag Google Maps
-						.tag Google Places
-						.tag Geolocation
-						.tag AWS (EC2)
-						.tag Jenkins
-						.tag Git
+				section.section(data-animation="fadeInUp")
+					.section__wrapper.section__wrapper--tight
+						h2.section__title What technologies did we use?
+						ul.section__tags.tags
+							li.tags__item C#
+							li.tags__item Xamarin Framework
+							li.tags__item Open GeoData
+							li.tags__item Google Maps
+							li.tags__item Google Places
+							li.tags__item Geolocation
+							li.tags__item AWS (EC2)
+							li.tags__item Jenkins
+							li.tags__item Git
+					.slider.slider--project
+						ul.slider__slides-wrapper
+							li.slider__slide
+								.slider__slide-inner
+									.slider__img-wrapper
+										img(src="../../photos/yow/yow-gallery-1.png")
+							li.slider__slide
+								.slider__slide-inner
+									.slider__img-wrapper
+										img(src="../../photos/yow/yow-gallery-3.png")
+						.slider__dots
+							button.slider__dot.slider__dot--active(type="button")
+							button.slider__dot(type="button")
+					.section__wrapper.section__wrapper--tight
+						a.section__btn.btn(href="/portfolio/") Back to all projects
+							include ../../icons/arrow-go
 
-		section#about
-			.desktop-container
-				.yow-decorative-block.yow-decorative-block-map
+			include ../../parts/footer
+			+footer("project")
+		script(src="/js/main-nav.min.js")
+		script.
 
-				.container
-					.section-top
-						h2.title.dark About App
-						h3.sub-title YOW is a mobile application that functions as a travel scratch map. In the beginning, your travel map is black, but whenever you visit a new country, city or street it unveils an area which was black before and marks the place you have been to. The map is based on the Google Maps API. You can build the list of the favorite places, use navigation for finding spots.
+			(function () {
+				var slider = document.querySelector('.slider'),
+						slidesWrapper = slider.querySelector('.slider__slides-wrapper'),
+						slideItems = slider.querySelectorAll('.slider__slide'),
+						slidesCount = slideItems.length,
+						sliderStepValue = 100/slidesCount,
+						slideCurrent = 1,
+						sliderDots = slider.querySelectorAll('.slider__dot');
 
-		section#share
+				function slideChange (index) {
+					var	sliderTransValue = (index-1)*sliderStepValue;
+					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
+					sliderDots[slideCurrent-1].classList.remove('slider__dot--active');
+					sliderDots[index-1].classList.add('slider__dot--active');
+					slideCurrent = index;
+				};
 
-			.desktop-container
+				slidesWrapper.style.width = slidesCount*100+'%';
 
-				.yow-decorative-block.yow-decorative-block-phone
+				sliderDots.forEach(function (item, index) {
+					sliderDots[index].addEventListener('click', function () {
+						slideChange(index+1);
+					});
+				});
 
-				.container
-					.section-top
-						h2.title.dark Share with friends
-						h3.sub-title Your friend asks you about countries you have seen and you scratch your head thinking? Let your friends know how many countries/cities you have seen so far. You can share your exploration progress by clicking on social media buttons (Facebook, Twitter, Google+...)
+				window.addEventListener('keydown', function (event) {
+					if (event.keyCode == 37 && slideCurrent > 1) {
+						slideChange(slideCurrent-1);
+					}
+					if (event.keyCode == 39 && slideCurrent < slidesCount) {
+						slideChange(slideCurrent+1);
+					}
+				});
 
-		section#features
-			.container
-				.section-top
-					h2.title Our Features
-					h3.sub-title Our technical team used a comprehensive set of tools and technologies during yow development.
-					ul.features-list
-						li.feature-item.feature-item-offline-work
-							h2.feature-name Offline Working
-							p.feature-descr yow works offline, including maps, which means there is no need to look for Wi-Fi spots.
-						li.feature-item.feature-item-stor-pict
-							h2.feature-name Storing Pictures
-							p.feature-descr Every time you take your finest snapshots you can attach them to the places on the map through the app.
-						li.feature-item.feature-item-smart-adviser
-							h2.feature-name Smart Adviser
-							p.feature-descr Once you go on a trip to a new area, the app will give you suggestions for the places to see in nearby. 
-
-		section#gallery
-			.container
-				.gallery-container.swipeshow.yow
-					.slides
-						.slide
-						.slide
-						.slide
-					.dots
-				.controls
-					.slide-left.previous
-						include ../../icons/arrow-right
-					.slide-right.next
-						include ../../icons/arrow-right
-
-		section#back
-			a(href="/portfolio")
-				button(role="button")
-					span Next projects
-					span.icon
-						include ../../icons/arrow-go
-
-		include ../../parts/footer
-		script(type="text/javascript" src="/js/libs.min.js")
-		script(type="text/javascript" src="/js/portfolio.min.js")
-		include ../../parts/navbar
+			})();

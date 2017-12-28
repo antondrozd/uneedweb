@@ -1,16 +1,20 @@
 doctype html
 html(lang="en")
 	include ../../parts/head
-	+head("Outstanding software engineering practices | UNeed Web", "", "Thanks for contacting us.")
-	body#contact-us-result-page
-		include ../../parts/header
-		include ../../parts/mobile-nav
+	+head("Contact Us | Uneed Web", "where to outsource software development, how to find offshore software development company, why outsource web development, how to find web design company", "We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!")
+	body
+		.page-wrapper
 
-		#contact-result
-			.container
-				h1.title.dark Something went wrong!
-				h2.sub-title Please try again later
+			include ../../parts/header
+			+header("contact-us")
 
-		include ../../parts/footer
-		script(type="text/javascript" src="/js/contact-us.min.js")
+			main.page-content
 
+				section.section.section--first-after-menu.section--full-screen(data-animation="shake")
+					.section__wrapper
+						h1.section__title Something went wrong!
+						p.section__text.section__text Please try again later
+
+			include ../../parts/footer
+			+footer("contact-us")
+		script(src="/js/main-nav.min.js")

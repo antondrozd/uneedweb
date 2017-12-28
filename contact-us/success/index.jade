@@ -1,16 +1,22 @@
 doctype html
 html(lang="en")
 	include ../../parts/head
-	+head("Outstanding software engineering practices | UNeed Web", "", "Thanks for contacting us.")
-	body#contact-us-result-page
-		include ../../parts/header
-		include ../../parts/mobile-nav
+	+head("Contact Us | Uneed Web", "where to outsource software development, how to find offshore software development company, why outsource web development, how to find web design company", "We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!")
+	body
+		.page-wrapper
 
-		#contact-result
-			.container
-				h1.title.dark Thanks for contacting us!
-				h2.sub-title We will reach you out soon
+			include ../../parts/header
+			+header("contact-us")
 
-		include ../../parts/footer
-		script(type="text/javascript" src="/js/contact-us.min.js")
+			main.page-content
 
+				section.section.section--first-after-menu.section--full-screen(data-animation="bounce")
+					.section__wrapper
+						h1.section__title Thank you for contacting us
+						p.section__text.section__text--with-margin-bottom We appreciate you contacting us. We will reply to you as soon as possible.<br>Have a great day!
+						a.section__btn.btn(href="/") Back to home page
+							include ../../icons/arrow-go
+
+			include ../../parts/footer
+			+footer("contact-us")
+		script(src="/js/main-nav.min.js")

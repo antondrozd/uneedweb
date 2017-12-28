@@ -1,168 +1,83 @@
 doctype html
 html(lang="en")
 	include ../parts/head
-	+head("Portfolio | UNeed Web", "Web development projects, mobile development projects, product design", "Uneed Web drives innovation into services by crafting web and mobile applications, enlivening them with web design.")
-	body#portfolio-page
-		include ../parts/header
-		include ../parts/mobile-nav
+	+head("Portfolio | Uneed Web", "Web development projects, mobile development projects, product design", "We craft web and mobile applications for variety of industries. Take a glimpse into the projects we developed.")
+	body
+		.page-wrapper
 
-		section#description
-			.container
-				.section-top
-					h1.title.dark Portfolio
-					h3.sub-title We have a proven track record of building high-quality solutions for customers all over the world. Browse through our case studies and see projects that we have implemented.
+			include ../parts/header
+			+header("portfolio")
 
-		section#switcher
-			#switch-left
-				a(onclick="uneed.onPrevPortfolioFilter()")
-					include ../icons/left-arrow
-			a#all-filter.active(onclick="uneed.onChangePortfolioFilter('all')")
-				h4.sub-title All
-			a#web-filter(onclick="uneed.onChangePortfolioFilter('web')")
-				h4.sub-title Web Development
-			a#mobile-filter(onclick="uneed.onChangePortfolioFilter('mobile')")
-				h4.sub-title Mobile Development
-			a#design-filter(onclick="uneed.onChangePortfolioFilter('design')")
-				h4.sub-title Product Design
-			#switch-right
-				a(onclick="uneed.onNextPortfolioFilter()")
-					include ../icons/left-arrow
+			main.page-content
+		
+				section.section.section--first-after-menu(data-animation="fadeIn")
+					.section__wrapper
+						h1.section__title Portfolio
+						p.section__text We have a proven track record of building high-quality solutions for customers all over the world. Browse through our case studies and see projects that we have implemented.
 
-		section#projects.all-filter
-			.container
-				.project.travel.web
-					.project-background
-					.overlay
-					.project-content
-						.project-header
-							h4.type Web Development
-							.name Booking
-						.project-footer
-							.description Development of a web application for a travel company with a complete 			customer planning journey features.
-							a.details-link(href="/portfolio/travel")
-								button.details-button(type="button")
-									span Details
-									span.icon
-										include ../icons/arrow-go
-				.project.sport.web
-					.project-background
-					.overlay
-					.project-content
-						.project-header
-							h4.type Web Development
-							.name Entertainment
-						.project-footer
-							.description Development a web application for a sports betting company for the audience of 5 million users.
-							a.details-link(href="/portfolio/sport")
-								button.details-button(type="button")
-									span Details
-									span.icon
-										include ../icons/arrow-go
-				.project.yow.mobile.design
-					.project-background
-					.overlay
-					.project-content
-						.project-header
-							h4.type Mobile Development
-							.name Travel
-						.project-footer
-							.description Our own mobile application that keeps track of the places you visit and shows your exploration progress.
-							a.details-link(href="/portfolio/yow")
-								button.details-button(type="button")
-									span Details
-									span.icon
-										include ../icons/arrow-go
-				.project.banking.web
-					.project-background
-					.overlay
-					.project-content
-						.project-header
-							h4.type Web Development
-							.name Banking / Finance
-						.project-footer
-							.description Creation of a fee billing system for a major Hong Kong corporate bank. A software that calculates operational and managerial fees.
-							a.details-link(href="/portfolio/banking")
-								button.details-button(type="button")
-									span Details
-									span.icon
-										include ../icons/arrow-go
-				.project.gambling.web
-					.project-background
-					.overlay
-					.project-content
-						.project-header
-							h4.type Web Development
-							.name Gambling
-						.project-footer
-							.description Revamping of existing gambling web applications for a betting company with interactive components.
-							a.details-link(href="/portfolio/gambling")
-								button.details-button(type="button")
-									span Details
-									span.icon
-										include ../icons/arrow-go
-				.project.social-travel.web
-					.project-background
-					.overlay
-					.project-content
-						.project-header
-							h4.type Web Development
-							.name Social Network
-						.project-footer
-							.description Creation of an engaging travel-oriented social network service with an embedded e-commerce platform.
-							a.details-link(href="/portfolio/social-travel")
-								button.details-button(type="button")
-									span Details
-									span.icon
-										include ../icons/arrow-go
-				.project.localisation.web.design
-					.project-background
-					.overlay
-					.project-content
-						.project-header
-							h4.type Web Development
-							.name Data Management
-						.project-footer
-							.description Localisation helper: a software that eases the translation of an online sports application into multiple languages.
-							a.details-link(href="/portfolio/localisation")
-								button.details-button(type="button")
-									span Details
-									span.icon
-										include ../icons/arrow-go
-
-		//- section#result.section-top
-		//- 	h1.title.dark Technologies
-		//- 	h2.sub-title Working through a variety of projects, our main technologies are:
-		//- 	h2.sub-title.fe-dev Front-end development:
-		//- 	.tags
-		//- 		.tag JS
-		//- 		.tag HTML
-		//- 		.tag CSS
-		//- 		.tag PHP
-		//- 		.tag SQL
-		//- 		.tag Responsive Design
-		//- 		.tag React
-		//- 		.tag Angular JS
-		//- 		.tag Node
-		//- 		.tag JQuery
-		//- 	h2.sub-title.be-dev Back-end development:
-		//- 	.tags
-		//- 		.tag PHP
-		//- 		.tag Python
-		//- 		.tag Java
-		//- 		.tag SQL
-		//- 		.tag Perl
-		//- 		.tag RESTful
-		//- 		.tag Yii
-		//- 		.tag Django
-
-		//- 	a(href="/contact-us")
-		//- 		button(role="button")
-		//- 			span Contact Us
-		//- 			span.icon
-		//- 				include ../icons/arrow-go
-
-		include ../parts/footer
-		script(type="text/javascript" src="/js/libs.min.js")
-		script(type="text/javascript" src="/js/portfolio.min.js")
-		include ../parts/navbar
-
+				section.section.section--without-padding-top
+					.projects-gallery
+						.projects-gallery__wrapper
+							.switcher.switcher--tight(data-animation="fadeInDown")
+								button.switcher__btn.switcher__btn--prev(type="button")
+									include ../icons/left-arrow
+								h3.switcher__name.switcher__name--active(data-type="all") All
+								h3.switcher__name(data-type="web") Web Development
+								h3.switcher__name(data-type="mobile") Mobile Development
+								h3.switcher__name(data-type="design") Product Design
+								button.switcher__btn.switcher__btn--next(type="button")
+									include ../icons/left-arrow
+							ul.projects-gallery__list(data-animations-group)
+								li.project-item.project-item--booking(data-animation="zoomIn" data-type="web")
+									.project-item__wrapper
+										span.project-item__type Web Development
+										h4.project-item__title Booking
+										p.project-item__descr Development of a web application for a travel company with a complete customer planning journey features.
+										a.project-item__link-btn.btn(href="/portfolio/booking/") Details
+											include ../icons/arrow-go
+								li.project-item.project-item--entertaiment(data-animation="zoomIn" data-type="mobile")
+									.project-item__wrapper
+										span.project-item__type Web Development
+										h4.project-item__title Entertainment
+										p.project-item__descr Development a web application for a sports betting company for the audience of 5 million users.
+										a.project-item__link-btn.btn(href="/portfolio/on-game/") Details
+											include ../icons/arrow-go
+								li.project-item.project-item--travel(data-animation="zoomIn" data-type="mobile")
+									.project-item__wrapper
+										span.project-item__type Mobile Development
+										h4.project-item__title Travel
+										p.project-item__descr Our own mobile application that keeps track of the places you visit and shows your exploration progress.
+										a.project-item__link-btn.btn(href="/portfolio/yow/") Details
+											include ../icons/arrow-go
+								li.project-item.project-item--banking(data-animation="zoomIn" data-type="web design")
+									.project-item__wrapper
+										span.project-item__type Web Development
+										h4.project-item__title Banking / Finance
+										p.project-item__descr Creation of a fee billing system for a major Hong Kong corporate bank. A software that calculates operational and managerial fees.
+										a.project-item__link-btn.btn(href="/portfolio/banking/") Details
+											include ../icons/arrow-go
+								li.project-item.project-item--gambling(data-animation="zoomIn" data-type="web")
+									.project-item__wrapper
+										span.project-item__type Web Development
+										h4.project-item__title Gambling
+										p.project-item__descr Revamping of existing gambling web applications for a betting company with interactive components.
+										a.project-item__link-btn.btn(href="/portfolio/gambling/") Details
+											include ../icons/arrow-go
+								li.project-item.project-item--social(data-animation="zoomIn" data-type="web")
+									.project-item__wrapper
+										span.project-item__type Web Development
+										h4.project-item__title Social Network
+										p.project-item__descr Creation of an engaging travel-oriented social network service with an embedded e-commerce platform.
+										a.project-item__link-btn.btn(href="/portfolio/social-travel/") Details
+											include ../icons/arrow-go
+								li.project-item.project-item--data(data-animation="zoomIn" data-type="web design")
+									.project-item__wrapper
+										span.project-item__type Web Development
+										h4.project-item__title Data Management
+										p.project-item__descr Localisation helper: a software that eases the translation of an online sports application into multiple languages.
+										a.project-item__link-btn.btn(href="/portfolio/localisation/") Details
+											include ../icons/arrow-go
+			include ../parts/footer
+			+footer("portfolio")
+		script(src="/js/main-nav.min.js")
+		script(src="/js/portfolio.min.js")

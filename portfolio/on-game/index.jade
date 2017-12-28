@@ -1,22 +1,22 @@
 doctype html
 html(lang="en")
-	include ../../parts/b-head
+	include ../../parts/head
 	+head("Portfolio | Uneed Web", "Web development projects, mobile development projects, product design", "Uneed Web drives innovation into services by crafting web and mobile applications, enlivening them with web design.")
 	body
 		.page-wrapper
 
-			include ../../parts/b-header
-			+b-header("project-on-game")
+			include ../../parts/header
+			+header("project-on-game")
 
 			main.page-content
 
 				.project-switcher.project-switcher--on-game(data-animation="bounceIn")
 					.project-switcher__wrapper
-						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/booking/b-index.html")
+						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/booking/")
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-						a.project-switcher__link.project-switcher__link--next(href="/portfolio/yow/b-index.html")
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/yow/")
 							span Next Project
 							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
@@ -34,7 +34,7 @@ html(lang="en")
 						.on-game-score-block__logos(data-animations-group)
 							.on-game-score-block__inner
 								.on-game-score-block__logo-wrapper
-									img(src="../../images/on-game/columb-logo.png", alt="columb-logo" data-animation="zoomIn")
+									img(src="../../images/on-game/columlogo.png", alt="columlogo" data-animation="zoomIn")
 								span.on-game-score-block__text.on-game-score-block__text--dark Columbus Crew<br>Soccer Club<br>(win)
 							.on-game-score-block__inner
 								.on-game-score-block__logo-wrapper
@@ -125,6 +125,6 @@ html(lang="en")
 						a.section__btn.btn.btn--on-game Next projects
 							include ../../icons/arrow-go
 		
-			include ../../parts/b-footer
-			+b-footer("project-on-game")
+			include ../../parts/footer
+			+footer("project-on-game")
 		script(src="/js/main-nav.min.js")

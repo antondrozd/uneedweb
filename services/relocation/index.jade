@@ -1,115 +1,66 @@
 doctype html
 html(lang="en")
 	include ../../parts/head
-	+head("Specialist for Relocation | UNeed Web", "full-stack, fron-end developer, back-end developer, PHP developer, Java developer, Web Developer, in-house developer", "Access strategic talents that adds value beyond standard options. We are your committed partner to find top specialists for relocation.")
-	body#service-page
-		include ../../parts/header
-		include ../../parts/mobile-nav
+	+head("Relocation Specialist | Uneed Web", "full-stack, fron-end developer, back-end developer, PHP developer, Java developer, Web Developer, in-house developer", "Wonder how to access strategic talents? 28% of executives are convinced that accessing strategic top talents adds value beyond standard options. Uneed Web provides a cost-benefit service of Relocation Specialist.")
 
-		section#landing
+	body
+		.page-wrapper
 
-		section#switcher
-			#switch-left
-				a(href="/services/outstaff")
-					include ../../icons/left-arrow
-			a(href="/services/outsource")
-				h2.sub-title Project Development
-			a(href="/services/outstaff")
-				h2.sub-title Dedicated Development Team
-			a(href="/services/relocation").active
-				h2.sub-title Specialist for Relocation
-			#switch-right
-				a(href="/services/outsource")
-					include ../../icons/left-arrow
+			include ../../parts/header
+			+header("services-slide")
 
-		section#description
-			.container
-				.service-image.relocation
-				h1.title.dark Specialist for Relocation
+			main.page-content
 
-				h2.sub-title The cost-benefit service that allows you to access a richer pool of IT experts and leverage your human capital. When the top talents for your industry are above your budget or simply not located in your area we will provide you with high-skilled candidates that are willing to relocate to your place.
+				section.section.section--without-padding-bottom
+					.section__wrapper.section__wrapper--margin-left-only
+						.switcher.switcher--left
+							a.switcher__btn.switcher__btn--prev(href="/services/outstaff/")
+								include ../../icons/left-arrow
+							a.switcher__name(href="/services/outsource/") Project Development
+							a.switcher__name(href="/services/outstaff/") Staff Augmentation
+							a.switcher__name.switcher__name--active(href="/services/relocation/") Relocation Specialist
+							a.switcher__btn.switcher__btn--next
+								include ../../icons/left-arrow
 
-				h2.sub-title.result You do 5%, we do the remaining 95% for you.
+						section.slider__slide-inner.section.section--without-padding-top.section--small-padding-bottom.section--slide.section--slide-relocation(data-animation="fadeIn")
+							h2.section__title.section__title--text-left Relocation Specialist
+							p.section__text.section__text--text-left.section__text--with-margin-bottom Wonder how to access strategic talents?<br>28% of executives are convinced that accessing strategic top talents adds value beyond standard options. Uneed Web provides a cost-benefit service of Relocation Specialist. Access a richer pool of IT experts and leverage your human capital.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom When the top talents for your industry are above your budget or simply not located in your area we will provide you with high-skilled candidates that are willing to relocate to your place.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom You do 5%, we do the remaining 95% for you.
+							a.section__btn.btn(href="/services/") Services comparison
+								include ../../icons/arrow-go
 
-				a(href="/services")
-					button(role="button")
-						span Services comparison
-						span.icon
-							include ../../icons/arrow-go
+				section.section.section--main-color.workflow.workflow--relocation(data-animation="fadeIn")
+					.workflow__wrapper(data-animations-group)
+						.workflow__inner.workflow__inner--right
+							h3.workflow__title You do
+							ul.workflow__list.workflow__list
+								li.workflow__item.workflow__item--color-1.workflow__item--tablet-position-1.workflow__item--items-opposite-after-4(data-animation="fadeIn")
+									span Provide technical requirements for candidates
+								li.workflow__item.workflow__item--color-2.workflow__item--tablet-position-6.workflow__item--items-opposite-after-1(data-animation="fadeIn")
+									span Evaluate and approve candidates
+								li.workflow__item.workflow__item--color-3.workflow__item--tablet-position-8(data-animation="fadeIn")
+									span Sign contract with candidates
+						.workflow__inner.workflow__inner--left
+							h3.workflow__title We do
+							ul.workflow__list.workflow__list
+								li.workflow__item.workflow__item--color-4.workflow__item--tablet-position-2.workflow__item--items-opposite-before-1(data-animation="fadeIn")
+									span Candidates market overview in 24 hours
+								li.workflow__item.workflow__item--color-5.workflow__item--tablet-position-3(data-animation="fadeIn")
+									span Conduct recruitment process to check candidates’ personal skills and language proficiency
+								li.workflow__item.workflow__item--color-6.workflow__item--tablet-position-4(data-animation="fadeIn")
+									span Conduct technical interviews
+								li.workflow__item.workflow__item--color-7.workflow__item--tablet-position-5.workflow__item--items-opposite-after-1(data-animation="fadeIn")
+									span Suggest candidates and schedule an interview with your team
+								li.workflow__item.workflow__item--color-8.workflow__item--tablet-position-7.workflow__item--items-opposite-after-1(data-animation="fadeIn")
+									span Handle relocation and settlement
 
-		section#workflow.mobile
-			.container
-				h1.title You do
-				ul.customer-workflow
-					li.color-1 Provide technical requirements for candidates
-					li.color-2 Evaluate and approve candidates
-					li.color-3 Sign contract with candidates
-				h1.title We do
-				ul.uneed-workflow
-					li.color-4 Candidates market overview in 24 hours
-					li.color-5 Conduct recruitment process to check candidates’ personal skills and language proficiency
-					li.color-6 Conduct technical interview
-					li.color-7 Suggest candidates and schedule an interview with your team
-					li.color-8 Handle relocation and settlement
+				section.section
+					.section__wrapper
+						h2.section__title Result
+						p.section__text You get well-qualified team member, clean and robust code and successfully implemented product
 
-		section#workflow.desktop.animated
-			.container
-				.workflow-header
-					h1.title We do
-					h1.title You do
-				.workflow-row.right.color-1
-					.workflow-item
-						.ball
-						.arrow
-						.text Provide technical requirements for candidates
-				.workflow-row.left.color-2
-					.workflow-item
-						.ball
-						.arrow
-						.text Candidates market overview in 24 hours
-				.workflow-row.left.color-3
-					.workflow-item
-						.ball
-						.arrow
-						.text Conduct recruitment process to check candidates’ personal skills and language proficiency
-				.workflow-row.left.color-4
-					.workflow-item
-						.ball
-						.arrow
-						.text Conduct technical interview
-				.workflow-row.left.color-5
-					.workflow-item
-						.ball
-						.arrow
-						.text Suggest candidates and schedule an interview with your team
-				.workflow-row.right.color-6
-					.workflow-item
-						.ball
-						.arrow
-						.text Evaluate and approve candidates
-				.workflow-row.left.color-7
-					.workflow-item
-						.ball
-						.arrow
-						.text Handle relocation and settlement
-				.workflow-row.right.color-8
-					.workflow-item
-						.ball
-						.arrow
-						.text Sign contract with candidates
+			include ../../parts/footer
+			+footer("services-slide")
 
-		section#result.animated
-			h1.title.dark Result
-			h2.sub-title You get a new, high-skilled team member that completes your business team.
-
-			a(href="/services")
-				button(role="button")
-					span Services comparison
-					span.icon
-						include ../../icons/arrow-go
-
-		include ../../parts/footer
-		script(type="text/javascript" src="/js/libs.min.js")
-		script(type="text/javascript" src="/js/services.min.js")
-		include ../../parts/navbar
-
+		script(src="/js/main-nav.min.js")

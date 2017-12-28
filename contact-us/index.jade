@@ -1,54 +1,62 @@
 doctype html
 html(lang="en")
 	include ../parts/head
-	+head("Something to Ask - Contact Us | UNeed Web", "where to outsource software development, how to find offshore software development company, why outsource web development, how to find web design company", "We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!")
-	body#contact-us-page
-		include ../parts/header
-		include ../parts/mobile-nav
+	+head("Contact Us | Uneed Web", "where to outsource software development, how to find offshore software development company, why outsource web development, how to find web design company", "We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!")
+	body
+		.page-wrapper
 
-		.body-wrapper
-			#contact-heading
-				.section-top
-					h1.title.dark Contact Us
-					h3.sub-title We would love to hear what projects, ideas, endeavours you have!<br/> Fill in the form and we'll get back as soon as we can!
+			include ../parts/header
+			+header("contact-us")
 
-			#contact-body
-				.contact-form
-					h2.title.dark Send Us a Message
-					form(name="contactForm" action="/mail-us" method="POST")
-						.form-container
-							input#user_name(type="text" placeholder="Name" name="name" required)
-							input#user_email(type="email" placeholder="Email" name="email" required)
-							input#user_phone(type="tel" placeholder="Phone Number (optional)" name="phone")
-							textarea#user_message(name="message" rows="5" placeholder="Message")
-						button.white(type="submit") Send Email
+			main.page-content
+		
+				section.section.section--first-after-menu(data-animation="fadeIn")
+					.section__wrapper
+						h1.section__title Contact Us
+						p.section__text We would love to hear what projects, ideas, endeavours you have! Fill in the form and we'll get back as soon as we can!
+						
+				.page-content__wrapper
+					section.section.contact-us(data-animation="fadeInUp")
+						.contact-us__wrapper
+							h2.section__title.contact-us__title Send Us a Message
+							form.contact-us__form(name="contactForm" action="/mail-us" method="post")
+								.contact-us__input-wrapper.input-box
+									input(type="text" placeholder="Name" name="name" required)
+								.contact-us__input-wrapper.input-box
+									input(type="email" placeholder="Email" name="email" required)
+								.contact-us__input-wrapper.input-box
+									input(type="tel" placeholder="Phone Number (optional)" name="phone")
+								.contact-us__input-wrapper.input-box
+									textarea(name="message" rows="5" placeholder="Message")
+								button.contact-us__btn.btn(type="submit") Send Email
 
-				.contact-info
-					.details
-						h2.title Contact Details
-					.contacts
-						address.flex.align-ver-center
-							span.icon
-								include ../icons/address
-							span Kiev, Ukraine, 02140, Bazhana Ave 24/1
-						p
-							a.flex.align-ver-center(href="tel:380955914765")
-								span.icon
+					section.section.section--without-padding-top(data-animation="fadeInUp").contact-info
+						.contact-info__wrapper
+							h2.section__title.contact-info__title Contact Details
+							.contact-info__items-wrapper
+								.contact-info__item-inner
+									include ../icons/address
+									address.contact-info__address Kiev, Ukraine, 02140, <br>Bazhana Ave 24/1
+								.contact-info__item-inner
 									include ../icons/phone
-								span +38 095 591 4765
-						p
-							a.flex.align-ver-center(href="mailto:info@uneedweb.com?subject=Contact Uneed Web")
-								span.icon
+									span.contact-info__phone
+										a(href="tel:380955914765") +38 095 591 4765
+								.contact-info__item-inner
 									include ../icons/mail
-								span info@uneedweb.com
-						p.services
-							a(href="https://www.facebook.com/uneedweb/" target="_blank")
-								img(src="/images/png/services/facebook.png", alt="facebook icon", width="35")
-							a(href="https://www.linkedin.com/company/18188825/" target="_blank")
-								img(src="/images/png/services/linkedin.png", alt="linkedin icon", width="35")
+									span.contact-info__email
+										a(href="mailto:info@uneedweb.com?subject=Contact Uneed Web") info@uneedweb.com
+							.social
+								ul.social__list
+									li.social__item
+										a(href="https://www.facebook.com/uneedweb/" target="_blank")
+											img(src="/images/png/services/facebook.png", alt="facebook icon", width="35")
+									li.social__item
+										a(href="https://www.linkedin.com/company/18188825/" target="_blank")
+											img(src="/images/png/services/linkedin.png", alt="linkedin icon", width="35")
+									li.social__item
+										a(href="https://twitter.com/uneed_web" target="_blank")
+											img(src="/images/png/services/twitter.png", alt="twitter icon", width="35")
 
-		include ../parts/footer
-		script(type="text/javascript" src="/js/libs.min.js")
-		script(type="text/javascript" src="/js/contact-us.min.js")
-		include ../parts/navbar
-
+			include ../parts/footer
+			+footer("contact-us")
+		script(src="/js/main-nav.min.js")

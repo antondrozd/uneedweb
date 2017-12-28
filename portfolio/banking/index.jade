@@ -2,71 +2,106 @@ doctype html
 html(lang="en")
 	include ../../parts/head
 	+head("Banking App Development | Uneed Web", "Fee billing system, fee management system, Web Development, Automated billing workflow", "Creation of a fee billing system for a major Hong Kong corporate bank. A software that calculates operational and managerial fees.")
-	body#portfolio-project-page
-		include ../../parts/header
-		include ../../parts/mobile-nav
 
-		section#landing
+	body
+		.page-wrapper
 
-		section#description
-			.container
-				.buttons-container
-					a(href="/portfolio/yow")
-						button.prev-project
-							span.icon.rotated
+			include ../../parts/header
+			+header("project")
+
+			main.page-content
+
+				.project-switcher(data-animation="bounceIn")
+					.project-switcher__wrapper
+						a.project-switcher__link.project-switcher__link--prev(href="/portfolio/yow/")
+							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
 							span Previous Project
-					a(href="/portfolio/gambling")
-						button.next-project
+						a.project-switcher__link.project-switcher__link--next(href="/portfolio/gambling/")
 							span Next Project
-							span.icon
+							span.project-switcher__arrow-icon
 								include ../../icons/arrow-go
-				.section-top
-					h2.type Banking / Finance
-					h1.title.dark What was the challenge?
-					h2.sub-title Create a fee billing system for a major Hong Kong corporate bank. The system has to charge regular fees from institutional clients for management and performance on financial services.
 
-		section#approaches.section-top.banking
-			.container
-				h1.title Challenge accepted
-				h2.sub-title Based on set requirements, our developers team created a single fee management system that gradually reduced costs of the billing process for the bank. The software could optimize fee schedules, had an automated fee discount policy, included automated fee calculation, manual and automated billing workflows and reports, featured customized standard instructions workflow.
+				section.section(data-animation="fadeInUp")
+					.section__wrapper
+						span.section__project-type Banking / Finance
+						h1.section__title What was the challenge?
+						p.section__text Create a fee billing system for a major Hong Kong corporate bank. The system has to charge regular fees from institutional clients for management and performance on financial services.
 
-		section#technologies
-			.container
-				.section-top
-					h1.title.dark What technologies did we use?
-					.tags
-						.tag .NET 3.5
-						.tag ASP.NET MVC 4
-						.tag Oracle 11
-						.tag XPO
-						.tag Client side: CoffeeScript
-						.tag jQuery
-						.tag knockoutJS
-						.tag LESS
-						.tag HTML
-						.tag Watin
-						.tag SpecFlow
+				section.section.section--approaches.approaches.approaches--banking(data-animation="fadeInUp")
+					.section__wrapper
+						h2.section__title Challenge accepted
+						p.section__text Based on set requirements, our developers team created a single fee management system that gradually reduced costs of the billing process for the bank. The software could optimize fee schedules, had an automated fee discount policy, included automated fee calculation, manual and automated billing workflows and reports, featured customized standard instructions workflow.
 
-		section#gallery
-			.container
-				.gallery-container.swipeshow.banking
-					.slides
-						.slide
-						.slide
-					.dots
-					.slide-left
-					.slide-right
+				section.section(data-animation="fadeInUp")
+					.section__wrapper.section__wrapper--tight
+						h2.section__title What technologies did we use?
+						ul.section__tags.tags
+							li.tags__item .NET 3.5
+							li.tags__item ASP.NET MVC 4
+							li.tags__item Oracle 11
+							li.tags__item XPO
+							li.tags__item Client side: CoffeeScript
+							li.tags__item jQuery
+							li.tags__item knockoutJS
+							li.tags__item LESS
+							li.tags__item HTML
+							li.tags__item Watin
+							li.tags__item SpecFlow
+					.slider.slider--project
+						ul.slider__slides-wrapper
+							li.slider__slide
+								.slider__slide-inner
+									.slider__img-wrapper
+										img(src="../../photos/banking/banking-gallery-1.png")
+							li.slider__slide
+								.slider__slide-inner
+									.slider__img-wrapper
+										img(src="../../photos/banking/banking-gallery-2.png")
+						.slider__dots
+							button.slider__dot.slider__dot--active(type="button")
+							button.slider__dot(type="button")
+					.section__wrapper.section__wrapper--tight
+						a.section__btn.btn(href="/portfolio/") Back to all projects
+							include ../../icons/arrow-go
 
-		section#back
-			a(href="/portfolio")
-				button(role="button")
-					span Back to all projects
-					span.icon
-						include ../../icons/arrow-go
+			include ../../parts/footer
+			+footer("project")
+		script(src="/js/main-nav.min.js")
+		script.
 
-		include ../../parts/footer
-		script(type="text/javascript" src="/js/libs.min.js")
-		script(type="text/javascript" src="/js/portfolio.min.js")
-		include ../../parts/navbar
+			(function () {
+				var slider = document.querySelector('.slider'),
+						slidesWrapper = slider.querySelector('.slider__slides-wrapper'),
+						slideItems = slider.querySelectorAll('.slider__slide'),
+						slidesCount = slideItems.length,
+						sliderStepValue = 100/slidesCount,
+						slideCurrent = 1,
+						sliderDots = slider.querySelectorAll('.slider__dot');
 
+				function slideChange (index) {
+					var	sliderTransValue = (index-1)*sliderStepValue;
+					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
+					sliderDots[slideCurrent-1].classList.remove('slider__dot--active');
+					sliderDots[index-1].classList.add('slider__dot--active');
+					slideCurrent = index;
+				};
+
+				slidesWrapper.style.width = slidesCount*100+'%';
+
+				sliderDots.forEach(function (item, index) {
+					sliderDots[index].addEventListener('click', function () {
+						slideChange(index+1);
+					});
+				});
+
+				window.addEventListener('keydown', function (event) {
+					if (event.keyCode == 37 && slideCurrent > 1) {
+						slideChange(slideCurrent-1);
+					}
+					if (event.keyCode == 39 && slideCurrent < slidesCount) {
+						slideChange(slideCurrent+1);
+					}
+				});
+
+			})();

@@ -1,131 +1,71 @@
 doctype html
 html(lang="en")
 	include ../../parts/head
-	+head("Augmented Development Team | Uneed Web", "Team Extension, Dedicated Team, Outstaffing, Benefits of offshore software development", "43% of companies who outsource look for scaling their operations. With augmented development team you will attain higher flexibility for scaling.")
-	body#service-page
-		include ../../parts/header
-		include ../../parts/mobile-nav
+	+head("Staff Augmentation | Uneed Web", "Team Extension, Dedicated Team, Outstaffing, Benefits of offshore software development", "How to add staff without bearing the cost and liabilities of additional full time employees? 36% of organizations who outsource effectively are convinced this could be achieved with a staff augmentation model.")
 
-		section#landing
+	body
+		.page-wrapper
 
-		section#switcher
-			#switch-left
-				a(href="/services/outsource")
-					include ../../icons/left-arrow
-			a(href="/services/outsource")
-				h2.sub-title Project Development
-			a(href="/services/outstaff").active
-				h2.sub-title Dedicated Development Team
-			a(href="/services/relocation")
-				h2.sub-title Specialist for Relocation
-			#switch-right
-				a(href="/services/relocation")
-					include ../../icons/left-arrow
+			include ../../parts/header
+			+header("services-slide")
 
-		section#description
-			.container
-				.service-image.outstaff
-				h1.title.dark Dedicated Development Team
+			main.page-content
 
-				h2.sub-title 
-					p A cost-effective model for businesses that require high-quality, efficient resources within an optimized time frame. You get control over the selection and management of your dedicated IT team, with no unexpected costs, flexible workload and scope
+				section.section.section--without-padding-bottom
+					.section__wrapper.section__wrapper--margin-left-only
+						.switcher.switcher--left
+							a.switcher__btn.switcher__btn--prev(href="/services/outsource/")
+								include ../../icons/left-arrow
+							a.switcher__name(href="/services/outsource/") Project Development
+							a.switcher__name.switcher__name--active(href="/services/outstaff/") Staff Augmentation
+							a.switcher__name(href="/services/relocation/") Relocation Specialist
+							a.switcher__btn.switcher__btn--next(href="/services/relocation/")
+								include ../../icons/left-arrow
 
-					p While you focus on your projects, we will take care of all time-consuming tasks and ensure clear communication between your in-house team and offshore team.
+						section.section.section--without-padding-top.section--small-padding-bottom.section--slide.section--slide-team(data-animation="fadeIn")
+							h2.section__title.section__title--text-left Staff Augmentation
+							p.section__text.section__text--text-left.section__text--with-margin-bottom How to add staff without bearing the cost and liabilities of additional full time employees?<br>36% of organizations who outsource effectively are convinced that this could be achieved with a staff augmentation model.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom Uneed Web provides this cost-effective model for businesses that require high-quality, efficient resources within an optimized time frame. You get control over the selection and management of your dedicated IT team with flexible workload and scope.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom While you focus on your projects, we will take care of all time-consuming tasks and ensure clear communication between your in-house team and offshore team.
+							p.section__text.section__text--text-left.section__text--with-margin-bottom You do 5%, we do the remaining 95% for you.
+							a.section__btn.btn(href="/services/") Services comparison
+								include ../../icons/arrow-go
 
+				section.section.section--main-color.workflow.workflow--team(data-animation="fadeIn")
+					.workflow__wrapper(data-animations-group)
+						.workflow__inner.workflow__inner--right
+							h3.workflow__title You do
+							ul.workflow__list.workflow__list
+								li.workflow__item.workflow__item--color-1.workflow__item--tablet-position-1.workflow__item--items-opposite-after-4(data-animation="fadeIn")
+									span Provide a number and a skill set of required IT experts
+								li.workflow__item.workflow__item--color-2.workflow__item--tablet-position-6.workflow__item--items-opposite-after-1(data-animation="fadeIn")
+									span Evaluate and approve team
+								li.workflow__item.workflow__item--color-3.workflow__item--tablet-position-8(data-animation="fadeIn")
+									span Assign project tasks
+								li.workflow__item.workflow__item--color-4.workflow__item--tablet-hidden(data-animation="fadeIn")
+									span Renew the contract
+						.workflow__inner.workflow__inner--left
+							h3.workflow__title We do
+							ul.workflow__list.workflow__list
+								li.workflow__item.workflow__item--color-5.workflow__item--tablet-position-2.workflow__item--items-opposite-before-1(data-animation="fadeIn")
+									span Candidates market overview in 24 hours
+								li.workflow__item.workflow__item--color-6.workflow__item--tablet-position-3(data-animation="fadeIn")
+									span Conduct recruitment process to check candidates’ personal skills and language proficiency
+								li.workflow__item.workflow__item--color-7.workflow__item--tablet-position-4(data-animation="fadeIn")
+									span Conduct technical interviews
+								li.workflow__item.workflow__item--color-8.workflow__item--tablet-position-5.workflow__item--items-opposite-after-1(data-animation="fadeIn")
+									span Suggest candidates and schedule an interview with your team
+								li.workflow__item.workflow__item--color-9.workflow__item--tablet-position-7.workflow__item--items-opposite-after-1(data-animation="fadeIn")
+									span Provide workspace, facilities and technical equipment
+								li.workflow__item.workflow__item--color-10.workflow__item--tablet-position-9(data-animation="fadeIn")
+									span Take care of daily administrative things
 
-				h2.sub-title.result You do 5%, we do the remaining 95% for you.
+				section.section
+					.section__wrapper
+						h2.section__title Result
+						p.section__text You get well-qualified team member, clean and robust code and successfully implemented product
 
-				a(href="/services")
-					button(role="button")
-						span Services comparison
-						span.icon
-							include ../../icons/arrow-go
+			include ../../parts/footer
+			+footer("services-slide")
 
-		section#workflow.mobile
-			.container
-				h1.title You do
-				ul.customer-workflow
-					li.color-1 Provide a number and a skill set of required IT experts
-					li.color-2 Evaluate and approve team
-					li.color-3 Assign project tasks
-					li.color-4 Renew the contract
-				h1.title We do
-				ul.uneed-workflow
-					li.color-4 Candidates market overview in 24 hours
-					li.color-5 Conduct recruitment process to check candidates’ personal skills and language proficiency
-					li.color-6 Conduct technical interviews
-					li.color-6 Suggest candidates and schedule an interview with your team
-					li.color-7 Provide workspace, facilities and technical equipment
-					li.color-8 Take care of daily administrative things
-
-		section#workflow.desktop.animated
-			.container
-				.workflow-header
-					h1.title We do
-					h1.title You do
-				.workflow-row.right.color-1
-					.workflow-item
-						.ball
-						.arrow
-						.text Provide a number and a skill set of required IT experts
-				.workflow-row.left.color-2
-					.workflow-item
-						.ball
-						.arrow
-						.text Candidates market overview in 24 hours
-				.workflow-row.left.color-3
-					.workflow-item
-						.ball
-						.arrow
-						.text Conduct recruitment process to check candidates’ personal skills and language proficiency
-				.workflow-row.left.color-3
-					.workflow-item
-						.ball
-						.arrow
-						.text Conduct technical interviews
-				.workflow-row.left.color-4
-					.workflow-item
-						.ball
-						.arrow
-						.text Suggest candidates and schedule an interview with your team
-				.workflow-row.right.color-5
-					.workflow-item
-						.ball
-						.arrow
-						.text Evaluate and approve team
-				.workflow-row.left.color-5
-					.workflow-item
-						.ball
-						.arrow
-						.text Provide workspace, facilities and technical equipment
-				.workflow-row.right.color-6
-					.workflow-item
-						.ball
-						.arrow
-						.text Assign project tasks
-				.workflow-row.left.color-7
-					.workflow-item
-						.ball
-						.arrow
-						.text Take care of daily administrative things 
-				.workflow-row.right.color-8
-					.workflow-item
-						.ball
-						.arrow
-						.text Renew the contract
-
-		section#result.animated
-			h1.title.dark Result
-			h2.sub-title You get well-qualified team member, clean and robust code and successfully implemented product
-
-			a(href="/services")
-				button(role="button")
-					span Services comparison
-					span.icon
-						include ../../icons/arrow-go
-
-		include ../../parts/footer
-		script(type="text/javascript" src="/js/libs.min.js")
-		script(type="text/javascript" src="/js/services.min.js")
-		include ../../parts/navbar
-
+		script(src="/js/main-nav.min.js")
