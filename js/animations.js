@@ -11,7 +11,7 @@ $(document).ready(function () {
 					.addClass('animated')
 					.addClass(animationType)
 					.css('opacity', '');
-			}, {offset: '90%' });
+			}, {offset: '85%' });
 		};
 	});
 
