@@ -33,9 +33,9 @@
 	outline none
 	transition all $transition-duration
 	cursor pointer
-	&--active
+	&.active // JQuery Swipeshow plugin class
 		background-color #8492af
 		border solid 1px #778ab4
-	&:not(&--active):hover
+	&:not(.active):hover
 		background-color rgba(#8492af, 0.5)
 		border-color rgba(#778ab4, 0.3)

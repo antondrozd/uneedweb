@@ -138,71 +138,10 @@ html(lang="en")
 											li.tags__item Web Design \ UX
 										a.portfolio-item__btn.btn(href="/portfolio/") Go to portfolio
 							.slider__dots
-								button.slider__dot.slider__dot--active(type="button")
-								button.slider__dot(type="button")
-								button.slider__dot(type="button")
 						a.section__btn.section__btn--hidden-on-desktop.btn(href="/portfolio/") Go to portfolio
 							include icons/arrow-go
 			include parts/footer
 			+footer("hp")
-		script(src="js/main-nav.min.js")
+		script(src="/js/main-nav.min.js")
 		script(src="/js/index.min.js")
-		script.
-
-			(function () {
-				var slider = document.querySelector('.slider'),
-						slidesWrapper = slider.querySelector('.slider__slides-wrapper'),
-						slideItems = slider.querySelectorAll('.slider__slide'),
-						slidesCount = slideItems.length,
-						sliderStepValue = 100/slidesCount,
-						slideCurrent = 1,
-						slideNames = slider.querySelectorAll('.switcher__name'),
-						sliderPrev = slider.querySelector('.switcher__btn--prev'),
-						sliderNext = slider.querySelector('.switcher__btn--next'),
-						sliderDots = slider.querySelectorAll('.slider__dot');
-
-				function slideChange (index) {
-					var	sliderTransValue = (index-1)*sliderStepValue;
-					slidesWrapper.style.transform = 'translateX(-'+sliderTransValue+'%)';
-					sliderDots[slideCurrent-1].classList.remove('slider__dot--active');
-					sliderDots[index-1].classList.add('slider__dot--active');
-					slideNames[slideCurrent-1].classList.remove('switcher__name--active');
-					slideNames[index-1].classList.add('switcher__name--active');
-					slideCurrent = index;
-				};
-
-				slidesWrapper.style.width = slidesCount*100+'%';
-
-				sliderPrev.addEventListener('click', function () { 
-					if (slideCurrent > 1) {
-						slideChange(slideCurrent-1);
-					}
-				});
-
-				sliderNext.addEventListener('click', function () {
-					if (slideCurrent < slidesCount) {
-						slideChange(slideCurrent+1);
-					}
-				});
-
-				slideNames.forEach(function (item, index) {
-					slideNames[index].addEventListener('click', function () {
-						slideChange(index+1);
-					});
-				});
-
-				sliderDots.forEach(function (item, index) {
-					sliderDots[index].addEventListener('click', function () {
-						slideChange(index+1);
-					});
-				});
-
-				window.addEventListener('keydown', function (event) {
-					if (event.keyCode == 37 && slideCurrent > 1) {
-						slideChange(slideCurrent-1);
-					}
-					if (event.keyCode == 39 && slideCurrent < slidesCount) {
-						slideChange(slideCurrent+1);
-					}
-				});
-			})();
+		script(src="/js/swipeshow.min.js")
