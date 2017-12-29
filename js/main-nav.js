@@ -16,7 +16,7 @@
 		}
 	});
 
-	$(document).ready(function () {
+	$(function () {
 
 		var lastScrollTopValue = 0;
 		$(window).scroll(function () {

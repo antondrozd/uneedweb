@@ -10,27 +10,27 @@
 
 	function tableSwitch (index) {
 		if (index ==1) {
-			tableColumnSecondItems.forEach(function (item, index) {
-				tableColumnSecondItems[index].style.transform = '';
-				tableColumnSecondItems[index].style.opacity = '0';
+			tableColumnSecondItems.forEach(function (item) {
+				item.style.transform = '';
+				item.style.opacity = '0';
 			});
 		}
 
 		if (index == 2) {
-			tableColumnSecondItems.forEach(function (item, index) {
-				tableColumnSecondItems[index].style.transform = 'translateX(-100%)';
-				tableColumnSecondItems[index].style.opacity = '1';
+			tableColumnSecondItems.forEach(function (item) {
+				item.style.transform = 'translateX(-100%)';
+				item.style.opacity = '1';
 			});
-			tableColumnThirdItems.forEach(function (item, index) {
-				tableColumnThirdItems[index].style.transform = 'translateX(-100%)';
-				tableColumnThirdItems[index].style.opacity = '0';
+			tableColumnThirdItems.forEach(function (item) {
+				item.style.transform = 'translateX(-100%)';
+				item.style.opacity = '0';
 			});
 		}
 
 		if (index == 3) {
-			tableColumnThirdItems.forEach(function (item, index) {
-				tableColumnThirdItems[index].style.transform = 'translateX(-200%)';
-				tableColumnThirdItems[index].style.opacity = '1';
+			tableColumnThirdItems.forEach(function (item) {
+				item.style.transform = 'translateX(-200%)';
+				item.style.opacity = '1';
 			});
 		}
 		columnCurrent = index;
@@ -46,6 +46,20 @@
 		if (columnCurrent < 3) {
 			tableSwitch(columnCurrent+1);
 			}
+	});
+
+	$(window).resize(function () {
+		if ($(window).width() >= 1200) {
+			tableColumnFirstItems.forEach(function (item) {
+				item.style = '';
+			});
+			tableColumnSecondItems.forEach(function (item) {
+				item.style = '';
+			});
+			tableColumnThirdItems.forEach(function (item) {
+				item.style = '';
+			});
+		}
 	});
 
 })();
