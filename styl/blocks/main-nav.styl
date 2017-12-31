@@ -17,13 +17,12 @@
 }
 
 .main-nav
-	max-width 100vw !important
 	font-family $main-font
 	
 	&--hp,
 	&--project,
 	&--services-slide
-		background-color transparent // scroll up - $main-color
+		background-color transparent
 		.main-nav__list
 			background-color rgba($main-color, 0.97)
 	&--services,
@@ -33,7 +32,7 @@
 		.main-nav__list
 			background-color rgba($main-color, 0.97)
 	&--project-on-game
-		background-color transparent // scroll up - $main-color--on-game
+		background-color transparent
 		.main-nav__list
 			background-color rgba($main-color--on-game, 0.97)
 			
@@ -67,6 +66,8 @@
 		animation main-nav-show 0.5s ease forwards
 		&.main-nav--project-on-game
 			background-color $main-color--on-game
+		&.main-nav--project-yow
+			background-color $main-color--yow
 		
 	&--scroll-down
 		position fixed
@@ -74,6 +75,8 @@
 		animation main-nav-hide 0.5s ease forwards
 		&.main-nav--project-on-game
 			background-color $main-color--on-game
+		&.main-nav--project-yow
+			background-color $main-color--yow
 
 	&--footer
 		.main-nav__list

@@ -1,0 +1,30 @@
+.yow-logo
+	display flex
+	flex-direction row
+	align-items center
+	justify-content center
+	wrapper()
+	
+.yow-logo__icon-wrapper
+	&:nth-child(-n+3)
+		display none
+
+.yow-logo__arrow-wrapper
+	display none
+	
+@media $tablet-widths
+
+	.yow-logo
+		justify-content space-between
+
+	.yow-logo__icon-wrapper
+		&:nth-child(-n+3)
+			display block
+			
+	.yow-logo__arrow-wrapper
+		display block
+		
+@media $desktop-widths
+
+	.yow-logo
+		width 648px

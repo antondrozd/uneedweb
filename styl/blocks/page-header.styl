@@ -1,12 +1,12 @@
 .page-header
 	font-family $main-font
+	background-repeat no-repeat
 	&--hp
 		box-sizing border-box
 		height 100%
 		min-height 500px
 		background-color rgba($main-color, 0.9)
 		background-image url("../photos/landing-small.jpg")
-		background-repeat no-repeat
 		background-size cover
 		
 	&--services-slide,
@@ -14,16 +14,20 @@
 		height 350px
 		background-color rgba($main-color, 0.9)
 		background-image url("../photos/landing-small.jpg")
-		background-repeat no-repeat
 		background-size cover
 		background-position center
 		
 	&--project-on-game
 		min-height 17rem
-		background-repeat no-repeat
 		background-image url("../photos/on-game/bg-1.jpg")
 		background-size cover
 		background-position center
+		
+	&--project-yow
+		min-height 17rem
+		background-image url("../photos/yow/yow-top-background.png")
+		background-size 150%
+		background-position top right 40%
 
 .page-header__wrapper
 	wrapper-fluid()
@@ -77,6 +81,12 @@
 				fill #fff
 		
 @media $tablet-widths
+
+	.page-header
+		&--project-yow
+			min-height 22rem
+			background-size 100%
+			background-position top
 	
 	.page-header__title
 		font-size 48px
@@ -86,8 +96,10 @@
 		margin 0 auto
 		font-size 18px
 		
-@media $desktop-widhts
+@media $desktop-widths
 
 	.page-header
 		&--hp
 			max-height 1100px
+		&--project-yow
+			background-position left top -60px
