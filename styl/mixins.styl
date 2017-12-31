@@ -1,11 +1,11 @@
 wrapper()
-	width 280px
+	width $mobile-wrapper-width
 	margin 0 auto
 	@media $tablet-widths
-		width 648px
+		width $tablet-wrapper-width
 		
 	@media $desktop-widths
-		width 1170px
+		width $desktop-wrapper-width
 		
 	// @media $desktop-large-widths
 	// 	width 1400px
@@ -15,7 +15,7 @@ wrapper-fluid()
 	margin 0 auto
 	
 	@media $desktop-widths
-		width 1170px
+		width $desktop-wrapper-width
 
 clearfix()
 	&::after

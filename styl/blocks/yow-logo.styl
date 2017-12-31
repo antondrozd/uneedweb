@@ -1,9 +1,14 @@
+$animation-delay-step = 0.2s
+
 .yow-logo
 	display flex
 	flex-direction row
 	align-items center
 	justify-content center
 	wrapper()
+	for num in (1..5)
+		> *:nth-child({num})
+			animation-delay $animation-delay-step*num
 	
 .yow-logo__icon-wrapper
 	&:nth-child(-n+3)
@@ -22,7 +27,9 @@
 			display block
 			
 	.yow-logo__arrow-wrapper
-		display block
+		display flex
+		align-items center
+		justify-content center
 		
 @media $desktop-widths
 
