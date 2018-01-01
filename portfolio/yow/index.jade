@@ -89,24 +89,25 @@ html(lang="en")
 							h3.project-features__item-title Smart Adviser
 							p.project-features__item-descr Once you go on a trip to a new area, the app will give you suggestions for the places to see in nearby.
 
-				section.section
-					.slider.slider--project
-						ul.slider__slides-wrapper
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/yow/yow-gallery-1.png")
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/yow/yow-gallery-2.png")
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/yow/yow-gallery-3.png")
-						.slider__dots
-							button.slider__dot.slider__dot--active(type="button")
-							button.slider__dot(type="button")
+				section.section(data-animation="fadeIn")
+					.section__wrapper.section__wrapper--slider
+						.slider.slider--project
+							ul.slider__slides-wrapper
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/yow/yow-gallery-1.png")
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/yow/yow-gallery-2.png")
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/yow/yow-gallery-3.png")
+							.slider__dots
+								button.slider__dot.slider__dot--active(type="button")
+								button.slider__dot(type="button")
 
 			include ../../parts/footer
 			+footer("project-yow")
