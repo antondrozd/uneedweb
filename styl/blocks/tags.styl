@@ -25,3 +25,10 @@ $animation-delay-step = 0.1s
 	for num in (1..15)
 		&:nth-child({num})
 			animation-delay $animation-delay-step*num
+			
+@media $tablet-widths
+
+	.tags
+		max-width 41rem
+		margin-right auto
+		margin-left auto
