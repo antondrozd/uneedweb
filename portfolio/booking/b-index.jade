@@ -1,0 +1,94 @@
+doctype html
+html(lang="en")
+	include ../../parts/head
+	+head("Booking App Development | Uneed Web", "Travel application, Web Development, NLP technology", "Development of a web application for a travel company with a complete customer planning journey features: booking, invoicing, payment system.")
+
+	body
+		.page-wrapper
+
+			include ../../parts/header
+			+header("project-trawell")
+
+			main.page-content
+
+				section.section.section--big-section-with-bg-trawell
+
+					.project-switcher(data-animation="bounceIn")
+						.project-switcher__wrapper
+							a.project-switcher__link.project-switcher__link--prev(href="/portfolio/localisation/")
+								span.project-switcher__arrow-icon
+									include ../../icons/arrow-go
+								span Previous Project
+							a.project-switcher__link.project-switcher__link--next(href="/portfolio/on-game/")
+								span Next Project
+								span.project-switcher__arrow-icon
+									include ../../icons/arrow-go
+
+					section.section(data-animation="fadeInUp")
+						.section__wrapper
+							.section__project-type web development
+							h1.section__title TraWell
+							p.section__text TraWell is an online web service created for a travel company that enables customers to plan their journey in advance. The service allows to book tickets for flights, cruises, rent cars, buy vacation packages and various attractions via the internet. Through TraWell you can pay online for the services and post reviews. The site uses multiple global distribution systems like Amadeus or the Sabre reservation systems for flights and for hotels, Worldspan and Pegasus, along with its own hotel reservation system for contracted, bulk-rate reservations.
+
+					section.section.project-features.project-features--trawell
+						ul.project-features__list
+							li.project-features__item
+								.project-features__icon-wrapper(data-animation="zoomIn")
+									//- include ../../icons/trawell-features-ic1
+								h3.project-features__item-title NLP entity linking
+								p.project-features__item-descr Natural language processing entity linking was implemented to enhance user search performance improvement.
+							li.project-features__item
+								.project-features__icon-wrapper(data-animation="zoomIn")
+									//- include ../../icons/trawell-features-ic2
+								h3.project-features__item-title Invoicing system
+								p.project-features__item-descr The web service has a built-in invoicing system that creates invoices, sends payment reminders, keeps track of business expenses.
+							li.project-features__item
+								.project-features__icon-wrapper(data-animation="zoomIn")
+									//- include ../../icons/trawell-features-ic3
+								h3.project-features__item-title Payment system
+								p.project-features__item-descr An integration of a third party payment platform that enables accepting online payments from clients throughout the world.
+
+					section.section.section--img
+						.section__img-wrapper
+							img(src="/photos/booking/screen.jpg" alt="trawell-screen")
+
+				section.section.section--without-padding-bottom(data-animation="fadeIn")
+					.section__wrapper
+						h2.section__title What technologies did we use?
+						p.section__text Our technical team used a comprehensive set of tools and technologies during TraWell development.
+						ul.section__tags.tags
+							li.tags__item Angular
+							li.tags__item Jade
+							li.tags__item Stylus
+							li.tags__item Gulp
+							li.tags__item lodash
+							li.tags__item Yeoman
+							li.tags__item Google Maps
+							li.tags__item Geolocation
+							li.tags__item AWS (EC2)
+							li.tags__item Jenkins
+							li.tags__item Git
+							li.tags__item Karma
+							li.tags__item Jasmine
+
+				section.project-page-reverse-block.project-page-reverse-block--trawell
+					.project-page-reverse-block__wrapper
+						section.project-page-reverse-block__section.project-page-reverse-block__section--with-padding-top
+							.project-page-reverse-block__decorative-img.project-page-reverse-block__decorative-img--trawell-1(data-animation="fadeInLeft")
+							.project-page-reverse-block__inner(data-animation="fadeInRight")
+								h2.project-page-reverse-block__title Find the best offers
+								p.project-page-reverse-block__text The website is integrated with the global distribution systems that allow to pull out the latest relevant information about the airline seats, car rentals, hotel rooms, etc. The user simply enters point of destination, aimed travel dates, filters search results by price, ratings. The search engine suggests and indicates offers and deals that are available for the particular trip.
+						section.project-page-reverse-block__section.project-page-reverse-block__section--with-padding-bottom
+							.project-page-reverse-block__decorative-img.project-page-reverse-block__decorative-img--trawell-2(data-animation="fadeInRight")
+							.project-page-reverse-block__inner(data-animation="fadeInLeft")
+								h2.project-page-reverse-block__title Organizer Section
+								p.project-page-reverse-block__text TraWell helps to organize every part of customer journey including activities customers might want to take part in. By choosing a location for travel, the search engine system also suggests activities in the area (concerts, festivals, museums, theaters, etc.), prices and dates. The user can book an activity and it will be added to his journey plan.
+
+				section.section.section--img
+					.section__img-wrapper
+						img()
+
+			include ../../parts/footer
+			+footer("project-trawell")
+		script(src="/js/main-nav.min.js")
+		script(src="/js/swipeshow.min.js")
