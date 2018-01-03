@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+	include parts/head
+	+head("Web development company | Uneed Web", "offshore software development, web development outsourcing, web design outsourcing", "Uneed Web is a web development company. We shape your tech ideas with smart engineering, create an outreach for your business, provide an access to talents that adds value.")
+	body
+		.page-wrapper
+
+			include parts/header
+			+header("404")
+
+			main.page-content
+
+				section.section.section--first-after-menu.section--full-screen
+					.section__wrapper
+						span.section__404 - 404 -
+						h1.section__title Page not found!
+						p.section__text.section__text--with-margin-bottom The page you are looking for doesn’t exist or something went wrong.<br>Sorry about this. There is nothing here.
+						a.section__btn.btn(href="/") Back to home page
+							include icons/arrow-go
+
+			include parts/footer
+			+footer("404")
+		script(src="/js/main-nav.min.js")

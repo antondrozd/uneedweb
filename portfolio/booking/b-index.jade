@@ -34,7 +34,7 @@ html(lang="en")
 						ul.project-features__list
 							li.project-features__item
 								.project-features__icon-wrapper(data-animation="zoomIn")
-									//- include ../../icons/trawell-features-ic1
+									include ../../icons/trawell-features-ic1
 								h3.project-features__item-title NLP entity linking
 								p.project-features__item-descr Natural language processing entity linking was implemented to enhance user search performance improvement.
 							li.project-features__item
@@ -48,7 +48,7 @@ html(lang="en")
 								h3.project-features__item-title Payment system
 								p.project-features__item-descr An integration of a third party payment platform that enables accepting online payments from clients throughout the world.
 
-					section.section.section--img
+					section.section.section--without-padding-top.section--without-padding-bottom
 						.section__img-wrapper
 							img(src="/photos/booking/screen.jpg" alt="trawell-screen")
 
@@ -84,9 +84,12 @@ html(lang="en")
 								h2.project-page-reverse-block__title Organizer Section
 								p.project-page-reverse-block__text TraWell helps to organize every part of customer journey including activities customers might want to take part in. By choosing a location for travel, the search engine system also suggests activities in the area (concerts, festivals, museums, theaters, etc.), prices and dates. The user can book an activity and it will be added to his journey plan.
 
-				section.section.section--img
-					.section__img-wrapper
-						img()
+				section.section.section--gray-gradient(data-animation="fadeInUp")
+					.section__img-wrapper.section__img-wrapper--with-padding-bottom
+						img(src="/photos/booking/trawell-last-big-img.png")
+					.section__wrapper
+						a.section__btn.btn(href="/portfolio") Next projects
+							include ../../icons/arrow-go
 
 			include ../../parts/footer
 			+footer("project-trawell")
