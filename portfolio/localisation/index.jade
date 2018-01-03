@@ -33,7 +33,7 @@ html(lang="en")
 						h2.section__title Challenge accepted
 						p.section__text To solve the problem of multiple languages our team developed an additional web application that managed project’s localization. The localization helper was an excellent tool to find untranslated or missing words/phrases in translations, securely protected content and prevented from damaging, pulled and gathered data that was previously stored in Google spreadsheets. It divided the users by their role and rights, tracked their activities and provided a backup for accumulated data.
 
-				section.section(data-animation="fadeInUp")
+				section.section.section--without-padding-bottom(data-animation="fadeInUp")
 					.section__wrapper.section__wrapper--tight
 						h2.section__title What technologies did we use?
 						ul.section__tags.tags
@@ -43,22 +43,25 @@ html(lang="en")
 							li.tags__item Angular JS
 							li.tags__item Stylus
 							li.tags__item Jade
-					.slider.slider--project
-						ul.slider__slides-wrapper
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/localisation/localisation-gallery-1.png")
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/localisation/localisation-gallery-2.png")
-						.slider__dots
-							button.slider__dot.slider__dot--active(type="button")
-							button.slider__dot(type="button")
-					.section__wrapper.section__wrapper--tight
-						a.section__btn.btn(href="/portfolio/") Back to all projects
-							include ../../icons/arrow-go
+
+				section.section.section--without-padding-top(data-animation="fadeIn")
+					.section__wrapper.section__wrapper--slider
+						.slider.slider--project
+							ul.slider__slides-wrapper
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/localisation/localisation-gallery-1.png")
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/localisation/localisation-gallery-2.png")
+							.slider__dots
+								button.slider__dot.slider__dot--active(type="button")
+								button.slider__dot(type="button")
+						.section__wrapper.section__wrapper--tight
+							a.section__btn.btn(href="/portfolio/") Back to all projects
+								include ../../icons/arrow-go
 
 			include ../../parts/footer
 			+footer("project")

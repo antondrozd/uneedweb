@@ -34,7 +34,7 @@ html(lang="en")
 						p.section__text.section__text--with-margin-bottom Our team of experts developed a social media application that enabled users to create, book activities (canoeing, climbing, horse-riding, hiking and mountaineering). The activities could be organized both by agencies as well as by single travelers.
 						p.section__text An e-commerce platform was integrated into the web application and facilitated processing not only activity payments but also allowed equipment stores to sell their products onsite. As a social media, the network provided feedback tools, reviews, commentaries, messaging.
 
-				section.section(data-animation="fadeInUp")
+				section.section.section--without-padding-bottom(data-animation="fadeInUp")
 					.section__wrapper.section__wrapper--tight
 						h2.section__title What technologies did we use?
 						ul.section__tags.tags
@@ -49,22 +49,25 @@ html(lang="en")
 							li.tags__item WebSockets
 							li.tags__item Spring Boot
 							li.tags__item Spring Data
-					.slider.slider--project
-						ul.slider__slides-wrapper
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/social-travel/social-travel-gallery-1.png")
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/social-travel/social-travel-gallery-2.png")
-						.slider__dots
-							button.slider__dot.slider__dot--active(type="button")
-							button.slider__dot(type="button")
-					.section__wrapper.section__wrapper--tight
-						a.section__btn.btn(href="/portfolio/") Back to all projects
-							include ../../icons/arrow-go
+
+				section.section.section--without-padding-top(data-animation="fadeIn")
+					.section__wrapper.section__wrapper--slider
+						.slider.slider--project
+							ul.slider__slides-wrapper
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/social-travel/social-travel-gallery-1.png")
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/social-travel/social-travel-gallery-2.png")
+							.slider__dots
+								button.slider__dot.slider__dot--active(type="button")
+								button.slider__dot(type="button")
+						.section__wrapper.section__wrapper--tight
+							a.section__btn.btn(href="/portfolio/") Back to all projects
+								include ../../icons/arrow-go
 
 			include ../../parts/footer
 			+footer("project")

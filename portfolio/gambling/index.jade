@@ -33,7 +33,7 @@ html(lang="en")
 						h2.section__title Challenge accepted
 						p.section__text To enable a real-time visual experience, the tech team developed the wrapper for video streaming. The users now could watch and participate in the game. A live web chat was created for direct communication. An additional option of spectator mode was designed. The interactive system of betting was introduced by using functional video layers and WebSocket technology.
 
-				section.section(data-animation="fadeInUp")
+				section.section.section--without-padding-bottom(data-animation="fadeInUp")
 					.section__wrapper.section__wrapper--tight
 						h2.section__title What technologies did we use?
 						ul.section__tags.tags
@@ -45,22 +45,25 @@ html(lang="en")
 							li.tags__item WebSockets
 							li.tags__item TeamCity
 							li.tags__item HTML5 Video
-					.slider.slider--project
-						ul.slider__slides-wrapper
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/gambling/gambling-gallery-1.png")
-							li.slider__slide
-								.slider__slide-inner
-									.slider__img-wrapper
-										img(src="../../photos/gambling/gambling-gallery-2.png")
-						.slider__dots
-							button.slider__dot.slider__dot--active(type="button")
-							button.slider__dot(type="button")
-					.section__wrapper.section__wrapper--tight
-						a.section__btn.btn(href="/portfolio/") Back to all projects
-							include ../../icons/arrow-go
+
+				section.section.section--without-padding-top(data-animation="fadeIn")
+					.section__wrapper.section__wrapper--slider
+						.slider.slider--project
+							ul.slider__slides-wrapper
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/gambling/gambling-gallery-1.png")
+								li.slider__slide
+									.slider__slide-inner
+										.slider__img-wrapper
+											img(src="../../photos/gambling/gambling-gallery-2.png")
+							.slider__dots
+								button.slider__dot.slider__dot--active(type="button")
+								button.slider__dot(type="button")
+						.section__wrapper.section__wrapper--tight
+							a.section__btn.btn(href="/portfolio/") Back to all projects
+								include ../../icons/arrow-go
 
 			include ../../parts/footer
 			+footer("project")
