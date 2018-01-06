@@ -10,9 +10,9 @@ $(function () {
 
 		var elementToAnimate = $('[data-animation]');
 		elementToAnimate.each(function () {
-			if (!$(this).hasClass('animated')) {
-				$(this).css('opacity', 0);
-				var element = $(this);
+			var element = $(this);
+			if (!element.hasClass('animated')) {
+				element.css('opacity', 0);
 				var animationType = element.attr('data-animation');
 				element.waypoint(function () {
 					element
